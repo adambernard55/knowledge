@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'SEO/**/*.md'  # Note: Changed from 'Knowledge/SEO/**/*.md'
+      - 'Knowledge/SEO/**/*.md'  # Note: Changed from 'Knowledge/SEO/**/*.md'
   workflow_dispatch:
 
 jobs:
