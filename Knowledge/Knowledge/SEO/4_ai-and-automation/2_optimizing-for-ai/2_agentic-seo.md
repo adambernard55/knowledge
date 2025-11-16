@@ -127,4 +127,4 @@ Organizations that master these concepts will gain a significant competitive adv
 - [Generative Engine Optimization (GEO)](Knowledge/SEO/4_ai-and-automation/geo-optimization.md)
 - [Semantic SEO: Optimizing for Meaning, Entities, and Context](6_semantic-seo.md)
 - [E‑E‑A‑T Signals: Experience, Expertise, Authoritativeness, and Trust](5_eeat-signals.md)
-- [Core Web Vitals: Measuring and Optimizing User Experience](3_core-web-vitals.md)
+- [Core Web Vitals: Measuring and Optimizing User Experience](03_core-web-vitals.md)

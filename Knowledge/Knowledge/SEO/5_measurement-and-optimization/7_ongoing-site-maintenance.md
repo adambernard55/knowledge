@@ -121,6 +121,6 @@ These are major strategic reviews that set the direction for the next quarter.
 ## Related Resources
 - [SEO Analytics Basics: Measuring What Matters](1_seo-analytics-basics.md)
 - [Content Audit Framework](04_content-audit-framework.md)
-- [Crawlability and Indexation: Ensuring Search Engine Access](1_crawlability-and-indexation.md)
+- [Crawlability and Indexation: Ensuring Search Engine Access](01_crawlability-and-indexation.md)
 - [Rank Tracking and Reporting: Measuring and Communicating SEO Performance](2_rank-tracking-and-reporting.md)
-- [Page Speed Optimization: A Comprehensive Guide](4_page-speed-optimization.md)
+- [Page Speed Optimization: A Comprehensive Guide](04_page-speed-optimization.md)

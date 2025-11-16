@@ -107,5 +107,5 @@ For a detailed guide on implementation, see our article on [A/B Testing for SEO]
 - [A/B Testing for SEO](5_a-b-testing-for-seo.md)
 - [SEO Analytics Basics: Measuring What Matters](1_seo-analytics-basics.md)
 - [Search Intent and User Journeys](02_search-intent-and-user-journeys.md)
-- [Core Web Vitals: Measuring and optimizing User Experience](3_core-web-vitals.md)
+- [Core Web Vitals: Measuring and optimizing User Experience](03_core-web-vitals.md)
 - [Content Optimization Guide](07_content-optimization-guide.md)
