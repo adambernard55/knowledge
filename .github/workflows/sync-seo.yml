@@ -23,12 +23,13 @@ jobs:
           
       - name: Get changed files
         id: changed-files
+        if: github.event_name == 'push'
         uses: tj-actions/changed-files@v40
         with:
           files: 'Knowledge/SEO/**/*.md'
 
       - name: Sync to Knowledge Base
-        if: steps.changed-files.outputs.any_changed == 'true'
+        if: github.event_name == 'workflow_dispatch' || steps.changed-files.outputs.any_changed == 'true'
         env:
           WP_USERNAME: ${{ secrets.WP_USERNAME }}
           WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
@@ -37,7 +38,14 @@ jobs:
           DEFAULT_TOPIC_ID: ${{ secrets.KNOWLEDGE_SEO_TOPIC_ID }}
           CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
         run: |
-          IFS=' ' read -r -a files <<< "$CHANGED_FILES"
+          # Determine which files to process
+          if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+            echo "Manual trigger detected - processing ALL files in Knowledge/SEO/"
+            files=($(find Knowledge/SEO -name "*.md" -type f))
+          else
+            echo "Push event detected - processing changed files only"
+            IFS=' ' read -r -a files <<< "$CHANGED_FILES"
+          fi
           
           for file in "${files[@]}"; do
             [ -z "$file" ] && continue
@@ -304,6 +312,10 @@ jobs:
           done
           
       - name: Summary
-        if: steps.changed-files.outputs.any_changed == 'true'
+        if: github.event_name == 'workflow_dispatch' || steps.changed-files.outputs.any_changed == 'true'
         run: |
-          echo "SEO sync completed"
+          if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+            echo "SEO sync completed (manual trigger - processed all files)"
+          else
+            echo "SEO sync completed (push trigger - processed changed files)"
+          fi
