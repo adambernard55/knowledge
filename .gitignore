@@ -1,6 +1,18 @@
-# macOS/Windows system files
-.DS_Store
-Thumbs.db
+# Ignore everything by default
+*
+*/
 
-# Obsidian local workspace settings (safe to ignore)
+# Track .gitignore and .github
+!.gitignore
+!.github/
+!.github/**
+
+# Track Knowledge folder
+!Knowledge/
+!Knowledge/**
+
+# Exclude Obsidian/system files
 .obsidian/
+.trash/
+.space/
+*.mdb
