@@ -135,6 +135,6 @@ Regular audits are crucial for maintaining a healthy technical foundation.
 ## Related Resources
 - [How Search Engines Work](2_how-search-engines-work.md)
 - [Site Migrations and Canonicalization](7_site-migrations-and-canonicalization.md)
-- [Content Architecture: Structuring Pages for SEO and User Experience](1_content-architecture.md)
-- [Internal Linking: Building Strong Connections for SEO and User Experience](5_internal-linking.md)
+- [Content Architecture: Structuring Pages for SEO and User Experience](01_content-architecture.md)
+- [Internal Linking: Building Strong Connections for SEO and User Experience](05_internal-linking.md)
 - [JavaScript SEO: Ensuring Your Content is Renderable and Indexable](Knowledge/SEO/3_technical-seo/javascript-and-rendering.md)

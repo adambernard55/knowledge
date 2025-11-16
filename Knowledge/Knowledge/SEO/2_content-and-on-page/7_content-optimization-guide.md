@@ -90,14 +90,14 @@ To find these queries, use resources like Google's "People Also Ask" sections, A
 - Stay within **50–60 characters for titles** and **150–160 for descriptions**.
 - Emphasize unique value (“how‑to,” “checklist,” “2025,” or benefit‑driven phrases).
 
-See also: [[Knowledge/SEO/2_content-and-on-page/2_title-tags-and-meta.md]]
+See also: [[02_title-tags-and-meta]]
 
 ### 5.2 Header and Content Structure
 - Maintain a logical **H1 → H2 → H3** hierarchy.
 - **Frame H2s and H3s as questions** to directly target conversational queries.
 - Use headers as signposts for scannability for both humans and AI crawlers.
 
-See also: [[Knowledge/SEO/2_content-and-on-page/3_header-structure.md]]
+See also: [[03_header-structure]]
 
 ### 5.3 Readability and Formatting
 Keep paragraphs short (2–4 sentences), prefer active voice, and use legible fonts. Use bolding for emphasis and white space to improve comprehension.
@@ -141,7 +141,7 @@ Content optimization in the modern era is incomplete without structured data. **
 | **BreadcrumbList** | Hierarchical context. |
 | **Review / Product** | Commercial content. |
 
-For implementation details, see [[Knowledge/SEO/2_content-and-on-page/6_schema-and-rich-results.md]].
+For implementation details, see [[06_schema-and-rich-results]].
 
 ## 8. Auditing and AI Tools
 

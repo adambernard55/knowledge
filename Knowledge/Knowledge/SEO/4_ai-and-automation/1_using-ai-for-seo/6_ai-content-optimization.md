@@ -100,7 +100,7 @@ When starting with a draft from a generative AI tool, the optimization process i
 ---
 
 ## Related Resources
-- [Content Optimization Guide](7_content-optimization-guide.md)
+- [Content Optimization Guide](07_content-optimization-guide.md)
 - [AI in SEO: An Overview](1_ai-in-seo-overview.md)
 - [Semantic SEO: Optimizing for Meaning, Entities, and Context](6_semantic-seo.md)
 - [E‑E‑A‑T Signals: Experience, Expertise, Authoritativeness, and Trust](5_eeat-signals.md)

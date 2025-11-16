@@ -103,4 +103,4 @@ Studies have shown that for local searches (e.g., booking accommodations or find
 - [Semantic SEO: Optimizing for Meaning, Entities, and Context](/Knowledge/SEO/3_technical-seo/6_semantic-seo.md)
 - [E‑E-A-T Signals: Experience, Expertise, Authoritativeness, and Trust](/Knowledge/SEO/0_fundamentals/5_eeat-signals.md)
 - [How Search Engines Work](/Knowledge/SEO/0_fundamentals/2_how-search-engines-work.md)
-- [Content Architecture: Structuring Pages for SEO and User Experience](/Knowledge/SEO/2_content-and-on-page/1_content-architecture.md)
+- [Content Architecture: Structuring Pages for SEO and User Experience](01_content-architecture.md)
