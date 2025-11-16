@@ -106,7 +106,7 @@ While powerful, Edge SEO is an advanced technique that requires careful manageme
 
 Edge SEO is the technological foundation for more advanced, dynamic SEO strategies like **Agentic SEO**. In the future, edge workers will not just apply static rules but will make intelligent, real-time decisions based on multiple signals (user intent, SERP trends, AI agent identity) to serve truly polymorphic, adaptive content.
 
-For more on this, see our guide on [Agentic SEO](2_agentic-seo.md).
+For more on this, see our guide on [Agentic SEO](02_agentic-seo.md).
 
 ## 7. Key Takeaways
 
@@ -122,4 +122,4 @@ For more on this, see our guide on [Agentic SEO](2_agentic-seo.md).
 - [Site Migrations and Canonicalization](7_site-migrations-and-canonicalization.md)
 - [Page Speed Optimization: A Comprehensive Guide](4_page-speed-optimization.md)
 - [JavaScript SEO: Ensuring Your Content is Renderable and Indexable](2_javascript-and-rendering.md)
-- [Agentic SEO: Optimizing for AI Agents and Dynamic Systems](2_agentic-seo.md)
+- [Agentic SEO: Optimizing for AI Agents and Dynamic Systems](02_agentic-seo.md)
