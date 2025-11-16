@@ -1,0 +1,11 @@
+# Ignore everything by default
+*
+
+# But DO NOT ignore the Knowledge folder and its contents
+!/Knowledge/
+
+# Also, don't ignore this .gitignore file itself
+!/.gitignore
+
+# Explicitly ignore Obsidian's settings
+.obsidian/
