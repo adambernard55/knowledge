@@ -69,6 +69,6 @@ AI can connect disparate data sources to uncover trends and insights that might 
 
 ### Related Notes
 - [[11_the-impact-of-ai-on-modern-seo]]
-- [[1_keyword-research-basics]]
+- [[01_keyword-research-basics]]
 - [[topical-authority-and-clustering]]
 - [[eeat-signals]]

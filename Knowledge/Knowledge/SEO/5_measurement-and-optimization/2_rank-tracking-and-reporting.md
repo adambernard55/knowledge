@@ -112,7 +112,7 @@ An effective SEO report does more than just present data; it tells a story, prov
 
 ## Related Resources
 - [SEO Analytics Basics: Measuring What Matters](1_seo-analytics-basics.md)
-- [SEO Strategy Frameworks](6_seo-strategy-frameworks.md)
-- [Keyword Research Basics](1_keyword-research-basics.md)
+- [SEO Strategy Frameworks](06_seo-strategy-frameworks.md)
+- [Keyword Research Basics](01_keyword-research-basics.md)
 - [SERP Features and How to Win Them](4_serp-features.md)
-- [Competitor and Gap Analysis](3_competitor-and-gap-analysis.md.md)
+- [Competitor and Gap Analysis](03_competitor-and-gap-analysis.md.md)
