@@ -1,6 +1,6 @@
 name: Sync SEO to Knowledge Base
 
-oon:
+on:
   push:
     branches:
       - main
