@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'Knowledge/AI/**/*.md'  # Note: Changed from 'Knowledge/AI/**/*.md'
+      - 'Knowledge/AI/**/*.md'
   workflow_dispatch:
 
 jobs:
@@ -44,31 +44,51 @@ jobs:
             
             echo "Processing: $file"
             
-            # Determine topic based on subfolder
+            # Determine topic based on subfolder - AI categories
             TOPIC_ID=$DEFAULT_TOPIC_ID
-            # You will likely want to update these case statements for your AI topics
             case "$file" in
-              *"/0_fundamentals/"*) TOPIC_ID=1162 ;;
-              *"/fundamentals/"*) TOPIC_ID=1162 ;;
-              *"/1_research-and-strategy/"*) TOPIC_ID=1163 ;;
-              *"/research-and-strategy/"*) TOPIC_ID=1163 ;;
-              *"/2_content-and-on-page/"*) TOPIC_ID=1164 ;;
-              *"/content-and-on-page/"*) TOPIC_ID=1164 ;;
-              *"/3_technical-seo/"*) TOPIC_ID=1165 ;;
-              *"/technical-seo/"*) TOPIC_ID=1165 ;;
-              *"/4_ai-and-automation/"*) TOPIC_ID=1166 ;;
-              *"/ai-and-automation/"*) TOPIC_ID=1166 ;;
-              *"/5_measurement-and-optimization/"*) TOPIC_ID=1167 ;;
-              *"/measurement-and-optimization/"*) TOPIC_ID=1167 ;;
-              *"/6_future-trends/"*) TOPIC_ID=1168 ;;
-              *"/future-trends/"*) TOPIC_ID=1168 ;;
+              *"/Fundamentals/"*) TOPIC_ID=1186 ;;
+              *"/fundamentals/"*) TOPIC_ID=1186 ;;
+              *"/Models/"*) TOPIC_ID=1187 ;;
+              *"/models/"*) TOPIC_ID=1187 ;;
+              *"/Agents/"*) TOPIC_ID=1188 ;;
+              *"/agents/"*) TOPIC_ID=1188 ;;
+              *"/Methods/"*) TOPIC_ID=1189 ;;
+              *"/methods/"*) TOPIC_ID=1189 ;;
+              *"/Applications/"*) TOPIC_ID=1190 ;;
+              *"/applications/"*) TOPIC_ID=1190 ;;
+              *"/Ethics and Governance/"*) TOPIC_ID=1191 ;;
+              *"/ethics-and-governance/"*) TOPIC_ID=1191 ;;
+              *"/Future Trends/"*) TOPIC_ID=1192 ;;
+              *"/future-trends/"*) TOPIC_ID=1192 ;;
             esac
             
             echo "Assigned to topic ID: $TOPIC_ID"
             
-            # Handle filenames with spaces
+            # Handle filenames - improved formatting
             filename=$(basename "${file}" .md)
-            title=$(echo "$filename" | sed 's/-/ /g' | sed 's/\b\(.\)/\u\1/g')
+            
+            # Remove number prefixes (e.g., 01_, 06_) and underscores
+            title=$(echo "$filename" | sed 's/^[0-9]*_//' | sed 's/_/ /g' | sed 's/-/ /g')
+            
+            # Capitalize first letter of each word
+            title=$(echo "$title" | sed 's/\b\(.\)/\u\1/g')
+            
+            # Fix common acronyms that should be all caps
+            title=$(echo "$title" | sed 's/\bAi\b/AI/g')
+            title=$(echo "$title" | sed 's/\bSeo\b/SEO/g')
+            title=$(echo "$title" | sed 's/\bLlm\b/LLM/g')
+            title=$(echo "$title" | sed 's/\bNlp\b/NLP/g')
+            title=$(echo "$title" | sed 's/\bApi\b/API/g')
+            title=$(echo "$title" | sed 's/\bUi\b/UI/g')
+            title=$(echo "$title" | sed 's/\bUx\b/UX/g')
+            title=$(echo "$title" | sed 's/\bMl\b/ML/g')
+            title=$(echo "$title" | sed 's/\bGpt\b/GPT/g')
+            title=$(echo "$title" | sed 's/\bRag\b/RAG/g')
+            title=$(echo "$title" | sed 's/\bHtml\b/HTML/g')
+            title=$(echo "$title" | sed 's/\bCss\b/CSS/g')
+            title=$(echo "$title" | sed 's/\bUrl\b/URL/g')
+            title=$(echo "$title" | sed 's/\bIo\b/IO/g')
             
             # Check if file exists
             if [ ! -f "${file}" ]; then
@@ -84,7 +104,7 @@ jobs:
             if grep -q "^---$" "${file}"; then
               front_matter=$(sed -n '/^---$/,/^---$/p' "${file}" | sed '1d;$d')
               
-              # Extract title
+              # Extract title - frontmatter title overrides filename
               fm_title=$(echo "$front_matter" | grep -i "^title:" | sed 's/^title: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
               if [ ! -z "$fm_title" ]; then
                 title="$fm_title"
@@ -203,8 +223,7 @@ jobs:
               echo "Creating new post"
             fi
             
-            # Build JSON payload - assign BOTH parent and child topic, plus tag IDs
-            # You will likely want to update the parent topic ID (e.g. 1158)
+            # Build JSON payload - assign BOTH parent (1159 = AI) and child topic, plus tag IDs
             if [ ! -z "$excerpt" ]; then
               json_payload=$(jq -n \
                 --arg title "$title" \
@@ -217,7 +236,7 @@ jobs:
                   content: $content,
                   excerpt: $excerpt,
                   status: "publish",
-                  knowledge_topics: [1158, $topic],
+                  knowledge_topics: [1159, $topic],
                   knowledge_tag: $tags
                 }')
             else
@@ -230,13 +249,13 @@ jobs:
                   title: $title,
                   content: $content,
                   status: "publish",
-                  knowledge_topics: [1158, $topic],
+                  knowledge_topics: [1159, $topic],
                   knowledge_tag: $tags
                 }')
             fi
             
             echo "Syncing: $title"
-            echo "Topics: [1158 (AI), $TOPIC_ID]"
+            echo "Topics: [1159 (AI), $TOPIC_ID]"
             
             response=$(curl -s -w "\n%{http_code}" \
               -X $method \
