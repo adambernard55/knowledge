@@ -97,5 +97,5 @@ The most valuable skills for future SEO professionals will be **strategic thinki
 - [Agentic SEO: Optimizing for AI Agents and Dynamic Systems](2_agentic-seo.md)
 - [Generative Engine Optimization (GEO)](Knowledge/SEO/4_ai-and-automation/geo-optimization.md)
 - [AI in SEO: An Overview](ai-in-seo-overview.md)
-- [Semantic SEO: Optimizing for Meaning, Entities, and Context](6_semantic-seo.md)
+- [Semantic SEO: Optimizing for Meaning, Entities, and Context](06_semantic-seo.md)
 - [What Is SEO? A Comprehensive Guide](1_what-is-seo.md)

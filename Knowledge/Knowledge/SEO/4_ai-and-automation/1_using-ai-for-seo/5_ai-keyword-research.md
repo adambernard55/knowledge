@@ -107,5 +107,5 @@ AI is a powerful "co-pilot," but it does not replace the need for human strategy
 - [Keyword Research Basics](01_keyword-research-basics.md)
 - [AI in SEO: An Overview](1_ai-in-seo-overview.md)
 - [Search Intent and User Journeys](02_search-intent-and-user-journeys.md)
-- [Semantic SEO: Optimizing for Meaning, Entities, and Context](6_semantic-seo.md)
+- [Semantic SEO: Optimizing for Meaning, Entities, and Context](06_semantic-seo.md)
 - [Topical Authority and Clustering](05_topical-authority-and-clustering.md)

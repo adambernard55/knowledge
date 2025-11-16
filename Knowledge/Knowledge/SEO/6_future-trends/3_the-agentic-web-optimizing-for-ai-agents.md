@@ -65,5 +65,5 @@ The agentic web is the next frontier. Websites that structure their data and ser
 ---
 ### Related Notes
 - [[11_the-impact-of-ai-on-modern-seo]]
-- [[9_using-ai-tools-for-seo]]
+- [[09_using-ai-tools-for-seo]]
 - [[structured-data-and-schema]]

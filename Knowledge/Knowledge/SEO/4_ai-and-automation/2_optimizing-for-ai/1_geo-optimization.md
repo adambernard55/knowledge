@@ -100,7 +100,7 @@ Studies have shown that for local searches (e.g., booking accommodations or find
 
 ## Related Resources
 - [Agentic SEO: Optimizing for AI Agents and Dynamic Systems](./2_agentic-seo.md)
-- [Semantic SEO: Optimizing for Meaning, Entities, and Context](/Knowledge/SEO/3_technical-seo/6_semantic-seo.md)
+- [Semantic SEO: Optimizing for Meaning, Entities, and Context](06_semantic-seo.md)
 - [E‑E-A-T Signals: Experience, Expertise, Authoritativeness, and Trust](/Knowledge/SEO/0_fundamentals/5_eeat-signals.md)
 - [How Search Engines Work](/Knowledge/SEO/0_fundamentals/2_how-search-engines-work.md)
 - [Content Architecture: Structuring Pages for SEO and User Experience](01_content-architecture.md)

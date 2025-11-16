@@ -72,5 +72,5 @@ Adopt a "human-in-the-loop" model where AI assists at specific stages, but a hum
 
 ### Related Notes
 - [[11_the-impact-of-ai-on-modern-seo]]
-- [[9_using-ai-tools-for-seo]]
+- [[09_using-ai-tools-for-seo]]
 - [[eeat-signals]]
