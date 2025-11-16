@@ -1,0 +1,288 @@
+name: Sync SEO to Knowledge Base
+
+oon:
+  push:
+    branches:
+      - main
+    paths:
+      - 'SEO/**/*.md'  # Note: Changed from 'Knowledge/SEO/**/*.md'
+  workflow_dispatch:
+
+jobs:
+  sync-docs:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Install pandoc
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc
+          
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v40
+        with:
+          files: 'Knowledge/SEO/**/*.md'
+
+      - name: Sync to Knowledge Base
+        if: steps.changed-files.outputs.any_changed == 'true'
+        env:
+          WP_USERNAME: ${{ secrets.WP_USERNAME }}
+          WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
+          BEARER_TOKEN: ${{ secrets.AIENGINE_BEARER_TOKEN }}
+          WP_URL: ${{ secrets.WP_SITE_URL }}
+          DEFAULT_TOPIC_ID: ${{ secrets.KNOWLEDGE_SEO_TOPIC_ID }}
+          CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
+        run: |
+          IFS=' ' read -r -a files <<< "$CHANGED_FILES"
+          
+          for file in "${files[@]}"; do
+            [ -z "$file" ] && continue
+            
+            echo "Processing: $file"
+            
+            # Determine topic based on subfolder
+            TOPIC_ID=$DEFAULT_TOPIC_ID
+            case "$file" in
+              *"/0_fundamentals/"*) TOPIC_ID=1162 ;;
+              *"/fundamentals/"*) TOPIC_ID=1162 ;;
+              *"/1_research-and-strategy/"*) TOPIC_ID=1163 ;;
+              *"/research-and-strategy/"*) TOPIC_ID=1163 ;;
+              *"/2_content-and-on-page/"*) TOPIC_ID=1164 ;;
+              *"/content-and-on-page/"*) TOPIC_ID=1164 ;;
+              *"/3_technical-seo/"*) TOPIC_ID=1165 ;;
+              *"/technical-seo/"*) TOPIC_ID=1165 ;;
+              *"/4_ai-and-automation/"*) TOPIC_ID=1166 ;;
+              *"/ai-and-automation/"*) TOPIC_ID=1166 ;;
+              *"/5_measurement-and-optimization/"*) TOPIC_ID=1167 ;;
+              *"/measurement-and-optimization/"*) TOPIC_ID=1167 ;;
+              *"/6_future-trends/"*) TOPIC_ID=1168 ;;
+              *"/future-trends/"*) TOPIC_ID=1168 ;;
+            esac
+            
+            echo "Assigned to topic ID: $TOPIC_ID"
+            
+            # Handle filenames with spaces
+            filename=$(basename "${file}" .md)
+            title=$(echo "$filename" | sed 's/-/ /g' | sed 's/\b\(.\)/\u\1/g')
+            
+            # Check if file exists
+            if [ ! -f "${file}" ]; then
+              echo "⚠ File not found: ${file}"
+              continue
+            fi
+            
+            content=$(cat "${file}")
+            
+            # Extract front matter if exists
+            excerpt=""
+            tags=""
+            if grep -q "^---$" "${file}"; then
+              front_matter=$(sed -n '/^---$/,/^---$/p' "${file}" | sed '1d;$d')
+              
+              # Extract title
+              fm_title=$(echo "$front_matter" | grep -i "^title:" | sed 's/^title: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
+              if [ ! -z "$fm_title" ]; then
+                title="$fm_title"
+              fi
+              
+              # Extract excerpt
+              excerpt=$(echo "$front_matter" | grep -i "^excerpt:" | sed 's/^excerpt: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
+              
+              # Extract tags (comma-separated or YAML array)
+              tags=$(echo "$front_matter" | grep -i "^tags:" | sed 's/^tags: *//I' | sed 's/[\[\]]//g' | sed 's/,/ /g')
+              
+              # Optional: Allow frontmatter to override topic
+              fm_topic=$(echo "$front_matter" | grep -i "^topic:" | sed 's/^topic: *//I')
+              if [ ! -z "$fm_topic" ]; then
+                TOPIC_ID=$fm_topic
+                echo "Topic overridden by frontmatter: $TOPIC_ID"
+              fi
+              
+              # Remove front matter from content
+              content=$(sed '1{/^---$/!q;};1,/^---$/d' "${file}")
+            fi
+            
+            # Strip Obsidian internal links (keep just text)
+            content=$(echo "$content" | sed 's/\[\[[^]|]*|\([^]]*\)\]\]/\1/g')
+            content=$(echo "$content" | sed 's/\[\[\([^]]*\)\]\]/\1/g')
+            
+            # Remove Obsidian image embeds
+            content=$(echo "$content" | sed 's/!\[\[\([^]]*\)\]\]//g')
+            
+            # Strip Dataview code blocks
+            content=$(echo "$content" | sed '/^```dataview$/,/^```$/d')
+            
+            # Save content to temp file and convert with pandoc
+            echo "$content" > /tmp/content.md
+            
+            if ! html_content=$(pandoc \
+              -f markdown+smart \
+              -t html \
+              --wrap=none \
+              /tmp/content.md 2>&1); then
+              echo "⚠ Pandoc conversion failed for $file"
+              echo "Error: $html_content"
+              continue
+            fi
+            
+            echo "Content length: ${#content} chars"
+            echo "HTML length: ${#html_content} chars"
+            
+            # Skip if HTML is empty
+            if [ -z "$html_content" ]; then
+              echo "⚠ HTML content is empty, skipping"
+              continue
+            fi
+            
+            # Add table borders with inline styles
+            html_content=$(echo "$html_content" | sed 's/<table>/<table style="border-collapse:collapse;width:100%;border:1px solid #ddd;">/g')
+            html_content=$(echo "$html_content" | sed 's/<th\([^>]*\)>/<th\1 style="border:1px solid #ddd;padding:8px;background:#f4f4f4;text-align:left;">/g')
+            html_content=$(echo "$html_content" | sed 's/<td\([^>]*\)>/<td\1 style="border:1px solid #ddd;padding:8px;text-align:left;">/g')
+            
+            auth_header=$(echo -n "$WP_USERNAME:$WP_APP_PASSWORD" | base64)
+            
+            # Process tags: Get or create tag IDs
+            tag_ids="[]"
+            if [ ! -z "$tags" ]; then
+              echo "Processing tags: $tags"
+              tag_ids_array=()
+              
+              for tag_name in $tags; do
+                # Clean tag name
+                tag_slug=$(echo "$tag_name" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9-]/-/g')
+                
+                # Check if tag exists
+                existing_tag=$(curl -s "$WP_URL/wp-json/wp/v2/knowledge_tag?slug=$tag_slug")
+                tag_id=$(echo "$existing_tag" | jq -r '.[0].id // empty')
+                
+                if [ -z "$tag_id" ] || [ "$tag_id" = "null" ]; then
+                  # Tag doesn't exist, create it
+                  echo "Creating new tag: $tag_name"
+                  new_tag=$(curl -s -X POST \
+                    -H "Authorization: Basic $auth_header" \
+                    -H "Content-Type: application/json" \
+                    -d "{\"name\":\"$tag_name\",\"slug\":\"$tag_slug\"}" \
+                    "$WP_URL/wp-json/wp/v2/knowledge_tag")
+                  
+                  tag_id=$(echo "$new_tag" | jq -r '.id // empty')
+                fi
+                
+                if [ ! -z "$tag_id" ] && [ "$tag_id" != "null" ]; then
+                  echo "Tag '$tag_name' ID: $tag_id"
+                  tag_ids_array+=("$tag_id")
+                fi
+              done
+              
+              # Convert to JSON array
+              if [ ${#tag_ids_array[@]} -gt 0 ]; then
+                tag_ids=$(printf '%s\n' "${tag_ids_array[@]}" | jq -s '.')
+              fi
+            fi
+            
+            echo "Tag IDs to assign: $tag_ids"
+            
+            # Check if post already exists by slug (to update existing posts)
+            slug=$(echo "$title" | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g' | sed 's/[^a-z0-9-]//g')
+            existing_post=$(curl -s "$WP_URL/wp-json/wp/v2/knowledge?slug=$slug")
+            post_id=$(echo "$existing_post" | jq -r '.[0].id // empty')
+            
+            if [ ! -z "$post_id" ] && [ "$post_id" != "null" ]; then
+              # Update existing post with PUT
+              method="PUT"
+              endpoint="$WP_URL/wp-json/wp/v2/knowledge/$post_id"
+              echo "Updating existing post (ID: $post_id)"
+            else
+              # Create new post with POST
+              method="POST"
+              endpoint="$WP_URL/wp-json/wp/v2/knowledge"
+              echo "Creating new post"
+            fi
+            
+            # Build JSON payload - assign BOTH parent (1158) and child topic, plus tag IDs
+            if [ ! -z "$excerpt" ]; then
+              json_payload=$(jq -n \
+                --arg title "$title" \
+                --arg content "$html_content" \
+                --arg excerpt "$excerpt" \
+                --argjson topic "$TOPIC_ID" \
+                --argjson tags "$tag_ids" \
+                '{
+                  title: $title,
+                  content: $content,
+                  excerpt: $excerpt,
+                  status: "publish",
+                  knowledge_topics: [1158, $topic],
+                  knowledge_tag: $tags
+                }')
+            else
+              json_payload=$(jq -n \
+                --arg title "$title" \
+                --arg content "$html_content" \
+                --argjson topic "$TOPIC_ID" \
+                --argjson tags "$tag_ids" \
+                '{
+                  title: $title,
+                  content: $content,
+                  status: "publish",
+                  knowledge_topics: [1158, $topic],
+                  knowledge_tag: $tags
+                }')
+            fi
+            
+            echo "Syncing: $title"
+            echo "Topics: [1158 (SEO), $TOPIC_ID]"
+            
+            response=$(curl -s -w "\n%{http_code}" \
+              -X $method \
+              -H "Authorization: Basic $auth_header" \
+              -H "Content-Type: application/json" \
+              -d "$json_payload" \
+              "$endpoint")
+            
+            http_code=$(echo "$response" | tail -n1)
+            body=$(echo "$response" | sed '$d')
+            
+            if [ "$http_code" -eq 200 ] || [ "$http_code" -eq 201 ]; then
+              echo "✓ Successfully synced: $title"
+              post_id=$(echo "$body" | jq -r '.id')
+              echo "Post ID: $post_id"
+              
+              # Verify tags were assigned
+              assigned_tags=$(echo "$body" | jq -r '.knowledge_tag')
+              echo "Assigned tags: $assigned_tags"
+              
+              # Generate embeddings
+              echo "Generating embeddings..."
+              embed_payload=$(jq -n --argjson post_id "$post_id" '{postId: $post_id, envId: "default"}')
+              
+              embed_response=$(curl -s -w "\n%{http_code}" \
+                -X POST \
+                -H "Authorization: Bearer $BEARER_TOKEN" \
+                -H "Content-Type: application/json" \
+                -d "$embed_payload" \
+                "$WP_URL/wp-json/mwai/v1/vectors/add")
+              
+              embed_http_code=$(echo "$embed_response" | tail -n1)
+              
+              if [ "$embed_http_code" -eq 200 ]; then
+                echo "✓ Embeddings generated and stored in Pinecone"
+              else
+                echo "⚠ Embedding generation failed (HTTP $embed_http_code)"
+                echo "$embed_response"
+              fi
+            else
+              echo "✗ Failed to sync: $title (HTTP $http_code)"
+              echo "$body"
+            fi
+            
+            echo "---"
+          done
+          
+      - name: Summary
+        if: steps.changed-files.outputs.any_changed == 'true'
+        run: |
+          echo "SEO sync completed"

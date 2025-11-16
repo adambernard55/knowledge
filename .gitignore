@@ -1,0 +1,50 @@
+<<<<<<< HEAD
+
+# Ignore everything by default
+*
+
+# Include what we want
+<<<<<<< HEAD
+
+# Ignore everything by default
+*
+
+# Include what we want
+!.gitignore
+!.github/
+!.github/**
+
+# Include entire Knowledge directory
+!Knowledge/
+!Knowledge/**
+
+# Obsidian config to exclude
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+
+# System files
+!.gitignore
+!.github/
+!.github/**
+
+# Include entire Knowledge directory
+!Knowledge/
+!Knowledge/**
+
+# Obsidian config to exclude
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+.trash/
+
+
+.DS_Store
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+>>>>>>> 35015865deb2534cd0360e782bf93130b7c06c45
