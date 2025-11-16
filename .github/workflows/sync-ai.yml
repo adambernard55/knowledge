@@ -236,7 +236,7 @@ jobs:
                   content: $content,
                   excerpt: $excerpt,
                   status: "publish",
-                  knowledge_topics: [1159, $topic],
+                  knowledge_topic: [1159, $topic],
                   knowledge_tag: $tags
                 }')
             else
@@ -249,7 +249,7 @@ jobs:
                   title: $title,
                   content: $content,
                   status: "publish",
-                  knowledge_topics: [1159, $topic],
+                  knowledge_topic: [1159, $topic],
                   knowledge_tag: $tags
                 }')
             fi
