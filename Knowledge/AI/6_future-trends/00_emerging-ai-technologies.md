@@ -270,8 +270,8 @@ RAG pipelines combine foundation models with **organization-specific data**:
 This is becoming a default pattern for enterprise AI.
 
 See:  
-- [RAG Best Practices](../3_methods/mcp/6_mcp-best-practices-for-rag-pipelines.md)  
-- [RAG with NVIDIA](../3_methods/mcp/7_mcp-rag-with-nvidia.md)
+- [RAG Best Practices](06_mcp-best-practices-for-rag-pipelines.md)  
+- [RAG with NVIDIA](07_mcp-rag-with-nvidia.md)
 
 ### 8.2 Model Context Protocol (MCP) and Tool Ecosystems
 

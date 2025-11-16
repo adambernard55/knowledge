@@ -1,8 +1,11 @@
 ---
+title: AI in Analytics
 tags:
   - AI/applications
   - business/analytics
   - data-science
+  - ai
+  - analytics
 aliases:
   - AI Analytics
   - Augmented Analytics
@@ -10,7 +13,6 @@ related:
   - "[[1_ai-in-business-intelligence]]"
   - "[[Machine Learning]]"
   - "[[Data Science]]"
-title: AI in Analytics
 summary: AI in analytics, often called Augmented Analytics, refers to the use of artificial intelligence, machine learning (ML), and natural language processing (NLP) to enhance data analytics processes.
 ---
 

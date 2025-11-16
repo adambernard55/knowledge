@@ -4,6 +4,8 @@ tags:
   - AI/applications
   - business/automation
   - technology
+  - ai
+  - automation
 aliases:
   - AI-Powered Automation
   - Intelligent Automation

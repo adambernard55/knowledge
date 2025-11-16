@@ -125,4 +125,4 @@ Models like Mistral's Mixtral 8x7B and Google's Gemini family use MoE architectu
 -   [Advanced Prompt Engineering for AI and Marketing](09_advanced-prompt-engineering.md)
 -   [Agentic AI Systems: Architectures, Frameworks, and Memory](10_agentic-architectures-and-frameworks.md)
 -   [Training and finetuning](03_training-and-finetuning.md)
--   [MCP Foundations and Architecture](1_mcp-foundations-and-architecture.md)
+-   [MCP Foundations and Architecture](01_mcp-foundations-and-architecture.md)

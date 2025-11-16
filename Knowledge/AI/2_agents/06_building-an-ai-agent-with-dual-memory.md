@@ -1,14 +1,22 @@
 ---
-title: "Blueprint: Building an AI Agent with Dual-Memory Architecture"
-seo_category: "methods-and-systems"
-difficulty: "intermediate"
-last_updated: "2025-11-16"
-kb_status: "published"
-tags: ["ai-agents", "memory-architecture", "short-term-memory", "long-term-memory", "vector-database", "rag", "llm"]
+title: Building an AI Agent with Dual-Memory Architecture
+seo_category: methods-and-systems
+difficulty: intermediate
+last_updated: 2025-11-16
+kb_status: published
+tags:
+  - ai-agents
+  - memory-architecture
+  - short-term-memory
+  - long-term-memory
+  - vector-database
+  - rag
+  - llm
 related_topics:
-  - "what-are-ai-agents"
-  - "agentic-vs-automation-platforms"
-  - "introduction-to-vector-databases"
+  - what-are-ai-agents
+  - agentic-vs-automation-platforms
+  - introduction-to-vector-databases
+summary: Standard AI agents often operate on a request-response basis, making them "stateless." They have no memory of past interactions, which limits their ability to engage in coherent, multi-turn conversations or learn from previous encounters. To build a truly advanced agent, we must solve this problem of "agent amnesia."
 ---
 # Blueprint: Building an AI Agent with Dual-Memory Architecture
 
