@@ -1,5 +1,6 @@
-# macOS system files
+# macOS/Windows system files
 .DS_Store
+Thumbs.db
 
-# Obsidian local settings
+# Obsidian local workspace settings (safe to ignore)
 .obsidian/
