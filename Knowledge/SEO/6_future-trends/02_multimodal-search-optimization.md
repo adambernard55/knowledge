@@ -1,17 +1,25 @@
 ---
 title: "Multimodal Search Optimization: Beyond Text"
-summary: "Explores optimizing content for search queries that combine text, voice, and images, and how multimodal AI interprets them."
-seo_category: "future-trends"
-difficulty: "advanced"
-last_updated: "2025-01-26"
-kb_status: "published"
-tags: ["multimodal-search", "visual-search", "voice-search", "seo-trends", "ai", "gemini", "seo"]
+summary: Explores optimizing content for search queries that combine text, voice, and images, and how multimodal AI interprets them.
+seo_category: future-trends
+difficulty: advanced
+last_updated: 2025-01-26
+kb_status: published
+tags:
+  - multimodal-search
+  - visual-search
+  - voice-search
+  - seo-trends
+  - ai
+  - gemini
+  - seo
 related_topics:
-  - "future-trends-in-seo-overview"
-  - "semantic-seo"
-  - "schema-and-rich-results"
-  - "eeat-signals"
-  - "content-optimization-guide"
+  - future-trends-in-seo-overview
+  - semantic-seo
+  - schema-and-rich-results
+  - eeat-signals
+  - content-optimization-guide
+aliases: []
 ---
 
 # Multimodal Search Optimization: Beyond Text
@@ -108,7 +116,7 @@ Structured data is the technical backbone of multimodal optimization. It allows 
 ---
 
 ## Related Resources
-- [Future Trends in SEO: An Overview](1_future-trends-in-seo.md)
+- [Future Trends in SEO: An Overview](01_future-trends-in-seo.md)
 - [Semantic SEO: Optimizing for Meaning, Entities, and Context](06_semantic-seo.md)
 - [Schema and Rich Results: Enhancing Visibility with Structured Data](06_schema-and-rich-results.md)
 - [E‑E‑A-T Signals: Experience, Expertise, Authoritativeness, and Trust](5_eeat-signals.md)

@@ -106,8 +106,8 @@ A single number is rarely accurate. Sophisticated forecasts use scenarios and ac
 ---
 
 ## Related Resources
-- [SEO Analytics Basics: Measuring What Matters](1_seo-analytics-basics.md)
-- [Conversion Rate Optimization (CRO) for SEO](3_conversion-rate-optimization.md)
+- [SEO Analytics Basics: Measuring What Matters](01_seo-analytics-basics.md)
+- [Conversion Rate Optimization (CRO) for SEO](03_conversion-rate-optimization.md)
 - [SEO Strategy Frameworks](06_seo-strategy-frameworks.md)
-- [Rank Tracking and Reporting: Measuring and Communicating SEO Performance](2_rank-tracking-and-reporting.md)
+- [Rank Tracking and Reporting: Measuring and Communicating SEO Performance](02_rank-tracking-and-reporting.md)
 - [Keyword Research Basics](01_keyword-research-basics.md)

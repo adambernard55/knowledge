@@ -102,7 +102,7 @@ Several major SEO platforms (like Semrush and Ahrefs) are beginning to offer "AI
 ---
 
 ## Related Resources
-- [SEO Analytics Basics: Measuring What Matters](1_seo-analytics-basics.md)
+- [SEO Analytics Basics: Measuring What Matters](01_seo-analytics-basics.md)
 - [Generative Engine Optimization (GEO)](01_geo-optimization.md)
 - [Agentic SEO: Optimizing for AI Agents and Dynamic Systems](02_agentic-seo.md)
-- [Rank Tracking and Reporting: Measuring and Communicating SEO Performance](2_rank-tracking-and-reporting.md)
+- [Rank Tracking and Reporting: Measuring and Communicating SEO Performance](02_rank-tracking-and-reporting.md)
