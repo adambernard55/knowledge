@@ -286,7 +286,7 @@ Mitigations:
 
 - Limit exposure of raw training data and model internals.  
 - Use rate limiting, output filtering, and red‑teaming for security testing.  
-- Apply [MCP security and compliance](../3_methods/mcp/4_mcp-security-and-compliance.md) guidance for agent/tool integrations where applicable.
+- Apply [MCP security and compliance](4_mcp-security-and-compliance.md) guidance for agent/tool integrations where applicable.
 
 ### 6.3 Vendor and Third‑Party Risk
 

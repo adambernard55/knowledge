@@ -1,3 +1,18 @@
+---
+title: "MCP Runtime and Deployment"
+seo_category: "methods-and-systems"
+difficulty: "intermediate"
+last_updated: "2025-11-16"
+kb_status: "published"
+tags: ["mcp", "model-context-protocol", "runtime", "deployment", "scaling", "observability", "docker", "kubernetes", "stdio", "http", "security"]
+related_topics:
+  - "1_mcp-foundations-and-architecture"
+  - "2_mcp-connectors-and-integrations"
+  - "4_mcp-security-and-compliance"
+  - "ai-agents-running-workflows"
+summary: "Deploying Model Context Protocol servers successfully requires architecting for microservice-grade resilience, security, and scalability. From selecting the right transport to instrumenting observability and ensuring OAuth 2.1 compliance, MCP runtime design turns an open protocol into a production-ready foundation for connected AI agents and enterprise automation."
+---
+
 # MCP Runtime and Deployment
 
 ### Hosting, Scaling, and Managing Model Context Protocol Servers

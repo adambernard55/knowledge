@@ -1,4 +1,5 @@
 ---
+title: AI in Automation
 tags:
   - AI/applications
   - business/automation
@@ -10,6 +11,7 @@ related:
   - "[[1_ai-in-business-intelligence]]"
   - "[[Robotic Process Automation (RPA)]]"
   - "[[Machine Learning]]"
+summary: AI in automation, often referred to as Intelligent Automation (IA) or cognitive automation, involves using artificial intelligence technologies to create systems that can not only perform repetitive tasks but also learn, adapt, and make decisions.
 ---
 
 # AI in Automation

@@ -1,3 +1,17 @@
+---
+title: "MCP Connectors and Integrations"
+seo_category: "methods-and-systems"
+difficulty: "intermediate"
+last_updated: "2025-11-16"
+kb_status: "published"
+tags: ["mcp", "model-context-protocol", "ai-agents", "integration", "connectors", "sdk", "json-rpc", "supabase", "chrome-devtools"]
+related_topics:
+  - "1_mcp-foundations-and-architecture"
+  - "ai-agents-running-workflows"
+  - "agentic-vs-automation-platforms"
+summary: "MCP connectors are the operational interfaces that make agentic AI practical. They turn model requests into structured, governed actions on real systems through open standards and SDKs, forming the web of interactivity that defines the modern agentic AI ecosystem."
+---
+
 # MCP Connectors and Integrations
 
 ## Building Bridges Between AI Agents and External Systems

@@ -1,3 +1,26 @@
+---
+title: MCP Foundations and Architecture
+seo_category: methods-and-systems
+difficulty: intermediate
+last_updated: 2025-11-16
+kb_status: published
+tags:
+  - mcp
+  - model-context-protocol
+  - ai-agents
+  - agentic-ai
+  - integration
+  - protocol
+  - json-rpc
+  - interoperability
+  - ai-architecture
+related_topics:
+  - ai-agents-running-workflows
+  - building-agents-with-the-claude-agent-sdk
+  - agentic-vs-automation-platforms
+  - agentic-context-engineering
+summary: The Model Context Protocol (MCP) is an open standard that defines how AI systems - particularly agentic large language models (LLMs) - connect to real-world data and tools.
+---
 # MCP Foundations and Architecture
 
 ## Understanding the Model Context Protocol
@@ -6,7 +29,7 @@
 
 ## 1. Overview
 
-The **Model Context Protocol (MCP)** is an **open standard** that defines how AI systems—particularly agentic large language models (LLMs)—connect to real-world data and tools.
+The **Model Context Protocol (MCP)** is an **open standard** that defines how AI systems - particularly agentic large language models (LLMs) - connect to real-world data and tools.
 
 Instead of having every assistant, IDE, or chatbot build its own custom integrations, MCP acts as a **universal bridge** between AI reasoning engines and the applications or APIs they depend on.
 
