@@ -1,10 +1,12 @@
 # Ignore everything by default
 *
 
-# But DO NOT ignore these specific folders/files
+# --- EXCEPTIONS ---
+# Do NOT ignore the following files and folders:
 !/.gitignore
-!/Knowledge/
 !/.github/
+!/Knowledge/
 
-# Explicitly ignore Obsidian's settings
+# --- EXCLUSIONS ---
+# Explicitly ignore Obsidian's settings folder, even if it's inside a tracked folder
 .obsidian/
