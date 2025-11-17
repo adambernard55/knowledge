@@ -55,20 +55,13 @@ jobs:
             # Determine topic based on subfolder - AI categories
             TOPIC_ID=$DEFAULT_TOPIC_ID
             case "$file" in
-              *"/Fundamentals/"*) TOPIC_ID=1186 ;;
-              *"/fundamentals/"*) TOPIC_ID=1186 ;;
-              *"/Models/"*) TOPIC_ID=1187 ;;
-              *"/models/"*) TOPIC_ID=1187 ;;
-              *"/Agents/"*) TOPIC_ID=1188 ;;
-              *"/agents/"*) TOPIC_ID=1188 ;;
-              *"/Methods/"*) TOPIC_ID=1189 ;;
-              *"/methods/"*) TOPIC_ID=1189 ;;
-              *"/Applications/"*) TOPIC_ID=1190 ;;
-              *"/applications/"*) TOPIC_ID=1190 ;;
-              *"/Ethics and Governance/"*) TOPIC_ID=1191 ;;
-              *"/ethics-and-governance/"*) TOPIC_ID=1191 ;;
-              *"/Future Trends/"*) TOPIC_ID=1192 ;;
-              *"/future-trends/"*) TOPIC_ID=1192 ;;
+              *"/0_fundamentals/"*) TOPIC_ID=1186 ;;
+              *"/1_models/"*) TOPIC_ID=1187 ;;
+              *"/2_agents/"*) TOPIC_ID=1188 ;;
+              *"/3_methods/"*) TOPIC_ID=1189 ;;
+              *"/4_applications/"*) TOPIC_ID=1190 ;;
+              *"/5_ethics-and-governance/"*) TOPIC_ID=1191 ;;
+              *"/6_future-trends/"*) TOPIC_ID=1192 ;;
             esac
             
             echo "Assigned to topic ID: $TOPIC_ID"
@@ -118,11 +111,34 @@ jobs:
                 title="$fm_title"
               fi
               
-              # Extract excerpt
+              # Extract excerpt (or summary)
               excerpt=$(echo "$front_matter" | grep -i "^excerpt:" | sed 's/^excerpt: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
+              if [ -z "$excerpt" ]; then
+                excerpt=$(echo "$front_matter" | grep -i "^summary:" | sed 's/^summary: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/' | sed 's/^|-$//' | sed 's/^|$//')
+              fi
               
-              # Extract tags (comma-separated or YAML array)
+              # Extract tags (handles both inline and YAML list format)
               tags=$(echo "$front_matter" | grep -i "^tags:" | sed 's/^tags: *//I' | sed 's/[\[\]]//g' | sed 's/,/ /g')
+              
+              # If tags is empty, check for YAML list format (tags on separate lines with "  - ")
+              if [ -z "$tags" ]; then
+                # Extract YAML list items (lines starting with "  - " after "tags:")
+                in_tags=false
+                while IFS= read -r line; do
+                  if [[ "$line" =~ ^tags: ]]; then
+                    in_tags=true
+                  elif [[ "$in_tags" == true ]]; then
+                    if [[ "$line" =~ ^[[:space:]]*-[[:space:]](.+) ]]; then
+                      tag_value="${BASH_REMATCH[1]}"
+                      tags="$tags $tag_value"
+                    elif [[ "$line" =~ ^[a-zA-Z] ]]; then
+                      # Hit next field, stop collecting tags
+                      break
+                    fi
+                  fi
+                done <<< "$front_matter"
+                tags=$(echo "$tags" | xargs)  # Trim whitespace
+              fi
               
               # Optional: Allow frontmatter to override topic
               fm_topic=$(echo "$front_matter" | grep -i "^topic:" | sed 's/^topic: *//I')
