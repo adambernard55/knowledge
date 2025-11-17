@@ -151,12 +151,24 @@ jobs:
               content=$(sed '1{/^---$/!q;};1,/^---$/d' "${file}")
             fi
             
-            # Strip Obsidian internal links (keep just text)
+            # Strip Obsidian internal links and formatting
+            # Remove bold/italic from links first
+            content=$(echo "$content" | sed 's/__\[\[\([^]]*\)\]\]__/\1/g')
+            content=$(echo "$content" | sed 's/\*\*\[\[\([^]]*\)\]\]\*\*/\1/g')
+            content=$(echo "$content" | sed 's/_\[\[\([^]]*\)\]\]_/\1/g')
+            content=$(echo "$content" | sed 's/\*\[\[\([^]]*\)\]\]\*/\1/g')
+            
+            # Strip Obsidian internal links with aliases (keep display text)
             content=$(echo "$content" | sed 's/\[\[[^]|]*|\([^]]*\)\]\]/\1/g')
+            
+            # Strip simple Obsidian internal links (keep link text without brackets)
             content=$(echo "$content" | sed 's/\[\[\([^]]*\)\]\]/\1/g')
             
             # Remove Obsidian image embeds
             content=$(echo "$content" | sed 's/!\[\[\([^]]*\)\]\]//g')
+            
+            # Remove Obsidian block references
+            content=$(echo "$content" | sed 's/\^[a-zA-Z0-9-]*$//g')
             
             # Strip Dataview code blocks
             content=$(echo "$content" | sed '/^```dataview$/,/^```$/d')
