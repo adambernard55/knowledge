@@ -93,7 +93,7 @@ jobs:
             echo "Assigned to topic ID: $TOPIC_ID"
             
             filename=$(basename "${file}" .md)
-            title=$(echo "$filename" | sed 's/^[0-9]*_//' | sed 's/_/ /g' | sed 's/-/ /g' | sed 's/\b$.$/\u\1/g')
+            title=$(echo "$filename" | sed 's/^[0-9]*_//' | sed 's/_/ /g' | sed 's/-/ /g' | sed 's/\b\(.\)/\u\1/g')
             title=$(echo "$title" | sed -e 's/\bAi\b/AI/g' -e 's/\bSeo\b/SEO/g' -e 's/\bLlm\b/LLM/g' -e 's/\bNlp\b/NLP/g' -e 's/\bApi\b/API/g' -e 's/\bUi\b/UI/g' -e 's/\bUx\b/UX/g' -e 's/\bMl\b/ML/g' -e 's/\bGpt\b/GPT/g' -e 's/\bRag\b/RAG/g' -e 's/\bHtml\b/HTML/g' -e 's/\bCss\b/CSS/g' -e 's/\bUrl\b/URL/g' -e 's/\bIo\b/IO/g')
             
             if [ ! -f "${file}" ]; then
