@@ -7,7 +7,7 @@ TABLE WITHOUT ID
   summary as "Description",
   difficulty as "Difficulty",
   tags as "Tags"
-FROM "kb/CORE/Core Concepts"
+FROM "kb/CORE/core-concepts"
 WHERE file.name != "index.md"
 SORT file.name ASC
 ```
