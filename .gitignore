@@ -1,18 +1,18 @@
-# Ignore everything by default
-*
-*/
-
-# Track .gitignore and .github
-!.gitignore
+# Ignore all hidden files and folders at the root, except .github and .gitignore
+.*
+# Re-include .github and .gitignore so they are tracked
 !.github/
-!.github/**
+!.gitignore
 
-# Track Knowledge folder
-!Knowledge/
-!Knowledge/**
+# Ignore all other files and folders at the root
+/*
 
-# Exclude Obsidian/system files
+# Explicitly track the knowledge base folder and its contents
+!/kb/
+
+# Explicitly ignore Obsidian's folder, trash, and any temporary files
+# This is the most important part for plugin compatibility
 .obsidian/
 .trash/
-.space/
+*.tmp
 *.mdb
