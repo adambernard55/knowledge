@@ -38,7 +38,6 @@ jobs:
           DEFAULT_TOPIC_ID: ${{ secrets.KNOWLEDGE_SEO_TOPIC_ID }}
           CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
         run: |
-          # ROBUSTNESS: Use a more reliable method to read file lists
           get_files_to_process() {
             if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
               echo "Manual trigger detected - processing ALL files in kb/"
@@ -50,7 +49,6 @@ jobs:
           }
 
           get_files_to_process | while IFS= read -r file; do
-            # ROBUSTNESS: Skip empty lines or non-markdown files explicitly
             if [ -z "$file" ] || [[ "$file" != *.md ]]; then
               continue
             fi
@@ -58,7 +56,6 @@ jobs:
             echo "---"
             echo "Processing: $file"
             
-            # Determine topic based on subfolder - Knowledge categories
             TOPIC_ID=$DEFAULT_TOPIC_ID
             case "$file" in
               *"/AI/"*) TOPIC_ID=1159 ;;
@@ -96,7 +93,6 @@ jobs:
             echo "Assigned to topic ID: $TOPIC_ID"
             
             filename=$(basename "${file}" .md)
-            # FIX: Corrected the sed command to capitalize words
             title=$(echo "$filename" | sed 's/^[0-9]*_//' | sed 's/_/ /g' | sed 's/-/ /g' | sed 's/\b$.$/\u\1/g')
             title=$(echo "$title" | sed -e 's/\bAi\b/AI/g' -e 's/\bSeo\b/SEO/g' -e 's/\bLlm\b/LLM/g' -e 's/\bNlp\b/NLP/g' -e 's/\bApi\b/API/g' -e 's/\bUi\b/UI/g' -e 's/\bUx\b/UX/g' -e 's/\bMl\b/ML/g' -e 's/\bGpt\b/GPT/g' -e 's/\bRag\b/RAG/g' -e 's/\bHtml\b/HTML/g' -e 's/\bCss\b/CSS/g' -e 's/\bUrl\b/URL/g' -e 's/\bIo\b/IO/g')
             
@@ -144,9 +140,8 @@ jobs:
               content=$(sed '1{/^---$/!q;};1,/^---$/d' "${file}")
             fi
             
-            content=$(echo "$content" | sed -e 's/__$$$[^]]*$$$__/\1/g' -e 's/\*\*$$$[^]]*$$$\*\*/\1/g' -e 's/_$$$[^]]*$$$_/\1/g' -e 's/\*$$$[^]]*$$$\*/\1/g')
             content=$(echo "$content" | sed -e 's/$$[^]|]*|$[^]]*$$$/\1/g' -e 's/$$$[^]]*$$$/\1/g')
-            content=$(echo "$content" | sed -e 's/!$$$[^]]*$$$//g' -e 's/\^[a-zA-Z0-9-]*$//g')
+            content=$(echo "$content" | sed -e 's/!$$[^]]*$$//g' -e 's/\^[a-zA-Z0-9-]*//g')
             content=$(echo "$content" | sed '/^```dataview$/,/^```$/d')
             
             echo "$content" > /tmp/content.md
@@ -229,7 +224,7 @@ jobs:
               echo "$body"
             fi
           done
-          
+
       - name: Summary
         if: github.event_name == 'workflow_dispatch' || steps.changed-files.outputs.any_changed == 'true'
         run: |
