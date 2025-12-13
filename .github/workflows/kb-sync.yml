@@ -77,9 +77,9 @@ jobs:
               *"/TOOLS/image-video-generation/"*) TOPIC_ID=1601 ;;
               *"/TOOLS/marketing-automation/"*) TOPIC_ID=1602 ;;
               *"/TOOLS/marketing-automation/seo-optimization/"*) TOPIC_ID=1603 ;;
-	          *"/TOOLS/productivity-workflow/"*) TOPIC_ID=1604 ;;
-	          *"/TOOLS/research-knowledge-agents/"*) TOPIC_ID=1605 ;;
-	          *"/TOOLS/social-media/"*) TOPIC_ID=1605 ;;
+              *"/TOOLS/productivity-workflow/"*) TOPIC_ID=1604 ;;
+              *"/TOOLS/research-knowledge-agents/"*) TOPIC_ID=1605 ;;
+              *"/TOOLS/social-media/"*) TOPIC_ID=1605 ;;
             esac
             
             echo "Assigned to topic ID: $TOPIC_ID"
@@ -187,7 +187,6 @@ jobs:
               echo "Creating new post"
             fi
             
-            # Build JSON payload - using your confirmed 'knowledge_topics' (plural)
             if [ ! -z "$excerpt" ]; then
               json_payload=$(jq -n --arg title "$title" --arg content "$html_content" --arg excerpt "$excerpt" --argjson topic "$TOPIC_ID" --argjson tags "$tag_ids" '{title: $title, content: $content, excerpt: $excerpt, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags}')
             else
