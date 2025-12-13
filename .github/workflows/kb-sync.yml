@@ -38,23 +38,27 @@ jobs:
           DEFAULT_TOPIC_ID: ${{ secrets.KNOWLEDGE_SEO_TOPIC_ID }}
           CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
         run: |
-          # Determine which files to process
-          if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
-            echo "Manual trigger detected - processing ALL files in kb/"
-            files=($(find kb -name "*.md" -type f))
-          else
-            echo "Push event detected - processing changed files only"
-            IFS=' ' read -r -a files <<< "$CHANGED_FILES"
-          fi
-          
-          for file in "${files[@]}"; do
-            [ -z "$file" ] && continue
+          get_files_to_process() {
+            if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+              echo "Manual trigger detected - processing ALL files in kb/"
+              find kb -name "*.md" -type f
+            else
+              echo "Push event detected - processing changed files only"
+              echo "$CHANGED_FILES"
+            fi
+          }
+
+          get_files_to_process | while IFS= read -r file; do
+            if [ -z "$file" ] || [[ "$file" != *.md ]]; then
+              continue
+            fi
             
+            echo "---"
             echo "Processing: $file"
             
-            # Determine topic based on subfolder - Knowledge categories
             TOPIC_ID=$DEFAULT_TOPIC_ID
             case "$file" in
+              *"/AI/"*) TOPIC_ID=1159 ;;
               *"/AI/0_fundamentals/"*) TOPIC_ID=1186 ;;
               *"/AI/1_models/"*) TOPIC_ID=1187 ;;
               *"/AI/2_agents/"*) TOPIC_ID=1188 ;;
@@ -63,6 +67,7 @@ jobs:
               *"/AI/5_ethics-and-governance/"*) TOPIC_ID=1191 ;;
               *"/AI/6_future-trends/"*) TOPIC_ID=1192 ;;
               *"/SEO/0_fundamentals/"*) TOPIC_ID=1162 ;;
+              *"/SEO/"*) TOPIC_ID=1158 ;;
               *"/SEO/1_research-and-strategy/"*) TOPIC_ID=1163 ;;
               *"/SEO/2_content-and-on-page/"*) TOPIC_ID=1164 ;;
               *"/SEO/3_technical-seo/"*) TOPIC_ID=1165 ;;
@@ -77,9 +82,12 @@ jobs:
               *"/TOOLS/image-video-generation/"*) TOPIC_ID=1601 ;;
               *"/TOOLS/marketing-automation/"*) TOPIC_ID=1602 ;;
               *"/TOOLS/marketing-automation/seo-optimization/"*) TOPIC_ID=1603 ;;
-	          *"/TOOLS/productivity-workflow/"*) TOPIC_ID=1604 ;;
-	          *"/TOOLS/research-knowledge-agents/"*) TOPIC_ID=1605 ;;
-	          *"/TOOLS/social-media/"*) TOPIC_ID=1605 ;;
+              *"/TOOLS/productivity-workflow/"*) TOPIC_ID=1604 ;;
+              *"/TOOLS/research-knowledge-agents/"*) TOPIC_ID=1605 ;;
+              *"/TOOLS/social-media/"*) TOPIC_ID=1606 ;;
+              *"/CORE/"*) TOPIC_ID=1607 ;;
+              *"/CORE/core-concepts/"*) TOPIC_ID=1608 ;;
+              *"/CORE/strategy-application/"*) TOPIC_ID=1609 ;;
             esac
             
             echo "Assigned to topic ID: $TOPIC_ID"
@@ -132,9 +140,8 @@ jobs:
               content=$(sed '1{/^---$/!q;};1,/^---$/d' "${file}")
             fi
             
-            content=$(echo "$content" | sed -e 's/__$$$[^]]*$$$__/\1/g' -e 's/\*\*$$$[^]]*$$$\*\*/\1/g' -e 's/_$$$[^]]*$$$_/\1/g' -e 's/\*$$$[^]]*$$$\*/\1/g')
             content=$(echo "$content" | sed -e 's/$$[^]|]*|$[^]]*$$$/\1/g' -e 's/$$$[^]]*$$$/\1/g')
-            content=$(echo "$content" | sed -e 's/!$$$[^]]*$$$//g' -e 's/\^[a-zA-Z0-9-]*$//g')
+            content=$(echo "$content" | sed -e 's/!$$[^]]*$$//g' -e 's/\^[a-zA-Z0-9-]*//g')
             content=$(echo "$content" | sed '/^```dataview$/,/^```$/d')
             
             echo "$content" > /tmp/content.md
@@ -187,7 +194,6 @@ jobs:
               echo "Creating new post"
             fi
             
-            # Build JSON payload - using your confirmed 'knowledge_topics' (plural)
             if [ ! -z "$excerpt" ]; then
               json_payload=$(jq -n --arg title "$title" --arg content "$html_content" --arg excerpt "$excerpt" --argjson topic "$TOPIC_ID" --argjson tags "$tag_ids" '{title: $title, content: $content, excerpt: $excerpt, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags}')
             else
@@ -217,9 +223,8 @@ jobs:
               echo "✗ Failed to sync: $title (HTTP $http_code)"
               echo "$body"
             fi
-            echo "---"
           done
-          
+
       - name: Summary
         if: github.event_name == 'workflow_dispatch' || steps.changed-files.outputs.any_changed == 'true'
         run: |
