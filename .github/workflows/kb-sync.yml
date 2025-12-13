@@ -212,7 +212,7 @@ jobs:
               post_id=$(echo "$body" | jq -r '.id')
               echo "Generating embeddings for Post ID: $post_id"
               embed_payload=$(jq -n --argjson post_id "$post_id" '{postId: $post_id, envId: "default"}')
-              embed_response=$(curl -s -w "\n%{http_code}" -X POST -H "Authorization: Bearer $BEARER_TOKEN" -H "Content-Type: application/json" -d "$embed_payload" "$WP_URL/wp-json/mwai/v1/vectors/add")
+              embed_response=$(curl -s -w "\n%{http_code}" -X POST -H "Authorization: Bearer $BEARER_TOKEN" -H "Content-Type: application/json" -d "$embed_payload" "$WP_URL/wp-json/mwai/v2/vectors/add")
               embed_http_code=$(echo "$embed_response" | tail -n1)
               if [ "$embed_http_code" -eq 200 ]; then
                 echo "✓ Embeddings generated successfully."
