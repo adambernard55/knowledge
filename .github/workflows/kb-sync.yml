@@ -107,13 +107,13 @@ jobs:
             tags=""
             if grep -q "^---$" "${file}"; then
               front_matter=$(sed -n '/^---$/,/^---$/p' "${file}" | sed '1d;$d')
-              fm_title=$(echo "$front_matter" | grep -i "^title:" | sed 's/^title: *//I' | sed 's/^["'\'']$.*$["'\'']$/\1/')
+              fm_title=$(echo "$front_matter" | grep -i "^title:" | sed 's/^title: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
               if [ ! -z "$fm_title" ]; then
                 title="$fm_title"
               fi
-              excerpt=$(echo "$front_matter" | grep -i "^excerpt:" | sed 's/^excerpt: *//I' | sed 's/^["'\'']$.*$["'\'']$/\1/')
+              excerpt=$(echo "$front_matter" | grep -i "^excerpt:" | sed 's/^excerpt: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
               if [ -z "$excerpt" ]; then
-                excerpt=$(echo "$front_matter" | grep -i "^summary:" | sed 's/^summary: *//I' | sed 's/^["'\'']$.*$["'\'']$/\1/' | sed 's/^|-$//' | sed 's/^|$//')
+                excerpt=$(echo "$front_matter" | grep -i "^summary:" | sed 's/^summary: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/' | sed 's/^|-$//' | sed 's/^|$//')
               fi
               tags=$(echo "$front_matter" | grep -i "^tags:" | sed 's/^tags: *//I' | sed 's/[$$]//g' | sed 's/,/ /g')
               if [ -z "$tags" ]; then
