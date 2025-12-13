@@ -140,8 +140,8 @@ jobs:
               content=$(sed '1{/^---$/!q;};1,/^---$/d' "${file}")
             fi
             
-            content=$(echo "$content" | sed -e 's/$$[^]|]*|$[^]]*$$$/\1/g' -e 's/$$$[^]]*$$$/\1/g')
-            content=$(echo "$content" | sed -e 's/!$$[^]]*$$//g' -e 's/\^[a-zA-Z0-9-]*//g')
+            content=$(echo "$content" | sed -e 's/\[\[\([^]|]*\)|\([^]]*\)\]\]/\1/g' -e 's/\[\[\([^]]*\)\]\]/\1/g')
+            content=$(echo "$content" | sed -e 's/!\[\[[^]]*\]\]//g' -e 's/\^[a-zA-Z0-9-]*//g')
             content=$(echo "$content" | sed '/^```dataview$/,/^```$/d')
             
             echo "$content" > /tmp/content.md
@@ -156,7 +156,7 @@ jobs:
               continue
             fi
             
-            html_content=$(echo "$html_content" | sed -e 's/<table>/<table style="border-collapse:collapse;width:100%;border:1px solid #ddd;">/g' -e 's/<th$[^>]*$>/<th\1 style="border:1px solid #ddd;padding:8px;background:#f4f4f4;text-align:left;">/g' -e 's/<td$[^>]*$>/<td\1 style="border:1px solid #ddd;padding:8px;text-align:left;">/g')
+            html_content=$(echo "$html_content" | sed -e 's/<table>/<table style="border-collapse:collapse;width:100%;border:1px solid #ddd;">/g' -e 's/<th\([^>]*\)>/<th\1 style="border:1px solid #ddd;padding:8px;background:#f4f4f4;text-align:left;">/g' -e 's/<td\([^>]*\)>/<td\1 style="border:1px solid #ddd;padding:8px;text-align:left;">/g')
             
             auth_header=$(echo -n "$WP_USERNAME:$WP_APP_PASSWORD" | base64)
             
