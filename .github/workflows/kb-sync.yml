@@ -55,6 +55,7 @@ jobs:
             # Determine topic based on subfolder - Knowledge categories
             TOPIC_ID=$DEFAULT_TOPIC_ID
             case "$file" in
+              *"/AI/"*) TOPIC_ID=1159 ;;
               *"/AI/0_fundamentals/"*) TOPIC_ID=1186 ;;
               *"/AI/1_models/"*) TOPIC_ID=1187 ;;
               *"/AI/2_agents/"*) TOPIC_ID=1188 ;;
@@ -63,6 +64,7 @@ jobs:
               *"/AI/5_ethics-and-governance/"*) TOPIC_ID=1191 ;;
               *"/AI/6_future-trends/"*) TOPIC_ID=1192 ;;
               *"/SEO/0_fundamentals/"*) TOPIC_ID=1162 ;;
+              *"/SEO/"*) TOPIC_ID=1158 ;;
               *"/SEO/1_research-and-strategy/"*) TOPIC_ID=1163 ;;
               *"/SEO/2_content-and-on-page/"*) TOPIC_ID=1164 ;;
               *"/SEO/3_technical-seo/"*) TOPIC_ID=1165 ;;
@@ -79,7 +81,10 @@ jobs:
               *"/TOOLS/marketing-automation/seo-optimization/"*) TOPIC_ID=1603 ;;
               *"/TOOLS/productivity-workflow/"*) TOPIC_ID=1604 ;;
               *"/TOOLS/research-knowledge-agents/"*) TOPIC_ID=1605 ;;
-              *"/TOOLS/social-media/"*) TOPIC_ID=1605 ;;
+              *"/TOOLS/social-media/"*) TOPIC_ID=1606 ;;
+              *"/CORE/"*) TOPIC_ID=1607 ;;
+              *"/CORE/core-concepts/"*) TOPIC_ID=1608 ;;
+              *"/CORE/strategy-application/"*) TOPIC_ID=1609 ;;
             esac
             
             echo "Assigned to topic ID: $TOPIC_ID"
