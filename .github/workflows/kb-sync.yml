@@ -38,18 +38,24 @@ jobs:
           DEFAULT_TOPIC_ID: ${{ secrets.KNOWLEDGE_SEO_TOPIC_ID }}
           CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
         run: |
-          # Determine which files to process
-          if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
-            echo "Manual trigger detected - processing ALL files in kb/"
-            files=($(find kb -name "*.md" -type f))
-          else
-            echo "Push event detected - processing changed files only"
-            IFS=' ' read -r -a files <<< "$CHANGED_FILES"
-          fi
-          
-          for file in "${files[@]}"; do
-            [ -z "$file" ] && continue
+          # ROBUSTNESS: Use a more reliable method to read file lists
+          get_files_to_process() {
+            if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+              echo "Manual trigger detected - processing ALL files in kb/"
+              find kb -name "*.md" -type f
+            else
+              echo "Push event detected - processing changed files only"
+              echo "$CHANGED_FILES"
+            fi
+          }
+
+          get_files_to_process | while IFS= read -r file; do
+            # ROBUSTNESS: Skip empty lines or non-markdown files explicitly
+            if [ -z "$file" ] || [[ "$file" != *.md ]]; then
+              continue
+            fi
             
+            echo "---"
             echo "Processing: $file"
             
             # Determine topic based on subfolder - Knowledge categories
@@ -221,7 +227,6 @@ jobs:
               echo "✗ Failed to sync: $title (HTTP $http_code)"
               echo "$body"
             fi
-            echo "---"
           done
           
       - name: Summary
