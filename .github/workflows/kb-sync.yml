@@ -74,6 +74,7 @@ jobs:
               *"/SEO/4_ai-and-automation/"*) TOPIC_ID=1166 ;;
               *"/SEO/5_measurement-and-optimization/"*) TOPIC_ID=1167 ;;
               *"/SEO/6_future-trends/"*) TOPIC_ID=1168 ;;
+              *"/TOOLS/"*) TOPIC_ID=1160 ;;
               *"/TOOLS/ai-foundation-models/"*) TOPIC_ID=1596 ;;
               *"/TOOLS/analytics-data-insights/"*) TOPIC_ID=1597 ;;
               *"/TOOLS/audio-generation/"*) TOPIC_ID=1598 ;;
