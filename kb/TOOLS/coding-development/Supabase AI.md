@@ -17,7 +17,7 @@ tags: ["ai", "database", "sql", "supabase", "code-generation", "developer-tools"
 kb_status: "published"
 meta_description: "Supabase AI is an intelligent coding assistant embedded within the Supabase platform that translates natural language into SQL, manages Postgres databases, and accelerates backend development."
 keyword: "Supabase AI, SQL generator, database assistant, AI for developers"
-excerpt: "Supabase AI helps developers turn English prompts into SQL queries, debug database issues, and generate backend logic — all within the Supabase ecosystem."
+Excerpt: "Supabase AI helps developers turn English prompts into SQL queries, debug database issues, and generate backend logic — all within the Supabase ecosystem."
 ---
 
 # Supabase AI

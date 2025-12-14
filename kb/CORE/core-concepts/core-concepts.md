@@ -1,2 +1,7 @@
 # Core Concepts
 
+This section details the technical building blocks and fundamental techniques that power the Strategic Intelligence Engine's (SIE) ability to understand and process information. It serves as the engine room of the entire system, explaining the core mechanics that allow AI agents to interact with the knowledge base in a meaningful way.
+
+The central pillar of this architecture is [Retrieval-Augmented Generation (RAG)](app://obsidian.md/04_retrieval-augmented-generation-rag), the primary method used to provide agents with real-time, factual context. This process is powered by [Vector Databases](app://obsidian.md/05_vector-databases), which enable the sophisticated semantic search required to find information based on meaning rather than just keywords.
+
+The overall structure is defined in the [Anatomy](app://obsidian.md/00_anatomy) of the knowledge base, which outlines how components fit together. To ensure seamless communication and interoperability between agents and data sources, the system adheres to the [Model Context Protocol (MCP)](app://obsidian.md/01_model-context-protocol-mcp). Finally, the section explores [Advanced Retrieval Techniques](app://obsidian.md/02_advanced-retrieval-techniques) that go beyond standard RAG to enhance the precision, governance, and contextual awareness of the information provided to the agents. Together, these concepts form the technical foundation for transforming raw data into an intelligent, actionable asset.

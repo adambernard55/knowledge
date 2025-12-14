@@ -68,7 +68,7 @@ SORT file.name ASC
 
 | Topic                                     | Description                                                                                                                                                                                                                                 |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [[Anatomy of an AI agent knowledge base]] | Defines the architecture and components of the knowledge base (the Master Hub) that powers the Strategic Intelligence Engine's (SIE) agents, enabling them to perform complex reasoning and automated tasks with high accuracy and context. |
+| [[anatomy-of-an-ai-agent-knowledge-base]] | Defines the architecture and components of the knowledge base (the Master Hub) that powers the Strategic Intelligence Engine's (SIE) agents, enabling them to perform complex reasoning and automated tasks with high accuracy and context. |
 </executed_result>
 </dataview_block>
 

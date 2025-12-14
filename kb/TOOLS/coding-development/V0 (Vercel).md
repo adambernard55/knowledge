@@ -17,7 +17,7 @@ tags: ["ai", "code-generation", "frontend", "tailwind", "react", "vercel", "desi
 kb_status: "published"
 meta_description: "V0 by Vercel is an AI-powered code generation tool that turns English prompts into production-ready React and Tailwind components for developers and designers."
 keyword: "V0, Vercel, AI code generation, Tailwind, React UI builder"
-excerpt: "V0 by Vercel is an AI code generator that instantly transforms text prompts into clean, production-ready React and Tailwind code — built for speed, design, and deployment."
+Excerpt: "V0 by Vercel is an AI code generator that instantly transforms text prompts into clean, production-ready React and Tailwind code — built for speed, design, and deployment."
 ---
 
 # V0 (Vercel)
