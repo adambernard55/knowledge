@@ -7,6 +7,9 @@ updated: "2025-11-28"
 status: "Active"
 doc_type: "reference_document"
 summary: "Explains what Vector Databases are and their critical role in enabling semantic search for the SIE's RAG pipelines, allowing agents to find information based on meaning rather than keywords."
+meta_description: "Learn what a vector database is and its critical role in AI systems. This guide explains how they store vector embeddings to power semantic search for RAG pipelines, enabling AI to find information by meaning."
+keyword: "Vector Databases"
+excerpt: "Traditional databases find keywords; Vector Databases find meaning. This core concept explains what a vector database is and how it powers the Strategic Intelligence Engine (SIE). Learn how text is converted into 'vector embeddings' to enable semantic search—the technology that allows AI agents to retrieve contextually relevant information for Retrieval-Augmented Generation (RAG), dramatically improving accuracy and reducing hallucinations."
 tags:
   - vector-database
   - embeddings

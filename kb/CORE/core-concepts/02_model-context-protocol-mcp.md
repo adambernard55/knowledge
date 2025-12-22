@@ -7,6 +7,9 @@ updated: "2025-11-27"
 status: "Active"
 doc_type: "reference_document"
 summary: "Defines the Model Context Protocol (MCP) as an emerging standard for how AI agents connect to and retrieve information from knowledge sources, tools, and other agents, ensuring interoperability and scalability for the SIE."
+meta_description: "Learn about the Model Context Protocol (MCP), an emerging standard for AI agent communication that enables interoperability and scalability for complex systems like the Strategic Intelligence Engine (SIE)."
+keyword: "Model Context Protocol"
+excerpt: "The Model Context Protocol (MCP) is an emerging universal standard that acts as a 'universal translator' for AI agents. This protocol is critical for the Strategic Intelligence Engine (SIE) because it solves the challenge of scalability by replacing custom integrations with a single, compliant connection. MCP standardizes the data retrieval step, making it a complementary protocol to techniques like Retrieval-Augmented Generation (RAG)."
 tags:
   - mcp
   - ai-agents

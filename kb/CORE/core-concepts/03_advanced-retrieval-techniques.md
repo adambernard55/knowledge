@@ -7,6 +7,9 @@ updated: "2025-11-27"
 status: "Active"
 doc_type: "reference_document"
 summary: "Explores advanced methods beyond standard RAG for providing AI agents with precise, governed, and contextually-aware information from a knowledge base, enhancing their reasoning and decision-making capabilities."
+meta_description: "Explore advanced retrieval techniques beyond standard RAG, including RAG on the Wire and hierarchical search, to enhance AI agent accuracy, governance, and reasoning."
+keyword: "Advanced Retrieval Techniques"
+excerpt: "While standard RAG is foundational, advanced retrieval techniques are crucial for building truly intelligent and trustworthy AI agents. This document explores methods like 'RAG on the Wire' for enforcing governance, 'Hierarchical Search' for precision, and the use of 'Negative Examples' to create behavioral guardrails. Learn how these strategies move beyond simple data lookup to provide the nuanced, context-aware information required by the Strategic Intelligence Engine (SIE)."
 tags:
   - retrieval
   - rag

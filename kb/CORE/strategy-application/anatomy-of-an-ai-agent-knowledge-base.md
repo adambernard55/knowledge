@@ -151,7 +151,7 @@ The consensus is that agent knowledge bases benefit from a **multi-modal retriev
 
 ### Model Context Protocol (MCP)
 
-The [[01_model-context-protocol-mcp|Model Context Protocol]] will likely play a leading role as the standard for how agents access tools and data.
+The [[02_model-context-protocol-mcp|Model Context Protocol]] will likely play a leading role as the standard for how agents access tools and data.
 
 "Instead of building custom integrations for each knowledge source, agents can plug into any MCP-compatible system," says Sunder. This could even allow agents to communicate across organizational boundaries.
 
@@ -231,9 +231,9 @@ Since organizational knowledge is always evolving, **updating the system to keep
 
 ## Related Concepts
 
-- [[04_retrieval-augmented-generation-rag|Retrieval-Augmented Generation (RAG)]]
-- [[05_vector-databases|Vector Databases]]
-- [[02_advanced-retrieval-techniques|Advanced Retrieval Techniques]]
-- [[01_model-context-protocol-mcp|Model Context Protocol (MCP)]]
-- [[03_the-data-moat|The Data Moat]]
+- [[05_retrieval-augmented-generation-rag|Retrieval-Augmented Generation (RAG)]]
+- [[06_vector-databases|Vector Databases]]
+- [[03_advanced-retrieval-techniques|Advanced Retrieval Techniques]]
+- [[02_model-context-protocol-mcp|Model Context Protocol (MCP)]]
+- [[04_the-data-moat|The Data Moat]]
 

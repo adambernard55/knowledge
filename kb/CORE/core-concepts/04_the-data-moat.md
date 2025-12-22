@@ -7,6 +7,9 @@ updated: "2025-11-27"
 status: "Active"
 doc_type: "reference_document"
 summary: "Defines a 'Data Moat' as a defensible competitive advantage built from proprietary data, and explains how the Strategic Intelligence Engine (SIE) is designed to construct and activate this critical asset for clients."
+meta_description: "Discover what a Data Moat is and how the Strategic Intelligence Engine (SIE) transforms your proprietary data into a defensible competitive advantage for the AI era."
+keyword: "Data Moat"
+excerpt: "In an era of commoditized AI, a 'Data Moat'—a defensible advantage built from your unique, proprietary data—is the ultimate differentiator. This document explains how the Strategic Intelligence Engine (SIE) is specifically designed to construct this critical asset. Learn how the SIE transforms scattered institutional knowledge into a structured, active 'Master Hub' that provides superior performance, unique insights, and a non-replicable competitive advantage that generic AI cannot match."
 tags:
   - data-moat
   - competitive-advantage

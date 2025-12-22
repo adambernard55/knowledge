@@ -287,9 +287,9 @@ Organizations with robust knowledge bases are positioned to dominate not just tr
 ## Related Concepts
 
 - [[00_anatomy|Anatomy of an Agent Knowledge Base]]
-- [[04_retrieval-augmented-generation-rag|Retrieval-Augmented Generation (RAG)]]
+- [[05_retrieval-augmented-generation-rag|Retrieval-Augmented Generation (RAG)]]
 - [[anatomy-ai-agent-kb|Anatomy of an AI Agent Knowledge Base]]
-- [[03_the-data-moat|The Data Moat]]
+- [[04_the-data-moat|The Data Moat]]
 
 ---
 

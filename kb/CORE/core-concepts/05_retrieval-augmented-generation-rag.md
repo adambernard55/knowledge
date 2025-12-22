@@ -7,6 +7,9 @@ updated: "2025-11-28"
 status: "Active"
 doc_type: "reference_document"
 summary: "Explains Retrieval-Augmented Generation (RAG), the core technique used by the Strategic Intelligence Engine (SIE) to provide agents with real-time, factual context from the Master Hub, enhancing the accuracy and relevance of their outputs."
+meta_description: "Discover Retrieval-Augmented Generation (RAG), the core AI technique for enhancing LLM accuracy by connecting them to a live knowledge base to prevent hallucinations."
+keyword: "Retrieval-Augmented Generation"
+excerpt: "Retrieval-Augmented Generation (RAG) is the foundational technique that allows the Strategic Intelligence Engine (SIE) to produce accurate, trustworthy results. By retrieving real-time, factual information from a business's central Knowledge Base before generating a response, RAG solves the core LLM problems of knowledge cutoffs and hallucinations. This document explains the RAG workflow—from vector search to augmented prompts—and clarifies its critical role in grounding AI agents in verifiable truth."
 tags:
   - rag
   - retrieval
