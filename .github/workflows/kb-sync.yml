@@ -123,25 +123,20 @@ jobs:
             if grep -q "^---$" "${file}"; then
               front_matter=$(sed -n '/^---$/,/^---$/p' "${file}" | sed '1d;$d')
               
-              # Extract title
               fm_title=$(echo "$front_matter" | grep -i "^title:" | sed 's/^title: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
               if [ ! -z "$fm_title" ]; then
                 title="$fm_title"
               fi
               
-              # Extract excerpt
               excerpt=$(echo "$front_matter" | grep -i "^excerpt:" | sed 's/^excerpt: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
               if [ -z "$excerpt" ]; then
                 excerpt=$(echo "$front_matter" | grep -i "^summary:" | sed 's/^summary: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/' | sed 's/^|-$//' | sed 's/^|$//')
               fi
               
-              # Extract keyword (case-insensitive)
               keyword=$(echo "$front_matter" | grep -i "^keyword:" | sed 's/^keyword: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
               
-              # Extract meta_description (case-insensitive, handles _ or - or space)
               meta_description=$(echo "$front_matter" | grep -iE "^meta[_-]?description:" | sed 's/^meta[_-]*description: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
               
-              # Extract tags
               tags=$(echo "$front_matter" | grep -i "^tags:" | sed 's/^tags: *//I' | sed 's/[$$]//g' | sed 's/,/ /g')
               if [ -z "$tags" ]; then
                 in_tags=false
@@ -160,7 +155,6 @@ jobs:
                 tags=$(echo "$tags" | xargs)
               fi
               
-              # Extract topic override
               fm_topic=$(echo "$front_matter" | grep -i "^topic:" | sed 's/^topic: *//I')
               if [ ! -z "$fm_topic" ]; then
                 TOPIC_ID=$fm_topic
@@ -224,7 +218,6 @@ jobs:
               echo "Creating new post"
             fi
             
-# Build base payload arguments
             base_args=(
               --arg title "$title"
               --arg content "$html_content"
@@ -232,12 +225,10 @@ jobs:
               --argjson tags "$tag_ids"
             )
             
-            # Add excerpt if present
             if [ ! -z "$excerpt" ]; then
               base_args+=(--arg excerpt "$excerpt")
             fi
             
-            # Build meta fields object using jq for proper JSON handling
             meta_json="{}"
             has_meta=false
             
@@ -253,7 +244,6 @@ jobs:
               has_meta=true
             fi
             
-            # Build JSON payload
             if [ "$has_meta" = true ]; then
               if [ ! -z "$excerpt" ]; then
                 json_payload=$(jq -n \
