@@ -224,7 +224,7 @@ jobs:
               echo "Creating new post"
             fi
             
-            # Build base payload arguments
+# Build base payload arguments
             base_args=(
               --arg title "$title"
               --arg content "$html_content"
@@ -237,22 +237,24 @@ jobs:
               base_args+=(--arg excerpt "$excerpt")
             fi
             
-            # Build meta fields object if keyword or meta_description exist
-            meta_fields=()
+            # Build meta fields object using jq for proper JSON handling
+            meta_json="{}"
+            has_meta=false
+            
             if [ ! -z "$keyword" ]; then
-              meta_fields+=("\"rank_math_focus_keyword\":\"$keyword\"")
               echo "Setting focus keyword: $keyword"
+              meta_json=$(echo "$meta_json" | jq --arg key "$keyword" '. + {rank_math_focus_keyword: $key}')
+              has_meta=true
             fi
+            
             if [ ! -z "$meta_description" ]; then
-              # Escape quotes in meta description for JSON
-              escaped_meta=$(echo "$meta_description" | sed 's/"/\\"/g')
-              meta_fields+=("\"rank_math_description\":\"$escaped_meta\"")
               echo "Setting meta description: $meta_description"
+              meta_json=$(echo "$meta_json" | jq --arg desc "$meta_description" '. + {rank_math_description: $desc}')
+              has_meta=true
             fi
             
             # Build JSON payload
-            if [ ${#meta_fields[@]} -gt 0 ]; then
-              meta_json="{$(IFS=,; echo "${meta_fields[*]}")}"
+            if [ "$has_meta" = true ]; then
               if [ ! -z "$excerpt" ]; then
                 json_payload=$(jq -n \
                   "${base_args[@]}" \
