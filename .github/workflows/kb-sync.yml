@@ -27,6 +27,7 @@ jobs:
         uses: tj-actions/changed-files@v40
         with:
           files: 'kb/**/*.md'
+          separator: '\n'
 
       - name: Sync to Knowledge Base
         if: github.event_name == 'workflow_dispatch' || steps.changed-files.outputs.any_changed == 'true'
@@ -56,25 +57,41 @@ jobs:
             echo "---"
             echo "Processing: $file"
             
+# FIXED: Reorder case statement - MOST SPECIFIC FIRST
             TOPIC_ID=$DEFAULT_TOPIC_ID
             case "$file" in
-              *"/AI/"*) TOPIC_ID=1159 ;;
+              # AI subcategories - SPECIFIC FIRST
               *"/AI/0_fundamentals/"*) TOPIC_ID=1186 ;;
+              *"/AI/1_models/specific-models/"*) TOPIC_ID=1779 ;;
+              *"/AI/1_models/concepts-and-techniques/"*) TOPIC_ID=1780 ;;
+              *"/AI/1_models/evaluation-and-tooling/"*) TOPIC_ID=1781 ;;
+              *"/AI/1_models/comparisons/"*) TOPIC_ID=1782 ;;
               *"/AI/1_models/"*) TOPIC_ID=1187 ;;
+              *"/AI/2_agents/toolkits/"*) TOPIC_ID=1783 ;;
               *"/AI/2_agents/"*) TOPIC_ID=1188 ;;
+              *"/AI/3_methods/mcp/"*) TOPIC_ID=1784 ;;
               *"/AI/3_methods/"*) TOPIC_ID=1189 ;;
+              *"/AI/4_applications/business/"*) TOPIC_ID=1785 ;;
+              *"/AI/4_applications/marketing/"*) TOPIC_ID=1786 ;;
               *"/AI/4_applications/"*) TOPIC_ID=1190 ;;
               *"/AI/5_ethics-and-governance/"*) TOPIC_ID=1191 ;;
               *"/AI/6_future-trends/"*) TOPIC_ID=1192 ;;
+              *"/AI/"*) TOPIC_ID=1159 ;;
+              
+              # SEO subcategories - SPECIFIC FIRST
               *"/SEO/0_fundamentals/"*) TOPIC_ID=1162 ;;
-              *"/SEO/"*) TOPIC_ID=1158 ;;
               *"/SEO/1_research-and-strategy/"*) TOPIC_ID=1163 ;;
               *"/SEO/2_content-and-on-page/"*) TOPIC_ID=1164 ;;
               *"/SEO/3_technical-seo/"*) TOPIC_ID=1165 ;;
+              *"/SEO/4_ai-and-automation/using-ai-for-seo/"*) TOPIC_ID=1787 ;;
+              *"/SEO/4_ai-and-automation/optimizing-for-ai/"*) TOPIC_ID=1788 ;;
               *"/SEO/4_ai-and-automation/"*) TOPIC_ID=1166 ;;
               *"/SEO/5_measurement-and-optimization/"*) TOPIC_ID=1167 ;;
               *"/SEO/6_future-trends/"*) TOPIC_ID=1168 ;;
-              *"/TOOLS/"*) TOPIC_ID=1160 ;;
+              *"/SEO/"*) TOPIC_ID=1158 ;;
+              
+              # TOOLS subcategories - SPECIFIC FIRST
+              *"/TOOLS/marketing-automation/seo-optimization/"*) TOPIC_ID=1603 ;;
               *"/TOOLS/ai-foundation-models/"*) TOPIC_ID=1596 ;;
               *"/TOOLS/analytics-data-insights/"*) TOPIC_ID=1597 ;;
               *"/TOOLS/audio-generation/"*) TOPIC_ID=1598 ;;
@@ -82,13 +99,15 @@ jobs:
               *"/TOOLS/content-creation/"*) TOPIC_ID=1600 ;;
               *"/TOOLS/image-video-generation/"*) TOPIC_ID=1601 ;;
               *"/TOOLS/marketing-automation/"*) TOPIC_ID=1602 ;;
-              *"/TOOLS/marketing-automation/seo-optimization/"*) TOPIC_ID=1603 ;;
               *"/TOOLS/productivity-workflow/"*) TOPIC_ID=1604 ;;
               *"/TOOLS/research-knowledge-agents/"*) TOPIC_ID=1605 ;;
               *"/TOOLS/social-media/"*) TOPIC_ID=1606 ;;
-              *"/CORE/"*) TOPIC_ID=1607 ;;
+              *"/TOOLS/"*) TOPIC_ID=1160 ;;
+              
+              # CORE subcategories - SPECIFIC FIRST
               *"/CORE/core-concepts/"*) TOPIC_ID=1608 ;;
               *"/CORE/strategy-application/"*) TOPIC_ID=1609 ;;
+              *"/CORE/"*) TOPIC_ID=1607 ;;
             esac
             
             echo "Assigned to topic ID: $TOPIC_ID"
@@ -106,16 +125,31 @@ jobs:
             
             excerpt=""
             tags=""
+            keyword=""
+            meta_description=""
+            
             if grep -q "^---$" "${file}"; then
               front_matter=$(sed -n '/^---$/,/^---$/p' "${file}" | sed '1d;$d')
+              
+              # Extract title
               fm_title=$(echo "$front_matter" | grep -i "^title:" | sed 's/^title: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
               if [ ! -z "$fm_title" ]; then
                 title="$fm_title"
               fi
+              
+              # Extract excerpt
               excerpt=$(echo "$front_matter" | grep -i "^excerpt:" | sed 's/^excerpt: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
               if [ -z "$excerpt" ]; then
                 excerpt=$(echo "$front_matter" | grep -i "^summary:" | sed 's/^summary: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/' | sed 's/^|-$//' | sed 's/^|$//')
               fi
+              
+              # Extract keyword (case-insensitive)
+              keyword=$(echo "$front_matter" | grep -i "^keyword:" | sed 's/^keyword: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
+              
+              # Extract meta_description (case-insensitive, handles _ or - or space)
+              meta_description=$(echo "$front_matter" | grep -iE "^meta[_-]?description:" | sed 's/^meta[_-]*description: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
+              
+              # Extract tags
               tags=$(echo "$front_matter" | grep -i "^tags:" | sed 's/^tags: *//I' | sed 's/[$$]//g' | sed 's/,/ /g')
               if [ -z "$tags" ]; then
                 in_tags=false
@@ -133,11 +167,14 @@ jobs:
                 done <<< "$front_matter"
                 tags=$(echo "$tags" | xargs)
               fi
+              
+              # Extract topic override
               fm_topic=$(echo "$front_matter" | grep -i "^topic:" | sed 's/^topic: *//I')
               if [ ! -z "$fm_topic" ]; then
                 TOPIC_ID=$fm_topic
                 echo "Topic overridden by frontmatter: $TOPIC_ID"
               fi
+              
               content=$(sed '1{/^---$/!q;};1,/^---$/d' "${file}")
             fi
             
@@ -195,10 +232,56 @@ jobs:
               echo "Creating new post"
             fi
             
+            # Build base payload arguments
+            base_args=(
+              --arg title "$title"
+              --arg content "$html_content"
+              --argjson topic "$TOPIC_ID"
+              --argjson tags "$tag_ids"
+            )
+            
+            # Add excerpt if present
             if [ ! -z "$excerpt" ]; then
-              json_payload=$(jq -n --arg title "$title" --arg content "$html_content" --arg excerpt "$excerpt" --argjson topic "$TOPIC_ID" --argjson tags "$tag_ids" '{title: $title, content: $content, excerpt: $excerpt, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags}')
+              base_args+=(--arg excerpt "$excerpt")
+            fi
+            
+            # Build meta fields object if keyword or meta_description exist
+            meta_fields=()
+            if [ ! -z "$keyword" ]; then
+              meta_fields+=("\"rank_math_focus_keyword\":\"$keyword\"")
+              echo "Setting focus keyword: $keyword"
+            fi
+            if [ ! -z "$meta_description" ]; then
+              # Escape quotes in meta description for JSON
+              escaped_meta=$(echo "$meta_description" | sed 's/"/\\"/g')
+              meta_fields+=("\"rank_math_description\":\"$escaped_meta\"")
+              echo "Setting meta description: $meta_description"
+            fi
+            
+            # Build JSON payload
+            if [ ${#meta_fields[@]} -gt 0 ]; then
+              meta_json="{$(IFS=,; echo "${meta_fields[*]}")}"
+              if [ ! -z "$excerpt" ]; then
+                json_payload=$(jq -n \
+                  "${base_args[@]}" \
+                  --argjson meta "$meta_json" \
+                  '{title: $title, content: $content, excerpt: $excerpt, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags, meta: $meta}')
+              else
+                json_payload=$(jq -n \
+                  "${base_args[@]}" \
+                  --argjson meta "$meta_json" \
+                  '{title: $title, content: $content, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags, meta: $meta}')
+              fi
             else
-              json_payload=$(jq -n --arg title "$title" --arg content "$html_content" --argjson topic "$TOPIC_ID" --argjson tags "$tag_ids" '{title: $title, content: $content, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags}')
+              if [ ! -z "$excerpt" ]; then
+                json_payload=$(jq -n \
+                  "${base_args[@]}" \
+                  '{title: $title, content: $content, excerpt: $excerpt, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags}')
+              else
+                json_payload=$(jq -n \
+                  "${base_args[@]}" \
+                  '{title: $title, content: $content, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags}')
+              fi
             fi
             
             echo "Syncing: $title with Topics: [1158, $TOPIC_ID]"
