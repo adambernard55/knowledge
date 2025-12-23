@@ -57,10 +57,8 @@ jobs:
             echo "---"
             echo "Processing: $file"
             
-# FIXED: Reorder case statement - MOST SPECIFIC FIRST
             TOPIC_ID=$DEFAULT_TOPIC_ID
             case "$file" in
-              # AI subcategories - SPECIFIC FIRST
               *"/AI/0_fundamentals/"*) TOPIC_ID=1186 ;;
               *"/AI/1_models/specific-models/"*) TOPIC_ID=1779 ;;
               *"/AI/1_models/concepts-and-techniques/"*) TOPIC_ID=1780 ;;
@@ -77,8 +75,6 @@ jobs:
               *"/AI/5_ethics-and-governance/"*) TOPIC_ID=1191 ;;
               *"/AI/6_future-trends/"*) TOPIC_ID=1192 ;;
               *"/AI/"*) TOPIC_ID=1159 ;;
-              
-              # SEO subcategories - SPECIFIC FIRST
               *"/SEO/0_fundamentals/"*) TOPIC_ID=1162 ;;
               *"/SEO/1_research-and-strategy/"*) TOPIC_ID=1163 ;;
               *"/SEO/2_content-and-on-page/"*) TOPIC_ID=1164 ;;
@@ -89,8 +85,6 @@ jobs:
               *"/SEO/5_measurement-and-optimization/"*) TOPIC_ID=1167 ;;
               *"/SEO/6_future-trends/"*) TOPIC_ID=1168 ;;
               *"/SEO/"*) TOPIC_ID=1158 ;;
-              
-              # TOOLS subcategories - SPECIFIC FIRST
               *"/TOOLS/marketing-automation/seo-optimization/"*) TOPIC_ID=1603 ;;
               *"/TOOLS/ai-foundation-models/"*) TOPIC_ID=1596 ;;
               *"/TOOLS/analytics-data-insights/"*) TOPIC_ID=1597 ;;
@@ -103,8 +97,6 @@ jobs:
               *"/TOOLS/research-knowledge-agents/"*) TOPIC_ID=1605 ;;
               *"/TOOLS/social-media/"*) TOPIC_ID=1606 ;;
               *"/TOOLS/"*) TOPIC_ID=1160 ;;
-              
-              # CORE subcategories - SPECIFIC FIRST
               *"/CORE/core-concepts/"*) TOPIC_ID=1608 ;;
               *"/CORE/strategy-application/"*) TOPIC_ID=1609 ;;
               *"/CORE/"*) TOPIC_ID=1607 ;;
