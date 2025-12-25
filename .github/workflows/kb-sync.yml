@@ -1,4 +1,35 @@
-- name: Sync to Knowledge Base
+name: Sync Knowledge Base to WordPress
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'kb/**/*.md'
+  workflow_dispatch:
+
+jobs:
+  sync-docs:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Install pandoc
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc
+          
+      - name: Get changed files
+        id: changed-files
+        if: github.event_name == 'push'
+        uses: tj-actions/changed-files@v40
+        with:
+          files: 'kb/**/*.md'
+          separator: '\n'
+
+      - name: Sync to Knowledge Base
         if: github.event_name == 'workflow_dispatch' || steps.changed-files.outputs.any_changed == 'true'
         env:
           WP_USERNAME: ${{ secrets.WP_USERNAME }}
@@ -261,3 +292,12 @@
               echo "$body"
             fi
           done
+
+      - name: Summary
+        if: github.event_name == 'workflow_dispatch' || steps.changed-files.outputs.any_changed == 'true'
+        run: |
+          if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+            echo "Knowledge Base sync completed (manual trigger - processed all files)"
+          else
+            echo "Knowledge Base sync completed (push trigger - processed changed files)"
+          fi
