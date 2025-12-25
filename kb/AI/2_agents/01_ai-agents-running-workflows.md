@@ -1,8 +1,11 @@
 ---
 title: "AI Agents Running Workflows: From Automation to Autonomous Orchestration"
-ai_category: methods-and-systems
+category: AI Agents
+Primary_Keyword: "agentic workflow"
+Meta Description: "Learn how AI agents execute multi-step workflows using a reasoning loop (ReAct). This guide covers the architecture, best practices, and the critical role of well-designed tools for building autonomous systems."
+Excerpt: "Modern AI agents do more than simply respond to prompts; they execute workflows. A workflow is a multi-step sequence of actions that an agent performs autonomously to achieve a complex goal."
 difficulty: intermediate
-last_updated: 2025-01-23
+last_updated: 2025-12-25
 kb_status: published
 tags:
   - ai-agents
@@ -21,7 +24,6 @@ related_topics:
 summary: Modern AI agents do more than simply respond to prompts; they execute workflows. A workflow is a multi-step sequence of actions that an agent performs autonomously to achieve a complex goal.
 aliases: []
 ---
-
 
 # AI Agents Running Workflows
 
@@ -56,7 +58,9 @@ At the heart of every workflow is a cyclical process known as the **Agentic Exe
 The loop can be broken down into five key stages:
 
 ```
+
 1. Interpret → 2. Plan → 3. Act → 4. Observe → 5. Reflect → (repeat)
+
 ```
 
 |Stage|Description|Example: "Summarize top 3 market news articles about AI"|
@@ -82,7 +86,13 @@ A robust agent capable of running workflows typically consists of four architect
 
 This modular design allows developers to swap out different LLMs, add new tools, or change the orchestration logic without rebuilding the entire system.
 
-## 4. Best Practices for Designing Reliable Workflows
+## 4. The Critical Role of Well-Designed Tools
+
+The **Tool/Action Layer** is arguably the most critical component for a high-performing agent. The agent's reasoning is only as good as the actions it can take. Poorly designed tools lead to confusion, incorrect tool selection, and failed workflows.
+
+The reliability and effectiveness of any agentic workflow depend directly on the quality of the tools it can call. For a comprehensive guide on how to design and implement robust tools, see [[08_designing-effective-agent-tools]].
+
+## 5. Best Practices for Designing Reliable Workflows
 
 To move agents from experimental prototypes to production-ready systems, their workflows must be reliable, transparent, and governable.
 
@@ -97,7 +107,7 @@ To move agents from experimental prototypes to production-ready systems, their w
 
 ---
 
-## 5. Key Takeaways
+## 6. Key Takeaways
 
 1. **Workflows Unlock True Agency:** An agent's ability to execute multi-step, goal-oriented workflows is what distinguishes it from a simple chatbot.
 2. **It's Orchestration, Not Just Automation:** Agentic workflows are dynamic and adaptive, created on-the-fly by an LLM-powered reasoning engine.

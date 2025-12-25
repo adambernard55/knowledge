@@ -103,6 +103,8 @@ Beyond simple calendar agents, n8n's AI capabilities can be used for:
 -   **Data Enrichment Pipelines:** An agent takes a company name, uses a web search tool to find its website and social media links, and updates a record in a database.
 -   **Personalized Email Campaigns:** An agent analyzes customer data to generate personalized email copy and schedules it for sending.
 
+> The n8n ecosystem is expanding to include AI-native integrations through the Model Context Protocol (MCP). The **n8n-mcp** project provides an optimized platform to help AI models better understand and orchestrate n8n workflows.
+
 ## 7. Key Takeaways
 
 1.  **n8n combines deterministic automation with agentic capabilities.** It uses a structured, node-based approach to build reliable AI-powered workflows.

@@ -83,6 +83,9 @@ AI-driven search is powered by natural language, not just keywords. Users are as
 
 To find these queries, use resources like Google's "People Also Ask" sections, AnswerThePublic, and discussions on forums like Reddit or Quora. Structure your content, particularly your headers and opening paragraphs, to directly address these questions.
 
+**Optimize for AI Citation with Answer Capsules:**
+A key tactic for Generative Engine Optimization (GEO) is the "answer capsule"—a concise, link-free summary placed directly under a heading. This format makes your content highly quotable by AI models. For more, see [[kb/SEO/4_ai-and-automation/2_optimizing-for-ai/01_generative-engine-optimization-playbook|The GEO Playbook]].
+
 ## 5. On‑Page Optimization Techniques
 
 ### 5.1 Titles and Meta Descriptions

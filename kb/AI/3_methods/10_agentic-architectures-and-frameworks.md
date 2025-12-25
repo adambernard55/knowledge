@@ -1,8 +1,11 @@
 ---
 title: "Agentic AI Systems: Architectures, Frameworks, and Memory"
-seo_category: methods-and-systems
+Primary_Keyword: "agentic architecture"
+Meta Description: "A technical guide to agentic AI architectures (ReAct, Plan-and-Execute, Reflexion), development frameworks (LangGraph, CrewAI), and memory systems for building autonomous agents."
+Excerpt: "This reference document provides a technical overview of the core components required to design, build, and deploy production-ready agentic systems. It covers foundational architectural patterns, leading development frameworks, and advanced memory systems."
+category: AI Methods
 difficulty: advanced
-last_updated: 2025-10-10
+last_updated: 2025-12-25
 kb_status: published
 tags:
   - ai-agents
@@ -15,10 +18,10 @@ tags:
   - autogen
   - memory-systems
 related_topics:
-  - what-are-ai-agents
-  - ai-agents-running-workflows
-  - how-to-build-an-ai-desktop-automation-agent
-  - advanced-prompt-engineering
+  - 00_introduction-to-ai-agents
+  - 01_ai-agents-running-workflows
+  - 08_designing-effective-agent-tools
+  - 09_advanced-prompt-engineering
 summary: This reference document provides a technical overview of the core components required to design, build, and deploy production-ready agentic systems. It covers foundational architectural patterns, leading development frameworks, and advanced memory systems.
 ---
 # Agentic AI Systems: Architectures, Frameworks, and Memory
@@ -51,7 +54,13 @@ The behavior and reasoning of an AI agent are governed by its underlying archite
 | **Plan-and-Execute** | The agent first creates a complete, multi-step plan to achieve the goal. It then executes each step in sequence, often using smaller, more efficient models for the execution phase. | Lower cost and latency for complex workflows. More predictable and structured than ReAct. | The initial plan can be rigid and may fail if the environment changes unexpectedly. Requires a robust planning phase. | Multi-step data analysis, content generation pipelines, business process automation. |
 | **Reflexion (Reflection and Self-Correction)** | An advanced pattern where the agent performs a task, then generates a critique of its own performance. It uses this linguistic feedback to refine its plan and retry the task, learning from its mistakes over multiple cycles. | Enables self-improvement and leads to higher accuracy on complex problems. Good for tasks with clear success criteria. | Slower and more computationally expensive. Requires a model capable of high-quality self-critique. | Complex code generation, mathematical problem solving, scientific research. |
 
-## 3. Key Frameworks for Agent Development
+## 3. The Tool/Action Layer: An Agent's Capabilities
+
+The **Tool/Action Layer** is the set of functions and capabilities an agent can execute to interact with the world. This includes everything from web search APIs and database connectors to code interpreters. The design of this library is a critical architectural consideration, as it defines the agent's operational boundaries and is fundamental to its success.
+
+For best practices on creating a robust and reliable toolset, refer to the guide on [[kb/AI/2_agents/08_designing-effective-agent-tools]].
+
+## 4. Key Frameworks for Agent Development
 
 Several open-source frameworks have emerged to simplify the implementation of these architectural patterns.
 
@@ -63,24 +72,24 @@ Several open-source frameworks have emerged to simplify the implementation of th
 
 **Practitioner's Note:** It is recommended to master one framework at a time. Start with **CrewAI** for rapid prototyping and move to **LangGraph** for production-grade control and observability.
 
-## 4. Advanced Agent Concepts: Memory Systems
+## 5. Advanced Agent Concepts: Memory Systems
 
 For an agent to perform long-running or context-dependent tasks, it requires a memory system that extends beyond the LLM's limited context window.
 
-### 4.1 Types of Agent Memory
+### 5.1 Types of Agent Memory
 
 | Memory Type | Description | Implementation Examples |
 |---|---|---|
 | **Short-Term (Working) Memory** | Stores information relevant to the current task or conversation session. It is typically volatile and resets after the task is complete. | In-memory dictionaries, Redis caches, LangGraph's built-in state management. |
 | **Long-Term Memory** | A persistent store of knowledge that the agent accumulates over time. This allows the agent to recall past interactions, learned facts, and user preferences across sessions. | **Vector databases** (for semantic search), **knowledge graphs** (for structured facts), traditional SQL/NoSQL databases. |
 
-### 4.2 The Hybrid Memory Approach
+### 5.2 The Hybrid Memory Approach
 The current best practice for production agents is a **hybrid memory system** that combines multiple strategies:
 1.  **Semantic Retrieval:** Use a vector store to retrieve relevant past experiences or documents based on the similarity to the current situation.
 2.  **Factual Recall:** Use a knowledge graph or a relational database to store and query structured information (e.g., user profiles, product specifications).
 3.  **Summarization:** Use an LLM to periodically summarize conversation history, compressing it to fit into the context window while retaining key information.
 
-## 5. Practical Implementation and Evaluation
+## 6. Practical Implementation and Evaluation
 
 Building agentic systems requires a portfolio of practical skills that can be demonstrated through targeted projects.
 
@@ -90,7 +99,7 @@ Building agentic systems requires a portfolio of practical skills that can be de
 | **Multi-Agent Content System** | A "crew" of agents with specialized roles (e.g., Researcher, Writer, Editor, Fact-Checker) that collaborate to produce a polished article from a single topic prompt. | Multi-agent orchestration, task delegation, and role-based prompting. |
 | **Autonomous Data Analysis Agent** | An agent that connects to a database or CSV file, understands natural language queries about the data, writes and executes code (SQL, Python) to find insights, and generates visualizations. | Code generation and execution, self-correction (debugging code), and advanced tool use. |
 
-## 6. The Role of the Machine Learning Practitioner
+## 7. The Role of the Machine Learning Practitioner
 
 Developing agentic systems is a natural extension of existing ML skills.
 
@@ -101,7 +110,7 @@ Developing agentic systems is a natural extension of existing ML skills.
 | **Model Fine-Tuning** | Fine-tuning smaller, specialized LLMs to act as efficient "worker" agents in a plan-and-execute or multi-agent system. |
 | **MLOps** | Designing systems for observability (e.g., LangSmith), evaluation, and continuous deployment of agentic applications. |
 
-## 7. Key Takeaways
+## 8. Key Takeaways
 
 1.  **Agentic AI is a shift from reactive to proactive systems.** Agents autonomously plan, act, and learn to achieve complex goals.
 2.  **Architectural patterns dictate agent behavior.** ReAct, Plan-and-Execute, and Reflexion are the foundational patterns for building agents.
@@ -112,7 +121,7 @@ Developing agentic systems is a natural extension of existing ML skills.
 ---
 
 ## Related Resources
--   [What Are AI Agents? A Foundational Guide](00_introduction-to-ai-agents.md)
--   [AI Agents Running Workflows: From Automation to Autonomous Orchestration](r_ai-agents-running-workflows.md)
--   [Framework for Building an AI Desktop Automation Agent](03_build-an-ai-desktop-automation-agent.md)
--   [Advanced Prompt Engineering for AI and Marketing](09_advanced-prompt-engineering.md)
+-   [[00_introduction-to-ai-agents]]
+-   [[01_ai-agents-running-workflows]]
+-   [[03_build-an-ai-desktop-automation-agent]]
+-   [[09_advanced-prompt-engineering]]

@@ -165,6 +165,8 @@ _Result:_ A single agent can execute an end‑to‑end launch 
 4. Open ecosystem servers (e.g., Supabase, Context7, Chrome DevTools) showcase MCP’s versatility and security.  
 5. Enterprises are formalizing MCP governance to ensure controlled access and compliance within agent networks.
 
+> For a curated list of open-source tools and frameworks implementing these concepts, see [09_open-source-mcp-projects-and-tools](app://obsidian.md/09_open-source-mcp-projects-and-tools).
+
 ## Recommended Companion Documents
 
 - [MCP Foundations and Architecture](app://obsidian.md/ai/1_methods-and-systems/MCP/1_mcp-foundations-and-architecture)
