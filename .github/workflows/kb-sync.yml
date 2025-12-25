@@ -45,9 +45,11 @@ jobs:
               find kb -name "*.md" -type f
             else
               echo "Push event detected - processing changed files only"
-              echo "$CHANGED_FILES"
+              echo "$CHANGED_FILES" | sed 's/\\n/\n/g'
             fi
           }
+
+          get_files_to_process | while IFS= read -r file; do
 
           get_files_to_process | while IFS= read -r file; do
             if [ -z "$file" ] || [[ "$file" != *.md ]]; then
