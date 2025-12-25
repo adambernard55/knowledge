@@ -167,3 +167,8 @@ After creating this new note, I suggest making the following minor updates to ex
 
 This approach will seamlessly integrate this crucial information into your knowledge base, creating a more comprehensive and structured learning path on AI agents.
 
+#### Advanced Tool Patterns: User Interaction Tools
+
+Beyond data retrieval and action execution, a powerful pattern is designing tools that allow the agent to interact with the user through a graphical interface. Instead of relying on text, the agent can call a "tool" that renders a UI.
+
+[Google's A2UI ](kb/AI/2_agents/09_agent-driven-interfaces-with-a2ui.md) is a formal specification for this pattern. An agent can use it to request complex UI elements like forms, cards, and buttons. In this model, the "tool" isn't an API call but a structured request for a user interface, which the client application is responsible for rendering. This is a highly effective way to handle tasks that require structured user input.
