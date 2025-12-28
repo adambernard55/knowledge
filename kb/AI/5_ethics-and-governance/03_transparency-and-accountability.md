@@ -1,9 +1,12 @@
 ---
-title: Transparency and Accountability in AI Systems
-ai_category: ethics-and-governance
-difficulty: intermediate
-last_updated: 2025-01-15
-kb_status: published
+title: "Transparency and Accountability in AI Systems"
+id: "kb/AI/5_ethics-and-governance/03_transparency-and-accountability"
+version: "1.1"
+steward: "Adam Bernard"
+updated: "2025-12-28"
+status: "Active"
+doc_type: "kb_reference"
+summary: "A practical reference on how to design and operate AI systems that are transparent, explainable, and accountable—so people, regulators, and organizations can understand how AI is used, how decisions are made, and who is responsible when things go wrong."
 tags:
   - transparency
   - accountability
@@ -11,13 +14,28 @@ tags:
   - auditability
   - ai-governance
   - responsible-ai
-related_topics:
-  - responsible-ai-principles
-  - data-privacy-and-compliance
-  - bias-and-fairness
-  - intellectual-property
-  - human-ai-collaboration
-summary: A practical reference on how to design and operate AI systems that are transparent, explainable, and accountable—so people, regulators, and organizations can understand how AI is used, how decisions are made, and who is responsible when things go wrong.
+  - agentic-ai
+  - traceability
+relations:
+  - "kb/AI/5_ethics-and-governance/00_responsible-ai-principles"
+  - "kb/AI/5_ethics-and-governance/01_data-privacy-and-compliance"
+  - "kb/AI/5_ethics-and-governance/02_bias-and-fairness"
+  - "kb/AI/5_ethics-and-governance/04_intellectual-property"
+  - "kb/AI/5_ethics-and-governance/05_human-ai-collaboration"
+  - "kb/AI/5_ethics-and-governance/08_agentic-ai-safety-and-security-playbook"
+aliases:
+  - "AI Transparency"
+  - "AI Accountability"
+  - "Explainable AI"
+keywords:
+  - "AI transparency"
+  - "AI accountability"
+  - "explainable AI"
+  - "XAI"
+  - "agentic traceability"
+  - "AI audit logs"
+meta_description: "Learn how to design transparent and accountable AI systems. Covers explainability, agentic traceability, logging requirements, and incident review templates."
+excerpt: "Transparency and accountability are the foundations of trustworthy AI. This guide covers how to make AI visible, explainable, and accountable, with specific focus on agentic behavior traceability and incident handling."
 ---
 
 # Transparency and Accountability in AI Systems
@@ -232,14 +250,13 @@ Establish processes for:
   - Evidence of bias in outcomes.  
   - Security or data privacy incidents.
 
-For each incident:
-
-- Log what happened, why, and how it was resolved.  
-- Decide whether to adjust:
-  - Training data.  
-  - Model architecture or parameters.  
-  - Guardrails, thresholds, or workflows.  
-- Feed learnings back into documentation and training.
+#### Post-Incident Review Template (Agent Failure)
+When an agent fails or behaves unexpectedly, use this lightweight template to drive accountability:
+- **Incident Summary:** What happened? (e.g., "Agent approved loan outside policy limits.")
+- **Root Cause:** Why did it happen? (e.g., "Ambiguous prompt regarding 'high risk' threshold.")
+- **Containment:** How was it stopped/reverted? (e.g., "Kill switch activated; transaction rolled back.")
+- **Impact:** Who/what was affected?
+- **Policy/Guardrail Update:** What specific control will prevent recurrence? (e.g., "Added hard-coded check for credit score < 600.")
 
 ---
 
@@ -283,11 +300,16 @@ Implement logging aligned with privacy and security standards, capturing:
 - Human review actions (approve, override, modify) for AI-assisted workflows.  
 - Key configuration changes and deployments.
 
-These logs support:
+### 6.3 Agentic Traceability: Logging Actions
 
-- Internal reviews and debugging.  
-- Regulatory, client, or legal inquiries.  
-- Continuous improvement of models and workflows.
+For autonomous agents, logging outputs is insufficient. You must trace **behavior and intent**.
+Required logs for agentic systems:
+
+- **Prompts & Instructions:** The exact context and system prompt provided to the agent.
+- **Tool Calls & Parameters:** Which tool was called (e.g., `query_database`), with what arguments (e.g., `SELECT * FROM users`), and what the tool returned.
+- **Intermediate Steps:** The agent's "chain of thought" or reasoning steps, even if not shown to the user.
+- **State Changes:** Any write operations (create, update, delete) performed by the agent.
+- **Access Context:** Which identity/permissions were used to execute the action and what specific data was accessed.
 
 ---
 
@@ -409,3 +431,4 @@ Transparency and accountability are closely intertwined with other ethics topics
 6. Transparency and accountability are not optional extras—they are central to **trustworthy, compliant, and sustainable AI**.
 
 Use this reference to design and operate AI systems that stakeholders can **see, question, and trust—and for which your organization can confidently stand behind.**
+

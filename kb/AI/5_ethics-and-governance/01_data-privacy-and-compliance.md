@@ -1,9 +1,12 @@
 ---
-title: Data Privacy and Compliance in AI Systems
-ai_category: ethics-and-governance
-difficulty: intermediate
-last_updated: 2025-01-15
-kb_status: published
+title: "Data Privacy and Compliance in AI Systems"
+id: "kb/AI/5_ethics-and-governance/01_data-privacy-and-compliance"
+version: "1.1"
+steward: "Adam Bernard"
+updated: "2025-12-28"
+status: "Active"
+doc_type: "kb_reference"
+summary: "A practical reference on how to design and operate AI systems that respect data privacy and comply with major regulations—covering data types, legal bases, data minimization, security, cross-border transfers, and governance."
 tags:
   - data-privacy
   - compliance
@@ -11,13 +14,23 @@ tags:
   - data-governance
   - responsible-ai
   - regulation
-related_topics:
-  - responsible-ai-principles
-  - bias-and-fairness
-  - transparency-and-accountability
-  - intellectual-property
-  - ethical-ai-in-marketing
-summary: A practical reference on how to design and operate AI systems that respect data privacy and comply with major regulations—covering data types, legal bases, data minimization, security, cross-border transfers, and governance.
+  - agentic-ai
+relations:
+  - "kb/AI/5_ethics-and-governance/00_responsible-ai-principles"
+  - "kb/AI/5_ethics-and-governance/02_bias-and-fairness"
+  - "kb/AI/5_ethics-and-governance/03_transparency-and-accountability"
+  - "kb/AI/5_ethics-and-governance/04_intellectual-property"
+  - "kb/AI/5_ethics-and-governance/05_human-ai-collaboration"
+  - "kb/AI/5_ethics-and-governance/06_ethical-considerations-in-ai-marketing"
+  - "kb/AI/5_ethics-and-governance/07_operational-excellent"
+  - "kb/AI/5_ethics-and-governance/08_agentic-ai-safety-and-security-playbook"
+aliases:
+  - "AI Data Privacy and Compliance"
+  - "Privacy and Compliance for AI"
+ai_category: "ethics-and-governance"
+difficulty: "intermediate"
+last_updated: "2025-12-28"
+kb_status: "published"
 ---
 
 # Data Privacy and Compliance in AI Systems
@@ -117,6 +130,31 @@ AI‑specific aspects:
 - Restrictions and safeguards around **profiling and automated decision-making** (Article 22).  
 - Requirements for **Data Protection Impact Assessments (DPIAs)** for high‑risk processing.  
 - Strong rights for data subjects (see Section 4).
+
+### 2.1.1 Autonomy + automated decision-making (agentic workflows)
+
+As AI systems become more autonomous (agents that can plan and execute workflows), the compliance risk shifts from “incorrect outputs” to **automated decisions and actions that materially affect people**.
+
+Key regulatory implications to account for early:
+
+- **GDPR Article 22 (automated decision-making)**
+  - GDPR places restrictions and safeguard expectations around decisions made **solely by automated processing** that produce legal or similarly significant effects.
+  - Practical implications for agentic workflows:
+    - Define **human review triggers** (when an agent’s action/decision must be reviewed or approved by a person).
+    - Provide **meaningful transparency** about AI involvement (what the agent did, its role, and key factors that drove the outcome).
+    - Provide a way to **contest outcomes / request human intervention** in qualified contexts (especially where decisions affect rights, access, eligibility, employment, or credit).
+
+- **United States: sector and local accountability rules (examples)**
+  - **ECOA (Equal Credit Opportunity Act):** credit decisions must avoid unlawful discrimination; AI-assisted underwriting and agentic credit workflows require heightened fairness controls, documentation, and review.
+  - **NYC Local Law 144:** requires bias audits and notices for automated employment decision tools; HR-facing agents that screen or rank candidates must be treated as high scrutiny systems.
+
+- **EU AI Act (prepare conservatively now)**
+  - The EU AI Act is driving a higher baseline for oversight, transparency, and data governance, especially for higher-risk use cases.
+  - Practical guidance: design as if you will need **stronger documentation, monitoring, human oversight, and data governance** later—so you avoid expensive redesigns after deployment.
+
+See also:
+- [00_responsible-ai-principles.md](00_responsible-ai-principles.md.md)
+- [[08_agentic-ai-safety-and-security-playbook]]
 
 ### 2.2 CCPA / CPRA (California, USA)
 

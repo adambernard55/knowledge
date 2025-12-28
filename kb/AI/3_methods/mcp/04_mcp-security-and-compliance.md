@@ -1,16 +1,45 @@
 ---
 title: "MCP Security and Compliance"
+id: "kb/AI/3_methods/mcp/04_mcp-security-and-compliance"
+version: "1.1"
+steward: "Adam Bernard"
+updated: "2025-12-28"
+status: "Active"
+doc_type: "kb_reference"
+summary: "The Model Context Protocol creates a powerful and interoperable ecosystem for agents—but security and compliance define its trustworthiness. Implement robust authentication, authorization, sandboxing, and auditing across the stack to ensure that AI integrations operate transparently, ethically, and safely within human-centered governance frameworks."
+tags:
+  - mcp
+  - model-context-protocol
+  - security
+  - compliance
+  - governance
+  - auditing
+  - oauth
+  - sandboxing
+  - ai-agents
+  - gdpr
+relations:
+  - "kb/AI/3_methods/mcp/1_mcp-foundations-and-architecture"
+  - "kb/AI/3_methods/mcp/2_mcp-connectors-and-integrations"
+  - "kb/AI/3_methods/mcp/3_mcp-runtime-and-deployment"
+  - "kb/AI/3_methods/11_agentic-context-engineering"
+  - "kb/AI/5_ethics-and-governance/08_agentic-ai-safety-and-security-playbook"
+aliases:
+  - "MCP Security"
+  - "Agentic Protocol Security"
 seo_category: "methods-and-systems"
 difficulty: "advanced"
-last_updated: "2025-11-16"
+last_updated: "2025-12-28"
 kb_status: "published"
-tags: ["mcp", "model-context-protocol", "security", "compliance", "governance", "auditing", "oauth", "sandboxing", "ai-agents", "gdpr"]
-related_topics:
-  - "1_mcp-foundations-and-architecture"
-  - "2_mcp-connectors-and-integrations"
-  - "3_mcp-runtime-and-deployment"
-  - "agentic-context-engineering"
-summary: "The Model Context Protocol creates a powerful and interoperable ecosystem for agents—but security and compliance define its trustworthiness. Implement robust authentication, authorization, sandboxing, and auditing across the stack to ensure that AI integrations operate transparently, ethically, and safely within human-centered governance frameworks."
+keywords:
+  - "MCP security"
+  - "agent protocol security"
+  - "AI compliance"
+  - "OAuth 2.1 for AI"
+  - "agent sandboxing"
+  - "inter-agent security"
+meta_description: "Secure your Model Context Protocol (MCP) implementation. Covers OAuth 2.1, sandboxing, inter-agent protocols (Agent2Agent, Agent Connect), and compliance auditing for autonomous AI systems."
+excerpt: "Security is the backbone of MCP adoption. This guide covers the full security stack—from OAuth 2.1 authentication and fine-grained scopes to securing inter-agent communication protocols like Agent2Agent and Agent Connect."
 ---
 
 # MCP Security and Compliance
@@ -84,6 +113,22 @@ Each component must **act as a security boundary** and validate all protocol e
 |`prompt/use`|`interaction`|Optional capability — no state mutations|
 
 Policies should map every tool to a scope and sensitivity level, enforced on both client and server.
+
+## 3.3 Inter-agent protocols are immature—ship safeguards anyway
+
+As multi-agent ecosystems grow, agents will increasingly call other agents directly. While standard protocols are still evolving, security cannot wait for a winner to emerge.
+
+**Emerging protocols to watch:**
+- **Anthropic MCP:** Focuses on standardized context and tool exposure.
+- **Google Agent2Agent:** Proposed for high-speed, negotiated agent handoffs.
+- **Cisco Agent Connect:** Enterprise-focused with strong identity binding.
+- **IBM Agent Communication Protocol:** Heavy emphasis on governance and audit trails.
+
+**Minimum bar controls (regardless of protocol):**
+- **Mutual Authentication (mTLS):** Agents must prove their identity to each other, not just to the host.
+- **Signed Identities/Attestation:** Where possible, use cryptographic signatures to verify that an agent is running verified code (e.g., via TEE/enclaves).
+- **Explicit Permissioning:** No implicit trust. Agent A must have a specific, scoped token to call Agent B's `search_database` tool.
+- **Structured Logging:** Log the *intent* and *payload* of inter-agent messages, not just the raw bytes, to reconstruct decision chains during audits.
 
 ## 4. Data Protection and Privacy
 

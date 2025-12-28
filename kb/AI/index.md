@@ -1,10 +1,34 @@
 ---
 title: "AI Knowledge Base Index"
+id: "kb/AI/index"
+version: "1.0"
+steward: "Adam Bernard"
+updated: "2025-12-10"
+status: "Active"
+doc_type: "kb_index"
+summary: "Central navigation hub for the AI knowledge base, linking to each major section from fundamentals to future trends."
+tags:
+  - index
+  - ai
+  - knowledge-base
+  - navigation
+  - guide
+  - toc
+relations:
+  - "kb/AI/0_fundamentals/index"
+  - "kb/AI/1_models/index"
+  - "kb/AI/2_agents/index"
+  - "kb/AI/3_methods/index"
+  - "kb/AI/4_applications/index"
+  - "kb/AI/5_ethics-and-governance/index"
+  - "kb/AI/6_future-trends/index"
+aliases:
+  - "AI KB Index"
+  - "AI Knowledge Base Home"
 seo_category: "overview"
 difficulty: "beginner"
-last_updated: "2025-11-16"
+last_updated: "2025-12-10"
 kb_status: "published"
-tags: ["index", "ai", "knowledge-base", "navigation", "guide", "toc"]
 related_topics:
   - "0_fundamentals/index"
   - "1_models/index"
@@ -13,7 +37,6 @@ related_topics:
   - "4_applications/index"
   - "5_ethics-and-governance/index"
   - "6_future-trends/index"
-summary: "This central index file serves as a guide to the AI Knowledge Base, outlining the purpose and content of each major section, from foundational concepts and model comparisons to advanced methods, applications, and future trends."
 ---
 
 # AI Knowledge Base Index
