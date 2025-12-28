@@ -6,7 +6,7 @@ steward: Adam Bernard
 updated: 2025-12-22
 status: Active
 doc_type: reference_document
-summary: "Defines the architecture of the Knowledge Core (also known as the Master Hub), the proven asset that powers the Strategic Intelligence Engine (SIE). This blueprint is validated by the operational Knowledge Pipeline (KPL)."
+summary: Defines the architecture of the Knowledge Core (also known as the Master Hub), the proven asset that powers the Strategic Intelligence Engine (SIE). This blueprint is validated by the operational Knowledge Pipeline (KPL).
 tags:
   - knowledge-base
   - knowledge-core
@@ -17,13 +17,13 @@ tags:
   - graphrag
   - data-governance
 relations:
-  - "SIE/01_Core/00_core-purpose"
+  - SIE/01_Core/00_core-purpose
 aliases:
   - Agent Knowledge Base
   - SIE Knowledge Architecture
   - Master Hub Anatomy
   - Knowledge Core Anatomy
-governance: "[[01_ABX-Bill-Bernard-Standards]]"
+governance: "[[Adam/01_Core/01_ABX-Bill-Bernard-Standards]]"
 ---
 
 # Anatomy of a Knowledge Core: Fueling the Strategic Intelligence Engine
@@ -36,7 +36,7 @@ A coherent Knowledge Core is the essential component that allows the SIE's speci
 
 The Knowledge Core is designed to hold the full spectrum of a company’s operational reality, combining structured, semi-structured, and unstructured data. All data must conform to the SIE's master schema to be ingested.
 
--   **Procedures and Policies:** These are the operational rules for SIE agents. This includes style guides, compliance rules, and escalation paths for tasks requiring human approval. Crucially, these rules directly enforce the principles of **The Bill Bernard Standard** ([[01_ABX-Bill-Bernard-Standards]]), hardcoding integrity into the system's operations.
+-   **Procedures and Policies:** These are the operational rules for SIE agents. This includes style guides, compliance rules, and escalation paths for tasks requiring human approval. Crucially, these rules directly enforce the principles of **The Bill Bernard Standard** ([[Adam/01_Core/01_ABX-Bill-Bernard-Standards]]), hardcoding integrity into the system's operations.
 
 -   **Structured Data:** Formatted in JSON, YAML, or CSV, this includes databases, API documentation, product catalogs, and service-level agreements. This machine-readable data is critical for tasks requiring precise, factual information.
 

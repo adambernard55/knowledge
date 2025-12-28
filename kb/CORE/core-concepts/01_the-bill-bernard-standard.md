@@ -6,10 +6,10 @@ steward: Adam Bernard
 updated: 2025-12-22
 status: Active
 doc_type: core_concept
-summary: "Explains how the Bill Bernard Standard is not just an ethical guideline but a hardcoded operational protocol for the SIE, creating a competitive advantage through verifiable trust, system reliability, and antifragility."
-meta_description: "Discover how the Bill Bernard Standard is hardcoded into the Strategic Intelligence Engine (SIE) as an ethical kernel, creating a competitive moat through verifiable trust and system reliability."
-keyword: "Integrity as Strategy"
-excerpt: "The Bill Bernard Standard is more than an ethical guideline; it is the hardcoded operational protocol for the Strategic Intelligence Engine (SIE). This core concept explains how personal principles of integrity are translated into architectural constraints, creating a system that is trustworthy by design. By enforcing stewardship, verifiable reliability, and antifragility, the Standard builds an 'Ethical Moat'—a powerful competitive advantage in a low-trust digital economy."
+summary: Explains how the Bill Bernard Standard is not just an ethical guideline but a hardcoded operational protocol for the SIE, creating a competitive advantage through verifiable trust, system reliability, and antifragility.
+meta_description: Discover how the Bill Bernard Standard is hardcoded into the Strategic Intelligence Engine (SIE) as an ethical kernel, creating a competitive moat through verifiable trust and system reliability.
+keyword: Integrity as Strategy
+excerpt: The Bill Bernard Standard is more than an ethical guideline; it is the hardcoded operational protocol for the Strategic Intelligence Engine (SIE). This core concept explains how personal principles of integrity are translated into architectural constraints, creating a system that is trustworthy by design. By enforcing stewardship, verifiable reliability, and antifragility, the Standard builds an 'Ethical Moat'—a powerful competitive advantage in a low-trust digital economy.
 tags:
   - integrity
   - strategy
@@ -18,7 +18,7 @@ tags:
   - antifragility
   - trust-economy
 relations:
-  - "[[01_ABX-Bill-Bernard-Standards]]"
+  - "[[Adam/01_Core/01_ABX-Bill-Bernard-Standards]]"
   - "[[SIE/01_Core/00_core-purpose]]"
 aliases:
   - Integrity as Strategy
