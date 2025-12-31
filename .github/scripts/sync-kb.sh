@@ -145,9 +145,32 @@ extract_frontmatter() {
   fm_image=$(echo "$front_matter" | grep -i "^featured_image:" | sed 's/^featured_image: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
   [ -z "$fm_image" ] && fm_image=$(echo "$front_matter" | grep -i "^coverimage:" | sed 's/^coverimage: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
   
-  # Date
-  fm_updated=$(echo "$front_matter" | grep -i "^updated:" | sed 's/^updated: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
-  [ -z "$fm_updated" ] && fm_updated=$(git log -1 --format="%aI" -- "$file" 2>/dev/null || date -Iseconds)
+# Updated Date (use frontmatter or fallback to git)
+fm_updated=$(echo "$front_matter" | grep -i "^updated:" | sed 's/^updated: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
+
+# Normalize and validate date format
+if [ ! -z "$fm_updated" ]; then
+  # Try to parse and convert to ISO 8601 format
+  if normalized_date=$(date -d "$fm_updated" -Iseconds 2>/dev/null); then
+    fm_updated="$normalized_date"
+  else
+    echo "⚠ Invalid date format in frontmatter: $fm_updated - using git date"
+    fm_updated=""
+  fi
+fi
+
+# Fallback to git history if no valid frontmatter date
+if [ -z "$fm_updated" ]; then
+  fm_updated=$(git log -1 --format="%aI" -- "$file" 2>/dev/null)
+fi
+
+# Final fallback: use current date
+if [ -z "$fm_updated" ]; then
+  fm_updated=$(date -Iseconds)
+fi
+
+# Ensure date is in WordPress-compatible format (remove milliseconds if present)
+fm_updated=$(echo "$fm_updated" | sed 's/\.[0-9]*+/+/' | sed 's/\.[0-9]*Z$/Z/')
   
   # Tags
   fm_tags=$(echo "$front_matter" | grep -i "^tags:" | sed 's/^tags: *//I' | sed 's/[\[\]]//g' | sed 's/,/ /g')
