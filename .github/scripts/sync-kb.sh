@@ -126,16 +126,16 @@ extract_frontmatter() {
   # Semantic fields
   fm_semantic=$(echo "$front_matter" | grep -i "^semantic_summary:" | sed 's/^semantic_summary: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
   
-  # Array fields
+  # Array fields - using yq with error handling
   if grep -q "^synthetic_questions:" "$file"; then
-    fm_questions=$(yq eval '.synthetic_questions[]' "$file" 2>/dev/null | jq -R -s -c 'split("\n")[:-1] | map(select(length > 0)) | map({question: .})')
+    fm_questions=$(yq eval '.synthetic_questions[]' "$file" 2>/dev/null | jq -R -s -c 'split("\n") | map(select(length > 0)) | map({question: .})' 2>/dev/null || echo "[]")
     [ -z "$fm_questions" ] || [ "$fm_questions" = "null" ] && fm_questions="[]"
   else
     fm_questions="[]"
   fi
   
   if grep -q "^key_concepts:" "$file"; then
-    fm_concepts=$(yq eval '.key_concepts[]' "$file" 2>/dev/null | jq -R -s -c 'split("\n")[:-1] | map(select(length > 0)) | map({concept: .})')
+    fm_concepts=$(yq eval '.key_concepts[]' "$file" 2>/dev/null | jq -R -s -c 'split("\n") | map(select(length > 0)) | map({concept: .})' 2>/dev/null || echo "[]")
     [ -z "$fm_concepts" ] || [ "$fm_concepts" = "null" ] && fm_concepts="[]"
   else
     fm_concepts="[]"
@@ -150,7 +150,6 @@ extract_frontmatter() {
   
   # Normalize and validate date format
   if [ ! -z "$fm_updated" ]; then
-    # Try to parse and convert to ISO 8601 format
     if normalized_date=$(date -d "$fm_updated" -Iseconds 2>/dev/null); then
       fm_updated="$normalized_date"
       # Remove milliseconds for WordPress compatibility
@@ -163,12 +162,7 @@ extract_frontmatter() {
   
   # Fallback to git history if no valid frontmatter date
   if [ -z "$fm_updated" ]; then
-    fm_updated=$(git log -1 --format="%aI" -- "$file" 2>/dev/null)
-  fi
-  
-  # Final fallback: use current date
-  if [ -z "$fm_updated" ]; then
-    fm_updated=$(date -Iseconds)
+    fm_updated=$(git log -1 --format="%aI" -- "$file" 2>/dev/null || echo "")
   fi
   
   # Tags
@@ -195,10 +189,9 @@ extract_frontmatter() {
   return 0
 }
 
-# Function: Process tags
+# Function: Process tags and return JSON array
 process_tags() {
   local tags="$1"
-  local tag_ids="[]"
   
   if [ -z "$tags" ]; then
     echo "[]"
@@ -225,8 +218,20 @@ process_tags() {
     fi
   done
   
+  # Build JSON array safely
   if [ ${#tag_ids_array[@]} -gt 0 ]; then
-    printf '%s\n' "${tag_ids_array[@]}" | jq -s '.'
+    local json_array="["
+    local first=true
+    for id in "${tag_ids_array[@]}"; do
+      if [ "$first" = true ]; then
+        json_array="$json_array$id"
+        first=false
+      else
+        json_array="$json_array,$id"
+      fi
+    done
+    json_array="$json_array]"
+    echo "$json_array"
   else
     echo "[]"
   fi
@@ -283,48 +288,6 @@ process_featured_image() {
     echo "⚠ Failed to sideload image" >&2
     echo ""
   fi
-}
-
-# Function: Build JSON payload
-build_json_payload() {
-  local title="$1"
-  local content="$2"
-  local topic_id="$3"
-  local tag_ids="$4"
-  local excerpt="$5"
-  local updated="$6"
-  local featured="$7"
-  local has_meta="$8"
-  local meta_json="$9"
-  local has_acf="${10}"
-  local acf_json="${11}"
-  
-  local base_args=(
-    --arg title "$title"
-    --arg content "$content"
-    --argjson topic "$topic_id"
-    --argjson tags "$tag_ids"
-  )
-  
-  local payload_base='{title: $title, content: $content, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags'
-  
-  [ ! -z "$excerpt" ] && base_args+=(--arg excerpt "$excerpt") && payload_base="$payload_base, excerpt: \$excerpt"
-  [ ! -z "$updated" ] && base_args+=(--arg date "$updated") && payload_base="$payload_base, date: \$date"
-  [ ! -z "$featured" ] && base_args+=(--argjson featured_media "$featured") && payload_base="$payload_base, featured_media: \$featured_media"
-  
-  if [ "$has_meta" = "true" ]; then
-    base_args+=(--argjson meta "$meta_json")
-    payload_base="$payload_base, meta: \$meta"
-  fi
-  
-  if [ "$has_acf" = "true" ]; then
-    base_args+=(--argjson acf "$acf_json")
-    payload_base="$payload_base, acf: \$acf"
-  fi
-  
-  payload_base="$payload_base}"
-  
-  jq -n "${base_args[@]}" "$payload_base"
 }
 
 # Main execution
@@ -422,17 +385,21 @@ get_files_to_process | while IFS= read -r file; do
   fi
   
   if [ "$fm_questions" != "[]" ]; then
-    question_count=$(echo "$fm_questions" | jq 'length')
-    echo "Setting synthetic questions ($question_count items)"
-    acf_json=$(echo "$acf_json" | jq --argjson questions "$fm_questions" '. + {synthetic_questions: $questions}')
-    has_acf=true
+    question_count=$(echo "$fm_questions" | jq 'length' 2>/dev/null || echo "0")
+    if [ "$question_count" != "0" ]; then
+      echo "Setting synthetic questions ($question_count items)"
+      acf_json=$(echo "$acf_json" | jq --argjson questions "$fm_questions" '. + {synthetic_questions: $questions}')
+      has_acf=true
+    fi
   fi
   
   if [ "$fm_concepts" != "[]" ]; then
-    concept_count=$(echo "$fm_concepts" | jq 'length')
-    echo "Setting key concepts ($concept_count items)"
-    acf_json=$(echo "$acf_json" | jq --argjson concepts "$fm_concepts" '. + {key_concepts: $concepts}')
-    has_acf=true
+    concept_count=$(echo "$fm_concepts" | jq 'length' 2>/dev/null || echo "0")
+    if [ "$concept_count" != "0" ]; then
+      echo "Setting key concepts ($concept_count items)"
+      acf_json=$(echo "$acf_json" | jq --argjson concepts "$fm_concepts" '. + {key_concepts: $concepts}')
+      has_acf=true
+    fi
   fi
   
   # Build meta payload
@@ -466,8 +433,43 @@ get_files_to_process | while IFS= read -r file; do
     echo "Creating new post"
   fi
   
-  # Build JSON payload
-  json_payload=$(build_json_payload "$title" "$html_content" "$TOPIC_ID" "$tag_ids" "$fm_excerpt" "$fm_updated" "$featured_media" "$has_meta" "$meta_json" "$has_acf" "$acf_json")
+  # Build JSON payload incrementally
+  echo "Building JSON payload..."
+  
+  # Start with base payload
+  json_payload=$(jq -n \
+    --arg title "$title" \
+    --arg content "$html_content" \
+    --argjson topic "$TOPIC_ID" \
+    --argjson tags "$tag_ids" \
+    '{
+      title: $title,
+      content: $content,
+      status: "publish",
+      knowledge_topics: [1158, $topic],
+      knowledge_tag: $tags
+    }')
+  
+  # Add optional fields incrementally
+  if [ ! -z "$fm_excerpt" ]; then
+    json_payload=$(echo "$json_payload" | jq --arg excerpt "$fm_excerpt" '. + {excerpt: $excerpt}')
+  fi
+  
+  if [ ! -z "$fm_updated" ]; then
+    json_payload=$(echo "$json_payload" | jq --arg date "$fm_updated" '. + {date: $date}')
+  fi
+  
+  if [ ! -z "$featured_media" ]; then
+    json_payload=$(echo "$json_payload" | jq --argjson featured_media "$featured_media" '. + {featured_media: $featured_media}')
+  fi
+  
+  if [ "$has_meta" = "true" ]; then
+    json_payload=$(echo "$json_payload" | jq --argjson meta "$meta_json" '. + {meta: $meta}')
+  fi
+  
+  if [ "$has_acf" = "true" ]; then
+    json_payload=$(echo "$json_payload" | jq --argjson acf "$acf_json" '. + {acf: $acf}')
+  fi
   
   echo "Syncing: $title with Topics: [1158, $TOPIC_ID]"
   
