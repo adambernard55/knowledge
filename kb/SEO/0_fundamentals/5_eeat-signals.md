@@ -1,30 +1,53 @@
 ---
-title: "E‑E‑A‑T Signals: Experience, Expertise, Authoritativeness, and Trust in SEO"
+title: "E-E-A-T Signals: Experience, Expertise, Authoritativeness, and Trust"
+id: "KB/SEO/F-05"
+version: "2.0"
+steward: "Adam Bernard"
+updated: "2025-12-29"
+status: "Active"
+doc_type: "reference"
 summary: "Outlines the principles of Experience, Expertise, Authoritativeness, and Trust (E-E-A-T) for evaluating content quality, especially in the age of AI search."
-seo_category: fundamentals
-difficulty: intermediate
-last_updated: 2025-12-25
-kb_status: published
+governance: "[[01_ABX-Bill-Bernard-Standards]]"
 tags:
   - eeat
   - quality-guidelines
-  - experience
+  - seo
   - trust
   - expertise
   - authority
-  - content-quality
   - ai-search
-keywords: "eeat, seo, content quality, google quality guidelines, experience, expertise, authoritativeness, trust, ai search, generative engine optimization, geo"
-meta_description: "Learn about E-E-A-T (Experience, Expertise, Authoritativeness, Trust) and its critical role in modern SEO. This guide explains how to build these signals to improve rankings and get cited by AI search engines."
-excerpt: "E-E-A-T is the framework for content quality in modern SEO. In the age of AI, it's more critical than ever. Learn how demonstrating Experience, Expertise, Authoritativeness, and Trust makes your content a citable, reputable source for both humans and AI answer engines."
-related_topics:
-  - what-is-seo
-  - how-search-engines-work
-  - semantic-seo
-  - ai-foundations-for-seo
-  - content-optimization-guide
+relations:
+  - [[kb/SEO/0_fundamentals/1_what-is-seo]]
+  - [[kb/SEO/0_fundamentals/2_how-search-engines-work]]
+  - [[kb/SEO/0_fundamentals/6_ai-foundations-for-seo]]
+  - [[kb/SEO/2_content-and-on-page/07_content-optimization-guide]]
+  - [[kb/SEO/4_ai-and-automation/2_optimizing-for-ai/04_from-seo-to-geo]]
+aliases:
+  - E-E-A-T
+  - Google Quality Rater Guidelines
+  - YMYL
+semantic_summary: "A comprehensive guide to Google's E-E-A-T framework (Experience, Expertise, Authoritativeness, Trustworthiness). It details how these signals influence ranking for YMYL topics and explains their critical role in the age of AI search, where generative engines prioritize consensus and trusted entities."
+synthetic_questions:
+  - "What does E-E-A-T stand for in SEO?"
+  - "How do I demonstrate Experience in my content?"
+  - "Why is Trustworthiness the most important part of E-E-A-T?"
+  - "How does E-E-A-T affect AI-generated search results?"
+  - "What are YMYL topics?"
+key_concepts:
+  - "E-E-A-T"
+  - "YMYL (Your Money or Your Life)"
+  - "Trustworthiness"
+  - "Experience vs. Expertise"
+  - "Authoritativeness"
+  - "AI Consensus"
+primary_keyword: "eeat seo"
+seo_title: "E-E-A-T in SEO: The Ultimate Guide to Quality Signals (2025)"
+meta_description: "Master E-E-A-T (Experience, Expertise, Authoritativeness, Trust). Learn how to build trust signals that improve rankings and secure citations in AI search."
+excerpt: "E-E-A-T is the framework for content quality. Learn how demonstrating Experience, Expertise, Authoritativeness, and Trust makes your content a citable source for humans and AI."
+cover_image: ""
 ---
-# E‑E‑A‑T Signals: Experience, Expertise, Authoritativeness, and Trust in SEO
+
+# E-E-A-T Signals: Experience, Expertise, Authoritativeness, and Trust
 
 ## Overview
 
@@ -45,6 +68,7 @@ As search engines evolve toward understanding *intent, context, and meaning*, th
 | **Algorithmic Reflection** | Signals such as backlinks, bylines, citations, and content engagement mirror E‑E‑A‑T principles. | Improves rankings indirectly through credibility. |
 
 E‑E‑A‑T underpins Google’s shift from *keyword relevance* to *quality relevance*—aligning technical SEO, content creation, and brand reputation around demonstrating value and authenticity.
+
 ## 2. Decoding the Four Elements of E‑E‑A‑T
 
 ### 2.1 Experience (E)

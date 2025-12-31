@@ -22,7 +22,7 @@ This section introduces the foundational principles of Search Engine Optimizatio
 ```dataview
 TABLE WITHOUT ID
   file.link as "Topic",
-  summary as "Description"
+  semantic_summary as "Description"
 FROM "kb/SEO/0_fundamentals"
 WHERE file.name != "index.md"
 SORT file.name ASC

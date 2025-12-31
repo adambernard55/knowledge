@@ -31,7 +31,7 @@ This section introduces the core principles of SEO, explaining how search engine
 TABLE WITHOUT ID
   file.link as "Topic",
   summary as "Description"
-FROM "Knowledge/SEO/0_fundamentals"
+FROM "kb/SEO/0_fundamentals"
 WHERE file.name != "index.md"
 SORT file.name ASC
 ````
@@ -46,7 +46,7 @@ This section covers the strategic planning phase of SEO, from keyword and compet
 TABLE WITHOUT ID
   file.link as "Topic",
   summary as "Description"
-FROM "Knowledge/SEO/1_research-and-strategy"
+FROM "kb/SEO/1_research-and-strategy"
 WHERE file.name != "index.md"
 SORT file.name ASC
 ````
@@ -61,7 +61,7 @@ This section provides practical guides on crafting and optimizing the content an
 TABLE WITHOUT ID
   file.link as "Topic",
   summary as "Description"
-FROM "Knowledge/SEO/2_content-and-on-page"
+FROM "kb/SEO/2_content-and-on-page"
 WHERE file.name != "index.md"
 SORT file.name ASC
 ````
@@ -76,7 +76,7 @@ This section dives into the technical foundation of a website, covering crawlabi
 TABLE WITHOUT ID
   file.link as "Topic",
   summary as "Description"
-FROM "Knowledge/SEO/3_technical-seo"
+FROM "kb/SEO/3_technical-seo"
 WHERE file.name != "index.md"
 SORT file.name ASC
 ````
@@ -91,7 +91,7 @@ This section explores the transformative impact of Artificial Intelligence on SE
 TABLE WITHOUT ID
   file.link as "Topic",
   summary as "Description"
-FROM "Knowledge/SEO/4_ai-and-automation"
+FROM "kb/SEO/4_ai-and-automation"
 WHERE file.name != "index.md"
 SORT file.name ASC
 ````
@@ -104,7 +104,7 @@ _Practical guides on leveraging AI tools for content creation, keyword research,
 TABLE WITHOUT ID
   file.link as "Topic",
   summary as "Description"
-FROM "Knowledge/SEO/4_ai-and-automation/1_using-ai-for-seo"
+FROM "kb/SEO/4_ai-and-automation/1_using-ai-for-seo"
 WHERE file.name != "index.md"
 SORT file.name ASC
 ````
@@ -119,7 +119,7 @@ _Strategic guides on adapting SEO for AI agents and generative search engines._
 TABLE WITHOUT ID
   file.link as "Topic",
   summary as "Description"
-FROM "Knowledge/SEO/4_ai-and-automation/2_optimizing-for-ai"
+FROM "kb/SEO/4_ai-and-automation/2_optimizing-for-ai"
 WHERE file.name != "index.md"
 SORT file.name ASC
 ````
@@ -134,7 +134,7 @@ This section is focused on the analytics and continuous improvement cycle of SEO
 TABLE WITHOUT ID
   file.link as "Topic",
   summary as "Description"
-FROM "Knowledge/SEO/5_measurement-and-optimization"
+FROM "kb/SEO/5_measurement-and-optimization"
 WHERE file.name != "index.md"
 SORT file.name ASC
 ````
@@ -149,7 +149,7 @@ This section looks ahead at the emerging technologies and strategic shifts that 
 TABLE WITHOUT ID
   file.link as "Topic",
   summary as "Description"
-FROM "Knowledge/SEO/6_future-trends"
+FROM "kb/SEO/6_future-trends"
 WHERE file.name != "index.md"
 SORT file.name ASC
 ````
@@ -164,8 +164,40 @@ A collection of external articles, case studies, and practical resources to supp
 TABLE WITHOUT ID
   file.link as "Topic",
   summary as "Description"
-FROM "Knowledge/SEO/7_reference"
+FROM "kb/SEO/7_reference"
 WHERE file.name != "index.md"
 SORT file.name ASC
 ````
 
+
+SEO, or search engine optimization, is the practice of improving a website so it appears more prominently in unpaid (organic) search results on engines like Google and Bing. It focuses on increasing both the quality and quantity of visitors coming from these organic listings, not from ads.[](https://searchengineland.com/guide/what-is-seo)​
+
+## Core idea
+
+SEO means aligning your site with how search engines crawl, index, and rank content so they can easily understand and recommend your pages for relevant searches. The ultimate **goal** is to show up on the first page for the terms your ideal visitors are actually searching, bringing in qualified traffic that can turn into leads, sales, or other conversions.[](https://developers.google.com/search/docs/fundamentals/seo-starter-guide)​
+
+## Key components
+
+- On-page SEO: Optimizing visible elements on your pages (titles, headings, copy, internal links, images, structured data) around specific topics and keywords while keeping content genuinely useful and understandable for people. This includes things like descriptive title tags, clear meta descriptions, logical heading structure, and content that matches search intent.[](https://moz.com/learn/seo/what-is-seo)​
+    
+- Technical SEO: Improving site structure and performance so search engines can efficiently crawl, render, and index your pages, including aspects like site speed, mobile-friendliness, XML sitemaps, canonical tags, and clean URL structures. A solid technical foundation helps search engines treat your site as reliable and fully accessible.[](https://www.mtu.edu/umc/services/websites/seo/what-is/)​
+    
+- Off-page SEO: Increasing your site’s authority and trust through links and mentions from other sites, as well as broader brand signals. High-quality backlinks, brand citations, and positive reviews tell search engines your content is reputable and worth ranking.[](https://www.seo.com/basics/glossary/seo/)​
+    
+
+## How search engines work with SEO
+
+- Crawling: Automated bots discover pages by following links and reading sitemaps.[](https://neilpatel.com/what-is-seo/)​
+    
+- Indexing: Discovered pages are analyzed (content, metadata, structure) and stored in a massive searchable index.[](https://searchengineland.com/guide/what-is-seo)​
+    
+- Ranking: For each query, algorithms evaluate hundreds of signals—relevance, content quality, links, usability, and more—to decide which pages to show and in what order.[](https://www.seo.com/basics/glossary/seo/)​
+    
+
+## Why SEO matters
+
+- Sustainable traffic: Strong SEO can drive consistent, compounding organic traffic over time without paying per click for every visit.[](https://www.wordstream.com/seo)​
+    
+- Better user experience: Many SEO practices (fast pages, clear navigation, mobile-friendly design, helpful content) directly improve user satisfaction.[](https://www.interaction-design.org/literature/topics/search-engine-optimization)​
+    
+- Trust and credibility: Pages that rank well are typically perceived as more authoritative, which can strengthen your brand and increase conversion rates.[](https://yoast.com/what-is-seo/)​

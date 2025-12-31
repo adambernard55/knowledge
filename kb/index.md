@@ -1,17 +1,44 @@
 
-# Welcome to Our Knowledge Base
+---
+title: "Strategic Intelligence Engine"
+type: cornerstone
+status: active
+tags: [hub, navigation, root]
+description: "Central access point for The Bernard Group's knowledge assets, divided into Cognitive, Visibility, and Operational pillars."
+---
 
-Welcome! This knowledge base is your central hub for information, guides, and resources. We've designed it to be a comprehensive, easy-to-navigate library to help you find the answers you need, quickly and efficiently.
+# The Intelligence Engine
 
-### How to Navigate
+Welcome to the central nervous system of our operations. This Knowledge Base is organized into four strategic pillars designed to support decision-making, automation, and growth.
 
-Our content is organized into clear, high-level categories. The main sections are listed below, and you can click on any category to explore the specific topics and articles within it. Think of it as a digital library where each main heading is a bookshelf, and the links below it are the books on that shelf.
+## 🧠 Pillar I: Cognitive Architecture (AI)
+*Focus: Artificial Intelligence, Agents, and Model Context.*
+We are building systems that think. This pillar covers the architecture of our AI agents, safety protocols, and prompt engineering strategies.
+- **Key Hub:** [[kb/AI/index|AI & Agentic Systems]]
+- **Latest Focus:** [[agentic-ai-safety-playbook]]
 
-### What You'll Find Inside
+## 👁️ Pillar II: Organic Visibility (SEO)
+*Focus: Search, Semantics, and GEO.*
+We are building systems to be found. This pillar covers the transition from traditional SEO to Generative Engine Optimization.
+- **Key Hub:** [[kb/SEO/index|Search & Visibility Strategy]]
+- **Latest Focus:** [[geo-playbook]]
 
-Whether you're looking for step-by-step tutorials, strategic insights, or best practices, you'll find it here. We are constantly updating our articles to ensure you have the most current and relevant information at your fingertips.
+## ⚖️ Pillar III: Operational Governance
+*Focus: Standards, Ethics, and Law.*
+The rules that bind the system. This includes the "Bernard Firm Standards," metadata schemas, and compliance frameworks.
+- **Key Hub:** [[kb/Governance/index|Governance & Standards]]
+- **Latest Focus:** [[master-hub-schema]]
 
-Dive in and start exploring the categories below
+## 🛠️ Pillar IV: The Tech Stack
+*Focus: Tools, Platforms, and Code.*
+The instruments of execution. Documentation for Obsidian, WordPress, and our software supply chain.
+- **Key Hub:** [[kb/Tools/index|Technical Documentation]]
+
+---
+
+### 🗄️ Full Directory Access
+*Direct access to the file directory structure.*
+
 
 # Knowledge Base Contents
 
