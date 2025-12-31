@@ -15,11 +15,15 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Full history for git log dates
       
-      - name: Install pandoc
+      - name: Install dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y pandoc
+          sudo wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
+          sudo chmod +x /usr/local/bin/yq
           
       - name: Get changed files
         id: changed-files
@@ -39,6 +43,42 @@ jobs:
           DEFAULT_TOPIC_ID: ${{ secrets.KNOWLEDGE_SEO_TOPIC_ID }}
           CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
         run: |
+          # Media cache for featured images
+          declare -A MEDIA_CACHE
+          
+          # Function: Sideload image from URL to WordPress
+          sideload_image() {
+            local image_url="$1"
+            local post_title="$2"
+            
+            local filename=$(basename "$image_url" | cut -d'?' -f1 | sed 's/[^a-zA-Z0-9._-]/_/g')
+            local temp_file="/tmp/wp_sideload_$(date +%s)_$filename"
+            
+            if ! curl -s -L -f -o "$temp_file" "$image_url" 2>/dev/null; then
+              echo "0"
+              return 1
+            fi
+            
+            local mime_type=$(file -b --mime-type "$temp_file" 2>/dev/null || echo "image/jpeg")
+            
+            local response=$(curl -s -X POST \
+              -H "Authorization: Basic $auth_header" \
+              -H "Content-Type: $mime_type" \
+              -H "Content-Disposition: attachment; filename=$filename" \
+              --data-binary "@$temp_file" \
+              "$WP_URL/wp-json/wp/v2/media")
+            
+            local media_id=$(echo "$response" | jq -r '.id // empty')
+            
+            rm -f "$temp_file"
+            
+            if [ ! -z "$media_id" ] && [ "$media_id" != "null" ]; then
+              echo "$media_id"
+            else
+              echo "0"
+            fi
+          }
+          
           get_files_to_process() {
             if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
               echo "Manual trigger detected - processing ALL files in kb/"
@@ -49,8 +89,16 @@ jobs:
             fi
           }
 
+          auth_header=$(echo -n "$WP_USERNAME:$WP_APP_PASSWORD" | base64)
+
           get_files_to_process | while IFS= read -r file; do
             if [ -z "$file" ] || [[ "$file" != *.md ]]; then
+              continue
+            fi
+            
+            # Block index.md files from sync
+            if [[ "$(basename "$file")" == "index.md" ]]; then
+              echo "⊘ Skipping index file: $file"
               continue
             fi
             
@@ -115,29 +163,79 @@ jobs:
             
             content=$(cat "${file}")
             
+            # Initialize all variables
             excerpt=""
             tags=""
             keyword=""
             meta_description=""
+            semantic_summary=""
+            synthetic_questions="[]"
+            key_concepts="[]"
+            featured_image=""
+            updated_date=""
             
             if grep -q "^---$" "${file}"; then
               front_matter=$(sed -n '/^---$/,/^---$/p' "${file}" | sed '1d;$d')
               
+              # Title
               fm_title=$(echo "$front_matter" | grep -i "^title:" | sed 's/^title: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
               if [ ! -z "$fm_title" ]; then
                 title="$fm_title"
               fi
               
+              # Excerpt/Summary
               excerpt=$(echo "$front_matter" | grep -i "^excerpt:" | sed 's/^excerpt: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
               if [ -z "$excerpt" ]; then
                 excerpt=$(echo "$front_matter" | grep -i "^summary:" | sed 's/^summary: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/' | sed 's/^|-$//' | sed 's/^|$//')
               fi
               
+              # SEO Keyword
               keyword=$(echo "$front_matter" | grep -i "^keyword:" | sed 's/^keyword: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
               
+              # Meta Description
               meta_description=$(echo "$front_matter" | grep -iE "^meta[_-]?description:" | sed 's/^meta[_-]*description: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
               
-              tags=$(echo "$front_matter" | grep -i "^tags:" | sed 's/^tags: *//I' | sed 's/[$$]//g' | sed 's/,/ /g')
+              # Semantic Summary
+              semantic_summary=$(echo "$front_matter" | grep -i "^semantic_summary:" | sed 's/^semantic_summary: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
+              
+              # Synthetic Questions (array → ACF repeater)
+              if grep -q "^synthetic_questions:" "${file}"; then
+                synthetic_questions=$(yq eval '.synthetic_questions[]' "$file" 2>/dev/null | jq -R -s -c '
+                  split("\n")[:-1] | 
+                  map(select(length > 0)) | 
+                  map({question: .})
+                ')
+                if [ -z "$synthetic_questions" ] || [ "$synthetic_questions" = "null" ]; then
+                  synthetic_questions="[]"
+                fi
+              fi
+              
+              # Key Concepts (array → ACF repeater)
+              if grep -q "^key_concepts:" "${file}"; then
+                key_concepts=$(yq eval '.key_concepts[]' "$file" 2>/dev/null | jq -R -s -c '
+                  split("\n")[:-1] | 
+                  map(select(length > 0)) | 
+                  map({concept: .})
+                ')
+                if [ -z "$key_concepts" ] || [ "$key_concepts" = "null" ]; then
+                  key_concepts="[]"
+                fi
+              fi
+              
+              # Featured Image / Cover Image
+              featured_image=$(echo "$front_matter" | grep -i "^featured_image:" | sed 's/^featured_image: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
+              if [ -z "$featured_image" ]; then
+                featured_image=$(echo "$front_matter" | grep -i "^coverimage:" | sed 's/^coverimage: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
+              fi
+              
+              # Updated Date (use frontmatter or fallback to git)
+              updated_date=$(echo "$front_matter" | grep -i "^updated:" | sed 's/^updated: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
+              if [ -z "$updated_date" ]; then
+                updated_date=$(git log -1 --format="%aI" -- "$file" 2>/dev/null || date -Iseconds)
+              fi
+              
+              # Tags
+              tags=$(echo "$front_matter" | grep -i "^tags:" | sed 's/^tags: *//I' | sed 's/[\[\]]//g' | sed 's/,/ /g')
               if [ -z "$tags" ]; then
                 in_tags=false
                 while IFS= read -r line; do
@@ -155,6 +253,7 @@ jobs:
                 tags=$(echo "$tags" | xargs)
               fi
               
+              # Topic Override
               fm_topic=$(echo "$front_matter" | grep -i "^topic:" | sed 's/^topic: *//I')
               if [ ! -z "$fm_topic" ]; then
                 TOPIC_ID=$fm_topic
@@ -164,10 +263,12 @@ jobs:
               content=$(sed '1{/^---$/!q;};1,/^---$/d' "${file}")
             fi
             
+            # Clean Obsidian-specific syntax
             content=$(echo "$content" | sed -e 's/\[\[\([^]|]*\)|\([^]]*\)\]\]/\1/g' -e 's/\[\[\([^]]*\)\]\]/\1/g')
             content=$(echo "$content" | sed -e 's/!\[\[[^]]*\]\]//g' -e 's/\^[a-zA-Z0-9-]*//g')
             content=$(echo "$content" | sed '/^```dataview$/,/^```$/d')
             
+            # Convert markdown to HTML
             echo "$content" > /tmp/content.md
             
             if ! html_content=$(pandoc -f markdown+smart -t html --wrap=none /tmp/content.md 2>&1); then
@@ -180,10 +281,10 @@ jobs:
               continue
             fi
             
+            # Style tables
             html_content=$(echo "$html_content" | sed -e 's/<table>/<table style="border-collapse:collapse;width:100%;border:1px solid #ddd;">/g' -e 's/<th\([^>]*\)>/<th\1 style="border:1px solid #ddd;padding:8px;background:#f4f4f4;text-align:left;">/g' -e 's/<td\([^>]*\)>/<td\1 style="border:1px solid #ddd;padding:8px;text-align:left;">/g')
             
-            auth_header=$(echo -n "$WP_USERNAME:$WP_APP_PASSWORD" | base64)
-            
+            # Process tags
             tag_ids="[]"
             if [ ! -z "$tags" ]; then
               tag_ids_array=()
@@ -204,6 +305,56 @@ jobs:
               fi
             fi
             
+            # Handle Featured Image (URL-based)
+            featured_media=""
+            if [ ! -z "$featured_image" ]; then
+              echo "Processing featured image: $featured_image"
+              
+              if [[ "$featured_image" =~ ^https?:// ]]; then
+                # Validate URL is accessible
+                http_status=$(curl -s -o /dev/null -w "%{http_code}" -L "$featured_image" 2>/dev/null || echo "000")
+                
+                if [ "$http_status" = "200" ]; then
+                  # Check cache first
+                  cache_key=$(echo "$featured_image" | md5sum | cut -d' ' -f1)
+                  
+                  if [ ! -z "${MEDIA_CACHE[$cache_key]}" ]; then
+                    featured_media="${MEDIA_CACHE[$cache_key]}"
+                    echo "✓ Using cached media ID: $featured_media"
+                  else
+                    # Search for existing media
+                    image_basename=$(basename "$featured_image" | cut -d'?' -f1 | sed 's/\.[^.]*$//')
+                    existing_media=$(curl -s "$WP_URL/wp-json/wp/v2/media?search=$image_basename&per_page=1")
+                    media_id=$(echo "$existing_media" | jq -r '.[0].id // empty')
+                    
+                    if [ ! -z "$media_id" ] && [ "$media_id" != "null" ]; then
+                      featured_media="$media_id"
+                      echo "✓ Found existing media ID: $featured_media"
+                    else
+                      # Sideload new image
+                      media_id=$(sideload_image "$featured_image" "$title")
+                      if [ "$media_id" != "0" ]; then
+                        featured_media="$media_id"
+                        echo "✓ Uploaded new media ID: $featured_media"
+                      else
+                        echo "⚠ Failed to sideload image"
+                      fi
+                    fi
+                    
+                    # Cache result
+                    if [ ! -z "$featured_media" ]; then
+                      MEDIA_CACHE[$cache_key]="$featured_media"
+                    fi
+                  fi
+                else
+                  echo "⚠ Featured image URL returned HTTP $http_status - skipping"
+                fi
+              else
+                echo "⚠ Invalid image URL format (must start with http:// or https://)"
+              fi
+            fi
+            
+            # Check if post exists
             slug=$(echo "$title" | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g' | sed 's/[^a-z0-9-]//g')
             existing_post=$(curl -s "$WP_URL/wp-json/wp/v2/knowledge?slug=$slug")
             post_id=$(echo "$existing_post" | jq -r '.[0].id // empty')
@@ -218,17 +369,31 @@ jobs:
               echo "Creating new post"
             fi
             
-            base_args=(
-              --arg title "$title"
-              --arg content "$html_content"
-              --argjson topic "$TOPIC_ID"
-              --argjson tags "$tag_ids"
-            )
+            # Build ACF payload
+            acf_json="{}"
+            has_acf=false
             
-            if [ ! -z "$excerpt" ]; then
-              base_args+=(--arg excerpt "$excerpt")
+            if [ ! -z "$semantic_summary" ]; then
+              echo "Setting semantic summary"
+              acf_json=$(echo "$acf_json" | jq --arg summary "$semantic_summary" '. + {semantic_summary: $summary}')
+              has_acf=true
             fi
             
+            if [ "$synthetic_questions" != "[]" ]; then
+              question_count=$(echo "$synthetic_questions" | jq 'length')
+              echo "Setting synthetic questions ($question_count items)"
+              acf_json=$(echo "$acf_json" | jq --argjson questions "$synthetic_questions" '. + {synthetic_questions: $questions}')
+              has_acf=true
+            fi
+            
+            if [ "$key_concepts" != "[]" ]; then
+              concept_count=$(echo "$key_concepts" | jq 'length')
+              echo "Setting key concepts ($concept_count items)"
+              acf_json=$(echo "$acf_json" | jq --argjson concepts "$key_concepts" '. + {key_concepts: $concepts}')
+              has_acf=true
+            fi
+            
+            # Build Rank Math SEO meta payload
             meta_json="{}"
             has_meta=false
             
@@ -244,23 +409,190 @@ jobs:
               has_meta=true
             fi
             
-            if [ "$has_meta" = true ]; then
-              if [ ! -z "$excerpt" ]; then
+            # Build base arguments
+            base_args=(
+              --arg title "$title"
+              --arg content "$html_content"
+              --argjson topic "$TOPIC_ID"
+              --argjson tags "$tag_ids"
+            )
+            
+            if [ ! -z "$excerpt" ]; then
+              base_args+=(--arg excerpt "$excerpt")
+            fi
+            
+            if [ ! -z "$updated_date" ]; then
+              base_args+=(--arg date "$updated_date")
+            fi
+            
+            if [ ! -z "$featured_media" ]; then
+              base_args+=(--argjson featured_media "$featured_media")
+            fi
+            
+            # Construct JSON payload
+            if [ "$has_meta" = true ] && [ "$has_acf" = true ]; then
+              if [ ! -z "$excerpt" ] && [ ! -z "$updated_date" ] && [ ! -z "$featured_media" ]; then
+                json_payload=$(jq -n \
+                  "${base_args[@]}" \
+                  --argjson meta "$meta_json" \
+                  --argjson acf "$acf_json" \
+                  '{title: $title, content: $content, excerpt: $excerpt, date: $date, featured_media: $featured_media, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags, meta: $meta, acf: $acf}')
+              elif [ ! -z "$excerpt" ] && [ ! -z "$updated_date" ]; then
+                json_payload=$(jq -n \
+                  "${base_args[@]}" \
+                  --argjson meta "$meta_json" \
+                  --argjson acf "$acf_json" \
+                  '{title: $title, content: $content, excerpt: $excerpt, date: $date, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags, meta: $meta, acf: $acf}')
+              elif [ ! -z "$excerpt" ] && [ ! -z "$featured_media" ]; then
+                json_payload=$(jq -n \
+                  "${base_args[@]}" \
+                  --argjson meta "$meta_json" \
+                  --argjson acf "$acf_json" \
+                  '{title: $title, content: $content, excerpt: $excerpt, featured_media: $featured_media, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags, meta: $meta, acf: $acf}')
+              elif [ ! -z "$updated_date" ] && [ ! -z "$featured_media" ]; then
+                json_payload=$(jq -n \
+                  "${base_args[@]}" \
+                  --argjson meta "$meta_json" \
+                  --argjson acf "$acf_json" \
+                  '{title: $title, content: $content, date: $date, featured_media: $featured_media, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags, meta: $meta, acf: $acf}')
+              elif [ ! -z "$excerpt" ]; then
+                json_payload=$(jq -n \
+                  "${base_args[@]}" \
+                  --argjson meta "$meta_json" \
+                  --argjson acf "$acf_json" \
+                  '{title: $title, content: $content, excerpt: $excerpt, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags, meta: $meta, acf: $acf}')
+              elif [ ! -z "$updated_date" ]; then
+                json_payload=$(jq -n \
+                  "${base_args[@]}" \
+                  --argjson meta "$meta_json" \
+                  --argjson acf "$acf_json" \
+                  '{title: $title, content: $content, date: $date, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags, meta: $meta, acf: $acf}')
+              elif [ ! -z "$featured_media" ]; then
+                json_payload=$(jq -n \
+                  "${base_args[@]}" \
+                  --argjson meta "$meta_json" \
+                  --argjson acf "$acf_json" \
+                  '{title: $title, content: $content, featured_media: $featured_media, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags, meta: $meta, acf: $acf}')
+              else
+                json_payload=$(jq -n \
+                  "${base_args[@]}" \
+                  --argjson meta "$meta_json" \
+                  --argjson acf "$acf_json" \
+                  '{title: $title, content: $content, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags, meta: $meta, acf: $acf}')
+              fi
+            elif [ "$has_meta" = true ]; then
+              if [ ! -z "$excerpt" ] && [ ! -z "$updated_date" ] && [ ! -z "$featured_media" ]; then
+                json_payload=$(jq -n \
+                  "${base_args[@]}" \
+                  --argjson meta "$meta_json" \
+                  '{title: $title, content: $content, excerpt: $excerpt, date: $date, featured_media: $featured_media, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags, meta: $meta}')
+              elif [ ! -z "$excerpt" ] && [ ! -z "$updated_date" ]; then
+                json_payload=$(jq -n \
+                  "${base_args[@]}" \
+                  --argjson meta "$meta_json" \
+                  '{title: $title, content: $content, excerpt: $excerpt, date: $date, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags, meta: $meta}')
+              elif [ ! -z "$excerpt" ] && [ ! -z "$featured_media" ]; then
+                json_payload=$(jq -n \
+                  "${base_args[@]}" \
+                  --argjson meta "$meta_json" \
+                  '{title: $title, content: $content, excerpt: $excerpt, featured_media: $featured_media, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags, meta: $meta}')
+              elif [ ! -z "$updated_date" ] && [ ! -z "$featured_media" ]; then
+                json_payload=$(jq -n \
+                  "${base_args[@]}" \
+                  --argjson meta "$meta_json" \
+                  '{title: $title, content: $content, date: $date, featured_media: $featured_media, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags, meta: $meta}')
+              elif [ ! -z "$excerpt" ]; then
                 json_payload=$(jq -n \
                   "${base_args[@]}" \
                   --argjson meta "$meta_json" \
                   '{title: $title, content: $content, excerpt: $excerpt, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags, meta: $meta}')
+              elif [ ! -z "$updated_date" ]; then
+                json_payload=$(jq -n \
+                  "${base_args[@]}" \
+                  --argjson meta "$meta_json" \
+                  '{title: $title, content: $content, date: $date, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags, meta: $meta}')
+              elif [ ! -z "$featured_media" ]; then
+                json_payload=$(jq -n \
+                  "${base_args[@]}" \
+                  --argjson meta "$meta_json" \
+                  '{title: $title, content: $content, featured_media: $featured_media, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags, meta: $meta}')
               else
                 json_payload=$(jq -n \
                   "${base_args[@]}" \
                   --argjson meta "$meta_json" \
                   '{title: $title, content: $content, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags, meta: $meta}')
               fi
+            elif [ "$has_acf" = true ]; then
+              if [ ! -z "$excerpt" ] && [ ! -z "$updated_date" ] && [ ! -z "$featured_media" ]; then
+                json_payload=$(jq -n \
+                  "${base_args[@]}" \
+                  --argjson acf "$acf_json" \
+                  '{title: $title, content: $content, excerpt: $excerpt, date: $date, featured_media: $featured_media, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags, acf: $acf}')
+              elif [ ! -z "$excerpt" ] && [ ! -z "$updated_date" ]; then
+                json_payload=$(jq -n \
+                  "${base_args[@]}" \
+                  --argjson acf "$acf_json" \
+                  '{title: $title, content: $content, excerpt: $excerpt, date: $date, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags, acf: $acf}')
+              elif [ ! -z "$excerpt" ] && [ ! -z "$featured_media" ]; then
+                json_payload=$(jq -n \
+                  "${base_args[@]}" \
+                  --argjson acf "$acf_json" \
+                  '{title: $title, content: $content, excerpt: $excerpt, featured_media: $featured_media, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags, acf: $acf}')
+              elif [ ! -z "$updated_date" ] && [ ! -z "$featured_media" ]; then
+                json_payload=$(jq -n \
+                  "${base_args[@]}" \
+                  --argjson acf "$acf_json" \
+                  '{title: $title, content: $content, date: $date, featured_media: $featured_media, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags, acf: $acf}')
+              elif [ ! -z "$excerpt" ]; then
+                json_payload=$(jq -n \
+                  "${base_args[@]}" \
+                  --argjson acf "$acf_json" \
+                  '{title: $title, content: $content, excerpt: $excerpt, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags, acf: $acf}')
+              elif [ ! -z "$updated_date" ]; then
+                json_payload=$(jq -n \
+                  "${base_args[@]}" \
+                  --argjson acf "$acf_json" \
+                  '{title: $title, content: $content, date: $date, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags, acf: $acf}')
+              elif [ ! -z "$featured_media" ]; then
+                json_payload=$(jq -n \
+                  "${base_args[@]}" \
+                  --argjson acf "$acf_json" \
+                  '{title: $title, content: $content, featured_media: $featured_media, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags, acf: $acf}')
+              else
+                json_payload=$(jq -n \
+                  "${base_args[@]}" \
+                  --argjson acf "$acf_json" \
+                  '{title: $title, content: $content, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags, acf: $acf}')
+              fi
             else
-              if [ ! -z "$excerpt" ]; then
+              if [ ! -z "$excerpt" ] && [ ! -z "$updated_date" ] && [ ! -z "$featured_media" ]; then
+                json_payload=$(jq -n \
+                  "${base_args[@]}" \
+                  '{title: $title, content: $content, excerpt: $excerpt, date: $date, featured_media: $featured_media, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags}')
+              elif [ ! -z "$excerpt" ] && [ ! -z "$updated_date" ]; then
+                json_payload=$(jq -n \
+                  "${base_args[@]}" \
+                  '{title: $title, content: $content, excerpt: $excerpt, date: $date, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags}')
+              elif [ ! -z "$excerpt" ] && [ ! -z "$featured_media" ]; then
+                json_payload=$(jq -n \
+                  "${base_args[@]}" \
+                  '{title: $title, content: $content, excerpt: $excerpt, featured_media: $featured_media, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags}')
+              elif [ ! -z "$updated_date" ] && [ ! -z "$featured_media" ]; then
+                json_payload=$(jq -n \
+                  "${base_args[@]}" \
+                  '{title: $title, content: $content, date: $date, featured_media: $featured_media, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags}')
+              elif [ ! -z "$excerpt" ]; then
                 json_payload=$(jq -n \
                   "${base_args[@]}" \
                   '{title: $title, content: $content, excerpt: $excerpt, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags}')
+              elif [ ! -z "$updated_date" ]; then
+                json_payload=$(jq -n \
+                  "${base_args[@]}" \
+                  '{title: $title, content: $content, date: $date, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags}')
+              elif [ ! -z "$featured_media" ]; then
+                json_payload=$(jq -n \
+                  "${base_args[@]}" \
+                  '{title: $title, content: $content, featured_media: $featured_media, status: "publish", knowledge_topics: [1158, $topic], knowledge_tag: $tags}')
               else
                 json_payload=$(jq -n \
                   "${base_args[@]}" \
