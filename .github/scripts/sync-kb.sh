@@ -145,32 +145,31 @@ extract_frontmatter() {
   fm_image=$(echo "$front_matter" | grep -i "^featured_image:" | sed 's/^featured_image: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
   [ -z "$fm_image" ] && fm_image=$(echo "$front_matter" | grep -i "^coverimage:" | sed 's/^coverimage: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
   
-# Updated Date (use frontmatter or fallback to git)
-fm_updated=$(echo "$front_matter" | grep -i "^updated:" | sed 's/^updated: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
-
-# Normalize and validate date format
-if [ ! -z "$fm_updated" ]; then
-  # Try to parse and convert to ISO 8601 format
-  if normalized_date=$(date -d "$fm_updated" -Iseconds 2>/dev/null); then
-    fm_updated="$normalized_date"
-  else
-    echo "⚠ Invalid date format in frontmatter: $fm_updated - using git date"
-    fm_updated=""
+  # Date with validation
+  fm_updated=$(echo "$front_matter" | grep -i "^updated:" | sed 's/^updated: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
+  
+  # Normalize and validate date format
+  if [ ! -z "$fm_updated" ]; then
+    # Try to parse and convert to ISO 8601 format
+    if normalized_date=$(date -d "$fm_updated" -Iseconds 2>/dev/null); then
+      fm_updated="$normalized_date"
+      # Remove milliseconds for WordPress compatibility
+      fm_updated=$(echo "$fm_updated" | sed 's/\.[0-9]*+/+/' | sed 's/\.[0-9]*Z$/Z/')
+    else
+      echo "⚠ Invalid date format in frontmatter: $fm_updated - using git date"
+      fm_updated=""
+    fi
   fi
-fi
-
-# Fallback to git history if no valid frontmatter date
-if [ -z "$fm_updated" ]; then
-  fm_updated=$(git log -1 --format="%aI" -- "$file" 2>/dev/null)
-fi
-
-# Final fallback: use current date
-if [ -z "$fm_updated" ]; then
-  fm_updated=$(date -Iseconds)
-fi
-
-# Ensure date is in WordPress-compatible format (remove milliseconds if present)
-fm_updated=$(echo "$fm_updated" | sed 's/\.[0-9]*+/+/' | sed 's/\.[0-9]*Z$/Z/')
+  
+  # Fallback to git history if no valid frontmatter date
+  if [ -z "$fm_updated" ]; then
+    fm_updated=$(git log -1 --format="%aI" -- "$file" 2>/dev/null)
+  fi
+  
+  # Final fallback: use current date
+  if [ -z "$fm_updated" ]; then
+    fm_updated=$(date -Iseconds)
+  fi
   
   # Tags
   fm_tags=$(echo "$front_matter" | grep -i "^tags:" | sed 's/^tags: *//I' | sed 's/[\[\]]//g' | sed 's/,/ /g')
@@ -332,15 +331,27 @@ build_json_payload() {
 auth_header=$(echo -n "$WP_USERNAME:$WP_APP_PASSWORD" | base64)
 
 get_files_to_process | while IFS= read -r file; do
+  # Skip empty lines and non-markdown files
   [ -z "$file" ] || [[ "$file" != *.md ]] && continue
   
+  # Block index.md files
   if [[ "$(basename "$file")" == "index.md" ]]; then
     echo "⊘ Skipping index file: $file"
     continue
   fi
   
-  echo "---"
+  # Block Make.md folder-name files (e.g., folder/folder.md)
+  folder_name=$(basename "$(dirname "$file")")
+  file_name=$(basename "$file" .md)
+  if [[ "$folder_name" == "$file_name" ]]; then
+    echo "⊘ Skipping Make.md folder file: $file"
+    continue
+  fi
+  
+  echo ""
+  echo "============================================"
   echo "Processing: $file"
+  echo "============================================"
   
   [ ! -f "$file" ] && echo "⚠ File not found: $file" && continue
   
@@ -359,8 +370,20 @@ get_files_to_process | while IFS= read -r file; do
     [ ! -z "$fm_topic" ] && TOPIC_ID="$fm_topic" && echo "Topic overridden by frontmatter: $TOPIC_ID"
   fi
   
-  # Get content (strip frontmatter)
-  content=$(sed '1{/^---$/!q;};1,/^---$/d' "$file")
+  # Get content (strip frontmatter) - safer approach
+  if grep -q "^---$" "$file"; then
+    # File has frontmatter - extract content after second ---
+    content=$(awk '/^---$/{if(++n==2){flag=1;next}}flag' "$file")
+  else
+    # No frontmatter - use entire file
+    content=$(cat "$file")
+  fi
+  
+  # Skip if no actual content (Make.md metadata files)
+  if [ -z "$content" ] || [ "$(echo "$content" | tr -d '[:space:]')" = "" ]; then
+    echo "⚠ No body content found (Make.md metadata file?), skipping"
+    continue
+  fi
   
   # Clean Obsidian syntax
   content=$(echo "$content" | sed -e 's/\[\[\([^]|]*\)|\([^]]*\)\]\]/\1/g' -e 's/\[\[\([^]]*\)\]\]/\1/g')
@@ -374,7 +397,10 @@ get_files_to_process | while IFS= read -r file; do
     continue
   fi
   
-  [ -z "$html_content" ] && echo "⚠ HTML content is empty, skipping" && continue
+  if [ -z "$html_content" ] || [ "$(echo "$html_content" | tr -d '[:space:]')" = "" ]; then
+    echo "⚠ HTML content is empty after conversion, skipping"
+    continue
+  fi
   
   # Style tables
   html_content=$(echo "$html_content" | sed -e 's/<table>/<table style="border-collapse:collapse;width:100%;border:1px solid #ddd;">/g' -e 's/<th\([^>]*\)>/<th\1 style="border:1px solid #ddd;padding:8px;background:#f4f4f4;text-align:left;">/g' -e 's/<td\([^>]*\)>/<td\1 style="border:1px solid #ddd;padding:8px;text-align:left;">/g')
@@ -390,16 +416,21 @@ get_files_to_process | while IFS= read -r file; do
   has_acf=false
   
   if [ ! -z "$fm_semantic" ]; then
+    echo "Setting semantic summary"
     acf_json=$(echo "$acf_json" | jq --arg summary "$fm_semantic" '. + {semantic_summary: $summary}')
     has_acf=true
   fi
   
   if [ "$fm_questions" != "[]" ]; then
+    question_count=$(echo "$fm_questions" | jq 'length')
+    echo "Setting synthetic questions ($question_count items)"
     acf_json=$(echo "$acf_json" | jq --argjson questions "$fm_questions" '. + {synthetic_questions: $questions}')
     has_acf=true
   fi
   
   if [ "$fm_concepts" != "[]" ]; then
+    concept_count=$(echo "$fm_concepts" | jq 'length')
+    echo "Setting key concepts ($concept_count items)"
     acf_json=$(echo "$acf_json" | jq --argjson concepts "$fm_concepts" '. + {key_concepts: $concepts}')
     has_acf=true
   fi
@@ -409,11 +440,13 @@ get_files_to_process | while IFS= read -r file; do
   has_meta=false
   
   if [ ! -z "$fm_keyword" ]; then
+    echo "Setting focus keyword: $fm_keyword"
     meta_json=$(echo "$meta_json" | jq --arg key "$fm_keyword" '. + {rank_math_focus_keyword: $key}')
     has_meta=true
   fi
   
   if [ ! -z "$fm_meta_desc" ]; then
+    echo "Setting meta description: $fm_meta_desc"
     meta_json=$(echo "$meta_json" | jq --arg desc "$fm_meta_desc" '. + {rank_math_description: $desc}')
     has_meta=true
   fi
@@ -462,22 +495,13 @@ get_files_to_process | while IFS= read -r file; do
       "$WP_URL/wp-json/mwai/v2/vectors/add")
     
     embed_http_code=$(echo "$embed_response" | tail -n1)
-    [ "$embed_http_code" -eq 200 ] && echo "✓ Embeddings generated successfully." || echo "⚠ Embedding generation failed (HTTP $embed_http_code)"
+    if [ "$embed_http_code" -eq 200 ]; then
+      echo "✓ Embeddings generated successfully."
+    else
+      echo "⚠ Embedding generation failed (HTTP $embed_http_code)"
+    fi
   else
     echo "✗ Failed to sync: $title (HTTP $http_code)"
-    echo "$body"
+    echo "$body" | jq '.' 2>/dev/null || echo "$body"
   fi
 done
-```
-
----
-
-## Repository Structure
-```
-.github/
-├── workflows/
-│   └── kb-sync.yml           # Workflow orchestration
-└── scripts/
-    └── sync-kb.sh            # Sync logic (executable)
-kb/
-└── [your markdown files]
