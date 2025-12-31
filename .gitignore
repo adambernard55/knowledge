@@ -1,18 +1,47 @@
-# Ignore all hidden files and folders at the root, except .github and .gitignore
-.*
-# Re-include .github and .gitignore so they are tracked
-!.github/
-!.gitignore
+# =============================================================================
+# ROOT-LEVEL IGNORE PATTERN
+# =============================================================================
 
-# Ignore all other files and folders at the root
+# Ignore everything at root level
 /*
 
-# Explicitly track the knowledge base folder and its contents
+# Explicitly track these directories
+!/.github/
 !/kb/
+!/.gitignore
 
-# Explicitly ignore Obsidian's folder, trash, and any temporary files
-# This is the most important part for plugin compatibility
+# =============================================================================
+# .GITHUB DIRECTORY
+# =============================================================================
+
+# Ignore everything in .github except workflows and scripts
+.github/*
+!.github/workflows/
+!.github/scripts/
+
+# =============================================================================
+# OBSIDIAN-SPECIFIC
+# =============================================================================
+
 .obsidian/
 .trash/
+
+# =============================================================================
+# COMMON DOTFILES TO IGNORE
+# =============================================================================
+
+.DS_Store
+.vscode/
+.idea/
+.env
+.env.local
+.env.*.local
+
+# =============================================================================
+# TEMPORARY FILES
+# =============================================================================
+
 *.tmp
 *.mdb
+*.log
+*~
