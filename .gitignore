@@ -9,6 +9,19 @@
 !/.github/
 !/kb/
 !/.gitignore
+!/SIE/
+
+# =============================================================================
+# SIE AGENT LOOP
+# =============================================================================
+
+# Allow the agent code folder
+!/SIE/04_Engine/sie-agent-loop/
+
+# But ignore the heavy environment and secrets inside it
+SIE/04_Engine/sie-agent-loop/
+.venv/SIE/04_Engine/sie-agent-loop/
+.envSIE/04_Engine/sie-agent-loop/pycache/
 
 # =============================================================================
 # .GITHUB DIRECTORY
