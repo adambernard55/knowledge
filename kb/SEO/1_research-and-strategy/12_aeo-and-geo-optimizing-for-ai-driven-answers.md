@@ -1,22 +1,56 @@
 ---
 title: "AEO & GEO: Optimizing for Retrieval, Citation, and Trust in AI Search"
-aliases: [AEO, GEO, Answer Engine Optimization, Generative Engine Optimization, Retrieval Optimization]
+id: "KB/SEO/Research-12"
+version: "2.0"
+steward: "Adam Bernard"
+updated: "2026-01-01"
+status: "Active"
+doc_type: "Reference"
 summary: "A guide to AEO (Answer Engine Optimization) and GEO (Generative Engine Optimization), explaining the strategic shift from ranking to retrieval. Learn how to optimize for citation and trust by building machine-verifiable authority signals for AI systems."
-seo_category: research-and-strategy
-difficulty: intermediate
-last_updated: 2025-12-25
-kb_status: "published"
 tags:
-  - seo
-  - ai
   - aeo
   - geo
+  - generative-engine-optimization
+  - answer-engine-optimization
+  - ai-search
   - retrieval-optimization
-  - content-strategy
   - entity-authority
-keywords: "aeo, geo, answer engine optimization, generative engine optimization, retrieval optimization, ai search, seo for ai, entity clarity, machine-verifiable signals, citation optimization"
-meta_description: "Learn how to optimize for AI-driven search with AEO and GEO. This guide explains the shift from ranking to retrieval, focusing on building machine-verifiable trust signals like structured data and entity clarity to get your content cited in AI answers."
-excerpt: "Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO) represent a fundamental shift in SEO. Success is no longer about ranking #1, but about being retrieved, cited, and trusted by AI systems. This requires building machine-verifiable authority through entity clarity and structured data."
+relations:
+  - "kb/SEO/1_research-and-strategy/11_the-impact-of-ai-on-modern-seo"
+  - "kb/SEO/1_research-and-strategy/07_ai-powered-keyword-research"
+  - "kb/SEO/2_content-and-on-page/06_schema-and-rich-results"
+  - "kb/SEO/fundamentals/eeat-signals"
+aliases:
+  - "Answer Engine Optimization"
+  - "Generative Engine Optimization"
+  - "Retrieval Optimization"
+  - "AEO Guide"
+  - "GEO Guide"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: >
+  This document explains the strategic shift from traditional SEO ranking to AEO (Answer Engine Optimization) and GEO (Generative Engine Optimization). 
+  It details how AI search engines synthesize answers based on retrieval, citation, and trust. 
+  Key strategies include building machine-verifiable authority through entity clarity, structured data, and answer-ready formatting.
+synthetic_questions:
+  - "What is the difference between AEO and GEO?"
+  - "How do AI search engines find and synthesize answers?"
+  - "What are machine-verifiable trust signals in SEO?"
+  - "How do I optimize content for retrieval by AI agents?"
+key_concepts:
+  - "Retrieval vs Ranking"
+  - "Machine-Verifiable Authority"
+  - "Entity Clarity"
+  - "Consensus"
+  - "Query Fan-out"
+  - "Synthesized Answers"
+
+# --- SEO & Publication ---
+primary_keyword: "aeo and geo optimization"
+seo_title: "AEO & GEO: The Guide to Optimizing for AI Search (2026)"
+meta_description: "Master AEO and GEO. Learn how to optimize for retrieval, citation, and trust in the age of AI search engines like Google SGE and ChatGPT."
+excerpt: "SEO is shifting from ranking to retrieval. Learn how Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO) help you get cited by AI."
+cover_image: "assets/images/aeo-geo-optimization.jpg"
 ---
 
 # AEO & GEO: Optimizing for Retrieval, Citation, and Trust in AI Search
@@ -64,8 +98,6 @@ The primary strategic shift is moving from targeting individual keywords to buil
 
 The goal is to create the single best, most comprehensive resource that anticipates a user's entire informational journey on a complex topic.
 
-**For a detailed, step-by-step implementation guide on these principles, refer to [[kb/SEO/4_ai-and-automation/2_optimizing-for-ai/01_generative-engine-optimization-playbook|The GEO Playbook]].**
-
 ## 5. Key Takeaways
 
 1.  **AEO/GEO is a Mindset Shift:** The goal is no longer ranking, but being **retrieved, cited, and trusted** by AI systems.
@@ -74,8 +106,10 @@ The goal is to create the single best, most comprehensive resource that anticipa
 4.  **Fundamentals Still Apply:** Core principles like E-E-A-T, user intent, and originality are the foundation upon which machine-verifiable trust is built.
 
 ---
-### Related Notes
-- [[kb/SEO/4_ai-and-automation/2_optimizing-for-ai/02_agentic-seo|Agentic SEO: Achieving Agentic Readiness for AI Systems]]
-- [[kb/SEO/6_future-trends/03_the-agentic-web-optimizing-for-ai-agents|The Agentic Web: Optimizing for AI Agents]]
-- [[kb/SEO/0_fundamentals/5_eeat-signals|E-E-A-T Signals]]
+
+## Related Resources
+
+- [[kb/SEO/1_research-and-strategy/11_the-impact-of-ai-on-modern-seo|The Impact of AI on Modern SEO]]
+- [[kb/SEO/1_research-and-strategy/07_ai-powered-keyword-research|AI-Powered Keyword Research]]
+- [[kb/SEO/fundamentals/eeat-signals|E-E-A-T Signals]]
 - [[kb/SEO/2_content-and-on-page/06_schema-and-rich-results|Schema and Rich Results]]
