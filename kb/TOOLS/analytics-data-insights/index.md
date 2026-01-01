@@ -9,7 +9,7 @@ These platforms leverage artificial intelligence and machine learning to move be
 
 ```dataview
 TABLE
-    excerpt AS "Overview",
+    semantic_summary AS "Overview",
     tags AS "Tags",
     last_updated AS "Last Updated"
 FROM "kb/TOOLS/analytics-data-insights"
