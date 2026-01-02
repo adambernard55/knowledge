@@ -1,50 +1,49 @@
 ---
-title: "AI-Powered Content Creation"
-id: "KB/AI/MKTG-01"
+title: AI-Powered Content Creation
+id: KB/AI/MKTG-01
 version: "1.1"
-steward: "Adam Bernard"
-updated: "2026-01-02"
-status: "Active"
-doc_type: "Reference"
-summary: "A foundational guide to using AI for content creation, covering text, image, and video generation tools, strategies, and ethical best practices."
+steward: Adam Bernard
+updated: 2026-01-02
+status: Active
+doc_type: Reference
+summary: A foundational guide to using AI for content creation, covering text, image, and video generation tools, strategies, and ethical best practices.
 tags:
-  - "ai"
-  - "content creation"
-  - "marketing"
-  - "generative ai"
-  - "llm"
-  - "seo"
+  - ai
+  - content creation
+  - marketing
+  - generative ai
+  - llm
+  - seo
 relations:
-  - "kb/AI/4_applications/marketing/00_foundations-of-ai-powered-marketing.md"
-  - "kb/SEO/2_strategy/02_semantic-depth-standard.md"
+  - kb/AI/4_applications/marketing/00_foundations-of-ai-powered-marketing.md
+  - kb/SEO/2_strategy/02_semantic-depth-standard.md
 aliases:
-  - "AI Content Creation"
-  - "Generative AI for Content"
-target_audience: "All_Staff"
-security_level: "Internal"
-owner_team: "Marketing"
-semantic_summary: >
-  This document provides a comprehensive overview of leveraging artificial intelligence in modern content strategy. It details the role of AI in overcoming challenges like volume and personalization, explores specific tools and use cases for text, image, and video generation, and concludes with essential ethical considerations and best practices for human-led, AI-powered workflows.
+  - AI Content Creation
+  - Generative AI for Content
+target_audience: All_Staff
+security_level: Internal
+owner_team: Marketing
+semantic_summary: This document provides a comprehensive overview of leveraging artificial intelligence in modern content strategy. It details the role of AI in overcoming challenges like volume and personalization, explores specific tools and use cases for text, image, and video generation, and concludes with essential ethical considerations and best practices for human-led, AI-powered workflows.
 synthetic_questions:
-  - "How can AI help with content creation?"
-  - "What are the best AI tools for writing blog posts?"
-  - "Can AI generate images for social media?"
-  - "What is the difference between Midjourney and DALL-E 2?"
-  - "What are the ethical risks of using AI in content marketing?"
+  - How can AI help with content creation?
+  - What are the best AI tools for writing blog posts?
+  - Can AI generate images for social media?
+  - What is the difference between Midjourney and DALL-E 2?
+  - What are the ethical risks of using AI in content marketing?
 key_concepts:
-  - "content strategy"
-  - "generative ai"
-  - "large language models"
-  - "text-to-image"
-  - "text-to-video"
-  - "seo optimization"
-  - "personalization"
-  - "ethical ai"
-primary_keyword: "ai content creation"
+  - content strategy
+  - generative ai
+  - large language models
+  - text-to-image
+  - text-to-video
+  - seo optimization
+  - personalization
+  - ethical ai
+primary_keyword: ai content creation
 seo_title: "A Guide to AI Content Creation: Tools & Strategy for 2026"
-meta_description: "Learn how to leverage AI content creation with our guide to the best tools for text, image, and video. Master a human-led, AI-powered strategy."
-excerpt: "Unlock the power of AI content creation. This guide covers the top tools and strategies for generating text, images, and video to scale your marketing efforts while maintaining quality and ethical standards."
-cover_image: "assets/images/ai-content-strategy-cover.png"
+meta_description: Learn how to leverage AI content creation with our guide to the best tools for text, image, and video. Master a human-led, AI-powered strategy.
+excerpt: Unlock the power of AI content creation. This guide covers the top tools and strategies for generating text, images, and video to scale your marketing efforts while maintaining quality and ethical standards.
+cover_image: assets/images/ai-content-strategy-cover.png
 ---
 
 # AI-Powered Content Creation

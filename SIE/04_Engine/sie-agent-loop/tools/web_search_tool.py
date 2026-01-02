@@ -1,5 +1,5 @@
 ﻿# tools/web_search_tool.py
-from crewai_tools import SerperDevTool
+from crewai.tools import SerperDevTool
 import os
 
 # Initialize web search tool using SerperDev API
