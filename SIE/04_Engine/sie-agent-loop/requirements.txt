@@ -1,0 +1,9 @@
+crewai
+langchain-openai
+python-dotenv
+fastapi
+uvicorn
+tavily-python
+firecrawl-py
+pinecone-client
+numpy

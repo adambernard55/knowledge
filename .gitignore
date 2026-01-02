@@ -15,13 +15,27 @@
 # SIE AGENT LOOP
 # =============================================================================
 
-# Allow the agent code folder
+# 1. Allow the directory structure leading to the agent
+
+!/SIE/
+!/SIE/04_Engine/
 !/SIE/04_Engine/sie-agent-loop/
 
-# But ignore the heavy environment and secrets inside it
-SIE/04_Engine/sie-agent-loop/
-.venv/SIE/04_Engine/sie-agent-loop/
-.envSIE/04_Engine/sie-agent-loop/pycache/
+# 2. Re-ignore everything inside SIE EXCEPT the 04_Engine folder
+
+/SIE/*
+!/SIE/04_Engine/
+
+# 3. Re-ignore everything inside 04_Engine EXCEPT the sie-agent-loop folder
+
+/SIE/04_Engine/*
+!/SIE/04_Engine/sie-agent-loop/
+
+# 4. Final safety: Block the heavy environment and secrets inside the agent folder
+
+SIE/04_Engine/sie-agent-loop/.venv/
+SIE/04_Engine/sie-agent-loop/.env
+SIE/04_Engine/sie-agent-loop/pycache/
 
 # =============================================================================
 # .GITHUB DIRECTORY

@@ -1,21 +1,38 @@
 ---
-title: The Three Pillars of SEO
-id: 20251229071912
-version: 1
-Author: Adam Bernard
-steward:
-date: 2025-12-29
-category:
-category_id:
-Excerpt:
-Meta Description:
-Primary_Keyword:
-Featured_Image:
-doc_type:
-relations:
-aliases:
-last_updated: 2025-12-29
+title: "The Three Pillars of SEO"
+id: "KB/SEO/REF-01"
+version: "1.0"
+steward: "Adam Bernard"
+updated: "2025-12-29"
+status: "Active"
+doc_type: "Reference"
+summary: "Defines the three core pillars of modern SEO: On-Page, Technical, and Off-Page, and their strategic importance in 2025."
 tags:
+  - "seo"
+  - "on-page-seo"
+  - "technical-seo"
+  - "off-page-seo"
+  - "seo-fundamentals"
+  - "eeat"
+relations:
+  - "kb/SEO/0_fundamentals/index.md"
+  - "kb/SEO/2_content-and-on-page/index.md"
+  - "kb/SEO/3_technical-seo/index.md"
+aliases:
+  - "Three Pillars of SEO"
+  - "SEO Pillars"
+semantic_summary: "This document breaks down Search Engine Optimization into its three foundational pillars: On-Page (content and HTML optimization), Technical (site speed, crawlability), and Off-Page (backlinks, reputation). It explains why each is critical for building organic traffic and establishing trust in the modern AI-driven search landscape."
+synthetic_questions:
+  - "What are the three main areas of SEO?"
+  - "What is the difference between on-page and technical SEO?"
+  - "Why are backlinks important for SEO?"
+key_concepts:
+  - "on-page seo"
+  - "technical seo"
+  - "off-page seo"
+  - "backlinks"
+  - "eeat"
+  - "search intent"
 ---
 
 ## The Three Pillars of SEO
@@ -30,7 +47,7 @@ This is everything you do _on_ your actual pages to help search engines understa
     
 - **Content Quality:** Creating "people-first" content that is helpful and original.
     
-- **HTML Elements:** Optimizing Title Tags, Meta Descriptions, and Header Tags (6$H1$, 7$H2$, etc.) so search engines can "read" the page structure.
+- **HTML Elements:** Optimizing Title Tags, Meta Descriptions, and Header Tags (H1, H2, etc.) so search engines can "read" the page structure.
     
 
 ### 2. Technical SEO (The Engine)
@@ -60,7 +77,7 @@ This involves actions taken outside of your own website to impact your rankings.
 ## Why SEO Matters in 2025
 
 | **Benefit**                | **Description**                                                                                                                    |
-| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| :--- | :--- |
 | **Compounding Traffic**    | Unlike paid ads (PPC), which stop the moment you stop paying, SEO traffic is "organic" and builds over time.                       |
 | **Trust & Credibility**    | Users generally trust organic results more than "Sponsored" ads.                                                                   |
 | **Lower Acquisition Cost** | Over the long term, organic search is often the most cost-effective way to acquire new customers.                                  |
@@ -70,12 +87,8 @@ This involves actions taken outside of your own website to impact your rankings.
 
 ## Key 2025 Trends
 
-+1
-
-- **Search Intent over Keywords:** Google now focuses on _why_ someone is searching (e.g., are they looking to buy, or just looking for information?)17 rather than just matching a phrase.18
+- **Search Intent over Keywords:** Google now focuses on _why_ someone is searching (e.g., are they looking to buy, or just looking for information?) rather than just matching a phrase.
     
-    +1
+- **Generative Engine Optimization (GEO):** Adapting content so it appears in AI-generated search summaries.
     
-- **Generative Engine Optimization (GEO):** Adapting content so it appears in AI-generated search summaries.19
-    
-- **Zero-Click Searches:** Crafting content that provides value even if a user doesn't click through, often via "Featured Snippets."20
+- **Zero-Click Searches:** Crafting content that provides value even if a user doesn't click through, often via "Featured Snippets."

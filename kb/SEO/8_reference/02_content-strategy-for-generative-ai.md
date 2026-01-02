@@ -1,33 +1,50 @@
 ---
-title: Content Strategy for Generative AI
-id: 20251210054605
-version: 2
-Author: Adam Bernard
-steward:
-date: 2025-12-10
-category: SEO
-category_id:
-Excerpt: A reference guide on adapting content strategy for 2026, focusing on the shift from clicks to mentions and citations as primary visibility signals in an AI-driven user journey.
-Meta Description: Strategic reference for SEOs and content marketers on prioritizing mentions, citations, and technical optimization for AI agents and generative search.
-Primary_Keyword: 2026 content strategy
-Featured_Image:
-doc_type: reference
-relations:
-aliases:
-  - AI Content Strategy
-  - Generative SEO Strategy
-last_updated: 2025-12-10
+title: "Content Strategy for Generative AI"
+id: "KB/SEO/REF-02"
+version: "2.0"
+steward: "Adam Bernard"
+updated: "2025-12-10"
+status: "Active"
+doc_type: "Reference"
+summary: "A reference guide on adapting content strategy for 2026, focusing on the shift from clicks to mentions and citations as primary visibility signals in an AI-driven user journey."
 tags:
-  - SEO
-  - content-strategy
-  - AI
-  - generative-search
-  - GEO
-  - AI-agents
+  - "seo"
+  - "content-strategy"
+  - "ai"
+  - "generative-search"
+  - "geo"
+  - "ai-agents"
+relations:
+  - "kb/SEO/4_ai-and-automation/index.md"
+aliases:
+  - "AI Content Strategy"
+  - "Generative SEO Strategy"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: >
+  This document outlines a 2026 content strategy for generative AI, emphasizing the shift from clicks to citations and mentions. It proposes a dual-pronged approach: creating authoritative TOFU content for human selection within AI interfaces and ensuring technically perfect BOFU content for frictionless execution by autonomous AI agents.
+synthetic_questions:
+  - "How should content strategy change for generative AI?"
+  - "Why are citations more important than clicks in 2026?"
+  - "How do I optimize content for AI agents?"
+key_concepts:
+  - "generative ai"
+  - "content strategy"
+  - "ai agents"
+  - "citations"
+  - "mentions"
+  - "generative engine optimization"
+  - "agent payments protocol"
+
+# --- SEO & Publication ---
+primary_keyword: "2026 content strategy"
+seo_title: "Content Strategy for Generative AI in 2026"
+meta_description: "A strategic guide for adapting your 2026 content strategy to prioritize mentions, citations, and technical optimization for AI agents."
+excerpt: "Learn how to adapt your 2026 content strategy for a world of generative AI, where mentions and citations are the new clicks. This guide covers optimizing for both human selection and machine execution."
+cover_image: ""
 ---
 
-
-# Reference: 2026 Content Strategy for Generative AI
+# 2026 Content Strategy for Generative AI
 
 ## 1. Executive Summary
 
