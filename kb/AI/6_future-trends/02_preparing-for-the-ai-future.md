@@ -223,7 +223,7 @@ Preparing for the AI future also means investing in:
 - **AI platforms and integration**  
   - Common access to models (internal and external).  
   - RAG / knowledge integration pipelines (see: MCP RAG docs in `../3_methods/mcp/`).  
-  - Tooling for observability and evaluation (see: [Evaluation and Performance](08_evaluation-and-performance.md) and [LLM-Evalkit](LLM-Evalkit.md)).
+  - Tooling for observability and evaluation (see: [Evaluation and Performance](08_evaluation-and-performance.md) and [07_llm-evalkit](07_llm-evalkit.md)).
 
 - **Agent orchestration**  
   - Frameworks and protocols (e.g., MCP) to safely connect agents to business systems (see: [Agentic Architectures and Frameworks](10_agentic-architectures-and-frameworks.md)).

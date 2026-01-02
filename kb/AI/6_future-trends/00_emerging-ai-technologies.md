@@ -295,7 +295,7 @@ New tooling is emerging for:
 
 These form the backbone of **production-grade, governed AI systems**.
 
-See: [Evaluation and Performance](08_evaluation-and-performance.md) and [LLM-Evalkit](LLM-Evalkit.md).
+See: [Evaluation and Performance](08_evaluation-and-performance.md) and [07_llm-evalkit](07_llm-evalkit.md).
 
 ---
 

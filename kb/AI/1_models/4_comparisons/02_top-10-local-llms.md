@@ -1,10 +1,12 @@
 ---
 title: "Top 10 Local LLMs for 2025"
-summary: A comparative guide to the top 10 local LLMs in 2025, focusing on context length, VRAM requirements, licensing, and practical deployment considerations.
-category: AI Model Comparisons
-difficulty: Intermediate
-last_updated: 2025-09-28
-kb_status: published
+id: "KB/AI/Comp-02"
+version: "1.1"
+steward: "Adam Bernard"
+updated: "2026-01-02"
+status: "Active"
+doc_type: "Reference"
+summary: "A practical guide to the top 10 open-source LLMs for local deployment. Compares models like Llama 3 and Mixtral based on VRAM requirements, licensing, and performance for self-hosting."
 tags:
   - ai
   - llm
@@ -12,14 +14,48 @@ tags:
   - open-source
   - self-hosting
   - gguf
-related_topics:
-  - ai-models
-  - llama
-  - mistral-mixtral
   - model-deployment
+relations:
+  - "kb/AI/1_models/4_comparisons/01_top-10-llms.md"
+  - "kb/AI/1_models/00_ai-models.md"
+aliases:
+  - "Top 10 Local LLMs"
+  - "Self-Hosted LLM Guide"
+  - "Best Open Source LLMs"
+
+# --- Operational Metadata ---
+security_level: "Public"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: >
+  This document provides a practical comparison of the top 10 local large language models for self-hosting in 2025. It evaluates leading open-source models based on key deployment criteria such as VRAM requirements, context length, and licensing (Apache 2.0, MIT), making it a guide for practitioners choosing a model for on-device or on-premises inference.
+synthetic_questions:
+  - "What is the best local LLM for a 12GB GPU?"
+  - "Which open-source LLM has the most permissive license?"
+  - "What are the top 10 local LLMs in 2025?"
+  - "How much VRAM do I need for Mixtral?"
+key_concepts:
+  - "local LLM"
+  - "self-hosting"
+  - "open-source AI"
+  - "VRAM"
+  - "quantization"
+  - "GGUF"
+  - "Ollama"
+  - "Llama 3"
+  - "Mixtral"
+
+# --- SEO & Publication ---
+primary_keyword: "top local llms"
+seo_title: "Top 10 Local LLMs for 2025: A Self-Hosting Guide"
+meta_description: "Discover the top 10 local LLMs for self-hosting in 2025. Our guide compares Llama, Mixtral, and more on VRAM, licensing, and performance."
+excerpt: "A practical guide to the top 10 open-source LLMs for local deployment. Compare models based on VRAM requirements, licensing, and performance to choose the best fit for your hardware."
+cover_image: "assets/img/top-10-local-llms-cover.png"
 ---
 
 # Top 10 Local LLMs for 2025
+
+> **Looking for the best API-based models from major labs?** See the [[01_top-10-llms|Top 10 Cloud & API LLMs Comparison]].
 
 In 2025, local Large Language Models (LLMs) have reached maturity, making on-device and on-premises inference practical and powerful. Open-weight model families like [[5_llama]] 3.1, Qwen3, Gemma 2, and [[4_mistral-mixtral]] now offer reliable specifications, long context windows, and excellent support in local runners like Ollama and LM Studio. This guide compares the ten most deployable options, focusing on license clarity, GGUF availability, and key performance characteristics like parameter count, context length, and VRAM targets.
 

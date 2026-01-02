@@ -1,24 +1,59 @@
 ---
-title: "Top 10 LLMs for 2025: A Comparative Guide"
-summary: A high-level overview and ranking of the top 10 large language models in 2025, categorized by their primary strengths in reasoning, performance, and specialization.
-category: AI Model Comparisons
-difficulty: Beginner
-last_updated: 2025-11-10
-kb_status: published
+title: "Top 10 Large Language Models (Cloud & API): A 2025 Comparison"
+id: "KB/AI/Comp-01"
+version: "1.1"
+steward: "Adam Bernard"
+updated: "2026-01-02"
+status: "Active"
+doc_type: "Reference"
+summary: "A strategic comparison of the top 10 large language models available via API, focusing on industry leaders like GPT-4, Claude, and Gemini. Ideal for selecting a model for application integration and high-level use cases."
 tags:
   - ai
   - llm
   - top-10
   - model-comparison
   - generative-ai
-related_topics:
-  - ai-models
-  - chatgpt
-  - gemini
-  - claude
+  - api-models
+relations:
+  - "kb/AI/1_models/4_comparisons/02_top-10-local-llms.md"
+  - "kb/AI/1_models/00_ai-models.md"
+aliases:
+  - "Top 10 LLMs"
+  - "Cloud LLM Comparison"
+  - "Best API AI Models"
+
+# --- Operational Metadata ---
+security_level: "Public"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: >
+  This document provides a tiered ranking and strategic comparison of the top 10 proprietary large language models accessible via API in 2025. It evaluates leading models from OpenAI (GPT-4.1), Anthropic (Claude 4), and Google (Gemini 2.5) based on their reasoning capabilities, performance, and ideal use cases for enterprise and application development.
+synthetic_questions:
+  - "What is the best LLM for complex reasoning?"
+  - "Which AI model is best for enterprise use?"
+  - "What are the top 10 AI models in 2025?"
+  - "Should I use GPT-4, Claude, or Gemini for my application?"
+key_concepts:
+  - "API models"
+  - "cloud AI"
+  - "proprietary LLMs"
+  - "model tiers"
+  - "reasoning capability"
+  - "GPT-4"
+  - "Claude"
+  - "Gemini"
+
+# --- SEO & Publication ---
+primary_keyword: "top large language models"
+seo_title: "Top 10 Large Language Models (Cloud & API): A 2025 Comparison"
+meta_description: "Compare the top large language models of 2025. Our guide ranks GPT-4, Claude, and Gemini for strategic API integration."
+excerpt: "Discover the top large language models available via API. This guide ranks the S-Tier, A-Tier, and B-Tier models from OpenAI, Anthropic, and Google to help you choose the best AI for your strategic needs."
+cover_image: "assets/img/top-10-llms-cover.png"
 ---
 
-# Top 10 LLMs for 2025: A Comparative Guide
+# Top 10 Large Language Models (Cloud & API): A 2025 Comparison
+
+> **Looking for models you can run on your own hardware?** See the [[02_top-10-local-llms|Top 10 Local LLMs for Self-Hosting]].
 
 This guide provides a ranked overview of the top 10 Large Language Models (LLMs) shaping the AI landscape in 2025. The models are grouped into tiers based on their overall capability, reasoning power, and impact. For a more detailed breakdown of pricing and specific API IDs, refer to the main [[00_ai-models]] comparison note.
 
