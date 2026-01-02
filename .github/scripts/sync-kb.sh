@@ -79,8 +79,10 @@ get_topic_id() {
     *"/SEO/4_ai-and-automation/"*) topic_id=1166 ;;
     *"/SEO/5_measurement-and-optimization/"*) topic_id=1167 ;;
     *"/SEO/6_future-trends/"*) topic_id=1168 ;;
+    *"/SEO/7_frameworks-and-sops/"*) topic_id=1168 ;;
+    *"/SEO/8_reference/"*) topic_id=1168 ;;
     *"/SEO/"*) topic_id=1158 ;;
-    *"/TOOLS/marketing-automation/seo-optimization/"*) topic_id=1603 ;;
+    *"/TOOLS/seo-optimization/"*) topic_id=1603 ;;
     *"/TOOLS/ai-foundation-models/"*) topic_id=1596 ;;
     *"/TOOLS/analytics-data-insights/"*) topic_id=1597 ;;
     *"/TOOLS/audio-generation/"*) topic_id=1598 ;;
