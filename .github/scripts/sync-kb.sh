@@ -110,57 +110,70 @@ extract_frontmatter() {
     return 1
   fi
   
-  front_matter=$(sed -n '/^---$/,/^---$/p' "$file" | sed '1d;$d')
+  # Use yq for robust YAML parsing (handles >, |, and all YAML features)
+  fm_title=$(yq eval '.title // ""' "$file" 2>/dev/null)
+  fm_excerpt=$(yq eval '.excerpt // .summary // ""' "$file" 2>/dev/null)
+  fm_keyword=$(yq eval '.keyword // ""' "$file" 2>/dev/null)
+  fm_meta_desc=$(yq eval '.meta_description // .meta-description // ""' "$file" 2>/dev/null)
+  fm_semantic=$(yq eval '.semantic_summary // ""' "$file" 2>/dev/null)
+  fm_image=$(yq eval '.featured_image // .coverimage // ""' "$file" 2>/dev/null)
+  fm_updated=$(yq eval '.updated // ""' "$file" 2>/dev/null)
+  fm_topic=$(yq eval '.topic // ""' "$file" 2>/dev/null)
   
-  # Title
-  fm_title=$(echo "$front_matter" | grep -i "^title:" | sed 's/^title: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
-  
-  # Excerpt/Summary
-  fm_excerpt=$(echo "$front_matter" | grep -i "^excerpt:" | sed 's/^excerpt: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
-  if [ -z "$fm_excerpt" ]; then
-    fm_excerpt=$(echo "$front_matter" | grep -i "^summary:" | sed 's/^summary: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
-  fi
-  
-  # SEO fields
-  fm_keyword=$(echo "$front_matter" | grep -i "^keyword:" | sed 's/^keyword: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
-  fm_meta_desc=$(echo "$front_matter" | grep -iE "^meta[_-]?description:" | sed 's/^meta[_-]*description: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
-  
-  # Semantic fields
-  fm_semantic=$(echo "$front_matter" | grep -i "^semantic_summary:" | sed 's/^semantic_summary: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
-  
-  # Array fields - using yq with error handling
-  if grep -q "^synthetic_questions:" "$file"; then
-    fm_questions=$(yq eval '.synthetic_questions[]' "$file" 2>/dev/null | jq -R -s -c 'split("\n") | map(select(length > 0)) | map({question: .})' 2>/dev/null || echo "[]")
+  # Arrays
+  if yq eval 'has("synthetic_questions")' "$file" 2>/dev/null | grep -q "true"; then
+    fm_questions=$(yq eval '.synthetic_questions' "$file" 2>/dev/null | jq -c 'map({question: .})' 2>/dev/null || echo "[]")
     [ -z "$fm_questions" ] || [ "$fm_questions" = "null" ] && fm_questions="[]"
   else
     fm_questions="[]"
   fi
   
-  if grep -q "^key_concepts:" "$file"; then
-    fm_concepts=$(yq eval '.key_concepts[]' "$file" 2>/dev/null | jq -R -s -c 'split("\n") | map(select(length > 0)) | map({concept: .})' 2>/dev/null || echo "[]")
+  if yq eval 'has("key_concepts")' "$file" 2>/dev/null | grep -q "true"; then
+    fm_concepts=$(yq eval '.key_concepts' "$file" 2>/dev/null | jq -c 'map({concept: .})' 2>/dev/null || echo "[]")
     [ -z "$fm_concepts" ] || [ "$fm_concepts" = "null" ] && fm_concepts="[]"
   else
     fm_concepts="[]"
   fi
   
-  # Media
-  fm_image=$(echo "$front_matter" | grep -i "^featured_image:" | sed 's/^featured_image: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
-  [ -z "$fm_image" ] && fm_image=$(echo "$front_matter" | grep -i "^coverimage:" | sed 's/^coverimage: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
+  # Tags (array or string)
+  if yq eval 'has("tags")' "$file" 2>/dev/null | grep -q "true"; then
+    if yq eval '.tags | type' "$file" 2>/dev/null | grep -q "!!seq"; then
+      fm_tags=$(yq eval '.tags | join(" ")' "$file" 2>/dev/null)
+    else
+      fm_tags=$(yq eval '.tags // ""' "$file" 2>/dev/null | sed 's/[\[\],]/ /g')
+    fi
+  else
+    fm_tags=""
+  fi
   
-  # Date with validation
-  fm_updated=$(echo "$front_matter" | grep -i "^updated:" | sed 's/^updated: *//I' | sed 's/^["'\'']\(.*\)["'\'']$/\1/')
-  
-  # Normalize and validate date format
-  if [ ! -z "$fm_updated" ]; then
+  # Normalize date
+  if [ ! -z "$fm_updated" ] && [ "$fm_updated" != "null" ]; then
     if normalized_date=$(date -d "$fm_updated" -Iseconds 2>/dev/null); then
       fm_updated="$normalized_date"
-      # Remove milliseconds for WordPress compatibility
       fm_updated=$(echo "$fm_updated" | sed 's/\.[0-9]*+/+/' | sed 's/\.[0-9]*Z$/Z/')
     else
-      echo "⚠ Invalid date format in frontmatter: $fm_updated - using git date"
+      echo "⚠ Invalid date format: $fm_updated"
       fm_updated=""
     fi
+  else
+    fm_updated=""
   fi
+  
+  # Git fallback for date
+  [ -z "$fm_updated" ] && fm_updated=$(git log -1 --format="%aI" -- "$file" 2>/dev/null || echo "")
+  
+  # Clean nulls
+  [ "$fm_title" = "null" ] && fm_title=""
+  [ "$fm_excerpt" = "null" ] && fm_excerpt=""
+  [ "$fm_keyword" = "null" ] && fm_keyword=""
+  [ "$fm_meta_desc" = "null" ] && fm_meta_desc=""
+  [ "$fm_semantic" = "null" ] && fm_semantic=""
+  [ "$fm_image" = "null" ] && fm_image=""
+  [ "$fm_tags" = "null" ] && fm_tags=""
+  [ "$fm_topic" = "null" ] && fm_topic=""
+  
+  return 0
+}
   
   # Fallback to git history if no valid frontmatter date
   if [ -z "$fm_updated" ]; then
