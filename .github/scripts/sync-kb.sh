@@ -79,10 +79,8 @@ get_topic_id() {
     *"/SEO/4_ai-and-automation/"*) topic_id=1166 ;;
     *"/SEO/5_measurement-and-optimization/"*) topic_id=1167 ;;
     *"/SEO/6_future-trends/"*) topic_id=1168 ;;
-    *"/SEO/7_frameworks-and-sops/"*) topic_id=1168 ;;
-    *"/SEO/8_reference/"*) topic_id=1168 ;;
     *"/SEO/"*) topic_id=1158 ;;
-    *"/TOOLS/seo-optimization/"*) topic_id=1603 ;;
+    *"/TOOLS/marketing-automation/seo-optimization/"*) topic_id=1603 ;;
     *"/TOOLS/ai-foundation-models/"*) topic_id=1596 ;;
     *"/TOOLS/analytics-data-insights/"*) topic_id=1597 ;;
     *"/TOOLS/audio-generation/"*) topic_id=1598 ;;
@@ -102,7 +100,7 @@ get_topic_id() {
   echo "$topic_id"
 }
 
-# Function: Extract and process frontmatter
+# Function: Extract and process frontmatter using yq for proper YAML parsing
 extract_frontmatter() {
   local file="$1"
   
@@ -120,7 +118,7 @@ extract_frontmatter() {
   fm_updated=$(yq eval '.updated // ""' "$file" 2>/dev/null)
   fm_topic=$(yq eval '.topic // ""' "$file" 2>/dev/null)
   
-  # Arrays
+  # Arrays - synthetic_questions
   if yq eval 'has("synthetic_questions")' "$file" 2>/dev/null | grep -q "true"; then
     fm_questions=$(yq eval '.synthetic_questions' "$file" 2>/dev/null | jq -c 'map({question: .})' 2>/dev/null || echo "[]")
     [ -z "$fm_questions" ] || [ "$fm_questions" = "null" ] && fm_questions="[]"
@@ -128,6 +126,7 @@ extract_frontmatter() {
     fm_questions="[]"
   fi
   
+  # Arrays - key_concepts
   if yq eval 'has("key_concepts")' "$file" 2>/dev/null | grep -q "true"; then
     fm_concepts=$(yq eval '.key_concepts' "$file" 2>/dev/null | jq -c 'map({concept: .})' 2>/dev/null || echo "[]")
     [ -z "$fm_concepts" ] || [ "$fm_concepts" = "null" ] && fm_concepts="[]"
@@ -135,21 +134,24 @@ extract_frontmatter() {
     fm_concepts="[]"
   fi
   
-  # Tags (array or string)
+  # Tags (can be array or comma-separated string)
   if yq eval 'has("tags")' "$file" 2>/dev/null | grep -q "true"; then
     if yq eval '.tags | type' "$file" 2>/dev/null | grep -q "!!seq"; then
+      # It's an array - join with spaces
       fm_tags=$(yq eval '.tags | join(" ")' "$file" 2>/dev/null)
     else
+      # It's a string - clean up brackets and commas
       fm_tags=$(yq eval '.tags // ""' "$file" 2>/dev/null | sed 's/[\[\],]/ /g')
     fi
   else
     fm_tags=""
   fi
   
-  # Normalize date
+  # Normalize and validate date format
   if [ ! -z "$fm_updated" ] && [ "$fm_updated" != "null" ]; then
     if normalized_date=$(date -d "$fm_updated" -Iseconds 2>/dev/null); then
       fm_updated="$normalized_date"
+      # Remove milliseconds for WordPress compatibility
       fm_updated=$(echo "$fm_updated" | sed 's/\.[0-9]*+/+/' | sed 's/\.[0-9]*Z$/Z/')
     else
       echo "⚠ Invalid date format: $fm_updated"
@@ -159,10 +161,12 @@ extract_frontmatter() {
     fm_updated=""
   fi
   
-  # Git fallback for date
-  [ -z "$fm_updated" ] && fm_updated=$(git log -1 --format="%aI" -- "$file" 2>/dev/null || echo "")
+  # Fallback to git history if no valid frontmatter date
+  if [ -z "$fm_updated" ]; then
+    fm_updated=$(git log -1 --format="%aI" -- "$file" 2>/dev/null || echo "")
+  fi
   
-  # Clean nulls
+  # Clean up any "null" strings returned by yq
   [ "$fm_title" = "null" ] && fm_title=""
   [ "$fm_excerpt" = "null" ] && fm_excerpt=""
   [ "$fm_keyword" = "null" ] && fm_keyword=""
@@ -171,35 +175,6 @@ extract_frontmatter() {
   [ "$fm_image" = "null" ] && fm_image=""
   [ "$fm_tags" = "null" ] && fm_tags=""
   [ "$fm_topic" = "null" ] && fm_topic=""
-  
-  return 0
-}
-  
-  # Fallback to git history if no valid frontmatter date
-  if [ -z "$fm_updated" ]; then
-    fm_updated=$(git log -1 --format="%aI" -- "$file" 2>/dev/null || echo "")
-  fi
-  
-  # Tags
-  fm_tags=$(echo "$front_matter" | grep -i "^tags:" | sed 's/^tags: *//I' | sed 's/[\[\]]//g' | sed 's/,/ /g')
-  if [ -z "$fm_tags" ]; then
-    in_tags=false
-    while IFS= read -r line; do
-      if [[ "$line" =~ ^tags: ]]; then
-        in_tags=true
-      elif [[ "$in_tags" == true ]]; then
-        if [[ "$line" =~ ^[[:space:]]*-[[:space:]](.+) ]]; then
-          fm_tags="$fm_tags ${BASH_REMATCH[1]}"
-        elif [[ "$line" =~ ^[a-zA-Z] ]]; then
-          break
-        fi
-      fi
-    done <<< "$front_matter"
-    fm_tags=$(echo "$fm_tags" | xargs)
-  fi
-  
-  # Topic override
-  fm_topic=$(echo "$front_matter" | grep -i "^topic:" | sed 's/^topic: *//I')
   
   return 0
 }
