@@ -55,7 +55,7 @@ cover_image: "assets/img/top-10-local-llms-cover.png"
 
 # Top 10 Local LLMs for 2025
 
-> **Looking for the best API-based models from major labs?** See the [[01_top-10-llms|Top 10 Cloud & API LLMs Comparison]].
+**Looking for the best API-based models from major labs?** See the [[01_top-10-llms|Top 10 Cloud & API LLMs Comparison]].
 
 In 2025, local Large Language Models (LLMs) have reached maturity, making on-device and on-premises inference practical and powerful. Open-weight model families like [[5_llama]] 3.1, Qwen3, Gemma 2, and [[4_mistral-mixtral]] now offer reliable specifications, long context windows, and excellent support in local runners like Ollama and LM Studio. This guide compares the ten most deployable options, focusing on license clarity, GGUF availability, and key performance characteristics like parameter count, context length, and VRAM targets.
 
@@ -73,8 +73,6 @@ In 2025, local Large Language Models (LLMs) have reached maturity, making on-dev
 | Phi-4-Reasoning | 14B | 32K | MIT | Specialized reasoning (Chain-of-Thought) |
 | Yi-1.5 | 9B, 34B | 4K-32K | Apache-2.0 | Bilingual (EN/zh) tasks, permissive use |
 | InternLM 2 / 2.5 | 7B, 20B | Varies | Apache-2.0 | Research, math-tuned tasks |
-
----
 
 ## Detailed Breakdown
 
