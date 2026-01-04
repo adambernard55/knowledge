@@ -32,7 +32,7 @@ The rules that bind the system. This includes the "Bernard Firm Standards," meta
 ## 🛠️ Pillar IV: The Tech Stack
 *Focus: Tools, Platforms, and Code.*
 The instruments of execution. Documentation for Obsidian, WordPress, and our software supply chain.
-- **Key Hub:** [[kb/Tools/index|Technical Documentation]]
+- **Key Hub:** [[index_old|Technical Documentation]]
 
 ---
 

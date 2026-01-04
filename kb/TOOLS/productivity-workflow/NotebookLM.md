@@ -1,4 +1,6 @@
-
+---
+Title: NotebookLM
+---
 # **NotebookLM**
 
 NotebookLM is an AI-powered research and writing assistant from Google, designed specifically to help users work with their own documents and notes. Unlike general-purpose chatbots, NotebookLM grounds its responses and analysis in the specific source materials you upload (like PDFs, Google Docs, text files), making it a powerful tool for synthesizing information, generating ideas, and asking questions about your existing knowledge base.

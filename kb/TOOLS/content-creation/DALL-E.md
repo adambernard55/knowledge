@@ -1,3 +1,7 @@
+---
+title: DALL-E
+---
+
 **DALL-E 2 / DALL-E 3 (OpenAI)**
 
 DALL-E (currently DALL-E 3, accessed via ChatGPT Plus/Team/Enterprise and API) is an AI system developed by OpenAI that generates novel images and art from natural language descriptions (text prompts). It can create original images in various styles, combining concepts, attributes, and styles specified by the user.

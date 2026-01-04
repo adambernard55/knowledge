@@ -1,3 +1,7 @@
+---
+title: Grammarly
+---
+
 **Grammarly**
 
 Grammarly is an AI-powered writing assistant that helps users improve their writing by checking for grammatical errors, spelling mistakes, punctuation issues, clarity, conciseness, tone, and plagiarism. It works across various platforms and applications.

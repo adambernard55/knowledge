@@ -1,3 +1,6 @@
+---
+Title: MarketMuse
+---
 # **MarketMuse**
 
 MarketMuse is an AI-powered content planning and optimization platform focused on helping businesses build topical authority and create expert-level content that ranks well in search engines. It analyzes entire content landscapes to identify gaps and opportunities.

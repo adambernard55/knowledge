@@ -1,6 +1,5 @@
 ---
-aliases:
-  - Blaze.ai
+title: Blaze.ai
 ---
 
 ## **Blaze.ai**

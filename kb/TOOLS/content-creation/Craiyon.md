@@ -1,4 +1,6 @@
-
+---
+title: Craiyon
+---
 # **Craiyon (formerly DALL-E mini)**
 
 Craiyon is a free-to-use AI image generator that creates images from text prompts. It gained popularity as DALL-E mini and is known for its accessibility and often quirky or abstract image results.

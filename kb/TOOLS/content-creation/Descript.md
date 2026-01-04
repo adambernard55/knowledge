@@ -1,3 +1,7 @@
+---
+title: Descript
+---
+
 **Descript**
 
 Descript is an all-in-one audio and video editing platform that uses AI to make editing as simple as editing a text document. It automatically transcribes media, allowing users to edit audio/video by editing the text transcript. It also includes screen recording and AI voice generation features.

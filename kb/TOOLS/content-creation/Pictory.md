@@ -1,3 +1,7 @@
+---
+title: Pictory
+---
+
 # **Pictory**
 
 Pictory uses AI to automatically convert long-form content, such as blog posts, articles, scripts, or webinars, into short, engaging summary videos suitable for social media and other marketing channels.

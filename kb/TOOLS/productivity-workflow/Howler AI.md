@@ -1,4 +1,6 @@
-
+---
+Title: Howler AI
+---
 # Howler AI
 
 **Primary Category(ies):** Productivity & Workflow (PR & Media Outreach) / Influencer Marketing

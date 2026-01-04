@@ -1,3 +1,7 @@
+---
+title: Stable Diffusion
+---
+
 # **Stable Diffusion**
 
 Stable Diffusion is a powerful open-source text-to-image AI model. Unlike hosted services like Midjourney or DALL-E, the model itself can be downloaded and run locally (with appropriate hardware) or accessed through various third-party websites and applications. It allows for significant customization and fine-tuning.

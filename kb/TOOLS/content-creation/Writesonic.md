@@ -1,3 +1,7 @@
+---
+title: Writesonic
+---
+
 # **Writesonic**
 
 Writesonic is a versatile AI writing platform offering tools for generating various marketing content types, similar to Jasper and Copy.ai. It also integrates AI article writing workflows, paraphrasing tools, landing page builders, and AI image generation capabilities (Photosonic).

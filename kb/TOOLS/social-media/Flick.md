@@ -1,3 +1,7 @@
+---
+Title: Flick
+---
+
 ## **Flick’s AI Social Media Marketing Assistant (Flick.tech)**
 
 **Primary Category(ies):** Social Media Management / Content Creation / Productivity & Workflow
