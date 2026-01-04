@@ -1,4 +1,3 @@
-
 ---
 title: "Strategic Intelligence Engine"
 type: cornerstone

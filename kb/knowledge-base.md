@@ -1,95 +1,87 @@
 ---
-title: Welcome to Our Knowledge Base
-id: 20251206065828
-version: 1
-Author: Adam Bernard
-steward:
-date: 2025-12-06
-category:
-category_id:
-Excerpt:
-Meta Description:
-Primary_Keyword:
-Featured_Image:
-doc_type: Overview
-relations:
-aliases:
-last_updated: 2025-12-06
+title: "Knowledge Base Gateway"
+id: "SIE/KB/Index-00"
+version: "2.0"
+steward: "Adam Bernard"
+updated: "2026-01-04"
+status: "Active"
+doc_type: "Reference"
+summary: "The central gateway to the Strategic Intelligence Engine's knowledge base, organized into four strategic pillars: AI, SEO, Tools, and Governance."
 tags:
+  - index
+  - knowledge-base
+  - hub
+  - navigation
+  - pillar-page
+relations:
+  - "kb/AI/index.md"
+  - "kb/SEO/index.md"
+  - "kb/TOOLS/index.md"
+  - "kb/CORE/index.md"
+aliases:
+  - "KB Home"
+  - "Knowledge Base Index"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: "This document is the main entry point for the entire knowledge base. It provides a high-level overview and navigation to the four core pillars: AI & Cognitive Architecture, SEO & Organic Visibility, Tools & Technology Stack, and Governance & Core Standards. It is designed to orient users and direct them to the appropriate specialized section."
+synthetic_questions:
+  - "Where can I find the main index for the knowledge base?"
+  - "What are the main sections of the knowledge base?"
+  - "How is the knowledge base organized?"
+key_concepts:
+  - "knowledge base"
+  - "navigation"
+  - "cognitive architecture"
+  - "organic visibility"
+  - "technology stack"
+  - "governance"
+
+# --- SEO & Publication ---
+primary_keyword: "knowledge base gateway"
+seo_title: "Knowledge Base Gateway: Your Central Hub for AI, SEO, and Tools"
+meta_description: "Welcome to the central gateway for our knowledge base. Explore our four pillars: AI, SEO, Tools, and Governance to find the guides and resources you need."
+excerpt: "Navigate our comprehensive knowledge base from this central hub. Dive into our core pillars covering AI, SEO, the technology stack, and operational governance."
+cover_image: ""
 ---
 
-# Welcome to Our Knowledge Base
+# Knowledge Base Gateway
 
-Welcome! This knowledge base is your central hub for information, guides, and resources. We've designed it to be a comprehensive, easy-to-navigate library to help you find the answers you need, quickly and efficiently.
+Welcome to the central nervous system of our operations. This knowledge base is your primary access point for all information, guides, and resources, organized into four strategic pillars designed to support decision-making, automation, and growth.
 
-### How to Navigate
+Use this page to navigate to the specialized hub for each core domain.
 
-Our content is organized into clear, high-level categories. The main sections are listed below, and you can click on any category to explore the specific topics and articles within it. Think of it as a digital library where each main heading is a bookshelf, and the links below it are the books on that shelf.
+---
 
-### What You'll Find Inside
+## 🧠 Pillar I: AI & Cognitive Architecture
+*Focus: Artificial Intelligence, Agentic Systems, and Model Context.*
 
-Whether you're looking for step-by-step tutorials, strategic insights, or best practices, you'll find it here. We are constantly updating our articles to ensure you have the most current and relevant information at your fingertips.
+This pillar contains the knowledge required to build systems that think. It covers the architecture of our AI agents, safety protocols, prompt engineering strategies, and detailed references on the foundation models that power our intelligence engine.
 
-Dive in and start exploring the categories below
+- **Explore the Hub:** [[kb/AI/index|AI & Agentic Systems Knowledge Base]]
 
-# Knowledge Base Contents
+---
 
-```dataviewjs 
-const pages = dv.pages('"kb"')
-    .where(p => p.file.name === "index" && p.file.folder !== "kb")
-    .sort(p => p.file.folder);
+## 👁️ Pillar II: SEO & Organic Visibility
+*Focus: Search, Semantics, and Generative Engine Optimization (GEO).*
 
-// Group by first-level folder
-const grouped = {};
-for (let page of pages) {
-    const parts = page.file.folder.split('/');
-    
-    // Skip if deeper than 3 parts
-    if (parts.length > 3) continue;
-    
-    const firstLevel = parts[1];
-    
-    if (!firstLevel) continue;
-    
-    if (!grouped[firstLevel]) {
-        grouped[firstLevel] = [];
-    }
-    grouped[firstLevel].push(page);
-}
+This pillar is dedicated to building systems that are found. It covers the full spectrum of search strategy, from foundational principles to the advanced tactics required to transition from traditional SEO to optimizing for an AI-driven search landscape.
 
-// Display grouped results
-let isFirst = true;
-for (let [firstLevel, subPages] of Object.entries(grouped).sort()) {
-    if (!firstLevel || firstLevel === 'undefined') continue;
-    
-    // Only display if there's actually a top-level index
-    const topLevelIndex = subPages.find(p => p.file.folder === `kb/${firstLevel}`);
-    
-    // Skip this entire group if there's no top-level index
-    if (!topLevelIndex) continue;
-    
-    if (!isFirst) {
-        dv.el("hr", "");
-    }
-    isFirst = false;
-    
-    // Display top-level folder as linked header
-    dv.el("h3", dv.fileLink(topLevelIndex.file.path, firstLevel));
-    
-    // Display ONLY direct subfolders
-    const subfolders = subPages.filter(p => {
-        const parts = p.file.folder.split('/');
-        return parts.length === 3 && parts[2] && p.file.folder !== `kb/${firstLevel}`;
-    });
-    
-    if (subfolders.length > 0) {
-        dv.list(
-            subfolders.map(p => {
-                const parts = p.file.folder.split('/');
-                const folderName = parts[2];
-                return dv.fileLink(p.file.path, folderName);
-            })
-        );
-    }
-}
-```
+- **Explore the Hub:** [[kb/SEO/index|SEO & Visibility Knowledge Base]]
+
+---
+
+## 🛠️ Pillar III: Tools & Technology Stack
+*Focus: Platforms, Software, and Implementation Guides.*
+
+This pillar serves as the central repository for reference guides on the marketing and AI tools that power our strategies. It provides detailed, actionable insights into the capabilities and professional implementation of each platform in our stack.
+
+- **Explore the Hub:** [[kb/TOOLS/index|AI & Marketing Tools Knowledge Base]]
+
+---
+
+## ⚖️ Pillar IV: Governance & Core Standards
+*Focus: Engine Architecture, Standards, and Ethics.*
+
+This pillar defines the rules that bind the system. It includes the foundational concepts of the Strategic Intelligence Engine (SIE), metadata schemas, operational standards, and the ethical frameworks that ensure responsible and consistent execution.
+
+- **Explore the Hub:** [[kb/CORE/index|Core Engine Architecture & Governance]]
