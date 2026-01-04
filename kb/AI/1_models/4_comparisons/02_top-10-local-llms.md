@@ -27,8 +27,7 @@ aliases:
 security_level: "Public"
 
 # --- AI & RAG Enhancement ---
-semantic_summary: >
-  This document provides a practical comparison of the top 10 local large language models for self-hosting in 2025. It evaluates leading open-source models based on key deployment criteria such as VRAM requirements, context length, and licensing (Apache 2.0, MIT), making it a guide for practitioners choosing a model for on-device or on-premises inference.
+semantic_summary: This document provides a practical comparison of the top 10 local large language models for self-hosting in 2025. It evaluates leading open-source models based on key deployment criteria such as VRAM requirements, context length, and licensing (Apache 2.0, MIT), making it a guide for practitioners choosing a model for on-device or on-premises inference.
 synthetic_questions:
   - "What is the best local LLM for a 12GB GPU?"
   - "Which open-source LLM has the most permissive license?"
