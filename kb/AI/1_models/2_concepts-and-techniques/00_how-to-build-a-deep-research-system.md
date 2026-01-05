@@ -1,25 +1,49 @@
 ---
-title: How to Build a Deep Research System
-summary: Explains the architecture and implementation of a deep research system, an advanced alternative to RAG that uses an orchestrator LLM and sub-agents to perform comprehensive analysis across large document sets.
-category: AI Concepts & Techniques
-difficulty: Advanced
-last_updated: 2025-11-10
-kb_status: published
+title: "Architecting a Deep Research System: An Agentic Alternative to RAG"
+id: "SIE/REF/Deep-Research-Arch"
+version: "2.0"
+steward: "Adam Bernard"
+updated: "2026-01-05"
+status: "Active"
+doc_type: "Reference"
+summary: "Provides a technical blueprint for building a deep research system using an orchestrator and sub-agents, offering a more comprehensive alternative to standard RAG for complex queries."
 tags:
-  - ai
-  - rag
+  - deep-research
   - agentic-workflow
-  - research-system
+  - rag-alternative
   - llm-architecture
-related_topics:
-  - ai-models
-  - vector-databases
+  - orchestrator-pattern
+relations:
+  - "SIE/REF/ChatGPT-Models-Compare"
+  - "SIE/REF/Claude-Models-Compare"
+  - "SIE/REF/Gemini-Models-Compare"
 aliases:
-  - Deep Research System
-  - Agentic Research System
+  - "Deep Research System"
+  - "Agentic Research System"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: "This document details the architecture for a deep research system, an advanced agentic workflow that surpasses standard RAG. It explains the roles of an orchestrator LLM and specialized sub-agents in planning, executing, and synthesizing research from large document corpora, providing a framework for answering complex, multi-source queries."
+synthetic_questions:
+  - "How do you build a research system more advanced than RAG?"
+  - "What is the difference between a deep research system and standard RAG?"
+  - "What is the role of an orchestrator agent in an AI research system?"
+key_concepts:
+  - "Orchestrator Agent"
+  - "Sub-Agents"
+  - "Agentic Workflow"
+  - "Retrieval-Augmented Generation (RAG)"
+  - "Keyword Index"
+  - "Vector Index"
+
+# --- SEO & Publication ---
+primary_keyword: "deep research system"
+seo_title: "How to Build a Deep Research System: An Advanced Guide"
+meta_description: "Learn to architect a deep research system using agentic workflows. A technical guide on moving beyond RAG with orchestrators and sub-agents for complex analysis."
+excerpt: "Move beyond standard RAG. This guide provides a technical blueprint for building a deep research system with an orchestrator and sub-agents to answer complex, multi-source questions."
+cover_image: ""
 ---
 
-# How to Build a Deep Research System
+# Architecting a Deep Research System
 
 A **Deep Research System** is an advanced AI architecture designed to answer complex queries by performing a comprehensive, multi-step analysis of a large corpus of documents. Unlike simpler retrieval methods, it mimics a human research process by planning, delegating tasks to specialized sub-agents, and synthesizing findings into a detailed answer. This approach powers the "deep research" features found in applications like [[1_chatgpt]] and [[2_gemini]].
 
@@ -56,7 +80,6 @@ First, gather all information from sources like Google Drive, Notion, or Salesfo
 
 Create a library of functions (tools) that the agents can call. These functions should be simple and reliable.
 
-````markdown
 ```python
 @tool 
 def keyword_search(query: str) -> str:
@@ -73,7 +96,7 @@ def vector_search(query: str) -> str:
     # Format results for the LLM
     formatted_results = "\n".join([f"Source: {res['file_name']}\nContent: {res['content']}" for res in results])
     return formatted_results
-````
+```
 
 Other useful tools could include `internet_search`, `filename_search`, or custom functions for accessing specific databases.
 
@@ -91,9 +114,10 @@ The system operates in a loop managed by the orchestrator:
 
 The choice of models is crucial for balancing performance and cost.
 
-- **Orchestrator Agent:** Requires a high-capability model with strong reasoning skills, such as **Claude 4 Opus** or a premium **GPT-4.1** tier.
-- **Sub-Agents:** Can use faster, more cost-effective models like **Claude 4 Sonnet** or **gpt-4.1-mini**, as their tasks are more focused.  
-    (See [00_ai-models](obsidian://open?file=Knowledge%2FAI%2F4_models%2F00_ai-models.md) for a detailed comparison).
+- **Orchestrator Agent:** Requires a high-capability model with strong reasoning skills, such as **Claude Opus 4.1** or the **OpenAI o1-series**.
+- **Sub-Agents:** Can use faster, more cost-effective models like **Claude Sonnet 4.5**, **Gemini 1.5 Flash**, or **GPT-4o mini**, as their tasks are more focused.
+
+(See [1_chatgpt](obsidian://open?file=kb%2FAI%2F1_models%2F1_specific-models%2F1_chatgpt.md), [2_gemini](obsidian://open?file=kb%2FAI%2F1_models%2F1_specific-models%2F2_gemini.md), and [3_claude](obsidian://open?file=kb%2FAI%2F1_models%2F1_specific-models%2F3_claude.md) for detailed model comparisons).
 
 ## Conclusion & Trade-Offs
 
