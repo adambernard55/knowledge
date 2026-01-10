@@ -1,25 +1,41 @@
 ---
-title: MCP Foundations and Architecture
-seo_category: methods-and-systems
-difficulty: intermediate
-last_updated: 2025-11-16
-kb_status: published
+title: "MCP Foundations and Architecture"
+id: "kb/AI/mcp/01"
+version: "1.1" # Incremented version
+steward: "Adam Bernard"
+updated: 2026-01-10 # Updated date
+status: "Active"
+doc_type: "Reference"
+summary: "An open standard for connecting AI systems to real-world data and tools, detailing the core architectural components: Host, Client, and Server."
 tags:
-  - mcp
-  - model-context-protocol
-  - ai-agents
-  - agentic-ai
-  - integration
-  - protocol
-  - json-rpc
-  - interoperability
-  - ai-architecture
-related_topics:
-  - ai-agents-running-workflows
-  - building-agents-with-the-claude-agent-sdk
-  - agentic-vs-automation-platforms
-  - agentic-context-engineering
-summary: The Model Context Protocol (MCP) is an open standard that defines how AI systems - particularly agentic large language models (LLMs) - connect to real-world data and tools.
+  - "mcp"
+  - "architecture"
+  - "agentic-ai"
+  - "open-standard"
+  - "llm-tooling"
+relations:
+  - "kb/AI/3_methods/mcp/02_mcp-connectors-and-integrations.md"
+  - "kb/AI/3_methods/mcp/05_mcp-reference-and-use-cases.md"
+aliases:
+  - "MCP Foundations"
+  - "Model Context Protocol Architecture"
+semantic_summary: "This document defines the Model Context Protocol (MCP) as an open standard for agentic AI. It details the client-server architecture, explaining the distinct roles of the Host (the user-facing application), the Client (the communication handler), and the Server (the external tool provider), which together enable AI models to securely and dynamically interact with external data and functions."
+synthetic_questions:
+  - "What is the Model Context Protocol (MCP)?"
+  - "What is the architecture of MCP?"
+  - "What is the difference between an MCP Host, Client, and Server?"
+key_concepts:
+  - "Model Context Protocol"
+  - "client-server architecture"
+  - "agentic AI"
+  - "Host application"
+  - "MCP Client"
+  - "MCP Server"
+primary_keyword: "MCP architecture"
+seo_title: "Understanding MCP: Foundations and Core Architecture"
+meta_description: "Learn the foundations of the Model Context Protocol (MCP) and its core client-server architecture, including the roles of the Host, Client, and Server."
+excerpt: "A complete guide to the Model Context Protocol (MCP), explaining its open standard and the core architectural components that enable agentic AI."
+cover_image: ""
 ---
 # MCP Foundations and Architecture
 
@@ -39,6 +55,33 @@ It is often referred to as _“the USB‑C of AI”_: one consistent plug that 
 
 ---
 
+## Core Architectural Components
+
+At its heart, MCP follows a client-server architecture, but the terminology is tailored to the AI context. There are three main roles to understand: the Host, the Client, and the Server.
+
+![MCP Architecture Diagram](https://www.dailydoseofds.com/content/images/2026/01/data-src-image-7ac69662-379a-4fd2-af4d-ef87a9a70196.png)
+
+### 1. The Host
+
+The **Host** is the user-facing AI application—the environment where the AI model lives and interacts with the user. This could be a chat application (like the Claude desktop app), an AI-enhanced IDE (like Cursor), or any custom app that embeds an AI assistant.
+
+The Host initiates connections to available MCP servers, captures user input, maintains conversation history, and displays the model’s replies.
+
+![Diagram of the Host Component](https://www.dailydoseofds.com/content/images/2026/01/data-src-image-aa0b6e37-b7c8-4ee8-93dd-83e8a008a4bf.png)
+
+### 2. The Client
+
+The **MCP Client** is a component within the Host that handles the low-level communication with an MCP Server. Think of the Client as the adapter or messenger. While the Host decides *what* to do, the Client knows *how* to speak the MCP language to carry out those instructions with the server.
+
+![Diagram of the Client Component](https://www.dailydoseofds.com/content/images/2026/01/data-src-image-b93cb17d-1b95-4313-8145-daf78513dc00.png)
+
+### 3. The Server
+
+The **MCP Server** is the external program or service that provides the capabilities (tools, data, etc.) to the application. It acts as a wrapper around functionality, exposing a set of actions or resources in a standardized way that any MCP Client can invoke.
+
+Servers can run locally on the same machine as the Host or remotely on a cloud service. The key is that the Server advertises what it can do in a standard format, executes requests from the client, and returns the results.
+
+![Diagram of the Server Component](https://www.dailydoseofds.com/content/images/2026/01/data-src-image-4a532ec3-8791-4688-bafc-5bbb043f5cfa.png)
 ## 2. Core Architectural Model
 
 MCP defines a **three‑component architecture** built around clarity, portability, and separation of responsibilities:

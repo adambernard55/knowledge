@@ -1,24 +1,47 @@
 ---
 title: "Using MCP Servers with Local Large Language Models (LLMs)"
-ai_category: "methods-and-systems"
-difficulty: "advanced"
-last_updated: "2025-01-24"
-kb_status: "published"
-tags:
-  - mcp
-  - local-llm
-  - ai-server
-  - model-context-protocol
-  - integration
-  - ai-infrastructure
-related_topics:
-  - "mcp-foundations-and-architecture"
-  - "mcp-connectors-and-integrations"
-  - "embeddings-and-vectorization"
-  - "how-to-build-fullstack-agent-apps"
+id: "kb/AI/mcp/08"
+version: "1.1"
+steward: "Adam Bernard"
+updated: 2026-01-10
+status: "Active"
+doc_type: "Reference"
 summary: "This guide explains how to set up and use MCP servers in conjunction with local large language models (LLMs). It explores the architecture, implementation, and optimization strategies necessary for executing AI workflows locally."
-aliases: []
+tags:
+  - "mcp"
+  - "local-llm"
+  - "ollama"
+  - "agentic-ai"
+  - "ai-infrastructure"
+  - "on-premises-ai"
+relations:
+  - "kb/AI/3_methods/mcp/01_mcp-foundations-and-architecture.md"
+  - "kb/AI/3_methods/mcp/02_mcp-connectors-and-integrations.md"
+  - "kb/AI/3_methods/mcp/12_building-a-local-mcp-client.md"
+  - "kb/AI/2_agents/02_how-to-build-fullstack-agent-applications.md"
+aliases:
+  - "Local LLM MCP Integration"
+  - "On-Premises MCP Server Guide"
+semantic_summary: "A comprehensive guide to integrating Model Context Protocol (MCP) servers with locally hosted Large Language Models (LLMs). This document covers the necessary hardware and software requirements, deployment architecture, security considerations, and performance optimization strategies for creating secure, private, and scalable on-premises AI systems."
+synthetic_questions:
+  - "How do I connect a local LLM to an MCP server?"
+  - "What are the requirements for running an MCP server on-premises?"
+  - "How can I ensure the security of a local LLM deployment?"
+  - "What are the best practices for optimizing a local AI workflow with MCP?"
+key_concepts:
+  - "local LLM"
+  - "MCP server"
+  - "on-premises AI"
+  - "data sovereignty"
+  - "agentic infrastructure"
+  - "Ollama"
+primary_keyword: "local LLMs with MCP"
+seo_title: "How to Use MCP Servers with Local LLMs: A Complete Guide"
+meta_description: "Learn how to integrate Model Context Protocol (MCP) servers with local LLMs for secure, on-premises AI workflows. This guide covers setup, architecture, and optimization."
+excerpt: "Integrate MCP servers with local LLMs for secure, on-premises AI. Our guide covers the complete architecture, setup, and optimization for private agentic workflows."
+cover_image: ""
 ---
+
 # Using MCP Servers with Local Large Language Models (LLMs)
 
 ## Overview
@@ -29,7 +52,7 @@ This guide details how to employ MCP servers to facilitate seamless local LLM de
 
 ## 1. Introduction to MCP Servers
 
-**Model Context Protocol (MCP) Servers** provide the architectural backbone for connecting various AI components in a distributed system. These servers handle protocol requests, facilitating interaction between LLMs and external tools via standardized connectors and operations.
+**Model Context Protocol (MCP) Servers** provide the architectural backbone for connecting various AI components in a distributed system. These servers handle protocol requests, facilitating interaction between LLMs and external tools via standardized connectors and operations.
 
 ### Benefits of MCP Servers
 
@@ -46,14 +69,14 @@ This guide details how to employ MCP servers to facilitate seamless local LLM de
 
 ### 2.2 LLM Installation
 
-1. **Model Selection**: Choose an LLM compatible with your intended use case (e.g., Open-source options like GPT-2, smaller variants if resource-constrained).
+1. **Model Selection**: Choose an LLM compatible with your intended use case (e.g., Open-source options like Llama, Mistral, or others available via platforms like Ollama).
 2. **Environment Setup**:
-    - Install necessary dependencies (`PyTorch`, `Transformers`, model-specific libraries).
+    - Install necessary dependencies (`PyTorch`, `Transformers`, model-specific libraries).
     - Configure a virtual environment and containerize using Docker for consistency.
 
 ### 2.3 MCP Server Deployment
 
-1. **Install MCP Server Framework**: Use frameworks like `FastMCP` to configure MCP endpoints.
+1. **Install MCP Server Framework**: Use frameworks like `FastMCP` to configure MCP endpoints.
 2. **Configure Server Documentation**:
     - Set up JSON-RPC endpoints for LLM and external tools.
     - Allow tool definition and integrations through MCP connectors.
@@ -94,17 +117,24 @@ This guide details how to employ MCP servers to facilitate seamless local LLM de
 - Schedule regular maintenance windows for software updates and security patches.
 - Implement continuous integration/continuous deployment (CI/CD) pipelines to streamline testing and deployment processes.
 
+---
+
+### Practical Implementation Example
+
+For a complete, hands-on tutorial on building a 100% local MCP client using LlamaIndex and Ollama, see the following guide:
+
+- [[kb/AI/3_methods/mcp/12_building-a-local-mcp-client|Building a 100% Local MCP Client with LlamaIndex and Ollama]]
+
+### Web Access Implementation Example
+
+For a step-by-step guide on configuring common web search tools (like Brave and Tavily) for your local LLM using an application like LM Studio, see this tutorial: 
+
+- [[kb/AI/3_methods/mcp/13_mcp-local-llm-web-access-guide|Connecting Local LLMs to the Web with MCP]]
+
+---
+
 ## Key Takeaways
 
 1. **MCP Servers Enable Local Intelligence**: Harness advanced AI capabilities within the confines of your secure and controlled environment.
 2. **Security and Scalability are Paramount**: Ensure system and infrastructure protect data integrity and scale efficiently.
 3. **Optimize for Performance**: Prioritize model and system optimizations to ensure high throughput and reliable operation.
-
-## Recommended Reading
-
-- [MCP Foundations and Architecture](app://obsidian.md/ai/2_methods/mcp/1_mcp-foundations-and-architecture.md)
-- [MCP Connectors and Integrations](app://obsidian.md/ai/2_methods/mcp/2_mcp-connectors-and-integrations.md)
-- [Embeddings and Vectorization](app://obsidian.md/ai/2_methods/02_embeddings-and-vectorization.md)
-- [How to Build Full-Stack Agent Applications](app://obsidian.md/ai/1_agents/02_how-to-build-fullstack-agent-applications.md)
-
-> **Summary:** This guide walks you through setting up an advanced server architecture using MCP to enable local LLM operations. By leveraging a robust local infrastructure, AI systems can be harnessed effectively for sensitive operations while maintaining control over data and workflows.
