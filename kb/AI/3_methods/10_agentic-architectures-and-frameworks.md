@@ -125,3 +125,4 @@ Developing agentic systems is a natural extension of existing ML skills.
 -   [[01_ai-agents-running-workflows]]
 -   [[03_build-an-ai-desktop-automation-agent]]
 -   [[09_advanced-prompt-engineering]]
+- [[13_reference-architecture-for-trustworthy-agentic-ai]]
