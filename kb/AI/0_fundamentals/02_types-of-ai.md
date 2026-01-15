@@ -1,179 +1,132 @@
 ---
-title: "Types of Artificial Intelligence (AI): From Narrow to Superintelligence"
-ai_category: "fundamentals"
-difficulty: "beginner"
-last_updated: "2025-01-24"
-kb_status: "published"
+title: "Types of Artificial Intelligence: From Narrow AI to Agentic Systems"
+id: KB/AI/F-02
+version: "2.0"
+steward: Adam Bernard
+updated: 2026-01-15
+status: Active
+doc_type: knowledge_base
+summary: "Explores the classifications of Artificial Intelligence, from the capability ladder of Narrow (ANI), General (AGI), and Superintelligence (ASI) to functional types like reactive, limited memory, and modern agentic AI. This note clarifies the current 2026 landscape, which is dominated by advanced ANI operating within agentic frameworks."
 tags:
-  - artificial-intelligence
+  - ai
   - ai-types
-  - machine-learning
   - narrow-ai
   - general-ai
   - superintelligence
+  - agentic-ai
   - ai-capabilities
-related_topics:
-  - "what-is-ai"
-  - "history-of-ai"
-  - "machine-learning-vs-deep-learning"
-  - "the-ai-stack"
-  - "ai-ethics-and-bias"
-summary: "Explore the different types of artificial intelligence, including Narrow AI, General AI, and Superintelligence. Understand their current applications, developmental status, and future potential."
-aliases: []
+relations:
+  - "kb/AI/0_fundamentals/00_what-is-ai"
+  - "kb/AI/0_fundamentals/01_history-of-ai"
+  - "kb/AI/2_agents/00_introduction-to-ai-agents"
+aliases:
+  - AI Types
+  - ANI vs AGI vs ASI
+  - Agentic AI
+semantic_summary: This document outlines the primary classifications of Artificial Intelligence (AI). It details the capability spectrum from Artificial Narrow Intelligence (ANI), which excels at specific tasks, to the theoretical concepts of Artificial General Intelligence (AGI) and Artificial Superintelligence (ASI). A key update for 2026 is the introduction of "Agentic AI" as a functional type—systems that can plan, use tools, and execute multi-step workflows. The note clarifies that the current state-of-the-art consists of advanced, multi-modal ANI wrapped in agentic runtimes, not true AGI, and provides updated expert timelines and governance context for future AI development.
+synthetic_questions:
+  - "What is the difference between Artificial Narrow, General, and Superintelligence?"
+  - "What is Agentic AI and how does it fit into the types of AI?"
+  - "What is the dominant paradigm for AI systems in 2026?"
+  - "Are today's most advanced AI systems considered AGI?"
+  - "What are the current expert forecasts for when AGI might be achieved?"
+  - "How are functional types of AI (like reactive, limited memory, agentic) different from capability types (ANI, AGI, ASI)?"
+key_concepts:
+  - Artificial Narrow Intelligence (ANI)
+  - Artificial General Intelligence (AGI)
+  - Artificial Superintelligence (ASI)
+  - Agentic AI
+  - Foundation Models
+  - AI Capabilities
+  - Functional AI Types
+  - AI Governance
+  - On-Device AI
 ---
-# Types of Artificial Intelligence (AI): From Narrow to Superintelligence
+# Types of Artificial Intelligence: From Narrow to Superintelligence
 
 ## Introduction
 
-Artificial Intelligence (AI) encompasses a spectrum of capabilities ranging from highly specialized systems executing narrow tasks to hypothetical intelligences rivaling or surpassing human cognition. Understanding these classifications sheds light on what AI can achieve today and where it may lead in the future.
+Artificial Intelligence (AI) is not a single entity but a spectrum of systems with vastly different capabilities. Understanding these classifications is crucial for grasping what AI can do today and where it might be headed.
 
-This reference defines the **main types of AI**, their roles, current applications, and theoretical horizons.
+AI is typically categorized in two ways: by its **capability** (the ANI-AGI-ASI ladder) and by its **functionality** (how it operates). This reference defines these types, clarifies the current state of AI in 2026, and explains the rise of **agentic systems** as the dominant paradigm.
 
-## 1. Core Classifications of AI
+## 1. The Capability Ladder: ANI, AGI, and ASI
 
-AI is typically divided into three distinct categories based on capability:
+This is a conceptual ladder, not a clean taxonomy of deployed systems. It classifies AI based on its intellectual breadth and power relative to humans.
 
-|Type|Description|Current Status|Examples|
-|---|---|---|---|
-|**Artificial Narrow Intelligence (ANI)**|Specializes in one or few dedicated tasks.|Existing|ChatGPT, recommendation engines, image recognition systems|
-|**Artificial General Intelligence (AGI)**|Envisioned to perform any cognitive task a human can, exhibiting reasoning and adaptability.|Theoretical / Emerging|Research prototypes (self-learning models)|
-|**Artificial Superintelligence (ASI)**|Surpasses human intelligence across domains; expected to improve itself continuously.|Theoretical / Future concept|None (speculative and depicted in fiction)|
+| Type | Description | Current Status | Examples |
+| :--- | :--- | :--- | :--- |
+| **Artificial Narrow Intelligence (ANI)** | Specializes in one or a few dedicated tasks, often exceeding human performance in that specific domain. | **Existing & Dominant** | LLM-powered copilots, recommender systems, autonomous threat-hunting agents, logistics optimizers. |
+| **Artificial General Intelligence (AGI)** | A theoretical AI with the ability to understand, learn, and apply knowledge across a wide range of tasks at a human level. | **Theoretical / Emerging** | No true examples exist; an active area of frontier research. |
+| **Artificial Superintelligence (ASI)** | A hypothetical intellect that is much smarter than the best human brains in practically every field. | **Purely Speculative** | None. The focus is on governance and control problems, not capability claims. |
 
-These classifications illustrate an **evolution of intelligence** from specific, task-based AI to generalized and eventually advanced, autonomous cognitive entities.
+---
 
 ## 2. Artificial Narrow Intelligence (ANI)
 
-**Artificial Narrow Intelligence (ANI)**—also known as **Weak AI**—refers to systems designed to handle specific tasks with a high level of efficiency.
+**ANI**, also known as Weak AI, describes every AI system in operation today. These systems are goal-oriented and designed to perform a single task or a limited set of tasks with high proficiency.
 
-### Characteristics of ANI
+Most production systems in 2025–26 are advanced forms of Narrow AI, increasingly wrapped in **agentic runtimes** that let them plan and act but still within tightly scoped domains.
 
-- **Task-Specific**: Designed for a singular function or set of related tasks.
-- **Data-Driven**: Relies on predictive modeling and data analysis.
-- **Lacks Contextual Understanding**: No comprehensive awareness beyond its defined scope.
+### Characteristics of Modern ANI (2026)
 
-### Applications of ANI
+-   **Task-Specific:** Excels at its trained function but lacks general awareness or common sense.
+-   **Multi-Modal:** Can operate across different data types (text, image, code, audio) but remains goal-bounded.
+-   **Runs on the Edge:** Increasingly, compact ANI models run partially or fully on devices (phones, cars), enabling low-latency, privacy-preserving inference.
+-   **Agentic Behavior:** Can be orchestrated to plan, use tools (APIs, databases), and execute multi-step workflows to achieve a defined objective.
 
-|Domain|AI Example|Functionality|
-|---|---|---|
-|**Language**|ChatGPT, Claude|Text generation and summarization|
-|**Vision**|Tesla Autopilot|Real-time object detection and navigation|
-|**Image Generation**|DALL-E|Artistic design and multimedia content|
-|**Speech**|Siri, Alexa|Voice recognition and response execution|
-|**Analytics**|Salesforce Einstein|Predictive insights and data visualization|
-
-**Note**: ANI excels in its designated domains but doesn’t possess general cognitive abilities.
+---
 
 ## 3. Artificial General Intelligence (AGI)
 
-**Artificial General Intelligence (AGI)** aims to replicate human intellectual versatility, enabling machines to apply learned knowledge across various domains and contexts.
+**AGI** is the long-sought goal of creating an AI with human-like cognitive versatility. An AGI could reason, plan, solve problems, think abstractly, and learn from experience across diverse domains, not just the ones it was trained for.
 
-### Defining Features
+It's crucial to clarify that most "AGI-like" claims today refer to **narrow generality** (performing many tasks *within software*) rather than true, human-level general intelligence across physical, social, and scientific environments.
 
-- **Understanding**: AGI models are expected to grasp nuanced meanings and abstract concepts.
-- **Learning**: Adapts and acquires skills without requiring extensive retraining.
-- **Reasoning**: Applies logic, creativity, and emotional consciousness when tackling problems.
+### The Path to AGI: Timelines and Tone
 
-### Current Research in AGI
+-   **Current Status:** AGI remains theoretical. No system has demonstrated the robust, cross-domain adaptability that defines general intelligence.
+-   **Expert Forecasts:** Surveys of AI experts and forecasters now cluster around **~2030–2050** as the central estimate for achieving human-level AGI. Some aggressive timelines (e.g., 2027) have been pushed back after slower-than-expected progress on core reasoning challenges.
+-   **Research Focus:** The pursuit of AGI drives research into areas like causal reasoning, world models, and building more reliable **frontier foundation models**.
 
-While AGI remains theoretical, ongoing research explores its potential:
-
-- **Advanced LLMs**: Leveraging models like future GPT-5, Claude 3, and similar architectures.
-- **Agentic Systems**: Developing multi-agent environments for enhanced collaborative problem-solving and reasoning.
-
-The journey to AGI poses challenges surrounding safety, alignment, and control, requiring extensive ethical and scientific diligence.
+---
 
 ## 4. Artificial Superintelligence (ASI)
 
-**Artificial Superintelligence (ASI)** transcends human intelligence, conceptualized to redefine technological growth and problem-solving at an unprecedented scale.
+**ASI** is a speculative future AI that would possess intelligence far surpassing that of the brightest human minds.
 
-### Core Concepts of ASI
+The discussion around ASI is not about building it, but about preparing for its potential consequences. Many researchers believe that if AGI is achieved, a rapid, recursive self-improvement cycle could lead to ASI within a few years or decades. This has made **governance, the control problem, and existential risk research** a critical field of study.
 
-ASI is theorized to:
+---
 
-- **Self-Optimize**: Enhance itself autonomously beyond human design.
-- **Strategic Reasoning**: Make complex, multi-layered strategic decisions rapidly.
-- **Innovate**: Generate new science and technologies beyond current human capabilities.
+## 5. Functional Types of AI
 
-### Theoretical Challenges
+This classification looks at *how* an AI system operates and perceives the world.
 
-|Challenge|Description|
-|---|---|
-|**Control Problem**|Maintaining human oversight over ASI's decisions and actions.|
-|**Ethical Alignment**|Ensuring ASI's objectives align with human ethics and safety.|
-|**Existential Risks**|Addressing risks of unsupervised autonomy and potential harm.|
+| Type | Description | Example |
+| :--- | :--- | :--- |
+| **Reactive Machines** | Responds directly to present stimuli without an internal memory of past events. The most basic type. | IBM's Deep Blue (chess), classic game AI. |
+| **Limited Memory AI** | Uses historical data and past observations to inform its immediate decisions. Most modern AI falls here. | Autonomous vehicles, recommendation engines. |
+| **Theory of Mind AI** | A future AI that could understand and infer human emotions, beliefs, and intentions. | An active research area, but not yet achieved. |
+| **Self-Aware AI** | A hypothetical AI with consciousness, self-awareness, and sentience. | Purely theoretical and the subject of philosophical debate. |
+| **Agentic AI** | Goal-driven systems that can plan, call tools, collaborate with other agents, and autonomously execute multi-step workflows. | Research copilots, autonomous cybersecurity agents, supply-chain optimizers. |
 
-While ASI exists purely in theory, it inspires crucial discourse on **alignment, governance, and existential considerations**.
+---
 
-## 5. Functional Types of AI: Looking Beyond Capability Tiers
+## 6. The 2026 Landscape: Advanced ANI and Agentic Systems
 
-AI can also be evaluated based on its operational paradigms:
+As of 2026, the AI landscape is defined by two key trends:
+1.  **Better reasoning and reliability *inside* Narrow AI.**
+2.  **Agentic orchestration *across* tools and environments.**
 
-|Type|Description|Example|
-|---|---|---|
-|**Reactive Machines**|Direct response to present stimuli without memory.|IBM Deep Blue (chess)|
-|**Limited Memory AI**|Utilizes historical data to improve decisions.|Autonomous vehicles (self-driving)|
-|**Theory of Mind AI**|Understands emotions, beliefs, and intent for human-like interactions.|Ongoing research in social computing|
-|**Self-Aware AI**|Possesses self-consciousness akin to human cognition.|Entirely theoretical, hypothetical|
+Organizations are moving beyond simple API calls to pilot and scale **agentic systems**. These are still considered advanced ANI, not AGI, because their autonomy is constrained to specific domains and goals. As AI is embedded into more physical systems (robots, vehicles, industrial equipment), the line between highly capable ANI and nascent AGI will continue to blur, making this dual classification (capability vs. function) essential.
 
-Current technologies operate predominantly within the **Reactive** and **Limited Memory** realms.
-
-## 6. Comparing Capability vs. Functional Perspectives
-
-|Perspective|Focus|Example|
-|---|---|---|
-|**Capability View (ANI, AGI, ASI)**|Measures intelligence in terms of versatility and depth.|ChatGPT → ANI · AGI → Hypothetical Advanced Agents|
-|**Functional View (Reactive, Limited Memory, etc.)**|Explores how AI processes–from stimuli to output.|IBM Watson → Limited Memory · Future AI → Theory of Mind|
-
-Each framework offers complementary insights into AI design, impact, and potential improvements.
-
-## 7. The Present State of AI (2025)
-
-As of 2025, AI systems predominantly showcase **Advanced ANI** capabilities, gradually incorporating nascent AGI elements.
-
-### Current Indicators:
-
-- **Contextual Reasoning**: LLMs like Claude 3 and Gemini 2 are enhancing contextual accuracy and reflective refinement.
-- **Tool Usage**: AI agents increasingly utilize APIs and databases to enrich their capabilities, facilitated by protocols like MCP.
-- **Autonomous Planning**: Emerging agentic systems demonstrate task automation and decision-making, overseen by ethical and safety measures.
-
-Although still confined to specialized intelligence, these systems exhibit emergent behaviors pointing towards human-like adaptability.
-
-## 8. Key Implications
-
-Each type of AI brings distinct societal, ethical, and technological challenges:
-
-|AI Type|Challenges|Required Controls|
-|---|---|---|
-|**ANI**|Bias, data privacy risks|Implement transparent datasets and privacy protocols.|
-|**AGI**|Control, unforeseen autonomy|Ensure robust ethical governance and alignment frameworks.|
-|**ASI**|Existential risks, value conflicts|Foster global collaboration, develop advanced supervision models.|
-
-Ethical development and governance frameworks should progress in tandem with technological advancements to ensure AI remains a **beneficial and trustworthy ally**.
-
-## 9. Future Directions: Pathway to Intelligence
-
-Current trends suggest AI evolution through four potential stages:
-
-1. **Specialized Automation (ANI)**: Refining processes for productivity gains.
-2. **Cross-Domain Learning (AGI)**: Converging knowledge across domains and tasks.
-3. **Distributed Autonomous Systems**: Coordinating multitasking agents effectively.
-4. **Aligned Superintelligent Collaborators**: Harmonizing high-level reasoning with global policy and ethical considerations.
-
-AI's growth trajectory will depend as much on technical advancements as on ethical frameworks supporting its **safe, just, and equitable progress**.
+---
 
 ## Key Takeaways
 
-1. **AI types span from specialized ANI to speculative ASI**, forming a continuum of capabilities and potential.
-2. **Today's AI landscape remains rooted in Narrow AI**, with agents showing signs of progress toward AGI.
-3. **Challenges and ethical concerns** intensify with broader capability expansion, necessitating balanced development approaches.
-4. **Alignment frameworks and ethical scrutiny** become crucial as AI solutions transition from bounded tools to potentially autonomous agents.
-
-## Recommended Reading & Next Steps
-
-- [What Is Artificial Intelligence (AI)?](app://obsidian.md/ai/0_fundamentals/what-is-ai)
-- [History of AI](app://obsidian.md/ai/0_fundamentals/history-of-ai)
-- [Machine Learning vs. Deep Learning](app://obsidian.md/ai/0_fundamentals/machine-learning-vs-deep-learning)
-- [The AI Stack: How AI Systems Are Built](app://obsidian.md/ai/0_fundamentals/the-ai-stack)
-- [AI Ethics and Bias](app://obsidian.md/ai/4_ethics-and-governance/bias-and-fairness)
-
-> **Summary:** This document presents a comprehensive overview of AI types, emphasizing their implications for the present and future. Through understanding these tiers and functions, professionals can better grasp the spectrum of AI capabilities and make informed decisions regarding their ethical and practical applications.
+1.  **AI is best understood through two lenses:** the capability ladder (ANI, AGI, ASI) and functional types (reactive, agentic, etc.).
+2.  **All current AI systems are forms of ANI**, though they are becoming more powerful, multi-modal, and capable of running on-device.
+3.  **Agentic AI is the dominant functional paradigm in 2026**, where ANI models are orchestrated to plan, use tools, and complete complex tasks.
+4.  **AGI remains a theoretical goal**, with expert timelines centering on the 2030-2050 range.
+5.  **ASI is purely speculative**, and the surrounding discourse focuses on safety, ethics, and control, not on building such a system.
