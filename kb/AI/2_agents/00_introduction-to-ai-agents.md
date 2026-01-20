@@ -62,7 +62,7 @@ A standard chatbot is reactive, while an agent is proactive and goal-oriented. T
 
 The true value of AI agents lies in their ability to move beyond simple automation. While automation executes repetitive, pre-defined tasks, agentic systems handle complex, multi-step **workflows** that require reasoning and adaptation.
 
-As defined in the [[SIE/01_Core/00_core-purpose|System Charter]], the strategic goal of deploying AI agents is to:
+As defined in the [[SIE/00_Core/00_core-purpose|System Charter]], the strategic goal of deploying AI agents is to:
 - **Reduce Cognitive Load:** Agents take on the tactical execution of complex tasks, freeing up human operators for strategic oversight.
 - **Shift to a Fleet Commander Model:** Instead of being a "human-in-the-loop" who constantly verifies micro-tasks, the operator becomes a "Fleet Commander" who provides high-level intent and manages a fleet of autonomous agents.
 - **Minimize the Human Correction Tax:** By building agents that can reason, learn, and self-correct, we reduce the time, cost, and effort spent fixing errors, leading to superior net velocity.

@@ -60,7 +60,7 @@ Increasing the search scope (e.g., `ef_search` in HNSW, `nprobe` in IVF) improve
 
 ### Popular Vector Database Options
 
-- **Managed Services:** [[Pinecone]]
+- **Managed Services:** [[pinecone]]
 - **Open-Source (Self-Hosted):** [[Weaviate]], [[Chroma]], [[Qdrant]], [[Milvus]]
 - **Extensions to Existing DBs:**
     - **Postgres:** `pgvector` extension.

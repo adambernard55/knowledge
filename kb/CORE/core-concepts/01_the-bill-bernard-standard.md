@@ -19,7 +19,7 @@ tags:
   - trust-economy
 relations:
   - "[[Adam/01_Core/01_ABX-Bill-Bernard-Standards]]"
-  - "[[SIE/01_Core/00_core-purpose]]"
+  - "[[SIE/00_Core/00_core-purpose]]"
 aliases:
   - Integrity as Strategy
   - Ethical Kernel
