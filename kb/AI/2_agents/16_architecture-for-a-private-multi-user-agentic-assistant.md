@@ -1,34 +1,46 @@
 ---
-title: "Reference: Architecture for a Private, Multi-User Agentic Assistant"
-id: 20251210054823
-version: 2
-Author: Adam Bernard
-steward:
-date: 2025-12-10
-category: AI
-category_id:
-Excerpt: A technical blueprint for a self-hosted, multi-tenant platform that provides each user with a private, agentic chatbot capable of secure, permission-based document retrieval.
-Meta Description: Technical reference detailing the architecture, components, and workflows for building a secure, self-hosted, multi-user agentic RAG system.
-Primary_Keyword: agentic assistant architecture
-Featured_Image:
-doc_type: reference
-relations:
-aliases:
-  - Private Agentic RAG
-  - Multi-User Chatbot Architecture
-last_updated: 2025-12-10
+title: "Architecture for a Private, Multi-User Agentic Assistant"
+id: "kb/AI/2_agents/16"
+version: "1.0"
+steward: "Adam Bernard"
+updated: "2026-01-22"
+status: "Active"
+doc_type: "Reference"
+summary: "Provides a technical blueprint for a self-hosted, multi-tenant platform that gives each user a private, agentic chatbot with secure, permission-based document retrieval."
 tags:
-  - AI
-  - agentic-rag
-  - system-architecture
-  - self-hosted
-  - multi-tenant
-  - LangGraph
-  - Ollama
+  - "ai"
+  - "agentic-rag"
+  - "system-architecture"
+  - "self-hosted"
+  - "multi-tenant"
+  - "langgraph"
+  - "ollama"
+  - "security"
+relations:
+  - "kb/AI/2_agents/index.md"
+  - "kb/AI/2_agents/13_reference-architecture-for-trustworthy-agentic-ai.md"
+aliases:
+  - "Private Agentic RAG"
+  - "Multi-User Chatbot Architecture"
+semantic_summary: "This document details the architecture for a self-hosted, multi-tenant agentic assistant. It uses a privacy-first stack including Ollama for local LLMs, Minio for blob storage, and Postgres with pgvector for permission-based vector search. The system's workflows for file management, asynchronous embedding, and agentic chat are orchestrated via a RabbitMQ message queue and a LangGraph agent."
+synthetic_questions:
+  - "How can you build a multi-tenant RAG system with per-user data isolation?"
+  - "What is a good architecture for a self-hosted AI agent platform?"
+  - "How does LangGraph fit into an agentic chat workflow?"
+key_concepts:
+  - "Multi-Tenancy"
+  - "Agentic RAG"
+  - "Self-Hosted AI"
+  - "LangGraph"
+  - "Ollama"
+  - "pgvector"
+  - "Permission-Based Retrieval"
+  - "Asynchronous Embedding"
+primary_keyword: "agentic assistant architecture"
+meta_description: "Technical reference detailing the architecture, components, and workflows for building a secure, self-hosted, multi-user agentic RAG system."
 ---
 
-
-# Reference: Architecture for a Private, Multi-User Agentic Assistant
+# Architecture for a Private, Multi-User Agentic Assistant
 
 ## 1. System Overview
 

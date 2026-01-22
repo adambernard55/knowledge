@@ -1,29 +1,40 @@
 ---
 title: "Perplexity Search API"
-id: 20251003221140
-version: 2
-Author: Adam Bernard
-steward:
-date: 2025-12-10
-category: AI
-category_id:
-Excerpt: A technical overview of the Perplexity Search API, designed to provide developers with real-time, reliable, and fine-grained web search results for building AI agents and RAG pipelines.
-Meta Description: Technical reference on the Perplexity Search API, detailing its features, comparison to the Sonar API, performance benchmarks, and developer resources.
-Primary_Keyword: Perplexity Search API
-Featured_Image:
-doc_type: reference
-relations:
-aliases:
-  - Perplexity API
-  - Perplexity Search
-last_updated: 2025-12-10
+id: "kb/AI/3_methods/17"
+version: "1.0"
+steward: "Adam Bernard"
+updated: "2026-01-22"
+status: "Active"
+doc_type: "Reference"
+summary: "A technical overview of the Perplexity Search API, designed for developers building AI agents and RAG pipelines with real-time, reliable web search results."
 tags:
-  - AI
-  - API
-  - Perplexity
-  - search-api
-  - agentic-ai
-  - RAG
+  - "ai"
+  - "api"
+  - "perplexity"
+  - "search-api"
+  - "agentic-ai"
+  - "rag"
+relations:
+  - "kb/AI/3_methods/index.md"
+aliases:
+  - "Perplexity API"
+  - "Perplexity Search"
+semantic_summary: "This document provides a technical overview of the Perplexity Search API, which offers real-time, fine-grained web search results for AI applications. It contrasts the raw-data Search API with the conversational Sonar API, highlights features like AI-powered parsing and freshness, and mentions the open-source `search_evals` framework for performance benchmarking."
+synthetic_questions:
+  - "What is the Perplexity Search API and how is it used?"
+  - "What is the difference between Perplexity's Search API and Sonar API?"
+  - "What are the key features of the Perplexity Search API for RAG pipelines?"
+key_concepts:
+  - "Perplexity Search API"
+  - "Sonar API"
+  - "Retrieval-Augmented Generation (RAG)"
+  - "Agentic AI"
+  - "Search Indexing"
+  - "Web Snippets"
+primary_keyword: "Perplexity Search API"
+meta_description: "Technical reference on the Perplexity Search API, detailing its features, comparison to the Sonar API, performance benchmarks, and developer resources."
+excerpt: "A technical overview of the Perplexity Search API, designed to provide developers with real-time, reliable, and fine-grained web search results for building AI agents and RAG pipelines."
+cover_image: ""
 ---
 
 # Reference: Perplexity Search API

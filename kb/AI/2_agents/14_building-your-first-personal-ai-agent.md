@@ -1,6 +1,44 @@
+---
+title: "Building Your First Personal AI Agent"
+id: "kb/AI/2_agents/14"
+version: "1.0"
+steward: "Adam Bernard"
+updated: "2026-01-22"
+status: "Active"
+doc_type: "Reference"
+summary: "A structured guide on creating a personal AI agent, covering core components, no-code vs. code-based approaches, a step-by-step framework, and common pitfalls."
+tags:
+  - ai
+  - agents
+  - guide
+  - development
+  - no-code
+  - langchain
+relations:
+  - "kb/AI/2_agents/00_introduction-to-ai-agents.md"
+  - "kb/AI/2_agents/index.md"
+aliases:
+  - "Personal AI Agent Guide"
+  - "How to Build an AI Agent"
+semantic_summary: "This guide provides a step-by-step framework for building a personal AI agent. It covers core components like LLMs, tools, and memory; compares no-code (Make, Zapier) and code-based (OpenAI SDK, LangChain) approaches; outlines a development process from use case definition to deployment; and details common pitfalls such as vague prompts and poor error handling."
+synthetic_questions:
+  - "What are the core components of an AI agent?"
+  - "What is the difference between no-code and code-based approaches to building AI agents?"
+  - "How do I start building my first personal AI agent?"
+  - "What are common mistakes to avoid when developing an AI agent?"
+key_concepts:
+  - "AI Agent"
+  - "LLM"
+  - "No-Code AI"
+  - "LangChain"
+  - "Agent Development"
+  - "Prompt Engineering"
+  - "Agent Orchestration"
+---
+
 # Building Your First Personal AI Agent
 
-This guide provides a structured overview of creating a personal AI agent, covering essential components, development approaches, and best practices. It is based on a tutorial by Tina Huang.
+This guide provides a structured overview of creating a personal AI agent, covering essential components, development approaches, and best practices.
 
 ## What are AI Agents?
 
