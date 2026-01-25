@@ -1,9 +1,9 @@
 ---
 title: "Introduction to AI Agents"
 id: "kb/AI/2_agents/00_introduction-to-ai-agents"
-version: "1.3"
+version: "1.4"
 steward: "Adam Bernard"
-updated: "2026-01-15"
+updated: "2026-01-23"
 status: "Active"
 doc_type: "Reference"
 summary: "A comprehensive introduction to AI agents, covering their definition, strategic purpose, core architecture (including ReAct), key components, autonomy levels, and future challenges."
@@ -17,6 +17,7 @@ relations:
   - "kb/AI/2_agents/01_ai-agents-running-workflows"
   - "SIE/01_Core/00_core-purpose"
   - "kb/AI/2_agents/13_reference-architecture-for-trustworthy-agentic-ai"
+  - "kb/AI/2_agents/17_building-with-deep-agents"
 aliases:
   - "AI Agent"
   - "What is an AI Agent?"
@@ -45,7 +46,7 @@ key_concepts:
 
 ## 1. Definition
 
-An **AI agent** is an autonomous system powered by a Large Language Model (LLM) that can perceive its environment, make decisions, plan, and take actions to achieve a specific goal. Unlike simple programs that follow predefined instructions, an agent can reason, self-correct, and use tools to navigate complex, dynamic situations.
+An **AI agent** is an autonomous system powered by a Large Language Model (LLM) that can perceive its environment, make decisions, plan, and take actions to achieve a specific goal. Unlike simple programs that follow predefined instructions, an agent can reason, self-correct, and use tools to navigate complex, dynamic situations. Frameworks like [[kb/AI/2_agents/17_building-with-deep-agents|Deep Agents]] provide concrete tools and patterns for building these sophisticated, multi-agent systems.
 
 ## 2. Agent vs. Chatbot: A Core Distinction
 

@@ -1,9 +1,12 @@
 ---
 title: "AI Model Training and Fine-Tuning: From Foundational Models to Specialists"
-seo_category: methods-and-systems
-difficulty: advanced
-last_updated: 2025-10-15
-kb_status: published
+id: "kb/AI/3_methods/03_training-and-finetuning"
+version: "1.1"
+steward: "Adam Bernard"
+updated: "2026-01-25"
+status: "Active"
+doc_type: "Reference"
+summary: "Explains the difference between pre-training and fine-tuning for LLMs, compares fine-tuning to RAG, and outlines modern techniques like PEFT and LoRA."
 tags:
   - training
   - fine-tuning
@@ -13,12 +16,30 @@ tags:
   - lora
   - rlhf
   - dpo
-related_topics:
-  - architectures-and-llms
-  - embeddings-and-vectorization
-  - the-ai-stack
-  - rag-architecture
-summary: "Large Language Models (LLMs) gain their power through two distinct phases of learning: pre-training and fine-tuning. Understanding the difference between these processes is fundamental to building effective AI applications."
+relations:
+  - "kb/AI/3_methods/01_architectures-and-llms"
+  - "kb/AI/3_methods/02_embeddings-and-vectorization"
+  - "kb/AI/0_fundamentals/04_the-ai-stack"
+aliases:
+  - "Fine-Tuning vs RAG"
+  - "Model Fine-Tuning"
+  - "PEFT and LoRA"
+semantic_summary: "This document distinguishes between the two primary phases of LLM learning: pre-training, which creates generalist foundational models, and fine-tuning, which specializes them for specific tasks, styles, or domains. It contrasts fine-tuning with Retrieval-Augmented Generation (RAG), explaining that fine-tuning teaches skills while RAG provides knowledge. The note also covers modern, efficient fine-tuning methods like PEFT and LoRA, and alignment techniques such as RLHF and DPO."
+synthetic_questions:
+  - "What is the difference between pre-training and fine-tuning an AI model?"
+  - "When should I use fine-tuning versus Retrieval-Augmented Generation (RAG)?"
+  - "What are Parameter-Efficient Fine-Tuning (PEFT) and LoRA?"
+  - "What are the key steps in a fine-tuning workflow?"
+  - "What is the most important factor for a successful fine-tuning project?"
+key_concepts:
+  - "Pre-training"
+  - "Fine-Tuning"
+  - "Retrieval-Augmented Generation (RAG)"
+  - "Parameter-Efficient Fine-Tuning (PEFT)"
+  - "Low-Rank Adaptation (LoRA)"
+  - "Reinforcement Learning from Human Feedback (RLHF)"
+  - "Direct Preference Optimization (DPO)"
+  - "Foundational Model"
 ---
 
 # AI Model Training and Fine-Tuning: From Foundational Models to Specialists
@@ -86,7 +107,7 @@ Fine-tuning is often confused with RAG, but they solve different problems. They 
 ## 4. Modern Fine-Tuning Techniques
 
 ### 4.1 Full Fine-Tuning
-This traditional method updates all the weights of the neural network. While a powerful, it is computationally expensive and requires significant memory. It also carries a higher risk of "catastrophic forgetting," where the model loses some of its general capabilities.
+This traditional method updates all the weights of the neural network. While powerful, it is computationally expensive and requires significant memory. It also carries a higher risk of "catastrophic forgetting," where the model loses some of its general capabilities.
 
 ### 4.2 Parameter-Efficient Fine-Tuning (PEFT)
 PEFT methods have made fine-tuning much more accessible. Instead of updating all the model's parameters, they freeze the original model and only train a small number of additional parameters.
@@ -132,11 +153,3 @@ These methods focus on aligning a model's behavior with human preferences and in
 3.  **RAG is for providing knowledge.** It gives a model access to external, up-to-date information at the time of the query.
 4.  Modern techniques like **PEFT (especially LoRA)** have made fine-tuning more efficient, affordable, and accessible.
 5.  The success of any fine-tuning project is **90% dependent on the quality of the training dataset.**
-
----
-
-## Related Resources
--   [LLM and System Architectures: From Transformers to Agentic AI](01_architectures-and-llms.md)
--   [Embeddings and Vectorization: Translating Meaning into Math](/Knowledge/AI/1_methods-and-systems/embeddings-and-vectorization.md)
--   [The AI Stack](04_the-ai-stack.md)
--   [RAG Architecture (To be created)](/Knowledge/AI/1_methods-and-systems/rag-architecture.md)

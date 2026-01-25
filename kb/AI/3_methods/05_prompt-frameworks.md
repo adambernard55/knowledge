@@ -1,108 +1,103 @@
 ---
 title: "Prompt Frameworks: Structured Techniques for Enhanced AI Interactions"
-ai_category: "methods-and-systems"
-difficulty: "intermediate"
-last_updated: "2025-01-24"
-kb_status: "published"
+id: "kb/AI/3_methods/05_prompt-frameworks"
+version: "1.1"
+steward: "Adam Bernard"
+updated: "2026-01-25"
+status: "Active"
+doc_type: "Reference"
+summary: "Explores structured prompt frameworks like Chain of Thought (CoT) and PTCF to improve the coherence, accuracy, and goal alignment of AI model outputs."
 tags:
   - prompt-engineering
   - llm
   - ai-frameworks
   - structured-queries
   - language-models
-  - ai-prompting
-related_topics:
-  - "prompt-engineering-basics"
-  - "advanced-prompt-engineering"
-  - "agentic-context-engineering"
-  - "introduction-to-ai-agents"
-summary: "Explore various structured prompt frameworks designed to elevate interactions with AI models, focusing on techniques like Chain of Thought, PTCF, and dual-prompting strategies to improve coherence, accuracy, and goal alignment."
-aliases: []
+relations:
+  - "kb/AI/3_methods/04_prompt-engineering-basics"
+  - "kb/AI/3_methods/09_advanced-prompt-engineering"
+  - "kb/AI/3_methods/11_agentic-context-engineering"
+  - "kb/AI/2_agents/00_introduction-to-ai-agents"
+aliases:
+  - "Prompting Frameworks"
+  - "Structured Prompting"
+semantic_summary: "This document details structured prompt frameworks designed to improve the quality and reliability of LLM outputs. It moves beyond basic prompting to cover methodologies like Chain of Thought (CoT), which encourages step-by-step reasoning, and the PTCF (Prompt, Task, Context, Feedback) framework for segmenting complex queries. These techniques help enhance coherence, ensure consistency, and boost the relevance of AI-generated content."
+synthetic_questions:
+  - "What are prompt frameworks and why are they useful?"
+  - "How does the Chain of Thought (CoT) prompting technique work?"
+  - "What are the components of the PTCF framework?"
+  - "What is a dual-prompting strategy and when is it used?"
+key_concepts:
+  - "Prompt Frameworks"
+  - "Chain of Thought (CoT)"
+  - "PTCF Framework"
+  - "Dual-Prompting"
+  - "Structured Prompting"
 ---
+
 # Prompt Frameworks: Structured Techniques for Enhanced AI Interactions
 
-## Overview
+## 1. Overview
 
-Building on the basics of prompt engineering, **prompt frameworks** offer structured methodologies that maximize the potential of large language models (LLMs). These frameworks provide reliable ways to guide AI behavior and ensure outputs align with user goals.
+Building on the basics of prompt engineering, **prompt frameworks** offer structured methodologies that maximize the potential of large language models (LLMs). These frameworks provide reliable, repeatable patterns to guide an AI's reasoning process and ensure its outputs align with complex user goals.
 
-In this guide, we explore frameworks such as Chain of Thought, PTCF (Prompt, Task, Context, and Feedback), and dual-prompting strategies to improve the quality, coherence, and relevance of AI-generated content.
+This guide explores key frameworks like Chain of Thought (CoT) and PTCF that transform simple queries into goal-centered, multi-step tasks.
 
-## 1. Why Use Structured Prompt Frameworks?
+## 2. Why Use Structured Prompt Frameworks?
 
-While basic prompt engineering focuses on crafting effective queries, structured frameworks help:
+While basic prompt engineering focuses on crafting a single, effective query, structured frameworks are essential for more complex tasks because they:
 
-1. **Enhance Coherence:** By guiding the LLM through complex reasoning paths.
-2. **Achieve Consistency:** Encouraging repeatable, predictable output patterns.
-3. **Boost Relevance:** By including contextual data or multiple stages of information.
+-   **Enhance Coherence:** Guide the LLM through a logical reasoning path, reducing the chance of hallucination or nonsensical output.
+-   **Achieve Consistency:** Encourage repeatable and predictable output formats, which is critical for automated workflows.
+-   **Boost Relevance:** Allow for the inclusion of rich contextual data and constraints in a structured way.
 
-Frameworks transform simple LLM interactions into goal-centered and explanatory tasks, essential for complex queries or multi-step reasoning.
+## 3. Core Frameworks in Prompt Engineering
 
-## 2. Core Frameworks in Prompt Engineering
+### 3.1 Chain of Thought (CoT)
 
-### 2.1 Chain of Thought (CoT)
+**Chain of Thought** is a technique that prompts an LLM to "think step-by-step" by breaking down a problem into intermediate reasoning steps before providing a final answer. This mimics a human's logical process and significantly improves performance on tasks requiring arithmetic, commonsense, or symbolic reasoning.
 
-**Chain of Thought** enhances cognitive processing by having the LLM "think through" each step before producing the final output.
+-   **Key Principle:** By articulating the reasoning process, the model is less likely to make impulsive errors and can self-correct along the way.
+-   **Example**: Instead of just asking "If a group of 5 friends wants to share 12 apples equally, how many are left over?", you would prompt: "If a group of 5 friends wants to share 12 apples equally, how many are left over? Show your work step-by-step."
 
-#### Key Components:
+### 3.2 PTCF Framework
 
-- **Sequential Reasoning:** Encourages the model to articulate intermediate steps.
-- **Reflective Analysis:** Models verify each step before proceeding.
+The **PTCF** framework segments a query into four distinct stages: **Prompt, Task, Context, and Feedback**. This is particularly useful for complex requests where clarity is paramount.
 
-**Example**: Instead of directly answering, "What is the capital of France?", the model articulates its reasoning process: "To determine the capital of France, consider national symbols, governance, and well-established facts. The capital city is Paris."
+-   **Prompt:** The initial, high-level request or question.
+-   **Task:** Explicit instructions detailing the expected output format, length, or specific actions to take.
+-   **Context:** Background information, data, or constraints that inform the LLM's understanding.
+-   **Feedback:** Criteria for a successful output or rules the model must follow.
 
-### 2.2 PTCF Framework
+**Example**:
+-   **Prompt:** "Explain the theory of evolution."
+-   **Task:** "Provide a 200-word summary suitable for high school students."
+-   **Context:** "Include key figures like Charles Darwin and fundamental concepts such as natural selection."
+-   **Feedback:** "Ensure the explanation is neutral and aligns with scientific consensus. Do not mention religious viewpoints."
 
-The **PTCF** prompt framework segments queries into four stages: **Prompt, Task, Context, and Feedback**.
+### 3.3 Dual-Prompting Strategies
 
-#### Key Components:
+**Dual-Prompting** uses parallel or layered prompts to improve response depth and contextual accuracy. This can involve a primary prompt for the main objective and a supplementary prompt to add detail, constraints, or an alternative perspective.
 
-- **Prompt:** The initial request or question posed to the model.
-- **Task:** Explicit instructions delineating the task or expected output format.
-- **Context:** Background or additional detail that informs the LLM's understanding.
-- **Feedback:** Indicators of success or criteria for output evaluation.
-
-**Example**:  
-Prompt: “Explain the theory of evolution.”  
-Task: “Provide a summary suitable for high school students.”  
-Context: “Include key figures like Charles Darwin and fundamental concepts such as natural selection.”  
-Feedback: “Ensure clear alignment with scientific consensus.”
-
-### 2.3 Dual-Prompting Strategies
-
-**Dual-Prompting** uses parallel or layered prompts to improve response depth and contextual accuracy.
-
-#### Key Components:
-
-- **Primary Prompt:** Lays out the main query or objective.
-- **Supplementary Prompt:** Adds detail, alternate views, or constraints to ensure clarity.
-
-**Example**:  
-Primary: “How does photosynthesis work?”  
-Supplementary: “Explain without using overly technical language, focusing on the process within plant leaves.”
-
-## 3. Advanced Techniques for Prompt Frameworks
-
-- **Iterative Refinement**: Utilize multiple iterations, re-phrasing or adjusting prompts based on model output to increase performance.
-- **Dynamic Contextual Insertion**: Dynamically provide contextual data via APIs or live feeds that update prompts for real-time accuracy.
-- **Feedback Loops**: Within PTCF, use feedback mechanisms to incorporate scored evaluations that refine both prompt inputs and model outputs.
+-   **Example**:
+    -   **Primary Prompt:** "How does photosynthesis work?"
+    -   **Supplementary Prompt:** "Explain the process without using overly technical language, focusing on what happens inside a plant's leaves."
 
 ## 4. Benefits of Using Prompt Frameworks
 
-- **Improved Output Quality**: Structured prompts produce more accurate and contextually aligned responses.
-- **Efficient Resource Usage**: By refining queries, frameworks reduce the compute cycles needed to achieve high-quality outputs.
-- **Flexibility Across Models**: Effective for various LLMs like GPT, Claude, or Gemini, accommodating unique strengths and weaknesses.
+-   **Improved Output Quality**: Structured prompts produce more accurate, relevant, and contextually aligned responses.
+-   **Reduced Errors**: By forcing a reasoning process, frameworks reduce the likelihood of factual or logical errors.
+-   **Greater Control**: They give the user finer-grained control over the model's output, which is essential for building reliable applications.
 
-## Key Takeaways
+## 5. Key Takeaways
 
-1. **Structured frameworks deepen interactions** with AI models, leading to more coherent, reliable, and valuable outputs.
-2. **Chain of Thought, PTCF, and dual-prompting** provide well-defined approaches to extracting structured and insightful information.
-3. **Frameworks eliminate ambiguity** and encourage the model to evaluate its reasoning and validation processes before finalizing responses.
+1.  **Structured frameworks deepen interactions** with AI models, leading to more coherent and valuable outputs.
+2.  **Chain of Thought, PTCF, and dual-prompting** provide well-defined approaches for guiding an LLM through complex reasoning.
+3.  **Frameworks eliminate ambiguity** and encourage the model to follow a logical process, improving the reliability of its responses.
 
 ## Recommended Reading
 
-- [Prompt Engineering Basics](app://obsidian.md/link-to/prompt-engineering-basics.md)
-- [Advanced Prompt Engineering](app://obsidian.md/link-to/advanced-prompt-engineering.md)
-- [Agentic Context Engineering](app://obsidian.md/link-to/agentic-context-engineering.md)
-- [Introduction to AI Agents](app://obsidian.md/link-to/introduction-to-ai-agents.md)
-
-> **Summary:** This document explores structured prompt frameworks designed to harness LLM potential more effectively, transforming dispersed AI interactions into goal-driven, high-yield engagements. By embedding frameworks like Chain of Thought, PTCF, and dual-prompting strategies, practitioners can elevate precision, depth, and alignment in automated dialogue systems.
+-   [[kb/AI/3_methods/04_prompt-engineering-basics|Prompt Engineering Basics]]
+-   [[kb/AI/3_methods/09_advanced-prompt-engineering|Advanced Prompt Engineering]]
+-   [[kb/AI/3_methods/11_agentic-context-engineering|Agentic Context Engineering]]
+-   [[kb/AI/2_agents/00_introduction-to-ai-agents|Introduction to AI Agents]]

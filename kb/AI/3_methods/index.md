@@ -19,11 +19,13 @@ tags:
 
 ## Contents
 
+
 ```dataview
 TABLE WITHOUT ID
   file.link as "Topic",
-  summary as "Description"
+  semantic_summary as "Summary",
+  key_concepts as "Key Concepts"
 FROM "kb/AI/3_methods"
 WHERE file.name != "index.md"
 SORT file.name ASC
-````
+```
