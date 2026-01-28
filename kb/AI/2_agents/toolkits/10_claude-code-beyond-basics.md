@@ -1,51 +1,56 @@
 ---
-title: "Claude Code Beyond Basics: Skills and MCP"
-id: "kb/AI/2_agents/toolkits/10_claude-code-beyond-basics"
-version: "1.0"
-steward: "Adam Bernard"
-updated: "2026-01-27"
-status: "Active"
-doc_type: "Reference"
-summary: "A practical guide to supercharging Claude Code by integrating it with an IDE, using custom Skills for repeatable tasks, and connecting to external tools via the Model Context Protocol (MCP)."
+title: "Claude Code Beyond Basics: Skills, MCP, and Open Models"  
+id: "kb/AI/2_agents/toolkits/10_claude-code-beyond-basics"  
+version: "1.1"  
+steward: "Adam Bernard"  
+updated: "2026-01-28"  
+status: "Active"  
+doc_type: "Reference"  
+summary: "A practical guide to supercharging Claude Code by integrating it with an IDE, using custom Skills, connecting to external tools via MCP, and leveraging compatible open-source models like SERA."  
 tags:
-  - claude
-  - claude-code
-  - ai-agents
-  - skills
-  - mcp
-  - ide
-  - vs-code
-  - tutorial
+- claude
+- claude-code
+- ai-agents
+- skills
+- mcp
+- ide
+- vs-code
+- tutorial
+- sera  
 relations:
-  - "kb/AI/1_models/1_specific-models/3_claude"
-  - "kb/AI/2_agents/00_introduction-to-ai-agents"
-  - "kb/AI/3_methods/mcp/1_mcp-foundations-and-architecture"
+- "kb/AI/1_models/1_specific-models/3_claude"
+- "kb/AI/2_agents/00_introduction-to-ai-agents"
+- "kb/AI/3_methods/mcp/1_mcp-foundations-and-architecture"
+- "kb/AI/2_agents/18_open-coding-agents-sera"  
 aliases:
-  - "Advanced Claude Code"
-  - "Claude Skills Guide"
-  - "Claude MCP Guide"
-semantic_summary: "This document provides a step-by-step tutorial on advancing beyond basic Claude Code usage. It covers setting up and using Claude Code within an IDE like VS Code or Cursor, creating and invoking custom 'Skills' to standardize repeatable workflows, and connecting to third-party MCP servers (like Hugging Face) to grant the agent new capabilities. The guide emphasizes combining Skills and MCP for powerful, automated task execution."
+- "Advanced Claude Code"
+- "Claude Skills Guide"
+- "Claude MCP Guide"  
+semantic_summary: "This document provides a step-by-step tutorial on advancing beyond basic Claude Code usage. It covers setting up and using Claude Code within an IDE like VS Code or Cursor, creating and invoking custom 'Skills' to standardize repeatable workflows, connecting to third-party MCP servers (like Hugging Face) to grant the agent new capabilities, and extending its power with compatible open-source models like SERA. The guide emphasizes combining these methods for powerful, automated task execution."  
 synthetic_questions:
-  - "How do I run Claude Code in VS Code or Cursor?"
-  - "What are Claude Skills and how do I create them?"
-  - "How can I get Claude Code to install the 'Skill Creator' skill for me?"
-  - "What is the Model Context Protocol (MCP) and how does it work with Claude Code?"
-  - "How do I connect Claude Code to an MCP server like Hugging Face?"
-  - "What is the benefit of combining Claude Skills with MCP servers?"
+- "How do I run Claude Code in VS Code or Cursor?"
+- "What are Claude Skills and how do I create them?"
+- "How can I get Claude Code to install the 'Skill Creator' skill for me?"
+- "What is the Model Context Protocol (MCP) and how does it work with Claude Code?"
+- "How do I connect Claude Code to an MCP server like Hugging Face?"
+- "What is the benefit of combining Claude Skills with MCP servers?"
+- "How can I use open-source models like SERA with Claude Code?"  
 key_concepts:
-  - "Claude Code"
-  - "AI Agents"
-  - "Claude Skills"
-  - "Model Context Protocol (MCP)"
-  - "Integrated Development Environment (IDE)"
-  - "VS Code Extension"
-  - "Agentic Workflows"
+- "Claude Code"
+- "AI Agents"
+- "Claude Skills"
+- "Model Context Protocol (MCP)"
+- "Integrated Development Environment (IDE)"
+- "VS Code Extension"
+- "Agentic Workflows"
+- "SERA"
 
 # --- SEO & Publication ---
-primary_keyword: "claude code skills"
-seo_title: "A Guide to Advanced Claude Code Skills and MCP Integration"
-meta_description: "Learn to use advanced Claude Code skills and the Model Context Protocol (MCP) to supercharge your agentic workflows."
-excerpt: "Go beyond the basics with this guide to advanced Claude Code skills and MCP. Learn to integrate Claude into your IDE, create custom skills for repeatable tasks, and connect to external tools."
+
+primary_keyword: "claude code skills"  
+seo_title: "A Guide to Advanced Claude Code Skills and MCP Integration"  
+meta_description: "Learn to use advanced Claude Code skills and the Model Context Protocol (MCP) to supercharge your agentic workflows."  
+excerpt: "Go beyond the basics with this guide to advanced Claude Code skills and MCP. Learn to integrate Claude into your IDE, create custom skills for repeatable tasks, and connect to external tools."  
 cover_image: "assets/images/claude-code-advanced.png"
 ---
 
