@@ -92,7 +92,15 @@ Many modern agents are built using the **ReAct (Reason + Act)** framework. This 
 3. **Observe:** The agent perceives the result of its action, updating its understanding of the environment.
 4. **Repeat:** The agent loops back to the reasoning step with new information, continuing until the goal is achieved.
 
-## 5. Common Applications
+## 5. Advanced Concepts: Context Engineering
+
+Once an agent understands its task, its performance is heavily dependent on the quality of the information within its "context window." **Context Engineering** is the discipline of managing this limited resource to ensure the agent has the most relevant information to perform its task effectively, while avoiding common failure modes like "lost-in-the-middle."
+
+This involves curating system prompts, tool definitions, retrieved documents, and conversation history to maximize signal and minimize noise.
+
+**For a deep dive into this topic, see the full guide: [[Agent Skills for Context Engineering]]**
+
+## 6. Common Applications
 
 By leveraging their core components, agents can effectively tackle complex tasks across various industries:
 
@@ -104,7 +112,7 @@ By leveraging their core components, agents can effectively tackle complex tasks
 | **Customer Support** | Handling complex inquiries, resolving multi-step issues, and providing personalized assistance by integrating with CRMs and knowledge bases. |
 | **Personal Productivity** | Assisting with travel arrangements, event planning, scheduling, and managing communications. |
 
-## 6. Classifying Agent Autonomy
+## 7. Classifying Agent Autonomy
 
 To create a shared understanding of agent capability, developers are adapting autonomy frameworks from established industries like automotive and aviation. These frameworks help clarify the division of responsibility between the human and the machine.
 
@@ -114,7 +122,7 @@ To create a shared understanding of agent capability, developers are adapting au
 | **Aviation's 10 Levels of Automation** | Describes the spectrum of human-machine collaboration. Most current agents are **"centaur" systems**, acting as co-pilots rather than fully autonomous pilots. |
 | **NIST's Robotics Framework (ALFUS)** | An agent's autonomy is context-dependent and measured along three axes: **Human Independence**, **Mission Complexity**, and **Environmental Complexity**. |
 
-## 7. Key Challenges and Limitations
+## 8. Key Challenges and Limitations
 
 Developing truly autonomous and reliable agents presents significant challenges that are areas of active research.
 
@@ -125,7 +133,7 @@ Developing truly autonomous and reliable agents presents significant challenges 
 | **Composability** | Enabling multiple specialized agents to collaborate, delegate tasks, and resolve conflicts is a major engineering challenge. |
 | **Alignment and Control** | Ensuring an agent's actions align with complex, nuanced, and often unstated human values and intentions. An agent might achieve a literal goal while violating common-sense constraints. |
 
-## 8. The Future of AI Agents
+## 9. The Future of AI Agents
 
 The path forward is likely to be collaborative and distributed rather than focused on a single, monolithic super-intelligence.
 

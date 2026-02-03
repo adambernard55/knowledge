@@ -1,28 +1,42 @@
 ---
 title: "AI Agents Running Workflows: From Automation to Autonomous Orchestration"
-category: AI Agents
-Primary_Keyword: "agentic workflow"
-Meta Description: "Learn how AI agents execute multi-step workflows using a reasoning loop (ReAct). This guide covers the architecture, best practices, and the critical role of well-designed tools for building autonomous systems."
-Excerpt: "Modern AI agents do more than simply respond to prompts; they execute workflows. A workflow is a multi-step sequence of actions that an agent performs autonomously to achieve a complex goal."
-difficulty: intermediate
-last_updated: 2025-12-25
-kb_status: published
+id: SIE/REF/AI-02
+version: "1.0"
+steward: Adam Bernard
+updated: 2026-02-03
+status: Active
+doc_type: Reference
+summary: "Modern AI agents do more than simply respond to prompts; they execute workflows. A workflow is a multi-step sequence of actions that an agent performs autonomously to achieve a complex goal."
 tags:
   - ai-agents
-  - agentic-ai
-  - workflow-automation
+  - agentic-workflow
   - orchestration
   - llm
   - reasoning-loop
   - react-framework
-related_topics:
-  - introduction-to-ai-agents
-  - agentic-context-engineering
-  - how-to-build-fullstack-agent-apps
-  - building-agents-with-the-claude-agent-sdk
-  - introduction-to-openai-agent-builder
-summary: Modern AI agents do more than simply respond to prompts; they execute workflows. A workflow is a multi-step sequence of actions that an agent performs autonomously to achieve a complex goal.
-aliases: []
+relations:
+  - "[[Introduction to AI Agents]]"
+  - "[[Agent Skills for Context Engineering]]"
+  - "[[Designing Effective Agent Tools]]"
+aliases:
+  - Agentic Workflow
+  - ReAct Framework
+semantic_summary: "Learn how AI agents execute multi-step workflows using a reasoning loop (ReAct). This guide covers the architecture, best practices, and the critical role of well-designed tools for building autonomous systems."
+synthetic_questions:
+  - "How do AI agents run workflows?"
+  - "What is the ReAct framework?"
+  - "What is the difference between automation and agentic orchestration?"
+key_concepts:
+  - Agentic Workflow
+  - Reasoning Loop
+  - ReAct Framework
+  - Orchestration
+  - Agent Tools
+  - Observability
+primary_keyword: "agentic workflow"
+seo_title: "Understanding Agentic Workflows for AI Agents"
+meta_description: "Learn how AI agents execute multi-step workflows using a reasoning loop (ReAct). This guide covers the architecture, best practices, and the critical role of well-designed tools for building autonomous systems."
+excerpt: "Modern AI agents do more than simply respond to prompts; they execute workflows. A workflow is a multi-step sequence of actions that an agent performs autonomously to achieve a complex goal."
 ---
 
 # AI Agents Running Workflows
@@ -104,6 +118,8 @@ To move agents from experimental prototypes to production-ready systems, their w
 |**Human-in-the-Loop (HITL)**|For critical or irreversible actions (e.g., sending an email, processing a payment), build in approval gates where a human must confirm the agent's plan before execution.|
 |**Observability**|Log the agent's entire thought process—every plan, action, and observation. This is crucial for debugging why an agent made a particular decision.|
 |**Idempotency**|Where possible, design tools so that calling them multiple times with the same input produces the same result. This prevents unintended side effects if an agent retries a failed step.|
+
+-   **Practice Effective Context Engineering:** The reliability of any agentic workflow depends on how well the agent's context is managed. This includes optimizing tool design, compressing message history, and ensuring retrieved data is concise and relevant. Mastering these skills is critical for building robust, production-grade systems. (See [[Agent Skills for Context Engineering]])
 
 ---
 

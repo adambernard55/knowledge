@@ -1,19 +1,19 @@
 ---
-title: "Designing Effective Tools for AI Agents"
-summary: "Learn the core principles for designing, defining, and implementing robust tools for AI agents, focusing on clarity, specificity, and error handling to maximize performance and reliability."
+title: Designing Effective Tools for AI Agents
+summary: Learn the core principles for designing, defining, and implementing robust tools for AI agents, focusing on clarity, specificity, and error handling to maximize performance and reliability.
 seo_category: agents
 difficulty: intermediate
 last_updated: 2025-12-23
 kb_status: draft
-meta_description: "Learn the core principles for designing effective tools for AI agents. This guide covers best practices for naming, docstrings, error handling, and providing clean outputs to build reliable and high-performing agentic systems." 
-keyword: "AI agent tools" 
-excerpt: "The performance of an AI agent is directly linked to the quality of its tools. This guide details the essential principles for designing robust and reliable functions for agents, covering best practices like clear naming, descriptive docstrings, specific functionality, clean outputs, and informative error handling to maximize effectiveness."
+meta_description: Learn the core principles for designing effective tools for AI agents. This guide covers best practices for naming, docstrings, error handling, and providing clean outputs to build reliable and high-performing agentic systems.
+keyword: AI agent tools
+excerpt: The performance of an AI agent is directly linked to the quality of its tools. This guide details the essential principles for designing robust and reliable functions for agents, covering best practices like clear naming, descriptive docstrings, specific functionality, clean outputs, and informative error handling to maximize effectiveness.
 tags:
   - ai-agents
   - tool-design
   - agentic-workflows
   - llm
-sticker: lucide//wrench
+sticker: ""
 ---
 
 # Designing Effective Tools for AI Agents
