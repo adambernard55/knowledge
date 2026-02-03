@@ -105,7 +105,15 @@ This flow describes how a user interacts with their agent to get answers based o
 7.  **Synthesize Response:** The agent incorporates the retrieved information into its reasoning and generates a final answer.
 8.  **Stream Response:** The generated answer is streamed back to the user's front-end for a real-time experience.
 
-## 4. Agent Logic & Tooling (LangGraph)
+## 4. Alternative Self-Hosted Architectures
+
+The architecture described in this document represents one pattern for self-hosting, focused on containerized open-source models and storage. An alternative approach leverages serverless cloud infrastructure.
+
+For an example of this, see the **Moltworker** project, which runs the Moltbot personal agent on Cloudflare's platform, using services like Cloudflare Workers, Sandboxes for code execution, and R2 for storage. This pattern can reduce the need for managing underlying server infrastructure.
+
+**See:** [[Moltworker: A Self-Hosted Personal AI Agent on Cloudflare]]
+
+## 5. Agent Logic & Tooling (LangGraph)
 
 The agent's behavior is defined as a graph using LangGraph. This graph dictates the agent's reasoning loop.
 
@@ -114,7 +122,7 @@ The agent's behavior is defined as a graph using LangGraph. This graph dictates 
 -   **Looping:** The output of the tool is passed back to the LLM, which re-evaluates if it has enough information to respond or if another tool call is needed.
 -   **Final Response:** Once the LLM determines no more tools are required, it generates the final answer for the user.
 
-## 5. Potential Enhancements
+## 6. Potential Enhancements
 
 -   **Incremental Re-embedding:** Update embeddings for documents that change over time (e.g., for integrating an Obsidian vault).
 -   **Citations:** Provide source information (file, page, chunk) for retrieved context to improve trust and explainability.

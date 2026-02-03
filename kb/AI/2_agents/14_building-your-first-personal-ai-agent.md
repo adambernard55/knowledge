@@ -71,6 +71,8 @@ There are two primary approaches to building an AI agent, depending on your tech
 |**No-Code**|Utilizes visual interfaces and pre-built integrations to create workflows without programming.|Make, Zapier, Relevance AI|Rapid prototyping and users with limited technical skills.|
 |**Code-Based**|Uses programming frameworks to build highly customized and scalable systems. For specialized coding agents, accessible frameworks like [18_open-coding-agents-sera](obsidian://open?file=kb%2FAI%2F2_agents%2F18_open-coding-agents-sera.md) provide a state-of-the-art method for fine-tuning models on specific codebases.|OpenAI Agents SDK, LangChain, Semantic Kernel|Advanced use cases requiring fine-grained control and complex integrations.|
 
+-   **Self-Hosted Agent Frameworks:** For full control, you can use open-source projects as a starting point. A notable example is **Moltworker**, which adapts the **Moltbot** personal assistant to run on Cloudflare's serverless platform. This approach demonstrates how to build a powerful, self-hosted agent without needing to manage dedicated local hardware. (See [[Moltworker: A Self-Hosted Personal AI Agent on Cloudflare]])
+
 ## Step-by-Step Development Framework
 
 Follow this structured process to build your AI agent:
