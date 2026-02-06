@@ -296,6 +296,12 @@ Each use case benefits from dynamic balance between **memory detail** and **t
 
 ---
 
+### Practical Implementation: Building a Custom Memory Layer 
+
+One of the most critical applications of context engineering is creating persistent memory for AI agents, allowing them to maintain state and context across user interactions. A custom memory layer transforms a stateless LLM into a personalized assistant. For a detailed, step-by-step guide on building such a system from scratch using DSPy and a vector database, see the full implementation guide: - **[[kb/AI/3_methods/12_custom-llm-memory-layer|How to Build a Custom LLM Memory Layer]]**
+
+---
+
 ## Recommended Resources
 
 - [Advanced Prompt Engineering for AI and Marketing](app://obsidian.md/ai/1_methods-and-systems/prompt-engineering/advanced-prompt-engineering)

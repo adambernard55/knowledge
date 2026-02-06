@@ -48,7 +48,18 @@ meta_description: "Master SEO planning with proven strategy frameworks like R.O.
 excerpt: "Stop guessing and start planning. Discover repeatable SEO strategy frameworks like R.O.A.D. and PIE to align your research, content, and technical efforts."
 cover_image: "assets/images/seo-strategy-frameworks.jpg"
 ---
+## The Foundational Skill: Problem Deduction
 
+Before applying any specific SEO framework, the most critical step is to accurately define the problem you are trying to solve. Most strategic failures are not the result of choosing the wrong framework, but of applying a framework to a poorly understood problem.
+
+As detailed in [[kb/SEO/1_research-and-strategy/17_seo-problem-deduction|SEO Problem Deduction]], this involves:
+- **Observing** a system's outcome without bias.
+- **Describing** that outcome precisely and neutrally.
+- **Reasoning** backward through contributing signals before jumping to conclusions.
+
+Only after a problem has been clearly defined can frameworks like R.O.A.D. or PIE be used effectively to structure a solution. This foundational step ensures that all subsequent strategic efforts are aimed at the correct target.
+
+---
 # SEO Strategy Frameworks: Models for Unified Planning
 
 ## 1. Overview

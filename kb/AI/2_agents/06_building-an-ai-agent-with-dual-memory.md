@@ -1,22 +1,53 @@
 ---
-title: Building an AI Agent with Dual-Memory Architecture
-seo_category: methods-and-systems
-difficulty: intermediate
-last_updated: 2025-11-16
-kb_status: published
+title: "Building an AI Agent with Dual-Memory Architecture"
+id: "KB/AI/A-06"
+version: "1.0"
+steward: "Adam Bernard"
+updated: "2025-11-16"
+status: "Active"
+doc_type: "Reference"
+summary: "Explains how to overcome 'agent amnesia' by implementing a dual-memory architecture with short-term (summarized) and long-term (vector-based) memory."
 tags:
-  - ai-agents
-  - memory-architecture
-  - short-term-memory
-  - long-term-memory
-  - vector-database
-  - rag
-  - llm
-related_topics:
-  - what-are-ai-agents
-  - agentic-vs-automation-platforms
-  - introduction-to-vector-databases
-summary: Standard AI agents often operate on a request-response basis, making them "stateless." They have no memory of past interactions, which limits their ability to engage in coherent, multi-turn conversations or learn from previous encounters. To build a truly advanced agent, we must solve this problem of "agent amnesia."
+  - "ai-agents"
+  - "memory-architecture"
+  - "short-term-memory"
+  - "long-term-memory"
+  - "vector-database"
+  - "rag"
+  - "llm"
+relations:
+  - "kb/AI/2_agents/00_introduction-to-ai-agents.md"
+  - "kb/AI/2_agents/05_agentic-vs-automation-platforms.md"
+  - "kb/AI/3_methods/02_embeddings-and-vectorization.md"
+  - "kb/AI/3_methods/12_custom-llm-memory-layer.md"
+aliases:
+  - "Dual-Memory AI Agent"
+  - "AI Agent Memory"
+  - "Short-Term Long-Term Memory AI"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: >
+  This document outlines a blueprint for building stateful AI agents by implementing a dual-memory architecture. It addresses the challenge of 'agent amnesia' by separating memory into two components: a rolling summary for short-term conversational context and a vector database for long-term, semantically searchable knowledge. The guide details the implementation of each memory type and describes the integrated reasoning loop where the agent combines both to generate context-aware responses.
+synthetic_questions:
+  - "How do you solve the problem of 'agent amnesia' in LLMs?"
+  - "What is a dual-memory architecture for an AI agent?"
+  - "How can you implement short-term memory for an AI agent?"
+  - "How does a vector database serve as long-term memory for an AI agent?"
+key_concepts:
+  - "Dual-Memory Architecture"
+  - "Agent Amnesia"
+  - "Short-Term Memory (STM)"
+  - "Long-Term Memory (LTM)"
+  - "Vector Database"
+  - "Rolling Summary"
+  - "Stateful Agents"
+
+# --- SEO & Publication ---
+primary_keyword: "dual memory ai agent"
+seo_title: "How to Build a Dual-Memory AI Agent Architecture"
+meta_description: "Learn to build an advanced AI agent with a dual-memory architecture. Overcome agent amnesia using short-term summaries and long-term vector memory."
+excerpt: "A blueprint for creating stateful AI agents. This guide details a dual-memory architecture combining short-term context with long-term vector-based recall."
+cover_image: ""
 ---
 # Blueprint: Building an AI Agent with Dual-Memory Architecture
 
@@ -30,9 +61,9 @@ The solution is to implement a sophisticated memory architecture that mimics hum
 
 A powerful and efficient approach is a dual-memory system that separates the immediate conversational context from a larger, persistent knowledge store of past interactions.
 
-- Short-Term Memory (STM): Manages the context of the current conversation. Its goal is to maintain coherence and relevance for ongoing dialogue.
+- **Short-Term Memory (STM):** Manages the context of the current conversation. Its goal is to maintain coherence and relevance for ongoing dialogue.
     
-- Long-Term Memory (LTM): Stores and retrieves key information from all past conversations. Its goal is to provide the agent with a persistent base of knowledge about the user, past topics, and resolved issues.
+- **Long-Term Memory (LTM):** Stores and retrieves key information from all past conversations. Its goal is to provide the agent with a persistent base of knowledge about the user, past topics, and resolved issues.
     
 
 ## 3. Implementing Summarized Short-Term Memory (STM)
@@ -43,13 +74,13 @@ The primary challenge with STM is the limited context window of LLMs. Passing th
 
 Instead of keeping a verbatim transcript, the agent uses an LLM to progressively summarize the conversation.
 
-1. Initial State: The STM starts as an empty summary.
+1.  **Initial State:** The STM starts as an empty summary.
     
-2. After Each Turn: The agent takes the existing summary, the latest user query, and the latest AI response.
+2.  **After Each Turn:** The agent takes the existing summary, the latest user query, and the latest AI response.
     
-3. Summarize: It sends these three components to an LLM with a prompt like: "Concisely summarize the following conversation, incorporating the new turn."
+3.  **Summarize:** It sends these three components to an LLM with a prompt like: "Concisely summarize the following conversation, incorporating the new turn."
     
-4. Update State: The new, updated summary replaces the old one in the agent's state.
+4.  **Update State:** The new, updated summary replaces the old one in the agent's state.
     
 
 This "rolling summary" keeps the essential context of the current conversation available without consuming an excessive number of tokens, allowing for long and coherent dialogues.
@@ -60,52 +91,46 @@ LTM allows the agent to recall relevant information from conversations that may 
 
 ### How It Works
 
-1. Memory Formation (Storing): At the end of a conversation (or after a significant interaction), the agent identifies key pieces of information to save. This could be user preferences, important facts, or summaries of problems solved. This process can be automated with an LLM prompted to extract "memorable" information.
+1.  **Memory Formation (Storing):** At the end of a conversation (or after a significant interaction), the agent identifies key pieces of information to save. This could be user preferences, important facts, or summaries of problems solved. This process can be automated with an LLM prompted to extract "memorable" information.
     
-2. Embedding: Each piece of information is converted into a numerical vector embedding.
+2.  **Embedding:** Each piece of information is converted into a numerical vector embedding.
     
-3. Storage: The embedding and its corresponding text are stored in a vector database (e.g., ChromaDB, Pinecone, Vespa).
+3.  **Storage:** The embedding and its corresponding text are stored in a vector database (e.g., ChromaDB, Pinecone, Vespa).
     
-4. Memory Retrieval (Recalling): When the agent receives a new query, it:
+4.  **Memory Retrieval (Recalling):** When the agent receives a new query, it:
     
-
-- Embeds the user's query to create a search vector.
+    -   Embeds the user's query to create a search vector.
+    -   Uses this vector to perform a similarity search in the vector database.
+    -   Retrieves the most relevant past memories.
     
-- Uses this vector to perform a similarity search in the vector database.
-    
-- Retrieves the most relevant past memories.
-    
-
 This allows the agent to recall information based on semantic meaning, not just keyword matching. For example, a query about "latest project deadlines" could retrieve a past memory about "timelines for the Q3 report."
 
 ## 5. The Agent's Integrated Reasoning Loop
 
 The true power of this architecture comes from combining both memory systems in the agent's core operational loop.
 
-1. Query Received: A new user query arrives.
+1.  **Query Received:** A new user query arrives.
     
-2. LTM Retrieval: The agent queries the Long-Term Memory (vector database) to find relevant historical context.
+2.  **LTM Retrieval:** The agent queries the Long-Term Memory (vector database) to find relevant historical context.
     
-3. Context Assembly: The agent assembles a master context by combining:
+3.  **Context Assembly:** The agent assembles a master context by combining:
     
-
-- The retrieved LTM results (if any).
+    -   The retrieved LTM results (if any).
+    -   The current Short-Term Memory summary.
     
-- The current Short-Term Memory summary.
+4.  **Prompt Generation:** This combined context is integrated into the final prompt for the LLM, along with the user's latest query.
     
-
-4. Prompt Generation: This combined context is integrated into the final prompt for the LLM, along with the user's latest query.
+5.  **LLM Generates Response:** The LLM uses this rich, dual-memory context to generate a highly relevant and informed response.
     
-5. LLM Generates Response: The LLM uses this rich, dual-memory context to generate a highly relevant and informed response.
+6.  **Memory Update:**
     
-6. Memory Update:
+    -   The STM summary is updated with the latest conversational turn.
+    -   The agent determines if any new information from the interaction is significant enough to be extracted, embedded, and stored in LTM.
     
-
-- The STM summary is updated with the latest conversational turn.
-    
-- The agent determines if any new information from the interaction is significant enough to be extracted, embedded, and stored in LTM.
-    
-
 This integrated system creates a continuous learning loop, where the agent gets progressively smarter and more personalized with every interaction.
 
-**
+---
+
+### Related Implementation Guides
+
+For a complete walkthrough on building a persistent memory layer from the ground up, refer to **[[kb/AI/3_methods/12_custom-llm-memory-layer|How to Build a Custom LLM Memory Layer]]**.
