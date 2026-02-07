@@ -98,3 +98,9 @@ The `examples` folder contains complete system designs that demonstrate how mult
 | `book-sft-pipeline` | Train models to write in any author's style. Includes Gertrude Stein case study. | `project-development`, `context-compression`, `multi-agent-patterns`, `evaluation` |
 
 Each example includes a complete PRD, skills mapping, and implementation guidance.
+
+### Case Study: Context Management in Deep Agents
+
+The LangChain Deep Agents SDK provides a powerful, real-world example of context engineering applied to long-running tasks. It uses a multi-layered approach to context compression, including offloading tool inputs/outputs and summarizing conversation history.
+
+-   **See the technical deep dive:** [[kb/AI/2_agents/21_context-management-for-deep-agents|Context Management for Deep Agents: A Technical Guide]]

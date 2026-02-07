@@ -100,3 +100,9 @@ To optimize for both performance and cost, apply the following "cascade" logic w
 -   **Shared Capabilities:** All models share access to a 200K+ token context window and are governed by Anthropic's Constitutional AI safety framework.
 -   **API Economics:** The cost difference is significant. Haiku is the most affordable for scaling, while Opus is a premium model. The cost-per-token for Opus can be many times higher than for Haiku, making model selection a critical business decision.
 -   **Access:** All three models are available via the Anthropic API, allowing developers to easily switch between them based on the specific requirements of an API call.
+
+---
+## Related Architectures & Workflows
+
+-   **[[kb/AI/1_models/1_specific-models/claude/01_creator-of-claude-code|Creator of Claude Code's Workflow]]**: An analysis of the high-efficiency, multi-agent workflow used by the head of Claude Code at Anthropic.
+-   **[[kb/AI/1_models/1_specific-models/claude/02_oh-my-claude-code|Oh My Claude Code (OMC)]]**: A guide to the popular plugin that enables agent swarm orchestration directly within the Claude Code terminal.

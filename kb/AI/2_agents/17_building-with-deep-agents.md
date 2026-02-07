@@ -205,3 +205,11 @@ Many systems use both. Skills define procedures; subagents execute complex multi
 ### Next Steps
 
 The key insight: multi-agent patterns don't have to be complicated. With the right abstractions, they become simple building blocks you can compose into capable, sophisticated systems. Start with subagents for context management, add skills for progressive disclosure, and build from there.
+
+---
+## Managing Long-Running Tasks: Context Compression
+
+A core challenge in complex agentic tasks is managing the model's finite context window. Deep Agents includes a sophisticated, built-in system for **context compression** to prevent context rot and ensure the agent can run for extended periods. This system uses a combination of filesystem offloading and summarization.
+
+For a detailed technical breakdown of these mechanisms and how to evaluate them, see the full guide:
+-   **[[kb/AI/2_agents/21_context-management-for-deep-agents|Context Management for Deep Agents: A Technical Guide]]**
