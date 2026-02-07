@@ -1,229 +1,120 @@
 ---
-title: "MCP Connectors and Integrations"
-seo_category: "methods-and-systems"
-difficulty: "intermediate"
-last_updated: "2025-11-16"
-kb_status: "published"
-tags: ["mcp", "model-context-protocol", "ai-agents", "integration", "connectors", "sdk", "json-rpc", "supabase", "chrome-devtools"]
-related_topics:
-  - "1_mcp-foundations-and-architecture"
-  - "ai-agents-running-workflows"
-  - "agentic-vs-automation-platforms"
-summary: "MCP connectors are the operational interfaces that make agentic AI practical. They turn model requests into structured, governed actions on real systems through open standards and SDKs, forming the web of interactivity that defines the modern agentic AI ecosystem."
+title: "MCP Connectors and Integrations: A Technical Guide"
+id: "KB/AI/M-MCP-02"
+version: "1.1"
+steward: "Adam Bernard"
+updated: "2026-02-07"
+status: "Active"
+doc_type: "Reference"
+summary: "Explains how Model Context Protocol (MCP) connectors link AI agents to external systems like databases, APIs, and developer tools, enabling practical agentic workflows."
+tags:
+  - "mcp"
+  - "model-context-protocol"
+  - "ai-agents"
+  - "integration"
+  - "connectors"
+  - "sdk"
+  - "api"
+relations:
+  - "kb/AI/3_methods/mcp/01_mcp-foundations-and-architecture.md"
+  - "kb/AI/2_agents/01_ai-agents-running-workflows.md"
+aliases:
+  - "MCP Connectors"
+  - "AI Agent Integrations"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: >
+  This document details how Model Context Protocol (MCP) connectors serve as the bridge between AI agents and external systems. It covers the architecture, common integration patterns (local vs. remote), and provides examples of connectors for databases (Supabase), developer tools (Chrome DevTools), and platforms (WordPress). The guide also outlines best practices for security, discovery, and development using various SDKs.
+synthetic_questions:
+  - "What are MCP connectors and how do they work?"
+  - "What are the different types of MCP connectors?"
+  - "How do you integrate an AI agent with a database like Supabase using MCP?"
+  - "What is the difference between local (stdio) and remote (HTTP) integration patterns?"
+key_concepts:
+  - "Model Context Protocol (MCP)"
+  - "MCP Connectors"
+  - "Agentic Integration"
+  - "Tool Discovery"
+  - "JSON-RPC"
+  - "Supabase MCP"
+  - "Chrome DevTools MCP"
+
+# --- SEO & Publication ---
+primary_keyword: "mcp connectors"
+seo_title: "MCP Connectors: A Guide to AI Agent Integrations"
+meta_description: "Learn how MCP connectors link AI agents to external systems like databases and APIs. This technical guide covers architecture, patterns, and examples."
+excerpt: "Discover how Model Context Protocol (MCP) connectors work. This guide explains the architecture, integration patterns, and best practices for linking AI agents to real-world data and tools."
+cover_image: ""
 ---
 
-# MCP Connectors and Integrations
+# MCP Connectors and Integrations
 
-## Building Bridges Between AI Agents and External Systems
+## 1. What Are MCP Connectors?
 
----
+**Model Context Protocol (MCP)** connectors are the structured interfaces that link AI agents to outside applications and data. A connector exposes a catalog of **tools**, **resources**, and **prompts**, each with a clearly defined schema that allows an agent to discover and safely execute actions on external systems without needing direct API logic or credentials.
 
-## 1. What Are MCP Connectors?
+Connectors can be built for local utilities (files, databases) or remote platforms (Supabase, GitHub, WordPress), forming the web of interactivity that makes agentic AI practical.
 
-**Model Context Protocol (MCP)** connectors are the structured interfaces that link AI agents to outside applications and data.  
-A connector tells an AI model:
+## 2. Connector Architecture
 
-> “Here’s how you can talk to my service, what tools you can call, and what you’ll get back.”
+| Layer | Purpose | Examples |
+| :--- | :--- | :--- |
+| **Server Layer** | Implements MCP spec endpoints and defines tools/resources. | `supabase-mcp`, `chrome-devtools-mcp` |
+| **Descriptor (JSON)** | Declares the entry-point so the client knows how to invoke the server. | `mcp.json`, `~/.client/mcp_servers.json` |
+| **Transport** | How messages flow: `stdio` for local CLI/IDE or `HTTP` for remote cloud servers. | `npx @supabase/mcp` or `https://mcp.supabase.com/mcp` |
+| **Host Integration** | How the user’s AI environment registers and uses the connector. | Claude Desktop config, Cursor IDE settings |
 
-Every MCP server exposes its connectors as a catalog of **tools**, **resources**, and **prompts**, each with clearly defined schemas for discovery and safe execution.
+All communication occurs via **JSON-RPC 2.0 requests** (`tools/call`, `resources/read`) and structured JSON schemas, ensuring cross-client compatibility.
 
-Connectors can be built for local utilities (files, databases, IDEs) or remote platforms (Supabase, GitHub, Google Ads, WordPress, Chrome DevTools etc.). They let agents access live data, execute actions, and integrate with enterprise systems — without the agent needing direct API logic or credentials.
+## 3. Common Integration Patterns
 
----
+### 3.1. Local (stdio)
+-   **Transport:** `stdio` via a CLI command (`npx`, `uvx`).
+-   **Use Case:** Agents running inside local IDEs (e.g., Cursor, LM Studio) that need access to the local filesystem or tools.
+-   **Pros:** Full privacy and direct system access.
 
-## 2. Connector Architecture and Roles
+### 3.2. Remote (HTTP)
+-   **Transport:** A public `https://.../mcp` endpoint.
+-   **Use Case:** Integrating with cloud services and enterprise APIs.
+-   **Pros:** Broad client compatibility (ChatGPT, Claude, Gemini).
 
-|Layer|Purpose|Examples|
-|---|---|---|
-|**Server Layer**|Implements MCP spec endpoints and defines tools/resources/prompts.|`supabase-mcp`, `chrome-devtools-mcp`, `ai-engine-mcp`|
-|**Connector Descriptor (JSON)**|Declares entry‑point (`command`, `args`, `env`) so the client knows how to invoke.|`mcp.json`, `~/.client/mcp_servers.json`|
-|**Transport**|How messages flow — stdio (for local CLI or editor) or HTTP (remote cloud servers).|`npx @supabase/mcp …` / `https://mcp.supabase.com/mcp`|
-|**Host Integration**|How the user’s AI environment registers and uses the connector.|Claude Desktop config, Cursor IDE settings, JetBrains Junie panel|
+## 4. Leading Example Connectors
 
-Each connector communicates through **JSON‑RPC 2.0 requests** (`tools/call`, `resources/read`, `prompts/list`) and structured JSON schemas that define inputs and outputs, ensuring cross‑client compatibility.
+| Connector                    | Purpose                                                                    | Key Integration Notes                                                                             |
+| :--------------------------- | :------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------ |
+| **Supabase MCP**             | Remote database and auth integration for agents.                           | Supports OAuth 2, Remote HTTP, and feature groups.                                                |
+| **Chrome DevTools MCP**      | Gives AI direct browser debugging and performance analysis capabilities.   | Uses Puppeteer and DevTools protocol; ideal for developer agents.                                 |
+| **WordPress.com Connector**  | Connects Claude to WordPress.com site data.                                | Official integration, uses OAuth 2.1 for secure, read-only access.                                |
+| **Context7 Memory MCP**      | Persistent agent memory and RAG context service.                           | Supports multi-agent context sharing and vector store queries.                                    |
+| **Google Dev Knowledge MCP** | Provides AI agents with access to official Google developer documentation. | Covers Firebase, Android, Google Cloud. Requires a Google Cloud API key and gcloud CLI for setup. |
 
----
+## 5. SDKs for Connector Development
 
-## 3. Types of Connectors
+| SDK | Language | Description |
+| :--- | :--- | :--- |
+| **FastMCP** | Python | Lightweight framework for rapid prototyping of MCP servers. |
+| **MCP PHP SDK** | PHP | Official, framework-agnostic SDK from the PHP Foundation and Symfony. |
+| **ModelContextProtocol JS SDK** | TypeScript | Used to build npm-published servers like the Chrome DevTools MCP. |
 
-|Category|Description|Typical Target|
-|---|---|---|
-|**Database Connectors**|Expose data queries and CRUD actions safely to LLMs.|Postgres (Supabase), MongoDB, MySQL|
-|**Application/Platform Connectors**|Wrap web APIs for AI use — project management, marketing, social.|GitHub, Google Ads, Slack, WordPress|
-|**Developer Tool Connectors**|Integrate IDE or dev‑ops functions.|Chrome DevTools, Cursor, Junie for PhpStorm|
-|**Automation and Workflow Connectors**|Trigger scripts and services in CI/CD, storage, or business apps.|Activepieces, Zapier, Airflow|
-|**Local Utility Connectors**|Provide OS tools, file access, docs, or search without cloud calls.|mcp‑obsidian, SearXNG search server|
+These SDKs abstract the JSON-RPC boilerplate and provide helpers for tool declaration, schema validation, and server lifecycle management.
 
----
+## 6. Security and Discovery
 
-## 4. Common Integration Patterns
+-   **Discovery:** Clients dynamically query servers using `tools/list` and `resources/list` to see available capabilities.
+-   **Authentication:** Remote servers must use OAuth 2.1 with scopes. Local servers operate within the system user's trust boundary.
+-   **Auditing:** Hosts should record full JSON-RPC exchanges for security and governance.
 
-### 4.1 Local (Development or Offline)
+## 7. Best Practices for Integration Design
 
-- **Transport:** `stdio` via `npx`, `uvx`, or CLI command.
-- **Use Case:** Agents running inside local IDEs (e.g., Cursor, LM Studio).
-- **Pros:** Full privacy, direct file/system access.
-- **Example:** SearXNG MCP (server for private web searches).
-
-### 4.2 Remote (HTTP / Streamable HTTP)
-
-- **Transport:** `https://…/mcp` endpoint with Streamable HTTP responses.
-- **Use Case:** Cloud services and enterprise APIs.
-- **Pros:** Broad client compatibility (ChatGPT, Claude, Gemini).
-- **Example:** Supabase MCP Server (`https://mcp.supabase.com/mcp`).
-
-### 4.3 Hybrid / Federated Connectors
-
-Complex agents combine several servers: e.g., a browser MCP for data gathering plus a database MCP for analysis, coordinated by a workflow agent.
-
----
-
-## 5. Leading Example Connectors
-
-|Connector|Purpose|Key Integration Notes|
-|---|---|---|
-|**Supabase MCP**|Remote database and auth integration for agents (e.g., Claude Code, ChatGPT).|Supports OAuth 2 auth, Remote HTTP; feature groups (database, storage, functions).|
-|**Chrome DevTools MCP**|Gives AI direct browser debugging and performance analysis capabilities.|Uses Puppeteer and DevTools protocol; ideal for developer agents.|
-|**AI Engine (WordPress MCP)**|Connects Claude or ChatGPT to WordPress via AI Engine plugin.|Supports 30+ WordPress operations (create posts, upload media, modify themes).|
-|**Google Ads API MCP**|Read‑only ad metrics access via secure remote server.|Early open‑source release; adds analytics tools to marketing agents.|
-|**Context7 Memory MCP**|Persistent agent memory and RAG context service.|Supports multi‑agent context sharing and vector store query.|
-|**Laravel Boost MCP**|For PhpStorm Junie coding agent to interface with Laravel framework.|Lists Artisan commands, logs, routes, config files for debugging.|
+1.  **Atomic Scope:** Limit exposed tools to a single, clear domain (e.g., analytics, CMS).
+2.  **Versioning:** Use semantic versioning for servers and tools to manage breaking changes.
+3.  **Clear Schemas:** Provide explicit types and descriptions to improve agent performance.
+4.  **Graceful Failure:** Return structured errors with codes to help agents self-correct.
+5.  **Read-Only by Default:** Mark tools as `readonly` whenever possible to enhance safety.
+6.  **Human-in-the-Loop:** Implement confirmation steps for any state-changing operations.
 
 ---
-
-## 6. Connector Configuration in Clients
-
-### Example for Claude Desktop / Cursor IDE
-
-```json
-{
-  "mcpServers": {
-    "chrome-devtools": {
-      "command": "npx",
-      "args": ["chrome-devtools-mcp@latest"]
-    },
-    "supabase": {
-      "url": "https://mcp.supabase.com/mcp",
-      "auth": "OAuth2"
-    }
-  }
-}
-```
-
-### JetBrains Junie Configuration (File: `~/.junie/mcp.json`)
-
-```json
-{
-  "servers": [
-    {
-      "name": "laravel-boost",
-      "command": "php",
-      "args": ["vendor/bin/laravel-mcp"]
-    }
-  ]
-}
-```
-
-### WordPress AI Engine Bridge
-
-Node relay example (`mcp.js`):
-
-```bash
-ai-engine/labs/mcp.js add https://example.com TOKEN
-ai-engine/labs/mcp.js start example.com
-```
-
-This patches Claude’s local config to connect directly to WordPress via AI Engine.
-
----
-
-## 7. SDKs and Tools for Connector Development
-
-|SDK|Language|Description|
-|---|---|---|
-|**FastMCP**|Python|Lightweight server framework for 快速 prototyping MCP servers (e.g., data science and document access agents).|
-|**MCP PHP SDK**|PHP|Official collaboration between PHP Foundation and Symfony; framework‑agnostic.|
-|**ModelContextProtocol JS SDK**|TypeScript|Used to build npm‑published servers (e.g., Chrome DevTools MCP).|
-|**Supabase Remote Server Template**|JavaScript|API for building read‑write database and storage MCPs.|
-
-Each SDK abstracts the JSON‑RPC boilerplate and provides helpers for tool declaration, schema validation, and Server lifecycle management.
-
----
-
-## 8. Connector Discovery and Security
-
-### 8.1 Discovery Protocol (`tools/list`, `resources/list`)  
-Clients dynamically query servers to see what capabilities are available. Every tool is defined with:
-
-- `name`, `description`, `input_schema`, `output_schema`
-- Access scopes and version
-
-### 8.2 Authentication & AuthZ
-
-- **Local Servers:** No network; trust boundary = system user.
-- **Remote Servers:** OAuth 2.1 + scopes mandatory (March 2025 spec update).
-- **Fine‑Grained Permissions:** Servers declare allowable read/write ops per tool; clients prompt for consent.
-
-### 8.3 Audit and Logging  
-Hosts record full JSON‑RPC exchange IDs and timestamps. Enterprises typically pipe logs to SIEM or AI Governance dashboards.
-
----
-
-## 9. Best Practices for Integration Design
-
-1. **Scope Matters:** Limit exposed tools to one domain (e.g., analytics, CMS).  
-2. **Use Versioning:** Break changes require tool or server version bump.  
-3. **Provide Clear Schemas and Docs:** Agents parse better with explicit types.  
-4. **Implement Graceful Failure:** Return structured errors with codes.  
-5. **Separate Read and Write:** Mark tools as `readonly` when appropriate for safety.  
-6. **Support Elicitation:** Use human confirmation steps for state‑changing operations.  
-7. **Test Against Multiple Clients:** Cursor (FastMCP), Claude (Desktop), Junie.  
-8. **Respect Timeouts and Streaming Limits:** Avoid stranded sessions.
-
----
-
-## 10. Ecosystem Trends in Connectors (2024–2025)
-
-- **Growth and Concentration:** Top 10 MCP servers capture ~45 % of public usage (GitHub stars metric).  
-- **Dominant Use Cases:** Software Engineering (24.7 %), Web Automation (24.8 %), Database & Search (23.1 %).  
-- **Hybrid Access Patterns:** Most servers offer both _read_ and _write_ operations; few are read‑only.  
-- **Enterprise Focus:** Vendors are adding fine‑grain scope management, local processing, and multi‑API fallbacks.
-
-(See _MCP in Practice_ by O’Reilly 2025 for dataset analysis of 2,874 servers.)
-
----
-
-## 11. Testing and Validation for Connectors
-
-When building MCP integrations, validate at three levels:  
-1. **Specification Compliance** — respond correctly to `tools/list`, `tools/call` and report schema conformity.  
-2. **Security Conformance** — verify token scopes and deny unauthorized calls.  
-3. **Functional Correctness** — mock tool calls and capture structured outputs for QA.
-
-Supabase and Anthropic provide open‑source _MCP Inspector_ utilities for automated testing.
-
----
-
-## 12. Key Takeaways
-
-1. **Connectors are how AI agents touch the real world.** They translate AI intent into structured interactions.  
-2. **MCP standardizes integration discovery and execution** across vendors.  
-3. Practical adoption spans hours—from local privacy‑focused setups to enterprise cloud services.  
-4. **Security, versioning, and schema design determine trust.** Always audit inputs, outputs, and access scopes.  
-5. **SDKs like FastMCP and MCP PHP SDK** make custom connector creation accessible to engineering teams.  
-6. Well‑designed connectors enable **elastic agent workflows**—mixing database access, tool automation, and real‑time context enrichment.
-
----
-
-## Recommended Companion Materials
-
-- [MCP Foundations and Architecture](app://obsidian.md/ai/1_methods-and-systems/MCP/1_mcp-foundations-and-architecture)
-- [How MCP Is Making AI Agents Actually Do Things in the Real World](app://obsidian.md/ai/1_methods-and-systems/MCP/how-mcp-is-making-ai-agents-actually-do-things-in-the-real-world)
-- [Building MCP Servers: 15 Best Practices](app://obsidian.md/ai/1_methods-and-systems/MCP/building-mcp-servers)
-- [MCP‑PHP SDK Overview](app://obsidian.md/ai/1_methods-and-systems/MCP/mcp-php-sdk)
-- [Model Context Protocol vs Function Calling vs OpenAPI Tools](app://obsidian.md/ai/1_methods-and-systems/MCP/model-context-protocol-vs-function-calling-vs-openapi-tools)
-
----
-
-> **Summary:**  
-> MCP connectors are the operational interfaces that make agentic AI practical. They turn model requests into structured, governed actions on real systems through open standards and SDKs. From Supabase to Chrome DevTools to local search and memory servers, these connectors form the web of interactivity that defines the modern agentic AI ecosystem.
+### See Also
+-   [[kb/AI/3_methods/mcp/01_mcp-foundations-and-architecture|MCP Foundations and Architecture]]
+-   [[kb/AI/1_models/1_specific-models/claude/03_claude-connector-for-wordpress|Claude Connector for WordPress.com]]
+- 

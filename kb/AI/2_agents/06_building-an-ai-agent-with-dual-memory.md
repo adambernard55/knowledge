@@ -133,4 +133,4 @@ This integrated system creates a continuous learning loop, where the agent gets 
 
 ### Related Implementation Guides
 
-For a complete walkthrough on building a persistent memory layer from the ground up, refer to **[[kb/AI/3_methods/12_custom-llm-memory-layer|How to Build a Custom LLM Memory Layer]]**.
+For a complete walkthrough on building a persistent memory layer from the ground up, refer to **[[15_custom-llm-memory-layer|How to Build a Custom LLM Memory Layer]]**.

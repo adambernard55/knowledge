@@ -102,7 +102,8 @@ To optimize for both performance and cost, apply the following "cascade" logic w
 -   **Access:** All three models are available via the Anthropic API, allowing developers to easily switch between them based on the specific requirements of an API call.
 
 ---
-## Related Architectures & Workflows
+## Related Architectures & Integrations
 
 -   **[[kb/AI/1_models/1_specific-models/claude/01_creator-of-claude-code|Creator of Claude Code's Workflow]]**: An analysis of the high-efficiency, multi-agent workflow used by the head of Claude Code at Anthropic.
 -   **[[kb/AI/1_models/1_specific-models/claude/02_oh-my-claude-code|Oh My Claude Code (OMC)]]**: A guide to the popular plugin that enables agent swarm orchestration directly within the Claude Code terminal.
+-   **[[kb/AI/1_models/1_specific-models/claude/03_claude-connector-for-wordpress|Claude Connector for WordPress.com]]**: A guide to the official MCP-based connector for securely linking Claude to WordPress.com site data.
