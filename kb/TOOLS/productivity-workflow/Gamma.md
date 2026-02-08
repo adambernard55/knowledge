@@ -1,23 +1,12 @@
 ---
-title: Gamma
-id: 20251213061000
-version: 1
-Author: Adam Bernard
-date: 2025-12-13
-tool_name: "Gamma"
-tool_category:
-  - Productivity & Workflow
-  - Content Creation
-  - Marketing Automation
-primary_function: "A web-based AI platform that turns outlines, notes, and documents into beautifully designed presentations and webpages instantly."
-ai_type:
-  - Generative AI (Design)
-  - Automation
-  - Text-to-Design
-pricing_model: Freemium
-difficulty: Beginner
-website: "https://gamma.app"
-last_updated: 2025-12-13
+title: "Gamma: AI Presentation and Webpage Builder"
+id: SIE/REF/GAMMA-01
+version: "1"
+steward: "Adam Bernard"
+updated: 2025-12-13
+status: "Active"
+doc_type: "Reference"
+summary: "A web-based AI platform that turns outlines, notes, and documents into beautifully designed presentations and webpages instantly."
 tags:
   - ai
   - presentations
@@ -26,10 +15,42 @@ tags:
   - design
   - visual-content
   - workflow
-kb_status: published
-meta_description: "Gamma is an AI presentation and document tool that transforms written content into visually stunning decks and webpages—no design skills required."
-Keyword: "Gamma, AI presentation tool, web-based slides"
-Excerpt: "Gamma lets users instantly create modern, interactive presentations or webpages from plain text using AI-powered design templates and fluid web delivery."
+relations:
+  - "kb/TOOLS/productivity-workflow/index.md"
+aliases:
+  - "Gamma"
+  - "Gamma.app"
+  - "Gamma AI presentation tool"
+
+# Domain Specifics
+offering_name: "Gamma"
+target_icp: "Startups, educators, marketers, and teams needing fast, visually compelling presentations and web-first content"
+price_point: "Freemium; Pro $16/month, Team $30/user/month, Enterprise custom"
+
+# Operational
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
+
+# AI/RAG
+semantic_summary: "Gamma is an AI-powered storytelling tool that converts written content such as notes, outlines, or reports into beautiful, interactive presentations and documents. Unlike traditional slide software, Gamma provides a web-first experience where content adapts dynamically to any device, with built-in collaboration, analytics, and AI-powered generation from text."
+synthetic_questions:
+  - "What AI tool can turn my text notes into a professional presentation instantly?"
+  - "How does Gamma compare to Beautiful.ai for creating slide decks?"
+  - "Can I create interactive web-based presentations without design skills?"
+key_concepts:
+  - "AI-powered presentation generation"
+  - "Web-first interactive format"
+  - "Text-to-design automation"
+  - "Real-time collaboration"
+  - "Viewer engagement analytics"
+
+# SEO
+primary_keyword: "Gamma AI presentation tool"
+seo_title: "Gamma AI Presentation Tool: Create Stunning Decks from Text"
+meta_description: "Gamma AI presentation tool transforms written content into visually stunning decks and webpages with no design skills required."
+excerpt: "Gamma AI presentation tool lets users instantly create modern, interactive presentations or webpages from plain text using AI-powered design templates and fluid web delivery."
+cover_image: ""
 ---
 
 # Gamma

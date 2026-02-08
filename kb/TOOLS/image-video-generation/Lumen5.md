@@ -1,3 +1,48 @@
+---
+title: "Lumen5: AI Text-to-Video Content Platform"
+id: SIE/REF/LUMEN5-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2026-02-08
+status: "Active"
+doc_type: "Reference"
+summary: "AI-powered video creation platform that transforms blog posts, articles, and text content into engaging video for social media and marketing."
+tags:
+  - video-creation
+  - ai-video
+  - text-to-video
+  - content-repurposing
+  - social-media
+  - marketing
+  - freemium
+relations:
+  - kb/TOOLS/image-video-generation/index.md
+aliases:
+  - Lumen5
+offering_name: "Lumen5"
+target_icp: "Content marketers and social media teams needing to repurpose written content into video at scale"
+price_point: "Freemium (Free Community plan with watermark; Basic/Starter/Professional/Enterprise from ~$19-$29/month annually)"
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "Marketing"
+semantic_summary: "Lumen5 is an AI-powered video creation platform designed to transform blog posts, articles, whitepapers, and recordings into engaging video content. It uses AI-driven text summarization to extract key points, automatically matches them with relevant stock footage, and provides brand customization with drag-and-drop editing for rapid video production at scale."
+synthetic_questions:
+  - "How does Lumen5 use AI to convert blog posts and articles into videos?"
+  - "What are the pricing tiers and feature differences for Lumen5 plans?"
+  - "What content repurposing workflows is Lumen5 best suited for?"
+key_concepts:
+  - ai text summarization to video
+  - content repurposing automation
+  - stock media auto-matching
+  - brand-customized video templates
+  - automatic caption generation
+primary_keyword: "Lumen5"
+seo_title: "Lumen5: AI Video Platform for Repurposing Text Content"
+meta_description: "Lumen5 is an AI video creation platform that transforms blog posts and articles into engaging marketing videos."
+excerpt: "Lumen5 is an AI-powered video creation platform that transforms blog posts, articles, and text content into engaging videos for social media and marketing."
+cover_image: ""
+---
+
 # **Lumen5**
 
 Lumen5 is an AI-powered video creation platform designed to help businesses easily transform blog posts, articles, whitepapers, and zoom recordings into engaging video content suitable for social media and marketing.

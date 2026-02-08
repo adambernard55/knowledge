@@ -1,12 +1,12 @@
 ---
-tool_name: Genspark
-tool_category:
-  - Research Knowledge Agents
-  - Search Engine
-tool_sub_cat:
-  - AI Search Agent
-  - Information Synthesis
-  - Knowledge Page Generation
+title: "Genspark: AI Search Agent with Sparkpage Summaries"
+id: SIE/REF/GENSPARK-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2025-12-11
+status: "Active"
+doc_type: "Reference"
+summary: "An AI search agent that synthesizes information into comprehensive, single-page summaries called Sparkpages."
 tags:
   - search-agent
   - ai-search
@@ -14,18 +14,44 @@ tags:
   - sparkpage
   - research-tool
   - generative-ai
-ai_type:
-  - Generative AI (Text)
-  - Search Agent
-primary_function: An AI search agent that synthesizes information into comprehensive, single-page summaries called "Sparkpages."
-pricing_model: Freemium / Subscription
-difficulty: Beginner
-website: https://www.genspark.ai/
-last_updated: 2025-12-11
-kb_status: published
-meta_description: Use Genspark, the AI search agent, to create instant, comprehensive 'Sparkpages'—Wikipedia-style summaries on any topic for deep and efficient research.
-Keyword: Genspark AI
-Excerpt: Genspark is an innovative AI search agent that transforms queries into 'Sparkpages'—single, well-structured pages that synthesize information from across the web, offering a faster, more comprehensive alternative to traditional research.
+relations:
+  - kb/TOOLS/research-knowledge-agents/index.md
+aliases:
+  - Genspark
+  - Genspark AI
+
+# --- Domain Specifics (Tool) ---
+offering_name: "Genspark"
+target_icp: "Marketers, researchers, and content creators needing rapid topic briefs and structured research summaries"
+price_point: "Freemium / Subscription"
+
+# --- Operational ---
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: >
+  Genspark is an AI-powered search agent that generates comprehensive, Wikipedia-style Sparkpages
+  from user queries. It synthesizes information from multiple web sources into a single structured
+  document, filling the gap between conversational answer engines and manual research workflows.
+synthetic_questions:
+  - "What is a Sparkpage and how does Genspark generate one?"
+  - "How does Genspark compare to Perplexity for research?"
+  - "Can Genspark be used for competitor analysis?"
+key_concepts:
+  - "Sparkpage Generation"
+  - "Multi-Source Synthesis"
+  - "AI Search Agent"
+  - "Structured Research Output"
+  - "Multimedia Integration"
+
+# --- SEO & Publication ---
+primary_keyword: "Genspark AI"
+seo_title: "Genspark AI: AI Search Agent for Instant Research Sparkpages"
+meta_description: "Genspark AI is an AI search agent that creates instant, comprehensive Sparkpages for deep and efficient research on any topic."
+excerpt: "Genspark AI transforms queries into Sparkpages, single structured pages that synthesize web information, offering a faster alternative to traditional research."
+cover_image: ""
 ---
 
 # Genspark

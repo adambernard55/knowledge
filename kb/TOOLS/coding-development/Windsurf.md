@@ -1,11 +1,12 @@
 ---
-tool_name: Windsurf
-tool_category:
-  - Coding & Development
-tool_sub_cat:
-  - Agentic IDE
-  - AI Assistant
-  - Code Editor
+title: "Windsurf: Agentic IDE Powered by Codeium"
+id: "SIE/REF/WINDSURF-01"
+version: "1.0"
+steward: "Adam Bernard"
+updated: "2025-12-11"
+status: "Active"
+doc_type: "Reference"
+summary: "An Agentic IDE powered by Codeium that deeply understands codebase context to autonomously execute complex development tasks."
 tags:
   - agentic-ide
   - coding-ai
@@ -15,18 +16,35 @@ tags:
   - ide
   - ai-agent
   - full-stack
-ai_type:
-  - AI Agent
-  - Generative AI (Code)
-primary_function: An "Agentic IDE" powered by Codeium that deeply understands codebase context to autonomously execute complex development tasks.
-pricing_model: Freemium / Subscription
-difficulty: Intermediate
-website: https://windsurf.dev/
-last_updated: 2025-12-11
-kb_status: published
-meta_description: Meet Windsurf, the agentic IDE powered by Codeium. Delegate complex coding tasks, from feature implementation to large-scale refactoring, to an AI that truly understands your entire codebase.
-Keyword: Windsurf Agentic IDE
-Excerpt: Windsurf is a next-generation "Agentic IDE" that leverages the power of Codeium to provide a deep, holistic understanding of your entire codebase. It moves beyond simple code completion to autonomously handle complex tasks, acting like an AI junior developer you can delegate work to.
+relations:
+  - "kb/TOOLS/coding-development/index.md"
+aliases:
+  - "Windsurf"
+  - "Windsurf IDE"
+  - "Windsurf Agentic IDE"
+  - "https://windsurf.dev/"
+offering_name: "Windsurf"
+target_icp: "Software Developers, Engineering Teams, Enterprise Development"
+price_point: "Freemium / Subscription"
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
+semantic_summary: "Windsurf is an Agentic IDE that shifts from AI-assisted coding to AI-delegated coding. Powered by Codeium, it indexes and deeply understands entire codebases, allowing developers to assign high-level tasks that the AI plans and executes across multiple files and directories autonomously."
+synthetic_questions:
+  - "How does Windsurf differ from other AI code editors like Cursor?"
+  - "What is an Agentic IDE and how does Windsurf implement that concept?"
+  - "Can Windsurf autonomously implement features across multiple files?"
+key_concepts:
+  - "Agentic IDE"
+  - "Deep Codebase Intelligence"
+  - "AI-Delegated Coding"
+  - "Autonomous Task Execution"
+  - "Codeium-Powered Models"
+primary_keyword: "Windsurf Agentic IDE"
+seo_title: "Windsurf Agentic IDE: Delegate Complex Coding Tasks to AI"
+meta_description: "Meet Windsurf Agentic IDE by Codeium. Delegate coding tasks, from features to refactoring, to AI that understands your codebase."
+excerpt: "Windsurf Agentic IDE leverages Codeium to deeply understand your entire codebase, autonomously handling complex tasks like an AI junior developer you can delegate work to."
+cover_image: ""
 ---
 
 # Windsurf

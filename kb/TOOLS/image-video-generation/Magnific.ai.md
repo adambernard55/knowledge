@@ -1,13 +1,12 @@
 ---
-tool_name: Magnific.ai
-tool_category:
-  - Image Generation
-  - Video & Visual Enhancement
-  - Creative Design
-tool_sub_cat:
-  - AI Image Upscaling
-  - Photo Enhancement
-  - Creative Editing
+title: "Magnific.ai: Generative AI Image Upscaling"
+id: SIE/REF/MAGNIFICAI-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2025-12-13
+status: "Active"
+doc_type: "Reference"
+summary: "AI-powered image upscaling and enhancement tool that uses generative transformation to increase resolution and add detail intelligently."
 tags:
   - ai-upscaler
   - photo-enhancement
@@ -15,18 +14,33 @@ tags:
   - creative-ai
   - visual-generation
   - workflow-automation
-ai_type:
-  - Image Generation
-  - Image Enhancement
-primary_function: AI-powered image upscaling and enhancement tool that uses generative transformation to increase resolution and add detail intelligently.
-pricing_model: Subscription
-difficulty: Beginner
-website: https://magnific.ai
-last_updated: 2025-12-13
-kb_status: published
-meta_description: "Magnific.ai is an AI-powered image enhancer and upscaler that intelligently adds detail, sharpness, and creative refinements — transforming low-resolution visuals into stunning, high-quality images."
-Keyword: "Magnific AI image enhancer"
-Excerpt: "Magnific.ai enhances and upscales images using generative AI to add realistic details, sharper textures, and artistic refinements, making it ideal for designers, photographers, and content creators."
+relations:
+  - kb/TOOLS/image-video-generation/index.md
+aliases:
+  - Magnific.ai
+  - Magnific AI
+offering_name: "Magnific.ai"
+target_icp: "Designers, photographers, AI artists, and content creators needing intelligent image upscaling and enhancement"
+price_point: "Subscription (starting ~$39/month for individuals; scales for studios and professionals)"
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "Marketing"
+semantic_summary: "Magnific.ai is an advanced image enhancement platform that uses generative AI to upscale images up to 8x while intelligently creating missing details that match the original scene's texture, lighting, and subject matter. Unlike traditional upscalers, it imagines new details for natural, artistic results, with controls for creativity level and detail intensity."
+synthetic_questions:
+  - "How does Magnific.ai differ from traditional image upscalers in its approach?"
+  - "What are the subscription pricing tiers for Magnific.ai?"
+  - "What types of images and workflows benefit most from Magnific.ai enhancement?"
+key_concepts:
+  - generative ai upscaling
+  - intelligent detail synthesis
+  - artistic image enhancement
+  - batch processing workflow
+  - web-based creative pipeline
+primary_keyword: "Magnific AI"
+seo_title: "Magnific AI: Generative Image Upscaler and Enhancer"
+meta_description: "Magnific AI is an AI-powered image enhancer and upscaler that intelligently adds detail, sharpness, and creative refinements."
+excerpt: "Magnific AI enhances and upscales images using generative AI to add realistic details and artistic refinements, ideal for designers and content creators."
+cover_image: ""
 ---
 
 # Magnific.ai

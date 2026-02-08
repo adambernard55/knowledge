@@ -1,13 +1,12 @@
 ---
-tool_name: Suno
-tool_category:
-  - Content Creation
-  - Social Media
-  - Specialized / Niche
-tool_sub_cat:
-  - Music Generation
-  - Audio Generation
-  - Creative Tool
+title: "Suno: AI Music Generation Platform"
+id: SIE/REF/SUNO-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2025-12-11
+status: "Active"
+doc_type: "Reference"
+summary: "Generates full, radio-quality songs with vocals and instrumentation from text prompts."
 tags:
   - music-generation
   - ai-music
@@ -15,17 +14,44 @@ tags:
   - songwriting
   - text-to-music
   - freemium
-ai_type:
-  - Generative AI (Audio)
-primary_function: Generates full, radio-quality songs with vocals and instrumentation from text prompts.
-pricing_model: Freemium / Subscription
-difficulty: Beginner
-website: https://suno.com/
-last_updated: 2025-12-11
-kb_status: published
-meta_description: Generate original, radio-quality songs from simple text prompts with Suno AI. Create custom music, complete with vocals and lyrics, for any project in seconds.
-Keyword: Suno AI Music
-Excerpt: Suno is a revolutionary AI music generator that creates full, high-quality songs—including vocals, lyrics, and instrumentation—from text prompts. It's the leading tool for instantly producing custom, royalty-free music for content creators, marketers, and musicians.
+relations:
+  - kb/TOOLS/content-creation/index.md
+aliases:
+  - Suno
+  - Suno AI
+
+# --- Domain Specifics (Tool) ---
+offering_name: "Suno"
+target_icp: "Content creators, marketers, and musicians"
+price_point: "Freemium / Subscription - Free tier with daily credits (non-commercial); Pro and Premier plans from ~$10/month with commercial rights"
+
+# --- Operational ---
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "Marketing"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: >
+  Suno is a groundbreaking AI music generation tool that creates complete, high-quality songs from simple
+  text prompts, including lyrics, vocals, and full instrumentation across diverse genres. Often called the
+  "ChatGPT for Music," it enables anyone to produce original, royalty-free music in seconds.
+synthetic_questions:
+  - "What AI tool can generate full songs with vocals from text prompts?"
+  - "How does Suno's pricing model work for commercial music use?"
+  - "Can Suno create instrumental-only tracks without vocals?"
+key_concepts:
+  - "Text-to-music generation"
+  - "AI-generated vocals"
+  - "Royalty-free music creation"
+  - "Credit-based freemium model"
+  - "Multi-genre song generation"
+
+# --- SEO & Publication ---
+primary_keyword: "Suno AI Music"
+seo_title: "Suno AI Music: Generate Full Songs from Text Prompts"
+meta_description: "Generate original, radio-quality songs from simple text prompts with Suno AI Music. Create custom music with vocals and lyrics in seconds."
+excerpt: "Suno AI Music is a revolutionary AI music generator that creates full, high-quality songs with vocals, lyrics, and instrumentation from text prompts."
+cover_image: ""
 ---
 
 # Suno

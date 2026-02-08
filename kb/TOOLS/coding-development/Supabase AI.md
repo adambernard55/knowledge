@@ -1,23 +1,49 @@
 ---
-title: Supabase AI
-id: 20251212064000
-version: 1
-Author: Adam Bernard
-date: 2025-12-12
-tool_name: "Supabase AI"
-tool_category: ["Coding & Development", "Data & Databases"]
-tool_sub_cat: ["SQL Generation", "Database Management", "Developer Tools"]
-ai_type: ["Developer AI", "Data Assistant", "Natural Language to SQL"]
-primary_function: "AI-powered assistant that helps developers write SQL queries, debug code, and manage Supabase databases using natural language."
-pricing_model: "Freemium"
-difficulty: "Beginner–Intermediate"
-website: "https://supabase.com/ai"
-last_updated: 2025-12-12
-tags: ["ai", "database", "sql", "supabase", "code-generation", "developer-tools", "backend", "postgres"]
-kb_status: "published"
-meta_description: "Supabase AI is an intelligent coding assistant embedded within the Supabase platform that translates natural language into SQL, manages Postgres databases, and accelerates backend development."
-keyword: "Supabase AI, SQL generator, database assistant, AI for developers"
-Excerpt: "Supabase AI helps developers turn English prompts into SQL queries, debug database issues, and generate backend logic — all within the Supabase ecosystem."
+title: "Supabase AI: Intelligent Database & SQL Assistant"
+id: "SIE/REF/SUPABASEAI-01"
+version: "1.0"
+steward: "Adam Bernard"
+updated: "2025-12-12"
+status: "Active"
+doc_type: "Reference"
+summary: "An AI-powered assistant that helps developers write SQL queries, debug code, and manage Supabase databases using natural language."
+tags:
+  - ai
+  - database
+  - sql
+  - supabase
+  - code-generation
+  - developer-tools
+  - backend
+  - postgres
+relations:
+  - "kb/TOOLS/coding-development/index.md"
+aliases:
+  - "Supabase AI"
+  - "Supabase SQL Assistant"
+  - "https://supabase.com/ai"
+offering_name: "Supabase AI"
+target_icp: "Backend Developers, Full-Stack Developers, Database Administrators"
+price_point: "Freemium"
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
+semantic_summary: "Supabase AI is an integrated assistant within the Supabase platform that helps developers write, debug, and optimize SQL queries and backend logic using natural language. It is schema-aware, understands database structure for precise results, and integrates directly into the Supabase dashboard for real-time query generation and execution."
+synthetic_questions:
+  - "How does Supabase AI generate SQL queries from natural language?"
+  - "Is Supabase AI aware of my database schema when generating queries?"
+  - "What are the pricing tiers for Supabase AI features?"
+key_concepts:
+  - "Natural Language to SQL"
+  - "Schema-Aware Query Generation"
+  - "PostgreSQL Optimization"
+  - "Interactive SQL Editor"
+  - "Backend AI Assistant"
+primary_keyword: "Supabase AI"
+seo_title: "Supabase AI: Natural Language SQL Generator & Database Assistant"
+meta_description: "Supabase AI translates natural language into SQL, manages Postgres databases, and accelerates backend development."
+excerpt: "Supabase AI helps developers turn English prompts into SQL queries, debug database issues, and generate backend logic within the Supabase ecosystem."
+cover_image: ""
 ---
 
 # Supabase AI

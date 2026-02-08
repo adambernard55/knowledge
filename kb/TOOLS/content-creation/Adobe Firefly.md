@@ -1,3 +1,61 @@
+---
+title: "Adobe Firefly: Commercially Safe Generative AI for Creative Cloud"
+id: SIE/REF/ADOBEFIREFLY-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2026-02-08
+status: "Active"
+doc_type: "Reference"
+summary: "Adobe's family of creative generative AI models for image generation and text effects, integrated into Creative Cloud and designed for commercial safety."
+tags:
+  - image-generation
+  - ai-image
+  - text-to-image
+  - adobe
+  - generative-fill
+  - creative-cloud
+  - commercial-safe
+relations:
+  - kb/TOOLS/content-creation/index.md
+aliases:
+  - Adobe Firefly
+  - Firefly
+  - Adobe Generative AI
+
+# --- Domain Specifics (Tool) ---
+offering_name: "Adobe Firefly"
+target_icp: "Designers, photographers, and marketers using Adobe Creative Cloud"
+price_point: "Included in Creative Cloud subscriptions; usage governed by Generative Credits per plan tier; additional credits purchasable; limited free tier via Firefly website"
+
+# --- Operational ---
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "Marketing"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: >
+  Adobe Firefly is Adobe's family of generative AI models integrated into Photoshop, Illustrator, and
+  Adobe Express, offering text-to-image generation, Generative Fill, text effects, and Generative Recolor.
+  Trained on Adobe Stock and openly licensed content, it is designed for commercially safe AI-generated visuals.
+synthetic_questions:
+  - "What AI image generator is built into Adobe Photoshop and Illustrator?"
+  - "Is Adobe Firefly safe to use for commercial projects?"
+  - "How does Generative Fill work in Photoshop with Adobe Firefly?"
+key_concepts:
+  - "Generative Fill (Photoshop)"
+  - "Commercially safe AI training data"
+  - "Generative Credits system"
+  - "Creative Cloud integration"
+  - "Text effects and Generative Recolor"
+
+# --- SEO & Publication ---
+primary_keyword: "Adobe Firefly"
+seo_title: "Adobe Firefly: Commercially Safe Generative AI for Creative Cloud"
+meta_description: "Adobe Firefly provides commercially safe generative AI for image generation, Generative Fill, and text effects within Creative Cloud."
+excerpt: "Adobe Firefly is Adobe's generative AI family integrated into Creative Cloud, offering commercially safe image generation, Generative Fill, and text effects."
+cover_image: ""
+---
+
 # **Adobe Firefly**
 
 Adobe Firefly is Adobe's family of creative generative AI models, integrated into various Adobe Creative Cloud applications (like Photoshop, Illustrator, Adobe Express) and available as a standalone web application. It focuses on generating images and text effects from prompts, designed to be commercially safe.

@@ -1,13 +1,12 @@
 ---
-tool_name: DeepSeek
-tool_category:
-  - Content Creation
-  - Productivity & Workflow
-  - Coding & Development
-tool_sub_cat:
-  - Conversational AI
-  - Text Generation
-  - Code Generation
+title: "DeepSeek: Cost-Effective LLM for Chat, Reasoning & Coding"
+id: SIE/REF/DEEPSEEK-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2025-12-11
+status: "Active"
+doc_type: "Reference"
+summary: "A high-performance, cost-effective large language model for chat, reasoning, and coding."
 tags:
   - llm
   - open-source
@@ -16,18 +15,44 @@ tags:
   - coding-ai
   - cost-effective
   - moe-architecture
-ai_type:
-  - Conversational AI
-  - Generative AI (Text)
-primary_function: A high-performance, cost-effective large language model for chat, reasoning, and coding.
-pricing_model: Freemium / Pay-as-you-go
-difficulty: Beginner
-website: https://www.deepseek.com/
-last_updated: 2025-12-11
-kb_status: published
-meta_description: Explore DeepSeek AI, a powerful and cost-effective large language model that delivers top-tier performance in coding and reasoning at a fraction of the cost.
-Keyword: DeepSeek AI
-Excerpt: DeepSeek AI has emerged as a top-tier challenger to established LLMs, offering comparable performance in coding and reasoning at a significantly lower cost, making it ideal for scalable, high-performance AI applications.
+relations:
+  - kb/TOOLS/ai-foundation-models/index.md
+aliases:
+  - DeepSeek
+  - DeepSeek AI
+
+# --- Domain Specifics (Tool) ---
+offering_name: "DeepSeek"
+target_icp: "Developers, startups, and enterprises seeking high-performance LLM capabilities at low cost for chat, coding, and reasoning"
+price_point: "Freemium / Pay-as-you-go (free web chat, low-cost per-token API pricing)"
+
+# --- Operational ---
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: >
+  DeepSeek is a family of large language models that rivals top-tier models like GPT-4 in reasoning
+  and coding benchmarks while offering dramatically lower API pricing. Built on a Mixture-of-Experts
+  architecture, it provides open-source model weights, a 128K context window, and both web and API access.
+synthetic_questions:
+  - "How does DeepSeek compare to GPT-4 in performance and cost?"
+  - "What is the Mixture-of-Experts architecture used by DeepSeek?"
+  - "Can DeepSeek models be self-hosted?"
+key_concepts:
+  - "Mixture-of-Experts Architecture"
+  - "Cost-Effective LLM"
+  - "Open-Source Models"
+  - "Code Generation"
+  - "Large Context Window"
+
+# --- SEO & Publication ---
+primary_keyword: "DeepSeek AI"
+seo_title: "DeepSeek AI: High-Performance LLM for Coding and Reasoning at Low Cost"
+meta_description: "DeepSeek AI delivers top-tier LLM performance in coding and reasoning at a fraction of the cost of competing models."
+excerpt: "DeepSeek AI is a top-tier challenger to established LLMs, offering comparable coding and reasoning performance at significantly lower cost for scalable AI applications."
+cover_image: ""
 ---
 
 # DeepSeek

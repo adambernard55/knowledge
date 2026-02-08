@@ -1,12 +1,12 @@
 ---
-title: Rytr
-id: 20251231121200
+title: "Rytr: Affordable AI Writing Assistant"
+id: SIE/REF/RYTR-01
 version: "2.0"
-steward: Adam Bernard
+steward: "Adam Bernard"
 updated: 2025-12-31
-status: Active
-doc_type: Reference
-summary: An affordable AI writing assistant designed for generating short-form content like emails, social media posts, and ad copy.
+status: "Active"
+doc_type: "Reference"
+summary: "An affordable AI writing assistant designed for generating short-form content like emails, social media posts, and ad copy."
 tags:
   - ai
   - copywriting
@@ -15,25 +15,26 @@ tags:
   - content-creation
   - budget-friendly
 relations:
-  - kb/TOOLS/content-creation/Copy.ai.md
+  - kb/TOOLS/content-creation/index.md
 aliases:
+  - Rytr
   - Rytr AI
   - Rytr Writer
 
 # --- Domain Specifics (Tool) ---
-tool_name: "Rytr"
-tool_category: ["Content Creation", "Marketing & Communications"]
-tool_sub_cat: ["AI Copywriting", "Content Generation"]
-ai_type: ["Generative AI (Text)"]
-primary_function: "Budget-friendly AI writing assistant for generating short-form marketing content, emails, and outlines."
-pricing_model: "Freemium / Subscription"
-difficulty: "Beginner"
-website: "https://rytr.me/"
+offering_name: "Rytr"
+target_icp: "Freelancers, small business owners, and budget-conscious marketers"
+price_point: "Freemium / Subscription - Free plan with generous character limit; Saver ~$9/month; Unlimited ~$29/month"
+
+# --- Operational ---
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "Marketing"
 
 # --- AI & RAG Enhancement ---
 semantic_summary: >
-  Rytr is an entry-level, budget-conscious AI writing tool focused on short-form content generation. 
-  It utilizes GPT-3 technology to provide over 30 templates for emails, ads, and social media captions. 
+  Rytr is an entry-level, budget-conscious AI writing tool focused on short-form content generation.
+  It utilizes GPT-3 technology to provide over 30 templates for emails, ads, and social media captions.
   It is distinct from competitors like Jasper or Copy.ai due to its lower price point and simpler feature set.
 synthetic_questions:
   - "What is the best budget-friendly AI writer?"
@@ -44,12 +45,14 @@ key_concepts:
   - "AI Templates"
   - "Plagiarism Detection"
   - "Tone of Voice"
+  - "Budget-friendly AI writing"
 
 # --- SEO & Publication ---
 primary_keyword: "Rytr"
 seo_title: "Rytr Review: Affordable AI Writing Assistant for Short-Form Content"
-meta_description: "Rytr is a budget-friendly AI writing assistant designed for generating emails, social media posts, and ad copy quickly using pre-built templates."
+meta_description: "Rytr is a budget-friendly AI writing assistant designed for generating emails, social media posts, and ad copy quickly using templates."
 excerpt: "Rytr is a budget-friendly AI writing tool ideal for generating short-form marketing copy, emails, and social posts quickly."
+cover_image: ""
 ---
 
 # Rytr

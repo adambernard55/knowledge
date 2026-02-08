@@ -1,13 +1,12 @@
 ---
-tool_name: HeyGen
-tool_category:
-  - Content Creation
-  - Image, Video & Design
-  - Social Media
-tool_sub_cat:
-  - AI Avatar
-  - Video Translation
-  - Video Dubbing
+title: "HeyGen: AI Avatar Video and Translation Platform"
+id: SIE/REF/HEYGEN-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2025-12-11
+status: "Active"
+doc_type: "Reference"
+summary: "Creates AI avatars for video content and provides advanced video translation and dubbing in multiple languages."
 tags:
   - ai-avatar
   - video-translation
@@ -16,18 +15,44 @@ tags:
   - multilingual
   - generative-ai
   - talking-head
-ai_type:
-  - Generative AI (Video)
-  - Generative AI (Audio)
-primary_function: Creates AI avatars for video content and provides advanced video translation and dubbing in multiple languages.
-pricing_model: Freemium / Subscription
-difficulty: Beginner
-website: https://www.heygen.com/
-last_updated: 2025-12-11
-kb_status: published
-meta_description: Transform your video content with HeyGen's AI avatars and instant video translation. Create professional talking-head videos and dub content into 40+ languages with realistic voice cloning.
-Keyword: HeyGen AI Avatar
-Excerpt: HeyGen is a leading platform for creating AI-generated avatar videos and translating existing videos into multiple languages. It enables businesses to produce scalable, multilingual video content with realistic digital spokespersons.
+relations:
+  - kb/TOOLS/content-creation/index.md
+aliases:
+  - HeyGen
+  - HeyGen AI
+
+# --- Domain Specifics (Tool) ---
+offering_name: "HeyGen"
+target_icp: "Marketing teams, sales teams, and L&D professionals needing scalable multilingual video"
+price_point: "Freemium / Subscription - Free tier with limited credits; paid plans from ~$30-$50/month; Enterprise plans with API access"
+
+# --- Operational ---
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "Marketing"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: >
+  HeyGen is a comprehensive AI video platform specializing in creating professional videos with customizable
+  AI avatars and translating existing videos into 40+ languages with synchronized lip movement and voice cloning.
+  It is the industry standard for scaling video content production across languages and personas.
+synthetic_questions:
+  - "What platform can create AI avatar videos with custom digital spokespersons?"
+  - "How can I translate and dub my videos into multiple languages with AI?"
+  - "Does HeyGen offer voice cloning for multilingual video content?"
+key_concepts:
+  - "AI avatar video creation"
+  - "Video translation and dubbing"
+  - "Voice cloning technology"
+  - "Multilingual content at scale"
+  - "Custom digital twin creation"
+
+# --- SEO & Publication ---
+primary_keyword: "HeyGen AI Avatar"
+seo_title: "HeyGen AI Avatar: Create Multilingual Videos with AI Spokespersons"
+meta_description: "Transform video content with HeyGen AI Avatar and instant translation. Create talking-head videos and dub into 40+ languages."
+excerpt: "HeyGen AI Avatar is a leading platform for creating AI-generated avatar videos and translating content into multiple languages with realistic digital spokespersons."
+cover_image: ""
 ---
 
 # HeyGen

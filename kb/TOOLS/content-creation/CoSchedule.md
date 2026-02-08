@@ -1,26 +1,12 @@
 ---
-title: CoSchedule
-id: 202511151017
-version: 2
-Author: Adam Bernard
-date: 2025-12-13
-tool_name: "CoSchedule Headline Analyzer (Headline Studio)"
-tool_category:
-  - Content Creation
-  - Marketing Optimization
-  - Copywriting
-tool_sub_cat:
-  - Headline Optimization
-  - SEO Tools
-  - Writing Assistant
-primary_function: "A headline optimization tool that analyzes the structure, word balance, and emotional impact of titles to improve engagement and click-through rates."
-ai_type:
-  - Content Analysis
-  - Copy Optimization
-pricing_model: Freemium / Subscription
-difficulty: Beginner
-website: "https://coschedule.com/headline-analyzer"
-last_updated: 2025-12-13
+title: "CoSchedule Headline Analyzer: Headline Optimization Tool"
+id: SIE/REF/COSCHEDULE-01
+version: "2"
+steward: "Adam Bernard"
+updated: 2025-12-13
+status: "Active"
+doc_type: "Reference"
+summary: "A headline optimization tool that analyzes the structure, word balance, and emotional impact of titles to improve engagement and click-through rates."
 tags:
   - content
   - marketing
@@ -30,10 +16,45 @@ tags:
   - optimization
   - headline
   - writing
-kb_status: published
-meta_description: "CoSchedule's Headline Analyzer (Headline Studio) helps marketers craft high-performing headlines by analyzing word balance, structure, and emotional impact."
-Keyword: "CoSchedule Headline Analyzer, Headline Studio, headline optimization tool"
-Excerpt: "CoSchedule’s Headline Analyzer is a headline optimization tool that scores and improves your titles for blogs, emails, and ads—helping maximize engagement and click-through rates."
+relations:
+  - kb/TOOLS/content-creation/index.md
+aliases:
+  - CoSchedule Headline Analyzer
+  - Headline Studio
+  - CoSchedule
+
+# --- Domain Specifics (Tool) ---
+offering_name: "CoSchedule Headline Analyzer (Headline Studio)"
+target_icp: "Marketers, bloggers, and copywriters"
+price_point: "Freemium / Subscription - Free plan with core scoring; Headline Studio Pro from ~$9-$19/month"
+
+# --- Operational ---
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "Marketing"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: >
+  CoSchedule's Headline Analyzer (Headline Studio) is a digital tool that scores headlines on a 0-100 scale
+  based on word balance, structure, sentiment, and engagement potential. It helps marketers, bloggers, and
+  copywriters optimize titles for blogs, emails, and ads to maximize click-through rates.
+synthetic_questions:
+  - "What tool can score and optimize my blog post headlines?"
+  - "How does CoSchedule Headline Analyzer evaluate headline quality?"
+  - "What is Headline Studio Pro and what does it offer?"
+key_concepts:
+  - "Headline scoring (0-100 scale)"
+  - "Word balance analysis"
+  - "Sentiment and emotional evaluation"
+  - "SEO headline optimization"
+  - "Click-through rate improvement"
+
+# --- SEO & Publication ---
+primary_keyword: "CoSchedule Headline Analyzer"
+seo_title: "CoSchedule Headline Analyzer: Optimize Headlines for Engagement"
+meta_description: "CoSchedule Headline Analyzer helps marketers craft high-performing headlines by analyzing word balance, structure, and emotional impact."
+excerpt: "CoSchedule Headline Analyzer is a headline optimization tool that scores and improves your titles for blogs, emails, and ads to maximize engagement."
+cover_image: ""
 ---
 
 # CoSchedule Headline Analyzer (Headline Studio)

@@ -1,12 +1,12 @@
 ---
-tool_name: Cursor
-tool_category:
-  - Coding & Development
-  - Productivity & Workflow
-tool_sub_cat:
-  - Code Editor
-  - AI Assistant
-  - Agentic IDE
+title: "Cursor: AI-Native Code Editor"
+id: "SIE/REF/CURSOR-01"
+version: "1.0"
+steward: "Adam Bernard"
+updated: "2025-12-11"
+status: "Active"
+doc_type: "Reference"
+summary: "An AI-native code editor designed for pair-programming with artificial intelligence, offering codebase-aware chat, inline editing, and AI-powered debugging."
 tags:
   - coding-ai
   - ide
@@ -15,18 +15,34 @@ tags:
   - developer-tool
   - agentic-coding
   - freemium
-ai_type:
-  - Generative AI (Text)
-  - Code Generation
-primary_function: An AI-native code editor designed for pair-programming with artificial intelligence.
-pricing_model: Freemium / Subscription
-difficulty: Intermediate
-website: https://cursor.sh/
-last_updated: 2025-12-11
-kb_status: published
-meta_description: Discover Cursor, the AI-first code editor that integrates powerful generative AI features directly into your development workflow for faster coding, debugging, and refactoring.
-Keyword: Cursor AI editor
-Excerpt: Cursor is an AI-native code editor built from the ground up to leverage generative AI, offering features like codebase-aware chat, automated code generation, and AI-assisted debugging to significantly accelerate the development process.
+relations:
+  - "kb/TOOLS/coding-development/index.md"
+aliases:
+  - "Cursor"
+  - "Cursor AI"
+  - "https://cursor.sh/"
+offering_name: "Cursor"
+target_icp: "Software Developers, Full-Stack Engineers"
+price_point: "Freemium / Pro ~$20/mo"
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
+semantic_summary: "Cursor is an AI-first code editor forked from VS Code that integrates generative AI deeply into the development workflow. It provides codebase-aware chat, inline AI editing, automated debugging, and full VS Code extension compatibility, making it a leading tool for AI-assisted software development."
+synthetic_questions:
+  - "What AI features does Cursor offer for developers?"
+  - "How does Cursor compare to GitHub Copilot as an AI coding tool?"
+  - "What is the pricing model for Cursor AI editor?"
+key_concepts:
+  - "AI-Native IDE"
+  - "Codebase-Aware Chat"
+  - "Inline AI Editing"
+  - "AI-Powered Debugging"
+  - "VS Code Fork"
+primary_keyword: "Cursor AI editor"
+seo_title: "Cursor AI Editor: The AI-Native Code Editor for Developers"
+meta_description: "Discover Cursor AI editor, the AI-first code editor with generative AI for faster coding, debugging, and refactoring."
+excerpt: "Cursor AI editor is an AI-native code editor built to leverage generative AI, offering codebase-aware chat, automated code generation, and AI-assisted debugging to accelerate development."
+cover_image: ""
 ---
 
 # Cursor

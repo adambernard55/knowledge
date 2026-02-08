@@ -1,11 +1,12 @@
 ---
-tool_name: Flux.1 (Black Forest Labs)
-tool_category:
-  - Content Creation
-  - Image, Video & Design
-tool_sub_cat:
-  - Image Generation
-  - Text-to-Image
+title: "Flux.1: Open-Weight AI Image Generation Model"
+id: SIE/REF/FLUX1-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2025-12-11
+status: "Active"
+doc_type: "Reference"
+summary: "An open-weight image generation model excelling at photorealism and accurate text rendering."
 tags:
   - image-generation
   - ai-image
@@ -14,17 +15,45 @@ tags:
   - open-weight
   - typography
   - black-forest-labs
-ai_type:
-  - Generative AI (Image)
-primary_function: An open-weight image generation model excelling at photorealism and accurate text rendering.
-pricing_model: Open-Weight / API Access
-difficulty: Intermediate
-website: https://blackforestlabs.ai/
-last_updated: 2025-12-11
-kb_status: published
-meta_description: Experience Flux.1 by Black Forest Labs, the open-weight AI image model that delivers unparalleled photorealism and perfectly rendered text, ideal for professional design and marketing.
-Keyword: Flux.1 AI Image Generator
-Excerpt: Flux.1 is a revolutionary open-weight image generation model from Black Forest Labs, setting a new industry standard for photorealism and, for the first time, consistently accurate text rendering within images.
+relations:
+  - kb/TOOLS/content-creation/index.md
+aliases:
+  - Flux.1
+  - Flux.1 (Black Forest Labs)
+  - Black Forest Labs Flux
+
+# --- Domain Specifics (Tool) ---
+offering_name: "Flux.1 (Black Forest Labs)"
+target_icp: "Designers, marketers, and developers needing photorealistic AI images with text rendering"
+price_point: "Open-Weight / API Access - free to download and run; third-party platforms offer credit-based freemium or subscription access"
+
+# --- Operational ---
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "Marketing"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: >
+  Flux.1 is a top-tier open-weight text-to-image model from Black Forest Labs that generates highly
+  photorealistic images and accurately renders text and typography within images. It competes with
+  Midjourney and DALL-E while being freely available for fine-tuning and integration.
+synthetic_questions:
+  - "What AI image generator can accurately render text within images?"
+  - "How does Flux.1 compare to Midjourney and DALL-E for photorealism?"
+  - "Is Flux.1 open-source and free to use?"
+key_concepts:
+  - "Text rendering in AI images"
+  - "Open-weight model architecture"
+  - "Photorealistic image generation"
+  - "Prompt adherence"
+  - "Community fine-tuning"
+
+# --- SEO & Publication ---
+primary_keyword: "Flux.1 AI Image Generator"
+seo_title: "Flux.1 AI Image Generator: Open-Weight Photorealism with Text Rendering"
+meta_description: "Flux.1 AI Image Generator by Black Forest Labs delivers unparalleled photorealism and accurate text rendering for professional design."
+excerpt: "Flux.1 AI Image Generator is a revolutionary open-weight model from Black Forest Labs, setting the standard for photorealism and accurate text rendering."
+cover_image: ""
 ---
 
 # Flux.1 (Black Forest Labs)

@@ -1,13 +1,12 @@
 ---
-tool_name: Google Veo
-tool_category:
-  - Video Generation
-  - Creative Design
-  - Marketing & Storytelling
-tool_sub_cat:
-  - Text-to-Video
-  - Generative Media
-  - AI Film Creation
+title: "Google Veo: Next-Gen Text-to-Video AI"
+id: SIE/REF/GOOGLEVEO-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2025-12-13
+status: "Active"
+doc_type: "Reference"
+summary: "Google's high-end text-to-video generation model capable of producing photorealistic, cinematic clips with advanced motion and lighting control."
 tags:
   - ai-video
   - text-to-video
@@ -15,18 +14,34 @@ tags:
   - google-ai
   - filmmaking
   - creative-ai
-ai_type:
-  - Video Generation
-  - Multimodal AI
-primary_function: Google's high-end text-to-video generation model capable of producing photorealistic, cinematic clips with advanced motion and lighting control.
-pricing_model: TBD (by invitation / beta)
-difficulty: Intermediate
-website: https://ai.google/veo
-last_updated: 2025-12-13
-kb_status: published
-meta_description: "Google Veo is a next-generation text-to-video AI that generates ultra-realistic, cinematic footage from text prompts, enabling professional-quality video creation in minutes."
-Keyword: "Google Veo text-to-video"
-Excerpt: "Google Veo is Google's flagship text-to-video AI model, capable of producing stunning photorealistic footage with natural motion, cinematic lighting, and professional composition — all from a simple prompt."
+relations:
+  - kb/TOOLS/image-video-generation/index.md
+aliases:
+  - Google Veo
+  - Veo
+  - Google DeepMind Veo
+offering_name: "Google Veo"
+target_icp: "Filmmakers, production studios, and marketing teams seeking cinematic-quality AI video generation"
+price_point: "TBD / Beta (limited access by invitation; expected subscription or credit-based model via Gemini Creative Suite)"
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "Marketing"
+semantic_summary: "Google Veo is Google DeepMind's high-definition text-to-video generation model that transforms written prompts into cinematic-level visual content with Hollywood-quality depth of field, motion blur, and lighting consistency. It integrates with Google's ecosystem including YouTube Shorts, Workspace, and Gemini Studio, representing one of the most advanced generative video systems available."
+synthetic_questions:
+  - "What makes Google Veo's video generation quality different from competing text-to-video tools?"
+  - "How does Google Veo integrate with the broader Google creative ecosystem?"
+  - "What is the current availability and expected pricing model for Google Veo?"
+key_concepts:
+  - text-to-video generation
+  - cinematic ai rendering
+  - google deepmind multimodal ai
+  - scene coherence and continuity
+  - youtube and workspace integration
+primary_keyword: "Google Veo"
+seo_title: "Google Veo: Next-Generation Text-to-Video AI for Cinematic Content"
+meta_description: "Google Veo is a next-gen text-to-video AI generating ultra-realistic cinematic footage from prompts in minutes."
+excerpt: "Google Veo is Google's flagship text-to-video AI model producing stunning photorealistic footage with natural motion and cinematic lighting from simple prompts."
+cover_image: ""
 ---
 
 # Google Veo

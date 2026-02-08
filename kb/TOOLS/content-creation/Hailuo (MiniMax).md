@@ -1,13 +1,12 @@
 ---
-tool_name: Hailuo (MiniMax)
-tool_category:
-  - Content Creation
-  - Image, Video & Design
-  - Social Media
-tool_sub_cat:
-  - Video Generation
-  - AI Video
-  - Character Consistency
+title: "Hailuo (MiniMax): AI Video Generation with Character Consistency"
+id: SIE/REF/HAILUO-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2025-12-11
+status: "Active"
+doc_type: "Reference"
+summary: "An AI video generation model specializing in maintaining high character consistency across different scenes."
 tags:
   - video-generation
   - ai-video
@@ -15,17 +14,45 @@ tags:
   - character-consistency
   - minimax
   - generative-ai
-ai_type:
-  - Generative AI (Video)
-primary_function: An AI video generation model specializing in maintaining high character consistency across different scenes.
-pricing_model: Waitlist / Freemium
-difficulty: Beginner
-website: https://www.minimaxi.com/
-last_updated: 2025-12-11
-kb_status: published
-meta_description: Create stunning AI videos with Hailuo by MiniMax, the video generation model that excels at maintaining consistent characters across multiple shots and scenes.
-Keyword: Hailuo AI Video
-Excerpt: Hailuo by MiniMax is a powerful AI video generation model that has gained significant traction for its unique ability to maintain character consistency, making it ideal for creating narrative-driven content and brand stories.
+relations:
+  - kb/TOOLS/content-creation/index.md
+aliases:
+  - Hailuo
+  - Hailuo (MiniMax)
+  - MiniMax Hailuo
+
+# --- Domain Specifics (Tool) ---
+offering_name: "Hailuo (MiniMax)"
+target_icp: "Video creators, brand storytellers, and marketers needing character-consistent video content"
+price_point: "Waitlist / Freemium - expected freemium or subscription-based model with credit tiers"
+
+# --- Operational ---
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "Marketing"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: >
+  Hailuo is an AI video generation model by MiniMax that excels at maintaining character consistency
+  across multiple shots and scenes, making it ideal for narrative-driven content. It supports text-to-video
+  and image-to-video generation with strong prompt adherence and high visual fidelity.
+synthetic_questions:
+  - "What AI video tool maintains character consistency across multiple scenes?"
+  - "How does Hailuo compare to Kling and Sora for narrative video creation?"
+  - "Can I use a reference image to keep a consistent character in AI-generated videos?"
+key_concepts:
+  - "Character consistency in AI video"
+  - "Narrative video generation"
+  - "Image-to-video with likeness preservation"
+  - "Multi-scene storytelling"
+  - "Brand mascot and character campaigns"
+
+# --- SEO & Publication ---
+primary_keyword: "Hailuo AI Video"
+seo_title: "Hailuo AI Video: Character-Consistent AI Video Generation by MiniMax"
+meta_description: "Create stunning AI videos with Hailuo AI Video by MiniMax, excelling at maintaining consistent characters across multiple shots and scenes."
+excerpt: "Hailuo AI Video by MiniMax is a powerful AI video model with unique character consistency, ideal for narrative-driven content and brand stories."
+cover_image: ""
 ---
 
 # Hailuo (MiniMax)

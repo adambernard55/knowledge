@@ -1,23 +1,12 @@
 ---
-title: Make.com
-id: 20251213055000
-version: 1
-Author: Adam Bernard
-date: 2025-12-13
-tool_name: "Make.com"
-tool_category:
-  - Productivity & Workflow
-  - Marketing Automation
-  - CRM & Personalization
-primary_function: "A visual platform that automates workflows and connects apps, APIs, and AI tools into powerful end-to-end systems."
-ai_type:
-  - Automation
-  - Workflow Orchestration
-  - API Integration
-pricing_model: Freemium
-difficulty: Intermediate
-website: "https://www.make.com"
-last_updated: 2025-12-13
+title: "Make.com: Visual Workflow Automation Platform"
+id: SIE/REF/MAKECOM-01
+version: "1"
+steward: "Adam Bernard"
+updated: 2025-12-13
+status: "Active"
+doc_type: "Reference"
+summary: "A visual platform that automates workflows and connects apps, APIs, and AI tools into powerful end-to-end systems."
 tags:
   - automation
   - workflow
@@ -27,10 +16,42 @@ tags:
   - crm
   - ai
   - productivity
-kb_status: published
-meta_description: "Make.com is a visual automation platform that connects apps, APIs, and AI tools—allowing users to build complex, multi-step workflows without code."
-Keyword: "Make.com, workflow automation, no-code AI integration"
-Excerpt: "Make.com lets teams visually design and automate workflows across hundreds of apps, connecting AI tools, CRMs, and marketing platforms without writing code."
+relations:
+  - "kb/TOOLS/productivity-workflow/index.md"
+aliases:
+  - "Make.com"
+  - "Make"
+  - "Integromat"
+
+# Domain Specifics
+offering_name: "Make.com"
+target_icp: "Power users, marketing teams, and operations teams needing complex multi-step workflow automation without coding"
+price_point: "Freemium; Core $9/month, Pro $16/month, Teams $29/month per user, Enterprise custom"
+
+# Operational
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
+
+# AI/RAG
+semantic_summary: "Make.com (formerly Integromat) is a powerful no-code platform for automating workflows and building multi-step processes between apps, APIs, and AI models. Its visual builder supports conditional logic, loops, data transformations, and integrations with 1,500+ apps including OpenAI, Claude, and CRM platforms, operating at near-developer level without code."
+synthetic_questions:
+  - "How can I connect AI tools like ChatGPT or Claude to my CRM and marketing workflows without coding?"
+  - "What is the difference between Make.com and Zapier for workflow automation?"
+  - "How do I build a multi-step automation scenario in Make.com?"
+key_concepts:
+  - "Visual workflow builder"
+  - "No-code automation"
+  - "API and webhook integration"
+  - "AI model orchestration"
+  - "Scenario-based conditional logic"
+
+# SEO
+primary_keyword: "Make.com workflow automation"
+seo_title: "Make.com Workflow Automation: No-Code AI Integration Platform"
+meta_description: "Make.com workflow automation connects apps, APIs, and AI tools, letting users build multi-step workflows without code."
+excerpt: "Make.com workflow automation lets teams visually design and automate workflows across hundreds of apps, connecting AI tools, CRMs, and marketing platforms without writing code."
+cover_image: ""
 ---
 
 # Make.com

@@ -1,24 +1,56 @@
 ---
-title: Elicit
-id: 20251213054435
-version: 1
-Author: Adam Bernard
-steward:
-date: 2025-12-13
-tool_name: "Elicit"
-tool_category: ["Research Knowledge Agents", "Academic Search"]
-primary_function: "An AI research assistant that helps automate literature review, summarize academic papers, and structure research evidence."
-ai_type: ["LLM", "Research Agent", "NLP"]
-pricing_model: "Freemium"
-difficulty: "Intermediate"
-website: "https://elicit.org"
-last_updated: 2025-12-13
-Meta Description: "Elicit is an AI-powered research assistant that automates literature reviews, summarizes academic papers, and structures research evidence — helping researchers analyze and synthesize information faster."
+title: "Elicit: AI Research Assistant for Literature Review"
+id: SIE/REF/ELICIT-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2025-12-13
+status: "Active"
+doc_type: "Reference"
+summary: "An AI research assistant that helps automate literature review, summarize academic papers, and structure research evidence."
+tags:
+  - tool
+  - ai
+  - research
+  - academic
+  - productivity
+relations:
+  - kb/TOOLS/research-knowledge-agents/index.md
+aliases:
+  - Elicit
+  - Elicit AI
 
-Primary_Keyword: "Elicit AI"
+# --- Domain Specifics (Tool) ---
+offering_name: "Elicit"
+target_icp: "Academic researchers, policy analysts, and research writers conducting literature reviews and evidence synthesis"
+price_point: "Freemium (Pro ~$10-$25/month, Team/Institutional plans available)"
 
-Excerpt: "Elicit is an academic research assistant that uses AI to automate literature reviews, summarize key findings, and extract structured data from research papers. It accelerates evidence-based research by turning unstructured information into organized, actionable insights."
-tags: ["tool", "ai", "research", "academic", "productivity"]
+# --- Operational ---
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: >
+  Elicit is an AI-powered research assistant by Ought that automates literature review workflows.
+  It finds relevant papers, generates structured summaries, extracts quantitative and qualitative data,
+  and organizes results into comparable tables, dramatically accelerating evidence synthesis.
+synthetic_questions:
+  - "How does Elicit automate literature reviews?"
+  - "Can Elicit extract structured data from research papers?"
+  - "What makes Elicit different from general-purpose AI search tools?"
+key_concepts:
+  - "Automated Literature Review"
+  - "Data Extraction"
+  - "Evidence Synthesis"
+  - "Structured Tables"
+  - "Research Workflows"
+
+# --- SEO & Publication ---
+primary_keyword: "Elicit AI"
+seo_title: "Elicit AI: Automate Literature Reviews and Research Synthesis"
+meta_description: "Elicit AI automates literature reviews, summarizes academic papers, and structures research evidence for faster analysis."
+excerpt: "Elicit AI automates literature reviews, summarizes key findings, and extracts structured data from research papers, turning unstructured information into actionable insights."
+cover_image: ""
 ---
 
 # [[Elicit]]
@@ -49,4 +81,6 @@ Elicit is an AI-powered research assistant designed to streamline the process of
 
 ## Expert Notes
 Elicit distinguishes itself from tools like [[Perplexity]] by focusing exclusively on **academic research synthesis** rather than general knowledge retrieval. Its biggest advantage is the ability to **structure unstructured research data**, making literature reviews dramatically faster and more systematic.  
-For academics, policy analysts, and research writers, Elicit serves as a “co-pilot” for evidence gathering — automating the tedious parts of research while preserving human interpretation where it matters most.
+For academics, policy analysts, and research writers, Elicit serves as a "co-pilot" for evidence gathering — automating the tedious parts of research while preserving human interpretation where it matters most.
+
+**Direct Link:** [https://elicit.org](https://elicit.org)

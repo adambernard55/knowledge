@@ -1,23 +1,12 @@
 ---
-title: Otter.ai
-id: 20251213053000
-version: 1
-Author: Adam Bernard
-date: 2025-12-13
-tool_name: "Otter.ai"
-tool_category:
-  - Productivity & Workflow
-  - Audio Generation
-  - Research & Data
-primary_function: "Automatic meeting transcription, note-taking, and voice summarization tool powered by AI."
-ai_type:
-  - Speech-to-Text
-  - Conversational AI
-  - Meeting Summarization
-pricing_model: Freemium
-difficulty: Beginner
-website: "https://otter.ai"
-last_updated: 2025-12-13
+title: "Otter.ai: AI Meeting Transcription & Note-Taking"
+id: SIE/REF/OTTERAI-01
+version: "1"
+steward: "Adam Bernard"
+updated: 2025-12-13
+status: "Active"
+doc_type: "Reference"
+summary: "Automatic meeting transcription, note-taking, and voice summarization tool powered by AI."
 tags:
   - ai
   - productivity
@@ -26,10 +15,41 @@ tags:
   - summarization
   - workflow
   - freemium
-kb_status: published
-meta_description: "Otter.ai converts conversations into smart, searchable meeting notes using real-time AI transcription and summarization."
-Keyword: "meeting transcription, AI note-taking, Otter.ai"
-Excerpt: "Otter.ai is a leading AI meeting assistant that transcribes, summarizes, and organizes conversations automatically, helping teams stay focused and save time."
+relations:
+  - "kb/TOOLS/productivity-workflow/index.md"
+aliases:
+  - "Otter.ai"
+  - "Otter AI"
+
+# Domain Specifics
+offering_name: "Otter.ai"
+target_icp: "Professionals, educators, journalists, and enterprise teams needing reliable automated meeting transcription and note-taking"
+price_point: "Freemium; Pro $16.99/month, Business $30/month per user, Enterprise custom"
+
+# Operational
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
+
+# AI/RAG
+semantic_summary: "Otter.ai is an AI-powered note-taking and transcription platform designed for meetings, interviews, and lectures. It provides real-time transcription, speaker identification, smart summaries with action items, and integrations with Zoom, Google Meet, and Microsoft Teams, serving as a full meeting intelligence platform."
+synthetic_questions:
+  - "What AI tool provides real-time meeting transcription with speaker identification?"
+  - "How can I automatically generate meeting summaries with action items?"
+  - "How does Otter.ai compare to Fireflies.ai for meeting transcription?"
+key_concepts:
+  - "Real-time AI transcription"
+  - "Speaker identification"
+  - "Smart meeting summaries"
+  - "Meeting platform integrations"
+  - "Searchable voice content"
+
+# SEO
+primary_keyword: "Otter.ai meeting transcription"
+seo_title: "Otter.ai Meeting Transcription: AI-Powered Note-Taking & Summaries"
+meta_description: "Otter.ai meeting transcription converts conversations into smart, searchable notes using real-time AI transcription."
+excerpt: "Otter.ai meeting transcription is a leading AI meeting assistant that transcribes, summarizes, and organizes conversations automatically, helping teams stay focused and save time."
+cover_image: ""
 ---
 
 # Otter.ai

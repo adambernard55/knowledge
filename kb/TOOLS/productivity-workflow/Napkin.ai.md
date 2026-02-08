@@ -1,13 +1,12 @@
 ---
-tool_name: Napkin.ai
-tool_category:
-  - Visualization
-  - Productivity & Workflow
-  - Communication & Strategy
-tool_sub_cat:
-  - Business Visualization
-  - Concept Mapping
-  - Presentation Design
+title: "Napkin.ai: AI-Powered Text-to-Visual Diagrams"
+id: SIE/REF/NAPKINAI-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2025-12-13
+status: "Active"
+doc_type: "Reference"
+summary: "Converts written concepts or prompts into clean, structured visual diagrams and mind maps for business, education, or creative ideation."
 tags:
   - visualization
   - ai-diagrams
@@ -15,18 +14,41 @@ tags:
   - business-tools
   - communication
   - creative-ai
-ai_type:
-  - Visual Generation (Text-to-Diagram)
-  - Productivity AI
-primary_function: Converts written concepts or prompts into clean, structured visual diagrams and mind maps for business, education, or creative ideation.
-pricing_model: Freemium
-difficulty: Beginner
-website: https://www.napkin.ai
-last_updated: 2025-12-13
-kb_status: published
-meta_description: "Napkin.ai turns plain text ideas into simple, elegant business visuals and diagrams instantly — ideal for brainstorming, presentations, and communication."
-Keyword: "Napkin AI business visuals"
-Excerpt: "Napkin.ai converts text descriptions into structured diagrams and clear visual explanations for business communication, education, and ideation."
+relations:
+  - "kb/TOOLS/productivity-workflow/index.md"
+aliases:
+  - "Napkin.ai"
+  - "Napkin AI"
+
+# Domain Specifics
+offering_name: "Napkin.ai"
+target_icp: "Entrepreneurs, educators, creatives, and business professionals needing quick visual diagrams from text"
+price_point: "Freemium; paid plans ~$10-$20/month for enhanced customization, export options, and team features"
+
+# Operational
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
+
+# AI/RAG
+semantic_summary: "Napkin.ai is an AI-powered visualization tool that transforms text-based ideas into clean, professional diagrams including mind maps, flowcharts, and frameworks. It excels at translating abstract concepts like workflows, strategies, or product ideas into minimalist visuals optimized for clarity and communication."
+synthetic_questions:
+  - "How can I quickly turn written ideas into professional diagrams without design skills?"
+  - "What AI tool converts text prompts into mind maps and flowcharts for business presentations?"
+  - "How does Napkin.ai compare to other visualization tools for brainstorming sessions?"
+key_concepts:
+  - "Text-to-visual conversion"
+  - "AI-powered diagram generation"
+  - "Business visualization and concept mapping"
+  - "Automatic layout and design"
+  - "Minimalist visual communication"
+
+# SEO
+primary_keyword: "Napkin AI business visuals"
+seo_title: "Napkin AI Business Visuals: Text-to-Diagram AI Tool"
+meta_description: "Napkin AI business visuals turns plain text ideas into elegant diagrams instantly, ideal for brainstorming and presentations."
+excerpt: "Napkin AI business visuals converts text descriptions into structured diagrams and clear visual explanations for business communication, education, and ideation."
+cover_image: ""
 ---
 
 # Napkin.ai

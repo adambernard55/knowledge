@@ -1,13 +1,12 @@
 ---
-tool_name: Luma Dream Machine
-tool_category:
-  - Video Generation
-  - Creative Design
-  - Visual Storytelling
-tool_sub_cat:
-  - Text-to-Video Generation
-  - Motion Synthesis
-  - AI Cinematics
+title: "Luma Dream Machine: AI Cinematic Video Generation"
+id: SIE/REF/LUMADREAMMACHINE-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2025-12-13
+status: "Active"
+doc_type: "Reference"
+summary: "AI-powered text-to-video and image-to-video generator that creates high-quality, cinematic motion sequences from simple prompts."
 tags:
   - ai-video
   - text-to-video
@@ -15,18 +14,34 @@ tags:
   - motion-generation
   - filmmaking
   - generative-media
-ai_type:
-  - Video Generation
-  - Generative AI (Visual)
-primary_function: AI-powered text-to-video and image-to-video generator that creates high-quality, cinematic motion sequences from simple prompts.
-pricing_model: Freemium
-difficulty: Intermediate
-website: https://lumalabs.ai/dream-machine
-last_updated: 2025-12-13
-kb_status: published
-meta_description: "Luma Dream Machine is an advanced AI text-to-video generator that transforms written prompts or static images into high-quality, cinematic motion clips with natural movement and dynamic lighting."
-Keyword: "Luma Dream Machine text to video"
-Excerpt: "Luma Dream Machine generates cinematic video clips from text or images using generative AI, combining stunning visuals, realistic motion, and artistic direction into fully-rendered animations."
+relations:
+  - kb/TOOLS/image-video-generation/index.md
+aliases:
+  - Luma Dream Machine
+  - Luma Labs Dream Machine
+  - Dream Machine
+offering_name: "Luma Dream Machine"
+target_icp: "Filmmakers, content creators, and marketing teams seeking cinematic AI-generated video from text or image prompts"
+price_point: "Freemium (free credits for experimentation; paid plans expand generation time, resolution, and export options)"
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "Marketing"
+semantic_summary: "Luma Dream Machine is an advanced AI video generation model by Luma Labs that transforms text descriptions or still images into vivid, cinematic video sequences with film-quality rendering. It produces smooth realistic motion, fluid camera dynamics, and natural lighting, making it a leading text-to-video tool for creators and storytellers."
+synthetic_questions:
+  - "How does Luma Dream Machine generate video from text prompts or images?"
+  - "What cinematic features distinguish Luma Dream Machine from other AI video generators?"
+  - "What are the pricing options and generation limits for Luma Dream Machine?"
+key_concepts:
+  - text-to-video generation
+  - image-to-video animation
+  - cinematic ai motion synthesis
+  - natural camera movement simulation
+  - web-based video creation
+primary_keyword: "Luma Dream Machine"
+seo_title: "Luma Dream Machine: AI Text-to-Video Generator for Cinematic Content"
+meta_description: "Luma Dream Machine is an advanced AI text-to-video generator creating cinematic motion clips with natural movement and lighting."
+excerpt: "Luma Dream Machine generates cinematic video clips from text or images using generative AI, combining stunning visuals, realistic motion, and artistic direction."
+cover_image: ""
 ---
 
 # Luma Dream Machine

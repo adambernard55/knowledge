@@ -1,10 +1,54 @@
 ---
-tool_category: CRM Personalization
+title: "Conversica: AI-Powered Intelligent Virtual Assistants"
+id: SIE/REF/CONVERSICA-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2025-12-13
+status: "Active"
+doc_type: "Reference"
+summary: "Conversica provides AI-powered Intelligent Virtual Assistants that automate business conversations across the customer lifecycle for marketing, sales, and customer success teams."
 tags:
-  - Chatbots
-  - AI-Assistants
-  - Sales-Automation
-  - Marketing-Automation
+  - chatbots
+  - ai-assistants
+  - sales-automation
+  - marketing-automation
+  - crm
+  - conversational-ai
+relations:
+  - "kb/TOOLS/productivity-workflow/index.md"
+aliases:
+  - "Conversica"
+  - "Conversica IVA"
+
+# Domain Specifics
+offering_name: "Conversica"
+target_icp: "Enterprise and mid-market marketing, sales, and customer success teams seeking automated lead qualification and follow-up"
+price_point: "Subscription-based SaaS; custom enterprise pricing based on IVA count, conversation volume, and integrations"
+
+# Operational
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
+
+# AI/RAG
+semantic_summary: "Conversica delivers AI-powered Intelligent Virtual Assistants (IVAs) that conduct natural, two-way conversations via email, SMS, and web chat to qualify leads, schedule meetings, and nurture customer relationships. The platform integrates with major CRMs and provides analytics on engagement and conversation outcomes, freeing human teams for higher-value activities."
+synthetic_questions:
+  - "How can I automate lead qualification and follow-up conversations at scale?"
+  - "What AI tool can persistently follow up with leads via email and SMS without human intervention?"
+  - "How does Conversica integrate with CRM platforms like Salesforce and HubSpot?"
+key_concepts:
+  - "Intelligent Virtual Assistants (IVAs)"
+  - "Automated lead qualification"
+  - "Multi-channel engagement (email, SMS, web chat)"
+  - "CRM integration and lead routing"
+  - "Natural Language Understanding for conversational AI"
+
+# SEO
+primary_keyword: "Conversica AI virtual assistant"
+seo_title: "Conversica AI Virtual Assistant: Automated Lead Qualification & Follow-Up"
+meta_description: "Conversica AI virtual assistant automates lead qualification and follow-up via email, SMS, and chat for sales and marketing teams."
+excerpt: "Conversica AI virtual assistant provides intelligent virtual assistants that automate lead qualification, follow-up, and nurturing across email, SMS, and chat channels."
+cover_image: ""
 ---
 
 ## Conversica

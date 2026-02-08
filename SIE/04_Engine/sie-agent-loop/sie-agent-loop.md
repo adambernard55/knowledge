@@ -17,6 +17,7 @@ relations:
 aliases:
 last_updated: 2026-01-02
 tags:
+color: var(--mk-color-base-60)
 ---
 
 <% tp.file.cursor() %>

@@ -1,13 +1,12 @@
 ---
-tool_name: Hugging Face
-tool_category:
-  - Research Knowledge Agents
-  - AI Infrastructure
-  - Developer Tools
-tool_sub_cat:
-  - Model Repository
-  - Open-Source AI Hub
-  - API & Inference Services
+title: "Hugging Face: Open-Source AI Model Hub & Platform"
+id: SIE/REF/HUGGINGFACE-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2025-12-13
+status: "Active"
+doc_type: "Reference"
+summary: "Open-source platform hosting machine learning models, datasets, and inference tools used by AI developers and researchers globally."
 tags:
   - open-source
   - machine-learning
@@ -17,18 +16,45 @@ tags:
   - huggingface
   - api
   - inference
-ai_type:
-  - Foundational AI Repository
-  - Model Hosting Platform
-primary_function: Open-source platform hosting machine learning models, datasets, and inference tools used by AI developers and researchers globally.
-pricing_model: Freemium
-difficulty: Intermediate
-website: https://huggingface.co
-last_updated: 2025-12-13
-kb_status: published
-meta_description: "Hugging Face is the open-source hub for AI models, datasets, and tools — enabling developers to build, share, and deploy machine learning models across NLP, vision, and multimodal domains."
-Keyword: "Hugging Face AI platform"
-Excerpt: "Hugging Face is the largest open-source platform for hosting, sharing, and deploying AI models and datasets, empowering developers, researchers, and enterprises with accessible machine learning infrastructure."
+relations:
+  - kb/TOOLS/research-knowledge-agents/index.md
+aliases:
+  - Hugging Face
+  - Hugging Face AI platform
+  - HuggingFace
+
+# --- Domain Specifics (Tool) ---
+offering_name: "Hugging Face"
+target_icp: "AI developers, ML researchers, data scientists, and enterprises deploying or fine-tuning machine learning models"
+price_point: "Freemium (Free tier, Pro/Org plans, Enterprise with SLAs, usage-based API billing)"
+
+# --- Operational ---
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: >
+  Hugging Face is the de facto open-source hub for AI, hosting over 600,000 models, datasets,
+  and tools across NLP, vision, and multimodal domains. Its ecosystem includes the Transformers library,
+  Spaces for interactive demos, Inference API for production deployment, and AutoTrain for no-code fine-tuning.
+synthetic_questions:
+  - "What is the Hugging Face Model Hub and how many models does it host?"
+  - "How can I deploy a model using Hugging Face Inference Endpoints?"
+  - "What is the Transformers library used for?"
+key_concepts:
+  - "Model Hub"
+  - "Transformers Library"
+  - "Inference API"
+  - "Spaces"
+  - "Open-Source AI"
+
+# --- SEO & Publication ---
+primary_keyword: "Hugging Face AI platform"
+seo_title: "Hugging Face AI Platform: Open-Source Models, Datasets & Deployment"
+meta_description: "Hugging Face AI platform is the open-source hub for AI models, datasets, and tools for building and deploying machine learning."
+excerpt: "Hugging Face AI platform is the largest open-source hub for hosting, sharing, and deploying AI models and datasets for developers and researchers."
+cover_image: ""
 ---
 
 # Hugging Face

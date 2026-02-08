@@ -1,23 +1,48 @@
 ---
-title: Synthesia
-id: 20251212060000
-version: 2
-Author: Adam Bernard
-date: 2025-12-12
-tool_name: "Synthesia"
-tool_category: ["Image & Video Generation", "Marketing & Communication"]
-tool_sub_cat: ["AI Video Creation", "Avatar Generation", "Text-to-Video"]
-ai_type: ["Generative AI (Video)", "Text-to-Speech", "Visual AI"]
-primary_function: "AI video generator that creates professional videos featuring digital avatars speaking user-provided text."
-pricing_model: "Subscription"
-difficulty: "Beginner–Intermediate"
-website: "https://www.synthesia.io/"
-last_updated: 2025-12-12
-tags: ["video", "ai", "avatar", "marketing", "training", "text-to-video", "content-creation"]
-kb_status: "published"
-meta_description: "Synthesia is an AI video generation platform that allows users to create professional videos with realistic avatars and multilingual voiceovers, eliminating the need for cameras or actors."
-keyword: "AI video avatars, text-to-video, Synthesia, video generation"
-excerpt: "Synthesia enables users to create realistic AI avatar videos simply by typing text, making it ideal for training, marketing, and internal communications."
+title: "Synthesia: AI Avatar Video Generation"
+id: SIE/REF/SYNTHESIA-01
+version: "2"
+steward: "Adam Bernard"
+updated: 2025-12-12
+status: "Active"
+doc_type: "Reference"
+summary: "AI video generator that creates professional videos featuring digital avatars speaking user-provided text."
+tags:
+  - video
+  - ai
+  - avatar
+  - marketing
+  - training
+  - text-to-video
+  - content-creation
+relations:
+  - kb/TOOLS/image-video-generation/index.md
+aliases:
+  - Synthesia
+  - Synthesia AI
+  - Synthesia Video
+offering_name: "Synthesia"
+target_icp: "Corporate trainers, marketers, and communications teams needing scalable video production without cameras or actors"
+price_point: "Subscription (Starter ~$30/month; Business & Enterprise with higher limits and custom avatars)"
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "Marketing"
+semantic_summary: "Synthesia is an AI-powered video generation platform that produces professional studio-quality videos with lifelike digital avatars speaking custom scripts in 120+ languages. It eliminates the need for cameras, microphones, or actors, making it ideal for corporate training, product explainers, localized marketing, and internal communications at scale."
+synthetic_questions:
+  - "How does Synthesia create videos with AI avatars and what languages does it support?"
+  - "What are the pricing plans and video minute limits for Synthesia?"
+  - "What are the best corporate use cases for Synthesia AI video generation?"
+key_concepts:
+  - ai avatar video generation
+  - text-to-speech multilingual support
+  - scalable corporate video production
+  - custom avatar branding
+  - no-camera video creation
+primary_keyword: "Synthesia AI video"
+seo_title: "Synthesia AI Video: Professional Avatar Video Generation Platform"
+meta_description: "Synthesia AI video platform creates professional videos with realistic avatars and multilingual voiceovers, no cameras needed."
+excerpt: "Synthesia AI video generator enables users to create realistic avatar videos simply by typing text, ideal for training, marketing, and internal communications."
+cover_image: ""
 ---
 
 # Synthesia

@@ -1,22 +1,55 @@
 ---
-title: Buffer
-Author: Adam Bernard
-last_updated: 2025-12-08
-tool_category: Social Media
-category_id: social-media
-related_topics:
-  - social media management
-  - content scheduling
-  - marketing tools
-excerpt: A streamlined social media management platform for scheduling content, analyzing performance, and managing engagement, known for its simplicity and user-friendly interface.
-primary_keyword: buffer
+title: "Buffer: Social Media Scheduling & Analytics Platform"
+id: SIE/REF/BUFFER-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2025-12-08
+status: "Active"
+doc_type: "Reference"
+summary: "A streamlined social media management platform for scheduling content, analyzing performance, and managing engagement across multiple networks."
 tags:
   - social-media
   - scheduling
   - analytics
   - content-creation
   - marketing-tool
-meta_description: Discover Buffer, the intuitive social media management tool for scheduling posts, analyzing performance, and engaging your audience. Perfect for small businesses and creators.
+relations:
+  - kb/TOOLS/social-media/index.md
+aliases:
+  - Buffer
+
+# --- Domain Specifics (Tool) ---
+offering_name: "Buffer"
+target_icp: "Small businesses, creators, and marketing teams needing simple social media scheduling and analytics"
+price_point: "Freemium (Free plan for 3 channels, paid plans from ~$6/month per channel)"
+
+# --- Operational ---
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: >
+  Buffer is a user-friendly social media management platform that enables scheduling posts across
+  Instagram, Facebook, X, LinkedIn, Pinterest, TikTok, and Mastodon. It includes analytics, engagement
+  tools, a landing page builder (Start Page), and an AI Assistant for content ideation and repurposing.
+synthetic_questions:
+  - "What social media platforms does Buffer support?"
+  - "Does Buffer have a free plan and what does it include?"
+  - "How does Buffer's AI Assistant help with content creation?"
+key_concepts:
+  - "Social Media Scheduling"
+  - "Content Calendar"
+  - "Post Analytics"
+  - "AI Assistant"
+  - "Multi-Platform Management"
+
+# --- SEO & Publication ---
+primary_keyword: "buffer"
+seo_title: "Buffer: Social Media Management Tool for Scheduling and Analytics"
+meta_description: "Buffer is an intuitive social media management tool for scheduling posts, analyzing performance, and engaging your audience."
+excerpt: "Buffer is a streamlined social media management platform for scheduling content, analyzing performance, and managing engagement with a user-friendly interface."
+cover_image: ""
 ---
 # **Buffer**
 

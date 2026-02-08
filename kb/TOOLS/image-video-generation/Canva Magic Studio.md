@@ -1,14 +1,12 @@
 ---
-tool_name: Canva Magic Studio
-tool_category:
-  - Content Creation
-  - Social Media
-  - Productivity & Workflow
-tool_sub_cat:
-  - Graphic Design
-  - Image Generation
-  - Video Editing
-  - Presentation Design
+title: "Canva Magic Studio: All-in-One AI Design Platform"
+id: SIE/REF/CANVAMAGICSTUDIO-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2025-10-15
+status: "Active"
+doc_type: "Reference"
+summary: "All-in-one visual design platform with AI-assisted features for graphic design, image generation, video editing, and presentations."
 tags:
   - graphic-design
   - social-media-graphics
@@ -18,16 +16,34 @@ tags:
   - presentations
   - freemium
   - collaboration
-ai_type:
-  - Generative AI (Image)
-  - Generative AI (Text)
-  - AI Editing
-primary_function: All-in-one visual design platform with AI-assisted features
-pricing_model: Freemium
-difficulty: Beginner
-website: https://www.canva.com/
-last_updated: 2025-10-15
-kb_status: published
+relations:
+  - kb/TOOLS/image-video-generation/index.md
+aliases:
+  - Canva Magic Studio
+  - Canva
+  - Canva AI
+offering_name: "Canva Magic Studio"
+target_icp: "Marketers, social media managers, and teams without dedicated designers needing professional visual content"
+price_point: "Freemium (Free tier with robust features; Canva Pro & Teams unlock premium AI tools and Brand Kit)"
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "Marketing"
+semantic_summary: "Canva Magic Studio is a comprehensive online design platform integrating AI-powered tools like Magic Write, Magic Edit, AI Image Generator, and Magic Design to streamline visual content creation. It democratizes design for users of all skill levels with drag-and-drop editing, vast template libraries, and brand consistency features ideal for marketing and internal communications."
+synthetic_questions:
+  - "What AI-powered features does Canva Magic Studio offer for content creation?"
+  - "How does Canva Magic Studio pricing work across free and paid tiers?"
+  - "What marketing use cases is Canva Magic Studio best suited for?"
+key_concepts:
+  - ai-assisted graphic design
+  - magic write text generation
+  - brand kit consistency
+  - template-based content creation
+  - collaborative design platform
+primary_keyword: "Canva Magic Studio"
+seo_title: "Canva Magic Studio: AI-Powered Design Platform for Marketing Teams"
+meta_description: "Canva Magic Studio is an all-in-one AI design platform with Magic Write, image generation, and templates for marketing teams."
+excerpt: "Canva Magic Studio is an all-in-one visual design platform with AI-assisted features including Magic Write, image generation, and templates for marketers and teams."
+cover_image: ""
 ---
 
 # Canva Magic Studio
@@ -71,3 +87,5 @@ Canva operates on a **freemium** model.
 ## Expert Notes
 
 Canva excels at democratizing design, making it an essential tool for marketers and teams without dedicated designers. While its AI features are powerful assistants, outputs (especially from Magic Write and the Image Generator) should be reviewed for brand alignment and accuracy. The Brand Kit is a non-negotiable feature for any organization focused on maintaining brand consistency.
+
+**Direct Link:** [https://www.canva.com/](https://www.canva.com/)

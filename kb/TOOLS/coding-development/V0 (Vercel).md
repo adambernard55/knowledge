@@ -1,23 +1,50 @@
 ---
-title: V0 (Vercel)
-id: 20251212063000
-version: 1
-Author: Adam Bernard
-date: 2025-12-12
-tool_name: "V0 (Vercel)"
-tool_category: ["Coding & Development", "Design & UI"]
-tool_sub_cat: ["Code Generation", "Frontend Development", "Web Design Automation"]
-ai_type: ["Generative AI (Code)", "Frontend Automation"]
-primary_function: "Generates production-ready React and Tailwind components directly from natural language prompts."
-pricing_model: "Freemium"
-difficulty: "Beginner–Intermediate"
-website: "https://v0.dev/"
-last_updated: 2025-12-12
-tags: ["ai", "code-generation", "frontend", "tailwind", "react", "vercel", "design", "web-development"]
-kb_status: "published"
-meta_description: "V0 by Vercel is an AI-powered code generation tool that turns English prompts into production-ready React and Tailwind components for developers and designers."
-keyword: "V0, Vercel, AI code generation, Tailwind, React UI builder"
-Excerpt: "V0 by Vercel is an AI code generator that instantly transforms text prompts into clean, production-ready React and Tailwind code — built for speed, design, and deployment."
+title: "V0 (Vercel): AI-Powered React & Tailwind Component Generator"
+id: "SIE/REF/V0VERCEL-01"
+version: "1.0"
+steward: "Adam Bernard"
+updated: "2025-12-12"
+status: "Active"
+doc_type: "Reference"
+summary: "Generates production-ready React and Tailwind components directly from natural language prompts within the Vercel ecosystem."
+tags:
+  - ai
+  - code-generation
+  - frontend
+  - tailwind
+  - react
+  - vercel
+  - design
+  - web-development
+relations:
+  - "kb/TOOLS/coding-development/index.md"
+aliases:
+  - "V0 (Vercel)"
+  - "V0"
+  - "V0.dev"
+  - "https://v0.dev/"
+offering_name: "V0 (Vercel)"
+target_icp: "Frontend Developers, Web Designers, React/Next.js Developers"
+price_point: "Freemium"
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
+semantic_summary: "V0 is an AI-powered code generation tool by Vercel that converts natural language descriptions into working React and Tailwind UI components. It integrates with the Vercel/Next.js ecosystem, providing visual previews, editable output, and instant deployment capabilities for modern frontend development."
+synthetic_questions:
+  - "How does V0 by Vercel generate React components from text prompts?"
+  - "What frameworks and design systems does V0 support?"
+  - "Can V0 deploy generated components directly to Vercel?"
+key_concepts:
+  - "Natural Language to UI"
+  - "React + Tailwind Code Generation"
+  - "ShadCN Integration"
+  - "Visual Preview Editor"
+  - "Vercel Deployment Pipeline"
+primary_keyword: "V0 Vercel"
+seo_title: "V0 by Vercel: AI Code Generator for React & Tailwind Components"
+meta_description: "V0 by Vercel is an AI tool that turns English prompts into production-ready React and Tailwind components for developers."
+excerpt: "V0 by Vercel is an AI code generator that instantly transforms text prompts into clean, production-ready React and Tailwind code, built for speed, design, and deployment."
+cover_image: ""
 ---
 
 # V0 (Vercel)

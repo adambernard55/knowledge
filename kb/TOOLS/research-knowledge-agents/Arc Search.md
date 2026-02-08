@@ -1,24 +1,56 @@
 ---
-title: Arc Search
-id: 20251213054336
-version: 1
-Author: Adam Bernard
-steward:
-date: 2025-12-13
-tool_name: "Arc Search"
-tool_category: ["Research Knowledge Agents", "Search Engine"]
-primary_function: "An AI-powered browser and search engine that delivers summarised answers and a fast, privacy-focused web experience."
-ai_type: ["LLM", "Conversational Search"]
-pricing_model: "Free"
-difficulty: "Beginner"
-website: "https://arc.net/search"
-last_updated: 2025-12-13
-Meta Description: "Arc Search is an AI-powered browser and search engine that summarizes information from across the web — offering a fast, private, and distraction-free research experience powered by The Browser Company."
+title: "Arc Search: AI-Powered Browser & Search Engine"
+id: SIE/REF/ARCSEARCH-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2025-12-13
+status: "Active"
+doc_type: "Reference"
+summary: "An AI-powered browser and search engine that delivers summarized answers and a fast, privacy-focused web experience."
+tags:
+  - tool
+  - ai
+  - browser
+  - research
+  - search
+relations:
+  - kb/TOOLS/research-knowledge-agents/index.md
+aliases:
+  - Arc Search
+  - Arc Search AI
 
-Primary_Keyword: "Arc Search AI"
+# --- Domain Specifics (Tool) ---
+offering_name: "Arc Search"
+target_icp: "Productivity-focused users, researchers, and content creators seeking fast, private, distraction-free web search"
+price_point: "Free"
 
-Excerpt: "Arc Search is an AI-first browser and search engine that combines web browsing, research, and summarization in one tool. Its 'Browse for Me' feature instantly compiles key insights from multiple sources into a clean, verified summary — perfect for fast, focused discovery."
-tags: ["tool", "ai", "browser", "research", "search"]
+# --- Operational ---
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: >
+  Arc Search is an AI-first browser and search engine by The Browser Company that merges browsing,
+  search, and AI summarization into one experience. Its Browse for Me feature compiles key insights
+  from multiple sources into clean summaries, prioritizing privacy and minimal design.
+synthetic_questions:
+  - "What is Arc Search's Browse for Me feature?"
+  - "How does Arc Search differ from Perplexity?"
+  - "Is Arc Search free to use?"
+key_concepts:
+  - "AI Summarization"
+  - "Browse for Me"
+  - "Privacy-Focused Search"
+  - "Unified Browser and Search"
+  - "The Browser Company"
+
+# --- SEO & Publication ---
+primary_keyword: "Arc Search AI"
+seo_title: "Arc Search AI: AI-First Browser with Summarized Search Results"
+meta_description: "Arc Search AI is an AI-powered browser and search engine offering fast, private, summarized research powered by The Browser Company."
+excerpt: "Arc Search AI is an AI-first browser and search engine combining browsing, research, and summarization with its Browse for Me feature for fast, focused discovery."
+cover_image: ""
 ---
 
 # [[Arc Search]]
@@ -44,3 +76,5 @@ Arc Search is an AI-first web browser and search engine created by The Browser C
 
 ## Expert Notes
 Arc Search builds on the trend of AI-powered retrieval seen in tools like [[Perplexity]], but with a design-forward browser experience. It simplifies the research process by merging **browsing**, **search**, and **AI summarization**, making it ideal for users who value both speed and clean interface design.
+
+**Direct Link:** [https://arc.net/search](https://arc.net/search)

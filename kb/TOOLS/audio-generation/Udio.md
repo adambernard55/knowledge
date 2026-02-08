@@ -1,13 +1,12 @@
 ---
-tool_name: Udio
-tool_category:
-  - Audio Generation
-  - Music Creation
-  - Creative AI
-tool_sub_cat:
-  - Text-to-Music Generation
-  - Audio Composition
-  - AI Songwriting
+title: "Udio: AI Music Generation Platform"
+id: SIE/REF/UDIO-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2025-12-13
+status: "Active"
+doc_type: "Reference"
+summary: "AI-powered music generation tool that creates full-length, studio-quality songs from text prompts or lyrics."
 tags:
   - ai-music
   - generative-audio
@@ -15,18 +14,41 @@ tags:
   - song-creation
   - creative-ai
   - audio-generation
-ai_type:
-  - Generative AI (Audio)
-  - Music Generation
-primary_function: AI-powered music generation tool that creates full-length, studio-quality songs from text prompts or lyrics.
-pricing_model: Freemium
-difficulty: Beginner
-website: https://www.udio.com
-last_updated: 2025-12-13
-kb_status: published
-meta_description: "Udio is an advanced AI music generator that composes full songs — including vocals, melodies, and instrumentals — from a simple text prompt, rivaling Suno in audio quality and realism."
-Keyword: "Udio AI music generator"
-Excerpt: "Udio generates full-length, high-quality songs using generative AI. It combines realistic vocals, complex melody structures, and professional mixing to produce production-ready music in seconds."
+relations:
+  - "kb/TOOLS/audio-generation/index.md"
+aliases:
+  - "Udio"
+  - "Udio AI"
+
+# Domain Specifics
+offering_name: "Udio"
+target_icp: "Music producers, content creators, game developers, filmmakers, and marketers needing custom AI-generated music"
+price_point: "Freemium; paid plans ~$10-$30/month for higher-quality exports, extended tracks, and commercial rights"
+
+# Operational
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
+
+# AI/RAG
+semantic_summary: "Udio is a state-of-the-art AI music generation platform developed by former Google DeepMind researchers that creates complete songs including vocals, lyrics, melody, and instrumentation from simple text prompts. It supports multiple genres with studio-quality mixing and offers audio continuation for building multi-verse structures."
+synthetic_questions:
+  - "What AI tool can generate full songs with vocals and instrumentals from a text prompt?"
+  - "How does Udio compare to Suno for AI music generation?"
+  - "Can I create commercial-use music using AI without instruments or audio engineering skills?"
+key_concepts:
+  - "Text-to-music generation"
+  - "AI vocal performance"
+  - "Multi-genre composition"
+  - "Studio-quality automated mixing"
+  - "Audio continuation and track extension"
+
+# SEO
+primary_keyword: "Udio AI music generator"
+seo_title: "Udio AI Music Generator: Create Full Songs from Text Prompts"
+meta_description: "Udio AI music generator composes full songs with vocals, melodies, and instrumentals from a simple text prompt."
+excerpt: "Udio AI music generator generates full-length, high-quality songs using generative AI, combining realistic vocals, complex melody structures, and professional mixing."
+cover_image: ""
 ---
 
 # Udio

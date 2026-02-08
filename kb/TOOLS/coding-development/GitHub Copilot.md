@@ -1,24 +1,46 @@
 ---
-title: GitHub Copilot
-id: 20251209052545
-version: 1
-Author: Adam Bernard
-steward:
-date: 2025-12-09
-tool_name: "GitHub Copilot"
-tool_category: ["Coding & Development"]
-primary_function: "An AI pair programmer that offers autocomplete-style suggestions as you code."
-ai_type: ["Code Generation", "Code Completion"]
-pricing_model: "Subscription"
-difficulty: "Beginner"
-website: "https://github.com/features/copilot"
-Excerpt: "GitHub Copilot is the industry-standard AI pair programmer that integrates directly into your code editor to provide real-time code suggestions, generate entire functions from comments, and accelerate the development process."
-Meta Description: "Learn about GitHub Copilot, the AI-powered code completion tool from GitHub and OpenAI. Speed up your programming workflow with intelligent suggestions in VS Code, JetBrains, and more."
-Primary_Keyword: "GitHub Copilot"
+title: "GitHub Copilot: AI Pair Programmer & Developer Platform"
+id: "SIE/REF/GITHUBCOPILOT-01"
+version: "1.0"
+steward: "Adam Bernard"
+updated: "2025-12-09"
+status: "Active"
+doc_type: "Reference"
+summary: "An AI pair programmer and developer platform that offers multi-model code completion, agentic workflows, and security remediation across major IDEs."
+tags:
+  - tool
+  - ai
+  - coding
+  - development
+  - github
 relations:
+  - "kb/TOOLS/coding-development/index.md"
 aliases:
-last_updated: 2025-12-09
-tags: ["tool", "ai", "coding", "development", "github"]
+  - "GitHub Copilot"
+  - "Copilot"
+  - "https://github.com/features/copilot"
+offering_name: "GitHub Copilot"
+target_icp: "Software Developers, Engineering Teams, Enterprise Organizations"
+price_point: "Subscription"
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
+semantic_summary: "GitHub Copilot is the industry-leading AI developer platform that integrates directly into the software development lifecycle. It has evolved from a simple code completion tool into a comprehensive suite featuring multi-model choice (Claude, Gemini, OpenAI), Copilot Workspace for agentic issue-to-PR workflows, and Copilot Autofix for security remediation."
+synthetic_questions:
+  - "What AI models does GitHub Copilot support and how do you switch between them?"
+  - "How does Copilot Workspace automate the issue-to-pull-request workflow?"
+  - "What IDEs and environments does GitHub Copilot support?"
+key_concepts:
+  - "Multi-Model AI Choice"
+  - "Copilot Workspace"
+  - "Next Edit Suggestions"
+  - "Copilot Autofix"
+  - "AI Pair Programming"
+primary_keyword: "GitHub Copilot"
+seo_title: "GitHub Copilot: The AI-Powered Pair Programmer for Developers"
+meta_description: "Learn about GitHub Copilot, the AI-powered code completion tool from GitHub. Speed up your workflow in VS Code, JetBrains, and more."
+excerpt: "GitHub Copilot is the industry-standard AI pair programmer that integrates into your code editor to provide real-time code suggestions, generate functions, and accelerate development."
+cover_image: ""
 ---
 
 # [[GitHub Copilot]]

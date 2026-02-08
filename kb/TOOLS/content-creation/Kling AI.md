@@ -1,12 +1,12 @@
 ---
-tool_name: Kling AI
-tool_category:
-  - Content Creation
-  - Social Media
-  - Specialized / Niche
-tool_sub_cat:
-  - Video Generation
-  - AI Video
+title: "Kling AI: Text-to-Video Generation Model"
+id: SIE/REF/KLINGAI-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2025-12-11
+status: "Active"
+doc_type: "Reference"
+summary: "A state-of-the-art AI model for generating high-fidelity, realistic videos from text prompts."
 tags:
   - video-generation
   - ai-video
@@ -14,17 +14,45 @@ tags:
   - generative-ai
   - sora-competitor
   - kuaishou
-ai_type:
-  - Generative AI (Video)
-primary_function: A state-of-the-art AI model for generating high-fidelity, realistic videos from text prompts.
-pricing_model: Waitlist / Freemium
-difficulty: Beginner
-website: https://kling.kuaishou.com/
-last_updated: 2025-12-11
-kb_status: published
-meta_description: Discover Kling AI, the state-of-the-art text-to-video model from Kuaishou, known for generating stunningly realistic video with complex motion, rivaling OpenAI's Sora.
-Keyword: Kling AI Video
-Excerpt: Kling AI is a leading text-to-video generation model developed by Kuaishou, setting a new standard for realistic motion, physical accuracy, and high-fidelity output in AI-generated video content.
+relations:
+  - kb/TOOLS/content-creation/index.md
+aliases:
+  - Kling AI
+  - Kling
+  - Kuaishou Kling
+
+# --- Domain Specifics (Tool) ---
+offering_name: "Kling AI"
+target_icp: "Video creators, marketers, and film/advertising professionals"
+price_point: "Waitlist / Freemium - expected credit-based freemium or subscription model"
+
+# --- Operational ---
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "Marketing"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: >
+  Kling AI is a powerful text-to-video model developed by Kuaishou Technology that generates high-quality,
+  cinematic video clips with exceptionally realistic motion and physics simulation. It competes directly
+  with OpenAI's Sora and supports both text-to-video and image-to-video generation at up to 1080p resolution.
+synthetic_questions:
+  - "What AI tool can generate realistic videos from text descriptions?"
+  - "How does Kling AI compare to OpenAI's Sora for video generation?"
+  - "Can Kling AI generate videos from both text and images?"
+key_concepts:
+  - "Text-to-video generation"
+  - "Physics simulation in AI video"
+  - "High-fidelity 1080p output"
+  - "Image-to-video conversion"
+  - "Cinematic AI content creation"
+
+# --- SEO & Publication ---
+primary_keyword: "Kling AI Video"
+seo_title: "Kling AI Video: State-of-the-Art Text-to-Video Generation"
+meta_description: "Discover Kling AI Video, the text-to-video model from Kuaishou generating stunningly realistic video with complex motion, rivaling Sora."
+excerpt: "Kling AI Video is a leading text-to-video generation model by Kuaishou, setting a new standard for realistic motion and high-fidelity AI-generated video."
+cover_image: ""
 ---
 
 # Kling AI

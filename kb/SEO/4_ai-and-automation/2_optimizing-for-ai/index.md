@@ -20,8 +20,8 @@ This section covers the strategic shift required to succeed in a search landscap
 ```dataview
 TABLE WITHOUT ID
   file.link as "Topic",
-  summary as "Description",
-  difficulty as "Difficulty"
+  semantic_summary as "Semantic Summary",
+  key_concepts as "Key Concepts"
 FROM "kb/SEO/4_ai-and-automation/2_optimizing-for-ai"
 WHERE file.name != "index.md"
 SORT file.name ASC

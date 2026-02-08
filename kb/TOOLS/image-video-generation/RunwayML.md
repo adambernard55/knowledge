@@ -1,3 +1,50 @@
+---
+title: "RunwayML: AI Creative Suite for Video and Image Generation"
+id: SIE/REF/RUNWAYML-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2026-02-08
+status: "Active"
+doc_type: "Reference"
+summary: "AI-powered creative suite offering tools for video editing, image generation, and generative visual effects for artists, designers, and filmmakers."
+tags:
+  - ai-video
+  - video-editing
+  - image-generation
+  - generative-ai
+  - creative-suite
+  - filmmaking
+  - visual-effects
+relations:
+  - kb/TOOLS/image-video-generation/index.md
+aliases:
+  - RunwayML
+  - Runway ML
+  - Runway
+offering_name: "RunwayML"
+target_icp: "Artists, designers, and filmmakers seeking AI-driven creative tools for video generation and visual effects"
+price_point: "Freemium (Free tier with limited credits; Standard/Pro/Unlimited/Enterprise from ~$12-$15/user/month annually)"
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "Marketing"
+semantic_summary: "RunwayML is an AI-powered creative suite providing a wide range of tools for video editing, text-to-video generation (Gen-1/Gen-2), image generation, background removal, inpainting, and experimental AI visual effects through a web-based interface. It is a leading platform for AI-driven creative experimentation, particularly strong in video generation and manipulation for high-impact campaigns."
+synthetic_questions:
+  - "What are RunwayML's Gen-1 and Gen-2 capabilities for video generation?"
+  - "How does RunwayML pricing work across its free and paid subscription plans?"
+  - "What practical video editing and visual effects tools does RunwayML offer?"
+key_concepts:
+  - text-to-video generation (gen-2)
+  - style transfer for video (gen-1)
+  - ai background removal and inpainting
+  - web-based creative ai suite
+  - generative visual effects
+primary_keyword: "RunwayML"
+seo_title: "RunwayML: AI Video Generation and Creative Suite for Filmmakers"
+meta_description: "RunwayML is an AI creative suite for video editing, text-to-video generation, and visual effects for artists and filmmakers."
+excerpt: "RunwayML is an AI-powered creative suite offering video generation, image creation, and experimental visual effects tools for artists, designers, and filmmakers."
+cover_image: ""
+---
+
 # RunwayML
 
 Runway is an AI-powered creative suite offering a wide range of tools for video editing, image generation, and other AI magic, primarily targeting artists, designers, and filmmakers. It provides access to various cutting-edge generative AI models through a web-based interface.

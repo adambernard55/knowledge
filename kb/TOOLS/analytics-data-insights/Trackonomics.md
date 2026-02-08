@@ -1,12 +1,12 @@
 ---
-title: Trackonomics
-id: 20251231123000
+title: "Trackonomics: Enterprise Affiliate Analytics & Attribution"
+id: SIE/REF/TRACKONOMICS-01
 version: "2.0"
-steward: Adam Bernard
+steward: "Adam Bernard"
 updated: 2025-12-31
-status: Active
-doc_type: Reference
-summary: A comprehensive affiliate marketing analytics platform that aggregates data, automates link generation, and provides revenue attribution for publishers.
+status: "Active"
+doc_type: "Reference"
+summary: "A comprehensive affiliate marketing analytics platform that aggregates data, automates link generation, and provides revenue attribution for publishers."
 tags:
   - affiliate-marketing
   - analytics
@@ -14,25 +14,27 @@ tags:
   - revenue-attribution
   - automation
   - publisher-tools
-relations: []
+relations:
+  - kb/TOOLS/analytics-data-insights/index.md
 aliases:
+  - Trackonomics
   - Trackonomics by impact.com
   - Funnel Relay
 
 # --- Domain Specifics (Tool) ---
-tool_name: "Trackonomics"
-tool_category: ["Analytics & Data Insights", "Affiliate Marketing"]
-tool_sub_cat: ["Data Aggregation", "Revenue Attribution", "Link Automation"]
-ai_type: ["NLP (Categorization)", "Data Analytics"]
-primary_function: "Aggregates affiliate data across networks and provides granular revenue attribution to optimize content monetization."
-pricing_model: "Custom / Enterprise"
-difficulty: "Intermediate"
-website: "https://trackonomics.net/"
+offering_name: "Trackonomics"
+target_icp: "Large-scale content publishers, affiliate agencies, and enterprise media companies managing multi-network affiliate programs"
+price_point: "Custom / Enterprise (~$16,000-$29,000/year, no free tier)"
+
+# --- Operational ---
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
 
 # --- AI & RAG Enhancement ---
 semantic_summary: >
-  Trackonomics (acquired by impact.com) is a data management platform (DMP) designed for large-scale content publishers. 
-  It aggregates data from over 100 affiliate networks into a single dashboard and utilizes its 'Funnel Relay' technology 
+  Trackonomics (acquired by impact.com) is a data management platform (DMP) designed for large-scale content publishers.
+  It aggregates data from over 100 affiliate networks into a single dashboard and utilizes its 'Funnel Relay' technology
   to provide page-level and link-level revenue attribution. It also features automated link generation and broken link detection.
 synthetic_questions:
   - "How does Trackonomics attribute revenue to specific articles?"
@@ -48,8 +50,9 @@ key_concepts:
 # --- SEO & Publication ---
 primary_keyword: "Trackonomics"
 seo_title: "Trackonomics Review: Enterprise Affiliate Analytics & Attribution"
-meta_description: "Trackonomics is an affiliate marketing analytics platform that aggregates data, tracks revenue attribution, and automates link generation for publishers."
+meta_description: "Trackonomics is an affiliate marketing analytics platform that aggregates data, tracks revenue attribution, and automates link generation."
 excerpt: "Trackonomics helps publishers scale affiliate revenue through data aggregation, automated link management, and granular revenue attribution."
+cover_image: ""
 ---
 
 # Trackonomics

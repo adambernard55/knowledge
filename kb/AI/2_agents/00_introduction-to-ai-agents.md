@@ -40,6 +40,8 @@ key_concepts:
   - "LLM"
   - "Tools"
   - "Memory"
+primary_keyword: "ai agents"
+meta_description: "Learn what AI agents are, how they differ from chatbots, their core architecture including ReAct framework, and key components like LLMs, tools, and memory."
 ---
 
 # Introduction to AI Agents

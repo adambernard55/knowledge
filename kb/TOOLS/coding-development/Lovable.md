@@ -1,12 +1,12 @@
 ---
-tool_name: Lovable
-tool_category:
-  - Coding & Development
-  - Image, Video & Design
-tool_sub_cat:
-  - UI/UX Generation
-  - Web App Generation
-  - No-Code / Low-Code
+title: "Lovable: Design-First AI Frontend Builder"
+id: "SIE/REF/LOVABLE-01"
+version: "1.0"
+steward: "Adam Bernard"
+updated: "2025-12-11"
+status: "Active"
+doc_type: "Reference"
+summary: "An AI agent that translates visual designs, mockups, and aesthetic descriptions into functional frontend code."
 tags:
   - ui-ux
   - design-first
@@ -17,18 +17,34 @@ tags:
   - generative-ai
   - frontend-development
   - founder-tool
-ai_type:
-  - Generative AI (Code)
-  - Generative AI (Image)
-primary_function: An AI agent that translates visual designs, mockups, and "vibes" into functional frontend code.
-pricing_model: Freemium / Subscription
-difficulty: Beginner
-website: https://lovable.dev/
-last_updated: 2025-12-11
-kb_status: published
-meta_description: Build beautiful, functional web apps with Lovable, the AI tool that turns your designs, mockups, and even "vibes" into production-ready frontend code. Perfect for founders and designers.
-Keyword: Lovable AI
-Excerpt: Lovable is a "design-first" AI coding assistant that excels at translating visual concepts into functional web applications. It's the ideal tool for non-technical founders and designers who prioritize UI/UX, allowing them to build high-fidelity prototypes and frontends from a simple description or mockup.
+relations:
+  - "kb/TOOLS/coding-development/index.md"
+aliases:
+  - "Lovable"
+  - "Lovable AI"
+  - "https://lovable.dev/"
+offering_name: "Lovable"
+target_icp: "Non-Technical Founders, UI/UX Designers, Product Managers"
+price_point: "Freemium / Subscription"
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
+semantic_summary: "Lovable is a design-first AI development tool that specializes in translating visual concepts, mockups, Figma files, and even abstract aesthetic descriptions into functional, high-fidelity web application frontends. It is optimized for founders, designers, and product managers who prioritize user interface and experience."
+synthetic_questions:
+  - "How does Lovable convert designs and mockups into working code?"
+  - "Can Lovable generate frontend code from a text description of a UI?"
+  - "What makes Lovable different from code-first AI tools like Bolt.new?"
+key_concepts:
+  - "Design-to-Code Conversion"
+  - "Vibe-Based UI Generation"
+  - "Component-Based Architecture"
+  - "Production-Ready Code Export"
+  - "Natural Language UI Editing"
+primary_keyword: "Lovable AI"
+seo_title: "Lovable AI: Turn Designs and Mockups into Production-Ready Frontend Code"
+meta_description: "Build beautiful web apps with Lovable AI, the tool that turns designs, mockups, and vibes into production-ready frontend code."
+excerpt: "Lovable AI is a design-first coding assistant that translates visual concepts into functional web apps, ideal for non-technical founders and designers who prioritize UI/UX."
+cover_image: ""
 ---
 
 # Lovable

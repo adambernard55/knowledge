@@ -1,12 +1,12 @@
 ---
-title: SmartWriter.ai
-id: 20251231122500
+title: "SmartWriter.ai: AI-Powered Personalized Cold Outreach"
+id: SIE/REF/SMARTWRITER-01
 version: "2.0"
-steward: Adam Bernard
+steward: "Adam Bernard"
 updated: 2025-12-31
-status: Active
-doc_type: Reference
-summary: An AI-powered platform focused on generating hyper-personalized copy for cold email outreach and LinkedIn messages to increase response rates.
+status: "Active"
+doc_type: "Reference"
+summary: "An AI-powered platform focused on generating hyper-personalized copy for cold email outreach and LinkedIn messages to increase response rates."
 tags:
   - ai
   - email-marketing
@@ -16,27 +16,29 @@ tags:
   - cold-email
   - linkedin
 relations:
+  - kb/TOOLS/marketing-automation/index.md
   - kb/TOOLS/content-creation/Copy.ai.md
   - kb/TOOLS/content-creation/Rytr.md
 aliases:
+  - SmartWriter.ai
   - Smartwriter
   - Smart Writer AI
 
 # --- Domain Specifics (Tool) ---
-tool_name: "SmartWriter.ai"
-tool_category: ["Marketing & Communications", "Sales Automation"]
-tool_sub_cat: ["Email Marketing", "Personalization", "Cold Outreach"]
-ai_type: ["Generative AI (Text)", "Data Enrichment"]
-primary_function: "Automates hyper-personalized cold email and LinkedIn outreach by analyzing prospect data to generate unique icebreakers."
-pricing_model: "Subscription"
-difficulty: "Intermediate"
-website: "https://www.smartwriter.ai/"
+offering_name: "SmartWriter.ai"
+target_icp: "Sales teams (SDR/BDR), recruiters, SEO agencies, and B2B marketers running personalized cold outreach campaigns"
+price_point: "Subscription (Basic ~$49/month, Popular ~$124/month, Pro ~$299/month, 7-day free trial)"
+
+# --- Operational ---
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
 
 # --- AI & RAG Enhancement ---
 semantic_summary: >
-  SmartWriter.ai is a specialized AI tool designed for sales and marketing outreach. 
-  It uses machine learning to analyze prospect data from LinkedIn, news articles, and company websites 
-  to generate hyper-personalized icebreakers and email bodies. Its primary goal is to improve 
+  SmartWriter.ai is a specialized AI tool designed for sales and marketing outreach.
+  It uses machine learning to analyze prospect data from LinkedIn, news articles, and company websites
+  to generate hyper-personalized icebreakers and email bodies. Its primary goal is to improve
   response rates for cold emails and LinkedIn messages by moving beyond generic personalization.
 synthetic_questions:
   - "How does SmartWriter.ai personalize cold emails?"
@@ -54,6 +56,7 @@ primary_keyword: "SmartWriter.ai"
 seo_title: "SmartWriter.ai Review: AI Tool for Personalized Cold Email Outreach"
 meta_description: "SmartWriter.ai automates hyper-personalized cold emails and LinkedIn messages using AI to research prospects and boost response rates."
 excerpt: "SmartWriter.ai is an AI tool that automates personalized cold outreach by researching prospects to create unique icebreakers and email copy."
+cover_image: ""
 ---
 
 # SmartWriter.ai

@@ -1,3 +1,50 @@
+---
+title: "Lexica Art: AI Image Generation and Search Engine"
+id: SIE/REF/LEXICAART-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2026-02-08
+status: "Active"
+doc_type: "Reference"
+summary: "AI image generation platform and search engine that creates unique images from text prompts and provides a searchable gallery of AI-generated art with corresponding prompts."
+tags:
+  - ai-image-generation
+  - text-to-image
+  - prompt-discovery
+  - stable-diffusion
+  - creative-ai
+  - freemium
+  - search-engine
+relations:
+  - kb/TOOLS/image-video-generation/index.md
+aliases:
+  - Lexica Art
+  - Lexica
+  - Lexica.art
+offering_name: "Lexica Art"
+target_icp: "Content creators, marketers, and designers seeking AI image generation with prompt discovery and inspiration tools"
+price_point: "Freemium (Free tier with limited generations; Starter/Pro/Max from ~$8-$10/month)"
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "Marketing"
+semantic_summary: "Lexica Art is a dual-function AI platform combining text-to-image generation using Stable Diffusion models with a powerful search engine for discovering existing AI-generated images and their prompts. It supports multiple artistic styles, negative prompts, aspect ratio control, and community galleries, making it valuable for both creating original visuals and learning prompt engineering techniques."
+synthetic_questions:
+  - "How does Lexica Art combine image generation with AI image search capabilities?"
+  - "What are the pricing tiers and generation limits for Lexica Art plans?"
+  - "How can marketers use Lexica Art for prompt discovery and visual content creation?"
+key_concepts:
+  - text-to-image generation
+  - ai image search engine
+  - prompt discovery and engineering
+  - stable diffusion models
+  - community-driven ai art gallery
+primary_keyword: "Lexica Art"
+seo_title: "Lexica Art: AI Image Generator and Prompt Search Engine"
+meta_description: "Lexica Art is an AI image generation platform and search engine for creating visuals and discovering prompts."
+excerpt: "Lexica Art is an AI image generation platform and search engine that creates unique images from text prompts and provides prompt discovery for learning."
+cover_image: ""
+---
+
 ## **Lexica Art**
 
 **Primary Category(ies):** Content Creation (Image)

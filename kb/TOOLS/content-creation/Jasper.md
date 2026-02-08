@@ -1,27 +1,12 @@
 ---
-title: Jasper
-id: 202510151314
-version: 2
-Author: Adam Bernard
-date: 2025-12-13
-tool_name: "Jasper"
-tool_category:
-  - Content Creation
-  - SEO Optimization
-  - Social Media
-tool_sub_cat:
-  - Blog Writing
-  - Copywriting
-  - AI Art Generation
-  - Brand Voice
-primary_function: "An AI-powered writing assistant for marketing copy, blog content, and social media posts with customizable brand voice and long-form capabilities."
-ai_type:
-  - Generative AI (Text)
-  - Generative AI (Image)
-pricing_model: Subscription
-difficulty: Beginner
-website: "https://www.jasper.ai/"
-last_updated: 2025-12-13
+title: "Jasper: AI-Powered Marketing Content Platform"
+id: SIE/REF/JASPER-01
+version: "2"
+steward: "Adam Bernard"
+updated: 2025-12-13
+status: "Active"
+doc_type: "Reference"
+summary: "An AI-powered writing assistant for marketing copy, blog content, and social media posts with customizable brand voice and long-form capabilities."
 tags:
   - copywriting
   - blogging
@@ -33,10 +18,45 @@ tags:
   - automation
   - content
   - image-generation
-kb_status: published
-meta_description: "Jasper is an AI writing assistant that helps marketers, creators, and teams produce high-quality, on-brand content and visuals for blogs, ads, and social media."
-Keyword: "Jasper AI, AI writing assistant, marketing copy generator"
-Excerpt: "Jasper helps marketing teams and content creators generate high-quality text and visuals faster with AI-powered brand voice, templates, and collaboration features."
+relations:
+  - kb/TOOLS/content-creation/index.md
+aliases:
+  - Jasper
+  - Jasper AI
+  - Jarvis AI
+
+# --- Domain Specifics (Tool) ---
+offering_name: "Jasper"
+target_icp: "Marketing teams, agencies, and content creators"
+price_point: "Subscription - tiered plans (Creator, Pro, Business); free trial available"
+
+# --- Operational ---
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "Marketing"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: >
+  Jasper is a leading AI content creation platform for marketing teams, agencies, and businesses,
+  using generative AI to produce on-brand copy, blog posts, emails, ads, and visuals. It features
+  Brand Voice training, long-form Boss Mode, 50+ content templates, and Jasper Art for image generation.
+synthetic_questions:
+  - "What AI tool can generate marketing copy while maintaining brand voice?"
+  - "How does Jasper help with long-form blog content creation?"
+  - "What is Jasper Art and how does it integrate with content creation?"
+key_concepts:
+  - "Brand Voice & Knowledge Base"
+  - "Long-form content generation (Boss Mode)"
+  - "AI art generation"
+  - "Marketing copy templates"
+  - "Team collaboration workflows"
+
+# --- SEO & Publication ---
+primary_keyword: "Jasper AI"
+seo_title: "Jasper AI Review: AI Writing Assistant for Marketing Teams"
+meta_description: "Jasper AI is an AI writing assistant that helps marketers produce on-brand content and visuals for blogs, ads, and social media."
+excerpt: "Jasper AI helps marketing teams generate high-quality text and visuals faster with AI-powered brand voice, templates, and collaboration features."
+cover_image: ""
 ---
 
 # Jasper

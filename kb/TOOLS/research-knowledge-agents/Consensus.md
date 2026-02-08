@@ -1,24 +1,56 @@
 ---
-title: Consensus
-id: 20251213054139
-version: 1
-Author: Adam Bernard
-steward:
-date: 2025-12-13
-tool_name: "Consensus"
-tool_category: ["Research Knowledge Agents", "Academic Search"]
-primary_function: "An AI research assistant that finds and summarizes scientific consensus from peer-reviewed papers."
-ai_type: ["LLM", "Research Agent"]
-pricing_model: "Freemium"
-difficulty: "Intermediate"
-website: "https://consensus.app"
-last_updated: 2025-12-13
-Meta Description: "Consensus is an AI-powered research tool that finds and summarizes peer-reviewed scientific consensus, helping researchers and professionals access credible, evidence-based insights instantly."
+title: "Consensus: AI-Powered Scientific Research Assistant"
+id: SIE/REF/CONSENSUS-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2025-12-13
+status: "Active"
+doc_type: "Reference"
+summary: "An AI research assistant that finds and summarizes scientific consensus from peer-reviewed papers."
+tags:
+  - tool
+  - ai
+  - research
+  - science
+  - academic
+relations:
+  - kb/TOOLS/research-knowledge-agents/index.md
+aliases:
+  - Consensus
+  - Consensus AI
 
-Primary_Keyword: "Consensus AI"
+# --- Domain Specifics (Tool) ---
+offering_name: "Consensus"
+target_icp: "Academic researchers, policy analysts, content creators, and health professionals seeking evidence-based insights"
+price_point: "Freemium (Pro ~$19/month, Team plans available)"
 
-Excerpt: "Consensus is an academic AI research assistant that identifies and summarizes scientific findings from peer-reviewed papers. It reveals what the literature supports or refutes on a topic, giving users fast, trustworthy evidence for research and decision-making."
-tags: ["tool", "ai", "research", "science", "academic"]
+# --- Operational ---
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: >
+  Consensus is an AI-powered research tool that searches peer-reviewed scientific literature to
+  identify prevailing scientific consensus on a given topic. It uses LLMs to summarize findings,
+  verify claims, and present evidence-based insights with full citations and study metadata.
+synthetic_questions:
+  - "How does Consensus verify scientific claims?"
+  - "Can Consensus show how many studies support or refute a hypothesis?"
+  - "What makes Consensus different from Perplexity for research?"
+key_concepts:
+  - "Scientific Consensus"
+  - "Peer-Reviewed Evidence"
+  - "Claim Verification"
+  - "Evidence-Based Summaries"
+  - "Academic Literature Search"
+
+# --- SEO & Publication ---
+primary_keyword: "Consensus AI"
+seo_title: "Consensus AI: Find Scientific Consensus from Peer-Reviewed Research"
+meta_description: "Consensus AI finds and summarizes peer-reviewed scientific consensus, helping researchers access credible, evidence-based insights."
+excerpt: "Consensus AI identifies and summarizes scientific findings from peer-reviewed papers, revealing what the literature supports or refutes for fast, trustworthy evidence."
+cover_image: ""
 ---
 
 # [[Consensus]]
@@ -46,3 +78,5 @@ Consensus is an AI-powered research tool that instantly finds answers to questio
 
 ## Expert Notes
 Consensus differentiates itself from general-purpose LLMs and search engines like [[Perplexity]] by focusing solely on peer-reviewed evidence. Its greatest strength lies in **credibility** and **transparency**, presenting citations and study metadata for every claim. For anyone conducting literature reviews or producing research-backed content, Consensus provides an invaluable shortcut to legitimate, scientifically grounded information.
+
+**Direct Link:** [https://consensus.app](https://consensus.app)

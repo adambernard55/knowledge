@@ -1,19 +1,48 @@
 ---
-title: Replit
-id: 20251212055000
-version: 1
-Author: Adam Bernard
-date: 2025-12-12
-tool_name: "Replit"
-tool_category: ["Coding & Development", "Productivity & Workflow"]
-tool_sub_cat: ["Cloud IDE", "Code Generation", "AI Agent"]
-ai_type: ["Developer Tools", "AI Coding Assistant"]
-primary_function: "Browser-based IDE and AI coding agent that builds, tests, and deploys applications directly in the cloud."
-pricing_model: "Freemium"
-difficulty: "Beginner–Intermediate"
-website: "https://replit.com/"
-last_updated: 2025-12-12
-tags: ["coding", "ai", "productivity", "freemium", "developer-tools", "ide", "automation"]
+title: "Replit: Browser-Based AI Development Platform"
+id: "SIE/REF/REPLIT-01"
+version: "1.0"
+steward: "Adam Bernard"
+updated: "2025-12-12"
+status: "Active"
+doc_type: "Reference"
+summary: "A browser-based IDE and AI coding agent that builds, tests, and deploys applications directly in the cloud."
+tags:
+  - coding
+  - ai
+  - productivity
+  - freemium
+  - developer-tools
+  - ide
+  - automation
+relations:
+  - "kb/TOOLS/coding-development/index.md"
+aliases:
+  - "Replit"
+  - "Replit Agent"
+  - "https://replit.com/"
+offering_name: "Replit"
+target_icp: "Indie Developers, Educators, Students, Startup Founders"
+price_point: "Freemium / Core ~$20/mo"
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
+semantic_summary: "Replit is a collaborative, browser-based development platform that brings AI-assisted coding, deployment, and debugging to users of all skill levels. With Replit Agent, it evolved into a powerful AI-native development environment capable of building full-stack applications from natural language prompts."
+synthetic_questions:
+  - "What is Replit Agent and how does it build applications from prompts?"
+  - "How does Replit support collaborative coding and instant deployment?"
+  - "What are the pricing tiers for Replit's AI features?"
+key_concepts:
+  - "Browser-Based IDE"
+  - "Replit Agent"
+  - "Instant Cloud Deployment"
+  - "Multiplayer Collaboration"
+  - "AI-Native Development"
+primary_keyword: "Replit"
+seo_title: "Replit: The AI-Powered Browser-Based IDE for Building and Deploying Apps"
+meta_description: "Replit is a browser-based IDE with AI coding agent that builds, tests, and deploys applications in the cloud instantly."
+excerpt: "Replit is a collaborative, browser-based development platform with Replit Agent, an AI assistant that builds, tests, and deploys full-stack applications directly in the cloud."
+cover_image: ""
 ---
 
 # Replit

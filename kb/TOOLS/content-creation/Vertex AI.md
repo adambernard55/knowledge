@@ -1,6 +1,7 @@
 ---
-title" Vertex AI
+title: Vertex AI
 ---
+
 
 ## **Vertex AI (Google Cloud)**
 

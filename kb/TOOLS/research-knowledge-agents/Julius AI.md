@@ -1,24 +1,56 @@
 ---
-title: Julius AI
-id: 20251115102346
-version: 1
-Author: Adam Bernard
-steward:
-date: 2025-11-15
-tool_name: "Julius AI"
-tool_category: ["Research Knowledge Agents", "Analytics & Insights"]
-primary_function: "An AI-powered data analyst that enables users to analyze and visualize data through natural language questions."
-ai_type: ["LLM", "NLP", "Data Analysis"]
-pricing_model: "Subscription (Freemium and Tiered Plans)"
-difficulty: "Intermediate"
-website: "https://julius.ai"
-last_updated: 2025-12-13
-Meta Description: "Julius AI is an AI-powered data analyst that helps users connect, analyze, and visualize data through natural language — delivering actionable insights without coding."
+title: "Julius AI: Natural Language Data Analysis Assistant"
+id: SIE/REF/JULIUSAI-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2025-12-13
+status: "Active"
+doc_type: "Reference"
+summary: "An AI-powered data analyst that enables users to analyze and visualize data through natural language questions."
+tags:
+  - tool
+  - ai
+  - data
+  - analytics
+  - research
+  - nlp
+relations:
+  - kb/TOOLS/research-knowledge-agents/index.md
+aliases:
+  - Julius AI
 
-Primary_Keyword: "Julius AI"
+# --- Domain Specifics (Tool) ---
+offering_name: "Julius AI"
+target_icp: "Marketers, business analysts, and non-technical teams needing data insights without coding"
+price_point: "Freemium / Subscription (~$20-$100/month, Enterprise plans available)"
 
-Excerpt: "Julius AI is an intelligent analytics assistant that transforms raw data into insights using natural language queries. It automates analysis, visualization, and reporting, making data-driven decision-making easier for marketers, analysts, and business teams."
-tags: ["tool", "ai", "data", "analytics", "research", "nlp"]
+# --- Operational ---
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: >
+  Julius AI is a no-code data analytics assistant that lets users connect data sources and ask
+  natural language questions to generate insights, charts, and reports. It supports statistical
+  and predictive analysis, making data-driven decision-making accessible to non-technical users.
+synthetic_questions:
+  - "Can Julius AI analyze data without writing code?"
+  - "What data sources does Julius AI connect to?"
+  - "How does Julius AI generate visualizations from natural language?"
+key_concepts:
+  - "Natural Language Querying"
+  - "Automated Data Visualization"
+  - "No-Code Analytics"
+  - "Predictive Analysis"
+  - "Data Democratization"
+
+# --- SEO & Publication ---
+primary_keyword: "Julius AI"
+seo_title: "Julius AI: AI-Powered Data Analysis Through Natural Language"
+meta_description: "Julius AI helps users connect, analyze, and visualize data through natural language, delivering actionable insights without coding."
+excerpt: "Julius AI transforms raw data into insights using natural language queries, automating analysis, visualization, and reporting for marketers, analysts, and business teams."
+cover_image: ""
 ---
 
 # [[Julius AI]]
@@ -59,3 +91,5 @@ Julius AI lowers the barrier to entry for data-driven decision-making by combini
 ## Related Tools
 - [[Perplexity]] – AI research engine for general query synthesis.  
 - [[Consensus]] – Academic research agent that sources peer-reviewed studies.
+
+**Direct Link:** [https://julius.ai](https://julius.ai)

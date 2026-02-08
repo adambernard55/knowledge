@@ -1,23 +1,48 @@
 ---
-title: Midjourney
-id: 20251209060000
-version: 2
-Author: Adam Bernard
-date: 2025-12-09
-tool_name: "Midjourney"
-tool_category: ["Image & Video Generation", "Art & Design"]
-tool_sub_cat: ["Text-to-Image", "Generative Art", "Creative Design"]
-ai_type: ["Generative AI (Image)", "Diffusion Model"]
-primary_function: "AI image generation platform that creates highly artistic and surreal visuals from text prompts via Discord."
-pricing_model: "Subscription"
-difficulty: "Beginner"
-website: "https://www.midjourney.com/"
-last_updated: 2025-12-09
-tags: ["ai", "midjourney", "image-generation", "generative-art", "creative", "discord", "text-to-image", "design"]
-kb_status: "published"
-meta_description: "Midjourney is a leading AI image generator known for its rich artistic style, accessible Discord-based workflow, and ability to produce highly aesthetic images from text prompts."
-keyword: "Midjourney AI, image generation, AI art, text-to-image, generative art"
-excerpt: "Midjourney is an AI art generator that produces stunning, artistic images from text prompts using a community-driven Discord interface—ideal for content creators and designers."
+title: "Midjourney: AI Image Generation Platform"
+id: SIE/REF/MIDJOURNEY-01
+version: "2"
+steward: "Adam Bernard"
+updated: 2025-12-09
+status: "Active"
+doc_type: "Reference"
+summary: "AI image generation platform that creates highly artistic and surreal visuals from text prompts via Discord."
+tags:
+  - ai
+  - midjourney
+  - image-generation
+  - generative-art
+  - creative
+  - discord
+  - text-to-image
+  - design
+relations:
+  - kb/TOOLS/image-video-generation/index.md
+aliases:
+  - Midjourney
+  - Midjourney AI
+offering_name: "Midjourney"
+target_icp: "Content creators, designers, and marketers seeking high-quality AI-generated artistic imagery"
+price_point: "Subscription (Basic / Standard / Pro tiers with Fast GPU Hours)"
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "Marketing"
+semantic_summary: "Midjourney is an independent research lab's AI image generation platform operated through Discord that produces exceptionally artistic and aesthetic images from text prompts. It offers iterative image tools including style variations, zoom/pan controls, and a style tuner, making it a leading choice for creative professionals who prioritize visual quality and artistic direction."
+synthetic_questions:
+  - "How does Midjourney generate images and what makes its output distinctive?"
+  - "What are the pricing tiers and subscription options for Midjourney?"
+  - "What are the best use cases for Midjourney in marketing and content creation?"
+key_concepts:
+  - text-to-image generation
+  - discord-based creative workflow
+  - diffusion model art
+  - iterative image refinement
+  - AI-generated marketing visuals
+primary_keyword: "Midjourney AI"
+seo_title: "Midjourney AI: Leading Image Generation Platform for Artistic Visuals"
+meta_description: "Midjourney AI is a leading image generator known for its rich artistic style, Discord-based workflow, and highly aesthetic outputs."
+excerpt: "Midjourney AI is an art generator that produces stunning, artistic images from text prompts using a community-driven Discord interface—ideal for content creators and designers."
+cover_image: ""
 ---
 
 # Midjourney

@@ -1,13 +1,12 @@
 ---
-tool_name: Topaz Photo AI
-tool_category:
-  - Image Generation
-  - Photo Enhancement
-  - Creative Design
-tool_sub_cat:
-  - AI Image Enhancement
-  - Upscaling & Denoising
-  - Photo Restoration
+title: "Topaz Photo AI: ML-Powered Photo Enhancement"
+id: SIE/REF/TOPAZPHOTOAI-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2025-12-13
+status: "Active"
+doc_type: "Reference"
+summary: "AI-powered photo enhancement software that automatically sharpens, denoises, and increases resolution for professional-quality results."
 tags:
   - photo-enhancement
   - ai-upscaler
@@ -15,18 +14,33 @@ tags:
   - sharpening
   - creative-ai
   - visual-generation
-ai_type:
-  - Image Enhancement
-  - Image Restoration
-primary_function: AI-powered photo enhancement software that automatically sharpens, denoises, and increases resolution for professional-quality results.
-pricing_model: One-time purchase (with optional upgrades)
-difficulty: Intermediate
-website: https://www.topazlabs.com/topaz-photo-ai
-last_updated: 2025-12-13
-kb_status: published
-meta_description: "Topaz Photo AI enhances and restores image quality using advanced machine learning to remove noise, sharpen details, and upscale resolution — producing crisp, natural results for photographers and designers."
-Keyword: "Topaz Photo AI image enhancer"
-Excerpt: "Topaz Photo AI combines powerful machine learning models to sharpen, denoise, and upscale photos automatically, delivering professional-grade image quality with minimal manual editing."
+relations:
+  - kb/TOOLS/image-video-generation/index.md
+aliases:
+  - Topaz Photo AI
+  - Topaz Labs Photo AI
+offering_name: "Topaz Photo AI"
+target_icp: "Photographers, retouchers, and creative professionals needing automated image enhancement and restoration"
+price_point: "One-time purchase (~$199 USD with one year of updates; optional annual upgrade renewal)"
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "Marketing"
+semantic_summary: "Topaz Photo AI is professional-grade photo enhancement software combining machine learning models for sharpening, noise removal, and resolution upscaling in one unified workflow. It integrates with Adobe Lightroom Classic and Photoshop, supports RAW files, and includes face recovery features, making it a go-to tool for photographers seeking natural, high-quality results."
+synthetic_questions:
+  - "How does Topaz Photo AI enhance image quality using machine learning?"
+  - "What is the pricing model for Topaz Photo AI and what does it include?"
+  - "How does Topaz Photo AI integrate with Adobe Lightroom and Photoshop workflows?"
+key_concepts:
+  - ai image sharpening and denoising
+  - resolution upscaling via machine learning
+  - raw file photo restoration
+  - adobe lightroom and photoshop integration
+  - face recovery enhancement
+primary_keyword: "Topaz Photo AI"
+seo_title: "Topaz Photo AI: AI Image Enhancer for Sharpening, Denoising, and Upscaling"
+meta_description: "Topaz Photo AI enhances image quality using machine learning to remove noise, sharpen details, and upscale resolution naturally."
+excerpt: "Topaz Photo AI combines powerful machine learning models to sharpen, denoise, and upscale photos automatically, delivering professional-grade image quality."
+cover_image: ""
 ---
 
 # Topaz Photo AI

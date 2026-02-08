@@ -1,23 +1,12 @@
 ---
-title: Leonardo.ai
-id: 20251213062000
-version: 1
-Author: Adam Bernard
-date: 2025-12-13
-tool_name: "Leonardo.ai"
-tool_category:
-  - Image & Video Generation
-  - Content Creation
-  - Design & Assets
-primary_function: "AI-powered creative platform for generating and refining game assets, concept art, and design visuals."
-ai_type:
-  - Generative AI (Image)
-  - Diffusion Model
-  - Visual Design Automation
-pricing_model: Freemium
-difficulty: Intermediate
-website: "https://www.leonardo.ai"
-last_updated: 2025-12-13
+title: "Leonardo.ai: AI Creative Asset Generation Platform"
+id: SIE/REF/LEONARDOAI-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2025-12-13
+status: "Active"
+doc_type: "Reference"
+summary: "AI-powered creative platform for generating and refining game assets, concept art, and design visuals."
 tags:
   - ai
   - design
@@ -27,10 +16,33 @@ tags:
   - diffusion
   - creativity
   - freemium
-kb_status: published
-meta_description: "Leonardo.ai is an AI design platform enabling creators to generate stunning visual assets, concept art, and textures using state-of-the-art diffusion models."
-Keyword: "Leonardo.ai, AI image generation, game design"
-Excerpt: "Leonardo.ai helps artists and developers build professional-grade visual assets—from concept art to textures—using powerful diffusion-based models and fine-tuned creative controls."
+relations:
+  - kb/TOOLS/image-video-generation/index.md
+aliases:
+  - Leonardo.ai
+  - Leonardo AI
+offering_name: "Leonardo.ai"
+target_icp: "Artists, game developers, and designers needing production-quality visual assets with fine-tuned creative control"
+price_point: "Freemium (Free with limits; Pro $12/month; Premium $24/month; Enterprise custom)"
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "Marketing"
+semantic_summary: "Leonardo.ai is a creative AI platform using diffusion-based models to produce high-fidelity concept art, 3D textures, characters, and environmental designs at production quality. It offers fine-tuned models, an AI Canvas workspace, custom model training, and advanced creative controls that bridge the gap between ideation and production-ready design for professionals."
+synthetic_questions:
+  - "What types of visual assets can Leonardo.ai generate and what models does it use?"
+  - "How does Leonardo.ai pricing work across its free and paid tiers?"
+  - "How does Leonardo.ai compare to Midjourney for professional design workflows?"
+key_concepts:
+  - diffusion-based image generation
+  - custom model training
+  - ai canvas editing workspace
+  - game asset and concept art creation
+  - production-ready visual design
+primary_keyword: "Leonardo.ai"
+seo_title: "Leonardo.ai: AI Image Generation for Game Assets and Concept Art"
+meta_description: "Leonardo.ai is an AI design platform for generating stunning visual assets, concept art, and textures using diffusion models."
+excerpt: "Leonardo.ai helps artists and developers build professional-grade visual assets from concept art to textures using powerful diffusion-based models and fine-tuned creative controls."
+cover_image: ""
 ---
 
 # Leonardo.ai

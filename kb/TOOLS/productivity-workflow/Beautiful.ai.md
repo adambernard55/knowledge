@@ -1,23 +1,12 @@
 ---
-title: Beautiful.ai
-id: 20251213060000
-version: 1
-Author: Adam Bernard
-date: 2025-12-13
-tool_name: "Beautiful.ai"
-tool_category:
-  - Productivity & Workflow
-  - Marketing Automation
-  - Content Creation
-primary_function: "AI-powered presentation software that automatically designs professional slides based on your content and branding."
-ai_type:
-  - Generative AI (Design)
-  - Workflow Automation
-  - Presentation AI
-pricing_model: Freemium
-difficulty: Beginner
-website: "https://www.beautiful.ai"
-last_updated: 2025-12-13
+title: "Beautiful.ai: AI-Powered Presentation Design"
+id: SIE/REF/BEAUTIFULAI-01
+version: "1"
+steward: "Adam Bernard"
+updated: 2025-12-13
+status: "Active"
+doc_type: "Reference"
+summary: "AI-powered presentation software that automatically designs professional slides based on your content and branding."
 tags:
   - presentation
   - design
@@ -26,10 +15,41 @@ tags:
   - automation
   - ai
   - marketing
-kb_status: published
-meta_description: "Beautiful.ai uses AI to automate presentation design—turning ideas into professional, on-brand slide decks instantly."
-Keyword: "Beautiful.ai, AI presentations, smart slides"
-Excerpt: "Beautiful.ai is an AI presentation builder that automatically designs and formats slides, helping users create stunning decks in minutes with no design skills required."
+relations:
+  - "kb/TOOLS/productivity-workflow/index.md"
+aliases:
+  - "Beautiful.ai"
+  - "Beautiful AI"
+
+# Domain Specifics
+offering_name: "Beautiful.ai"
+target_icp: "Teams, consultants, marketers, and startups needing professional presentations with minimal design effort"
+price_point: "Freemium; Pro $12/month, Team $40/user/month, Enterprise custom"
+
+# Operational
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
+
+# AI/RAG
+semantic_summary: "Beautiful.ai is an AI-powered presentation tool that automatically applies smart templates, layouts, and branding to slides, ensuring every deck looks professional. It dynamically adjusts layouts as content changes, provides analytics on viewer engagement, and supports team collaboration with centralized brand controls."
+synthetic_questions:
+  - "How can I create professional presentations without design skills using AI?"
+  - "What tool automatically formats and designs slides based on my brand guidelines?"
+  - "How does Beautiful.ai compare to Gamma for presentation creation?"
+key_concepts:
+  - "AI-powered design automation"
+  - "Smart templates and layouts"
+  - "Brand control and consistency"
+  - "Viewer engagement analytics"
+  - "Real-time team collaboration"
+
+# SEO
+primary_keyword: "Beautiful.ai AI presentations"
+seo_title: "Beautiful.ai AI Presentations: Smart Slide Design Automation"
+meta_description: "Beautiful.ai AI presentations uses AI to automate slide design, turning ideas into professional, on-brand decks instantly."
+excerpt: "Beautiful.ai AI presentations is an AI presentation builder that automatically designs and formats slides, helping users create stunning decks in minutes with no design skills required."
+cover_image: ""
 ---
 
 # Beautiful.ai
