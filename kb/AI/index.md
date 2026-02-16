@@ -22,6 +22,7 @@ relations:
   - "kb/AI/4_applications/index"
   - "kb/AI/5_ethics-and-governance/index"
   - "kb/AI/6_future-trends/index"
+  - "kb/AI/7_marketing/index"
 aliases:
   - "AI KB Index"
   - "AI Knowledge Base Home"
@@ -37,11 +38,12 @@ related_topics:
   - "4_applications/index"
   - "5_ethics-and-governance/index"
   - "6_future-trends/index"
+  - "7_marketing/index"
 ---
 
 # AI Knowledge Base Index
 
-This is the central hub for the entire AI knowledge base. It provides a high-level guide, explaining the purpose of each main section - from `0_fundamentals` to `6_future-trends` - and linking to key documents and sub-indexes within them. It's the primary entry point for anyone looking to understand the structure of the vault and find specific information.
+This is the central hub for the entire AI knowledge base. It provides a high-level guide, explaining the purpose of each main section - from `0_fundamentals` to `7_marketing` - and linking to key documents and sub-indexes within them. It's the primary entry point for anyone looking to understand the structure of the vault and find specific information.
 ## Section Guide
 
 ### 0_fundamentals — Core Concepts
@@ -151,7 +153,7 @@ Use this section when you’re designing **system architectures**, **prompting
 
 ---
 
-### 4_applications — Business and Marketing Use Cases
+### 4_applications — Business Use Cases
 
 **Purpose:** Show how AI creates value in concrete workflows and domains.
 
@@ -180,25 +182,28 @@ Index:
 
 - [4_applications/business/index](app://obsidian.md/Knowledge/AI/4_applications/business/index.md)
 
-#### Marketing Applications
+> Marketing applications have moved to [[kb/AI/7_marketing/index|7_marketing]].
 
-Folder: `4_applications/marketing/`
+Use this section when you want **examples, patterns, and playbooks** for applying AI to business.
 
-Examples:
+---
 
-- [0_foundations -of-ai-powered-marketing](app://obsidian.md/Knowledge/AI/4_applications/marketing/0_foundations%20-of-ai-powered-marketing.md)
-- [1_ai-content-strategy](app://obsidian.md/Knowledge/AI/4_applications/marketing/1_ai-content-strategy.md)
-- [2_personalization-and-predictive-ai](app://obsidian.md/Knowledge/AI/4_applications/marketing/2_personalization-and-predictive-ai.md)
-- [3_applied-ai-marketing](app://obsidian.md/Knowledge/AI/4_applications/marketing/3_applied-ai-marketing.md)
-- [4_gen-ai-playbook](app://obsidian.md/Knowledge/AI/4_applications/marketing/4_gen-ai-playbook.md)
-- [5_chatgpt-prompts](app://obsidian.md/Knowledge/AI/4_applications/marketing/5_chatgpt-prompts.md)
-- [marketing](app://obsidian.md/Knowledge/AI/4_applications/marketing/marketing.md)
+### 7_marketing — AI-Powered Marketing
+
+**Purpose:** Strategic and practical application of AI across marketing disciplines.
 
 Index:
 
-- [4_applications/marketing/index](app://obsidian.md/Knowledge/AI/4_applications/marketing/index.md)
+- [[kb/AI/7_marketing/index]]
 
-Use this section when you want **examples, patterns, and playbooks** for applying AI to business and marketing.
+Specialized areas:
+
+- [[kb/AI/7_marketing/Affiliate/index|Affiliate Marketing]] — Partner discovery, performance analytics, automation
+- [[kb/AI/7_marketing/E-commerce/index|E-commerce]] — AI across the buyer journey
+- [[kb/AI/7_marketing/Influencer/index|Influencer Marketing]] — Discovery, vetting, campaign optimization
+- [[kb/AI/7_marketing/Social Media/index|Social Media]] — Organic growth, paid media, analytics, AI systems
+
+Use this section for **marketing strategy, channel-specific playbooks, and AI marketing implementation**.
 
 ---
 
@@ -260,7 +265,7 @@ For a flat, searchable view, see:
 
 | Topic                                                                                                                                                 | Description                                                                                                      |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| [0_foundations -of-ai-powered-marketing](app://obsidian.md/Knowledge/AI/4_applications/marketing/0_foundations%20-of-ai-powered-marketing.md)         | -                                                                                                                |
+| [[00_foundations-of-ai-powered-marketing]]         | Foundations of AI-powered marketing                                                                                                |
 | [0_fundamentals](app://obsidian.md/Knowledge/AI/0_fundamentals/0_fundamentals.md)                                                                     | -                                                                                                                |
 | [00_ai-models](app://obsidian.md/Knowledge/AI/1_models/00_ai-models.md)                                                                               | Comparative overview of the generative AI model landscape, split into cloud/API vs. local/open-source models.    |
 | [00_emerging-ai-technologies](app://obsidian.md/Knowledge/AI/6_future-trends/00_emerging-ai-technologies.md)                                          | Overview of frontier and emerging AI technologies and how they reshape applications and organizations.           |
@@ -308,7 +313,7 @@ For a flat, searchable view, see:
 | [07_operational-excellent](app://obsidian.md/Knowledge/AI/5_ethics-and-governance/07_operational-excellent.md)                                        | Operational excellence as prerequisite for AI impact.                                                            |
 | [08_evaluation-and-performance](app://obsidian.md/Knowledge/AI/3_methods/08_evaluation-and-performance.md)                                            | Evaluating AI performance.                                                                                       |
 | [09_advanced-prompt-engineering](app://obsidian.md/Knowledge/AI/3_methods/09_advanced-prompt-engineering.md)                                          | Advanced prompt engineering techniques.                                                                          |
-| [1_ai-content-strategy](app://obsidian.md/Knowledge/AI/4_applications/marketing/1_ai-content-strategy.md)                                             | -                                                                                                                |
+| [[01_ai-content-strategy]]                                             | AI content strategy                                                                                                |
 | [1_ai-in-automation](app://obsidian.md/Knowledge/AI/4_applications/business/1_ai-in-automation.md)                                                    | AI in automation.                                                                                                |
 | [1_chatgpt](app://obsidian.md/Knowledge/AI/1_models/1_specific-models/1_chatgpt.md)                                                                   | ChatGPT model reference.                                                                                         |
 | [1_mcp-foundations-and-architecture](app://obsidian.md/Knowledge/AI/3_methods/mcp/1_mcp-foundations-and-architecture.md)                              | MCP foundations.                                                                                                 |
@@ -323,19 +328,19 @@ For a flat, searchable view, see:
 | [2_ai-in-automation](app://obsidian.md/Knowledge/AI/4_applications/business/2_ai-in-automation.md)                                                    | -                                                                                                                |
 | [2_gemini](app://obsidian.md/Knowledge/AI/1_models/1_specific-models/2_gemini.md)                                                                     | Gemini model reference.                                                                                          |
 | [2_mcp-connectors-and-integrations.md](app://obsidian.md/Knowledge/AI/3_methods/mcp/2_mcp-connectors-and-integrations.md.md)                          | -                                                                                                                |
-| [2_personalization-and-predictive-ai](app://obsidian.md/Knowledge/AI/4_applications/marketing/2_personalization-and-predictive-ai.md)                 | -                                                                                                                |
+| [[02_personalization-and-predictive-ai]]                 | Personalization and predictive AI                                                                                                |
 | [3_ai-in-ecommerce](app://obsidian.md/Knowledge/AI/4_applications/business/3_ai-in-ecommerce.md)                                                      | AI in ecommerce.                                                                                                 |
 | [3_applications](app://obsidian.md/Knowledge/AI/3_applications.md)                                                                                    | -                                                                                                                |
-| [3_applied-ai-marketing](app://obsidian.md/Knowledge/AI/4_applications/marketing/3_applied-ai-marketing.md)                                           | -                                                                                                                |
+| [[03_applied-ai-marketing]]                                           | Applied AI marketing                                                                                                |
 | [3_claude](app://obsidian.md/Knowledge/AI/1_models/1_specific-models/3_claude.md)                                                                     | Claude model reference.                                                                                          |
 | [3_mcp-runtime-and-deployment.md](app://obsidian.md/Knowledge/AI/3_methods/mcp/3_mcp-runtime-and-deployment.md.md)                                    | -                                                                                                                |
 | [3_methods](app://obsidian.md/Knowledge/AI/3_methods/3_methods.md)                                                                                    | -                                                                                                                |
 | [4_ai-in-analytics](app://obsidian.md/Knowledge/AI/4_applications/business/4_ai-in-analytics.md)                                                      | -                                                                                                                |
-| [4_gen-ai-playbook](app://obsidian.md/Knowledge/AI/4_applications/marketing/4_gen-ai-playbook.md)                                                     | -                                                                                                                |
+| [[04_gen-ai-playbook]]                                                     | Generative AI playbook                                                                                                |
 | [4_mcp-security-and-compliance.md](app://obsidian.md/Knowledge/AI/3_methods/mcp/4_mcp-security-and-compliance.md.md)                                  | -                                                                                                                |
 | [4_mistral-mixtral](app://obsidian.md/Knowledge/AI/1_models/1_specific-models/4_mistral-mixtral.md)                                                   | Mistral/Mixtral models.                                                                                          |
 | [5_a-guide-to-llm-seeding](app://obsidian.md/Knowledge/AI/4_applications/business/5_a-guide-to-llm-seeding.md)                                        | -                                                                                                                |
-| [5_chatgpt-prompts](app://obsidian.md/Knowledge/AI/4_applications/marketing/5_chatgpt-prompts.md)                                                     | -                                                                                                                |
+| [[05_chatgpt-prompts]]                                                     | ChatGPT prompts for marketing                                                                                                |
 | [5_ethics-and-governance](app://obsidian.md/Knowledge/AI/5_ethics-and-governance/5_ethics-and-governance.md)                                          | -                                                                                                                |
 | [5_llama](app://obsidian.md/Knowledge/AI/1_models/1_specific-models/5_llama.md)                                                                       | Llama model reference.                                                                                           |
 | [5_mcp-reference-and-use-cases.md](app://obsidian.md/Knowledge/AI/3_methods/mcp/5_mcp-reference-and-use-cases.md.md)                                  | -                                                                                                                |
@@ -361,13 +366,13 @@ For a flat, searchable view, see:
 | [index](app://obsidian.md/Knowledge/AI/1_models/1_specific-models/index.md)                                                                           | Index for specific models.                                                                                       |
 | [index](app://obsidian.md/Knowledge/AI/4_applications/business/index.md)                                                                              | Index for business applications.                                                                                 |
 | [index](app://obsidian.md/Knowledge/AI/4_applications/index.md)                                                                                       | Index for applications.                                                                                          |
-| [index](app://obsidian.md/Knowledge/AI/4_applications/marketing/index.md)                                                                             | Index for marketing applications.                                                                                |
+| [[kb/AI/7_marketing/index\|7_marketing index]]                                                                             | Index for marketing applications.                                                                                |
 | [index](app://obsidian.md/Knowledge/AI/index.md)                                                                                                      | This top-level AI index.                                                                                         |
 | [index](app://obsidian.md/Knowledge/AI/6_future-trends/index.md)                                                                                      | Index for future trends.                                                                                         |
 | [index](app://obsidian.md/Knowledge/AI/5_ethics-and-governance/index.md)                                                                              | Index for ethics and governance.                                                                                 |
 | [index](app://obsidian.md/Knowledge/AI/1_models/index%20.md)                                                                                          | Index for models.                                                                                                |
 | [LLM-Evalkit](app://obsidian.md/Knowledge/AI/1_models/3_evaluation-and-tooling/LLM-Evalkit.md)                                                        | Evaluation toolkit for LLMs.                                                                                     |
-| [marketing](app://obsidian.md/Knowledge/AI/4_applications/marketing/marketing.md)                                                                     | -                                                                                                                |
+| [[kb/AI/7_marketing/index\|Marketing]]                                                                     | AI-powered marketing knowledge base                                                                                                |
 | [mcp](app://obsidian.md/Knowledge/AI/3_methods/mcp/mcp.md)                                                                                            | -                                                                                                                |
 | [toolkits](app://obsidian.md/Knowledge/AI/2_agents/toolkits/toolkits.md)                                                                              | -                                                                                                                |
 

@@ -65,10 +65,14 @@ get_topic_id() {
     *"/AI/3_methods/mcp/"*) topic_id=1784 ;;
     *"/AI/3_methods/"*) topic_id=1189 ;;
     *"/AI/4_applications/business/"*) topic_id=1785 ;;
-    *"/AI/4_applications/marketing/"*) topic_id=1786 ;;
     *"/AI/4_applications/"*) topic_id=1190 ;;
     *"/AI/5_ethics-and-governance/"*) topic_id=1191 ;;
     *"/AI/6_future-trends/"*) topic_id=1192 ;;
+    *"/AI/7_marketing/Affiliate/"*) topic_id=2268 ;;
+    *"/AI/7_marketing/E-commerce/"*) topic_id=2269 ;;
+    *"/AI/7_marketing/Influencer/"*) topic_id=2270 ;;
+    *"/AI/7_marketing/Social Media/"*) topic_id=2271 ;;
+    *"/AI/7_marketing/"*) topic_id=1786 ;;
     *"/AI/"*) topic_id=1159 ;;
     *"/SEO/0_fundamentals/"*) topic_id=1162 ;;
     *"/SEO/1_research-and-strategy/"*) topic_id=1163 ;;
