@@ -30,9 +30,11 @@ These documents serve as the primary reference for understanding the "what, why,
 
 This section details the technical building blocks and fundamental techniques that power the SIE's ability to understand and process information.
 
-```dataview
-<dataview_block> <query_type>dataview</query_type> <original_query> TABLE WITHOUT ID file.link as "Topic", summary as "Description" FROM "kb/CORE/Core Concepts" WHERE file.name != "index.md" SORT file.name ASC </original_query> <executed_result>
-```
+## Contents
+
+- **[[00_CORE|00 Core]]**
+- **[[core-concepts/index|Core Concepts]]** — The Knowledge Core is the central nervous system of the SIE, designed to minimize the 'Human Correction Tax' by providing a governed, single source of truth. It contains structured, semi-structured, and unstructured data (including negative examples). It is operationalized via the Knowledge Pipeline (KPL), which syncs Obsidian markdown to a vector database for RAG, enabling the 'Fleet Commander' model of agent orchestration.
+- **[[strategy-application/index|Strategy Application]]**
 
 | Topic                                                                     | Description                                                                                                                                                                                                                                     |
 | ------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -42,8 +44,6 @@ This section details the technical building blocks and fundamental techniques th
 | [[04_the-data-moat]]                      | Defines a 'Data Moat' as a defensible competitive advantage built from proprietary data, and explains how the Strategic Intelligence Engine (SIE) is designed to construct and activate this critical asset for clients.                        |
 | [[05_retrieval-augmented-generation-rag]] | Explains Retrieval-Augmented Generation (RAG), the core technique used by the Strategic Intelligence Engine (SIE) to provide agents with real-time, factual context from the Master Hub, enhancing the accuracy and relevance of their outputs. |
 | [[06_vector-databases]]                   | Explains what Vector Databases are and their critical role in enabling semantic search for the SIE's RAG pipelines, allowing agents to find information based on meaning rather than keywords.                                                  |
-</executed_result>
-</dataview_block>
 
 
 ---
@@ -52,84 +52,7 @@ This section details the technical building blocks and fundamental techniques th
 
 This section explains how the core concepts are applied strategically to build and leverage the Master Hub as a competitive advantage.
 
-```dataview
-<dataview_block>
-<query_type>dataview</query_type>
-<original_query>
-TABLE WITHOUT ID
-  file.link as "Topic",
-  summary as "Description"
-FROM "kb/CORE/Strategy & Application"
-WHERE file.name != "index.md"
-SORT file.name ASC
-</original_query>
-<executed_result>
-```
 
 | Topic                                     | Description                                                                                                                                                                                                                                 |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [[anatomy-of-an-ai-agent-knowledge-base]] | Defines the architecture and components of the knowledge base (the Master Hub) that powers the Strategic Intelligence Engine's (SIE) agents, enabling them to perform complex reasoning and automated tasks with high accuracy and context. |
-</executed_result>
-</dataview_block>
-
-
-
-```dataviewjs 
-const pages = dv.pages('"CORE"')
-    .where(p => p.file.name === "index" && p.file.folder !== "kb")
-    .sort(p => p.file.folder);
-
-// Group by first-level folder
-const grouped = {};
-for (let page of pages) {
-    const parts = page.file.folder.split('/');
-    
-    // Skip if deeper than 3 parts
-    if (parts.length > 3) continue;
-    
-    const firstLevel = parts[1];
-    
-    if (!firstLevel) continue;
-    
-    if (!grouped[firstLevel]) {
-        grouped[firstLevel] = [];
-    }
-    grouped[firstLevel].push(page);
-}
-
-// Display grouped results
-let isFirst = true;
-for (let [firstLevel, subPages] of Object.entries(grouped).sort()) {
-    if (!firstLevel || firstLevel === 'undefined') continue;
-    
-    // Only display if there's actually a top-level index
-    const topLevelIndex = subPages.find(p => p.file.folder === `CORE/${firstLevel}`);
-    
-    // Skip this entire group if there's no top-level index
-    if (!topLevelIndex) continue;
-    
-    if (!isFirst) {
-        dv.el("hr", "");
-    }
-    isFirst = false;
-    
-    // Display top-level folder as linked header
-    dv.el("h3", dv.fileLink(topLevelIndex.file.path, firstLevel));
-    
-    // Display ONLY direct subfolders
-    const subfolders = subPages.filter(p => {
-        const parts = p.file.folder.split('/');
-        return parts.length === 3 && parts[2] && p.file.folder !== `CORE/${firstLevel}`;
-    });
-    
-    if (subfolders.length > 0) {
-        dv.list(
-            subfolders.map(p => {
-                const parts = p.file.folder.split('/');
-                const folderName = parts[2];
-                return dv.fileLink(p.file.path, folderName);
-            })
-        );
-    }
-}
-```

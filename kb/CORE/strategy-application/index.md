@@ -9,14 +9,8 @@ Each document provides battle-tested methodologies, architectural patterns, and 
 
 # Contents
 
-```dataview
-TABLE WITHOUT ID
-  file.link as "Topic",
-  summary as "Description",
-  difficulty as "Difficulty",
-  tags as "Tags"
-FROM "kb/CORE/strategy-application"
-WHERE file.name != "index.md"
-SORT file.name ASC
-```
+## Contents
 
+- **[[anatomy-of-an-ai-agent-knowledge-base|Anatomy of an AI Agent Knowledge Base]]** — A comprehensive guide to designing, implementing, and maintaining knowledge bases for AI agents, covering content types, retrieval strategies, and industry best practices for building shared agentic knowledge systems.
+- **[[leveraging-ai-knowledge-bases-for-seo|Leveraging AI Knowledge Bases for SEO]]** — Explores how AI-powered knowledge bases transform SEO strategy by enabling semantic content creation, topic authority, entity optimization, and automated content workflows that align with search engine AI systems.
+- **[[maintaining-knowledge-base-freshness|Maintaining Knowledge Base Freshness]]** — A comprehensive guide to maintaining knowledge base freshness in AI agent systems, covering detection strategies, update workflows, automation approaches, and governance frameworks for ensuring AI agents work with current, accurate information.

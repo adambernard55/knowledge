@@ -21,22 +21,7 @@ The documents herein bridge the gap between traditional SEO practices and the fu
 
 ## Contents
 
-### Key Concepts
-- **[[1_ai-in-seo-overview|AI in SEO: An Overview]]**: Start here for a foundational understanding of AI's dual role in the search ecosystem.
+- **[[ai-in-seo-overview|AI in SEO: An Overview of a Transformative Landscape]]** — Explains the dual role of AI in modern search: how search engines use it for ranking and how SEO professionals use it for optimization.
 
-### Sub-Categories
-- **[[kb/SEO/4_ai-and-automation/1_using-ai-for-seo/index|Using AI for SEO]]**: A collection of guides on the practical application of AI tools and platforms for SEO tasks.
-- **[[kb/SEO/4_ai-and-automation/2_optimizing-for-ai/index|Optimizing for AI]]**: A collection of strategic guides on how to adapt your SEO for an AI-first world.
-- 
-## Contents
-
-```dataview
-TABLE WITHOUT ID
-  file.link as "Topic",
-  summary as "Description",
-  difficulty as "Difficulty",
-  tags as "Tags"
-FROM "kb/SEO/4_ai-and-automation"
-WHERE file.name != "index.md"
-SORT file.name ASC
-````
+- **[[1_using-ai-for-seo/index|Using Ai For Seo]]** — An index of guides on how to use AI for practical SEO tasks, including content creation, keyword research, and campaign management.
+- **[[2_optimizing-for-ai/index|Optimizing For Ai]]** — An index of strategic guides on how to optimize your content and website for AI agents and generative search engines.

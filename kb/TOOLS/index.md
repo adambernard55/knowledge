@@ -49,18 +49,25 @@ Each section below represents a core functional category. Use this page as your 
 
 ---
 
-## [[kb/TOOLS/01_applied-ai-use-cases|Applied AI & Playbooks]]
+## [[01_applied-ai-use-cases|Applied AI & Playbooks]]
 
 This section provides practical frameworks and playbooks for implementing AI across key marketing functions.
 
-```dataview
-TABLE WITHOUT ID
-  file.link as "Topic",
-  semantic_summary as "Description"
-FROM "kb/TOOLS"
-WHERE contains(file.name, "applied-ai")
-SORT file.name ASC
-```
+## Contents
+
+- **[[00_TOOLS|AI & Marketing Tools Knowledge Base Gateway]]** — This pillar page is the main entry point for the AI & Marketing Tools Knowledge Base. It provides a high-level overview and navigation to foundational guides on tool evaluation and use cases, as well as categorized directories for specific platforms covering SEO, AI, analytics, and more.
+- **[[00_ai-tools-overview|AI Tools Overview: Categories, Evaluation, and Selection Framework]]** — This document provides a structured framework for understanding and evaluating the AI tools ecosystem. It details the primary categories of tools used in marketing and business, outlines a strategic selection process, and offers criteria for hands-on trials to ensure tools align with business goals, budget, and governance standards.
+- **[[ai-foundation-models/index|Ai Foundation Models]]**
+- **[[analytics-data-insights/index|Analytics Data Insights]]**
+- **[[audio-generation/index|Audio Generation]]**
+- **[[coding-development/index|Coding Development]]**
+- **[[content-creation/index|Content Creation]]**
+- **[[image-video-generation/index|Image Video Generation]]**
+- **[[marketing-automation/index|Marketing Automation]]**
+- **[[productivity-workflow/index|Productivity Workflow]]**
+- **[[research-knowledge-agents/index|Research Knowledge Agents]]** — AI research & knowledge agents help users discover, synthesize, and interpret information efficiently — turning web content and academic data into actionable insights.
+- **[[seo-optimization/index|Seo Optimization]]**
+- **[[social-media/index|Social Media]]**
 
 ---
 
@@ -68,14 +75,6 @@ SORT file.name ASC
 
 This section explores the core large-scale models that power today's generative and intelligent systems.
 
-```dataview
-TABLE WITHOUT ID
-  file.link as "Tool",
-  semantic_summary as "Description"
-FROM "kb/TOOLS/ai-foundation-models"
-WHERE file.name != "index.md"
-SORT file.name ASC
-```
 
 ---
 
@@ -83,14 +82,6 @@ SORT file.name ASC
 
 This section covers platforms for web analytics, data visualization, and deriving actionable insights from performance data.
 
-```dataview
-TABLE WITHOUT ID
-  file.link as "Tool",
-  semantic_summary as "Description"
-FROM "kb/TOOLS/analytics-data-insights"
-WHERE file.name != "index.md"
-SORT file.name ASC
-```
 
 ---
 
@@ -98,14 +89,6 @@ SORT file.name ASC
 
 This section highlights AI tools that act as intelligent assistants for the software development lifecycle.
 
-```dataview
-TABLE WITHOUT ID
-  file.link as "Tool",
-  semantic_summary as "Description"
-FROM "kb/TOOLS/coding-development"
-WHERE file.name != "index.md"
-SORT file.name ASC
-```
 
 ---
 
@@ -113,14 +96,6 @@ SORT file.name ASC
 
 This section covers tools for AI-powered content automation, including text, image, video, and audio generation.
 
-```dataview
-TABLE WITHOUT ID
-  file.link as "Tool",
-  semantic_summary as "Description"
-FROM "kb/TOOLS/content-creation"
-WHERE file.name != "index.md"
-SORT file.name ASC
-```
 
 ---
 
@@ -128,14 +103,6 @@ SORT file.name ASC
 
 This section details platforms for automating multi-channel marketing campaigns, from email to CRM.
 
-```dataview
-TABLE WITHOUT ID
-  file.link as "Tool",
-  semantic_summary as "Description"
-FROM "kb/TOOLS/marketing-automation"
-WHERE file.name != "index.md"
-SORT file.name ASC
-```
 
 ---
 
@@ -143,14 +110,6 @@ SORT file.name ASC
 
 This section includes tools designed to streamline workflows, manage tasks, and enhance productivity.
 
-```dataview
-TABLE WITHOUT ID
-  file.link as "Tool",
-  semantic_summary as "Description"
-FROM "kb/TOOLS/productivity-workflow"
-WHERE file.name != "index.md"
-SORT file.name ASC
-```
 
 ---
 
@@ -158,14 +117,6 @@ SORT file.name ASC
 
 This section focuses on AI agents designed for research, data synthesis, and knowledge management.
 
-```dataview
-TABLE WITHOUT ID
-  file.link as "Tool",
-  semantic_summary as "Description"
-FROM "kb/TOOLS/research-knowledge-agents"
-WHERE file.name != "index.md"
-SORT file.name ASC
-```
 
 ---
 
@@ -173,14 +124,6 @@ SORT file.name ASC
 
 This section includes platforms for keyword research, rank tracking, technical audits, and competitive analysis.
 
-```dataview
-TABLE WITHOUT ID
-  file.link as "Tool",
-  semantic_summary as "Description"
-FROM "kb/TOOLS/seo-optimization"
-WHERE file.name != "index.md"
-SORT file.name ASC
-```
 
 ---
 
@@ -188,19 +131,5 @@ SORT file.name ASC
 
 This section details tools for social media scheduling, engagement, monitoring, and influencer marketing.
 
-```dataview
-TABLE WITHOUT ID
-  file.link as "Tool",
-  semantic_summary as "Description"
-FROM "kb/TOOLS/social-media"
-WHERE file.name != "index.md"
-SORT file.name ASC
-```
-
 
 ---
-
-```dataviewjs 
-const allPages = dv.pages('"Knowledge/Tools/content-generation"').array(); const categories = [...new Set(allPages.flatMap(p => p.tool_category || []))].sort(); const pricingModels = [...new Set(allPages.map(p => p.pricing_model).filter(p => p))].sort(); const difficulties = [...new Set(allPages.map(p => p.difficulty).filter(p => p))].sort(); const aiTypes = [...new Set(allPages.flatMap(p => p.ai_type || []))].sort(); const container = dv.el("div", ""); container.innerHTML = ` <div style="background: var(--background-secondary); padding: 20px; border-radius: 10px; margin-bottom: 20px; border: 1px solid var(--background-modifier-border);"> <h3 style="margin-top: 0;">Filter & Sort Tools</h3> <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 15px;"> <div> <label style="display: block; margin-bottom: 5px; font-weight: bold;">Category:</label> <select id="categoryFilter" style="width: 100%; padding: 8px; border-radius: 5px; background: var(--background-primary); border: 1px solid var(--background-modifier-border);"> <option value="">All Categories</option> ${categories.map(cat => '<option value="' + cat + '">' + cat + '</option>').join('')} </select> </div> <div> <label style="display: block; margin-bottom: 5px; font-weight: bold;">Pricing:</label> <select id="pricingFilter" style="width: 100%; padding: 8px; border-radius: 5px; background: var(--background-primary); border: 1px solid var(--background-modifier-border);"> <option value="">All Pricing</option> ${pricingModels.map(pm => '<option value="' + pm + '">' + pm + '</option>').join('')} </select> </div> <div> <label style="display: block; margin-bottom: 5px; font-weight: bold;">Difficulty:</label> <select id="difficultyFilter" style="width: 100%; padding: 8px; border-radius: 5px; background: var(--background-primary); border: 1px solid var(--background-modifier-border);"> <option value="">All Levels</option> ${difficulties.map(d => '<option value="' + d + '">' + d + '</option>').join('')} </select> </div> <div> <label style="display: block; margin-bottom: 5px; font-weight: bold;">AI Type:</label> <select id="aiTypeFilter" style="width: 100%; padding: 8px; border-radius: 5px; background: var(--background-primary); border: 1px solid var(--background-modifier-border);"> <option value="">All Types</option> ${aiTypes.map(ai => '<option value="' + ai + '">' + ai + '</option>').join('')} </select> </div> </div> <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;"> <label style="font-weight: bold;">Sort by:</label> <button id="sortName" style="padding: 8px 15px; border-radius: 5px; background: var(--interactive-accent); color: white; border: none; cursor: pointer;">Name</button> <button id="sortUpdated" style="padding: 8px 15px; border-radius: 5px; background: var(--interactive-accent); color: white; border: none; cursor: pointer;">Last Updated</button> <button id="sortDifficulty" style="padding: 8px 15px; border-radius: 5px; background: var(--interactive-accent); color: white; border: none; cursor: pointer;">Difficulty</button> <button id="resetFilters" style="padding: 8px 15px; border-radius: 5px; background: var(--background-modifier-border); border: none; cursor: pointer; margin-left: auto;">Reset All</button> </div> <div id="resultCount" style="margin-top: 15px; font-weight: bold; color: var(--text-muted);"></div> </div> <div id="toolResults"></div> `; function renderTools() { const categoryFilter = container.querySelector('#categoryFilter').value; const pricingFilter = container.querySelector('#pricingFilter').value; const difficultyFilter = container.querySelector('#difficultyFilter').value; const aiTypeFilter = container.querySelector('#aiTypeFilter').value; const toolResults = container.querySelector('#toolResults'); const sortBy = toolResults.dataset.sortBy || 'name'; let filtered = allPages.filter(page => { if (categoryFilter && (!page.tool_category || !page.tool_category.includes(categoryFilter))) return false; if (pricingFilter && page.pricing_model !== pricingFilter) return false; if (difficultyFilter && page.difficulty !== difficultyFilter) return false; if (aiTypeFilter && (!page.ai_type || !page.ai_type.includes(aiTypeFilter))) return false; return true; }); if (sortBy === 'name') { filtered.sort((a, b) => (a.tool_name || a.file.name).localeCompare(b.tool_name || b.file.name)); } else if (sortBy === 'updated') { filtered.sort((a, b) => (b.last_updated || '').localeCompare(a.last_updated || '')); } else if (sortBy === 'difficulty') { const diffOrder = { "Beginner": 1, "Intermediate": 2, "Advanced": 3 }; filtered.sort((a, b) => (diffOrder[a.difficulty] || 999) - (diffOrder[b.difficulty] || 999)); } container.querySelector('#resultCount').textContent = 'Showing ' + filtered.length + ' of ' + allPages.length + ' tools'; const resultsHtml = filtered.map(page => { const tags = page.tags ? page.tags.map(t => '<span style="background: var(--interactive-accent); color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.85em; margin-right: 5px;">' + t + '</span>').join('') : ''; return '<div style="border: 1px solid var(--background-modifier-border); border-radius: 10px; padding: 20px; margin-bottom: 20px; background-color: var(--background-secondary); box-shadow: 0 2px 4px rgba(0,0,0,0.1);"><h2 style="margin-top: 0;"><a href="' + page.file.path + '" class="internal-link">' + (page.tool_name || page.file.name) + '</a></h2><p style="color: var(--text-muted); font-style: italic;">' + (page.primary_function || '') + '</p><hr style="border: none; border-top: 1px solid var(--background-modifier-border); margin: 15px 0;"><p><strong>Category:</strong> ' + (page.tool_category || 'N/A') + '</p><p><strong>AI Type:</strong> ' + (page.ai_type || 'N/A') + '</p><p><strong>Pricing:</strong> ' + (page.pricing_model || 'N/A') + '</p><p><strong>Difficulty:</strong> ' + (page.difficulty || 'N/A') + '</p>' + (page.website ? '<p><strong>Website:</strong> <a href="' + page.website + '" target="_blank">Visit →</a></p>' : '') + '<p><strong>Updated:</strong> ' + (page.last_updated || 'N/A') + '</p>' + (tags ? '<div style="margin-top: 10px;">' + tags + '</div>' : '') + '</div>'; }).join(''); toolResults.innerHTML = resultsHtml || '<p style="text-align: center; color: var(--text-muted); padding: 40px;">No tools match your filters.</p>'; } container.querySelector('#categoryFilter').addEventListener('change', renderTools); container.querySelector('#pricingFilter').addEventListener('change', renderTools); container.querySelector('#difficultyFilter').addEventListener('change', renderTools); container.querySelector('#aiTypeFilter').addEventListener('change', renderTools); container.querySelector('#sortName').addEventListener('click', () => { container.querySelector('#toolResults').dataset.sortBy = 'name'; renderTools(); }); container.querySelector('#sortUpdated').addEventListener('click', () => { container.querySelector('#toolResults').dataset.sortBy = 'updated'; renderTools(); }); container.querySelector('#sortDifficulty').addEventListener('click', () => { container.querySelector('#toolResults').dataset.sortBy = 'difficulty'; renderTools(); }); container.querySelector('#resetFilters').addEventListener('click', () => { container.querySelector('#categoryFilter').value = ''; container.querySelector('#pricingFilter').value = ''; container.querySelector('#difficultyFilter').value = ''; container.querySelector('#aiTypeFilter').value = ''; container.querySelector('#toolResults').dataset.sortBy = 'name'; renderTools(); }); renderTools();
-```
-

@@ -9,12 +9,11 @@ Tools such as [Cursor](obsidian://open?file=kb%2FTOOLS%2Fcoding-development%2FC
 
 ## Contents
 
-```dataview
-TABLE WITHOUT ID
-  file.link as "Topic",
-  Excerpt as "Description",
-  tags as "Tags"
-FROM "kb/TOOLS/coding-development"
-WHERE file.name != "index.md"
-SORT file.name ASC
-```
+- **[[bolt-new|Bolt.new: Browser-Based AI App Builder]]** — Bolt.new is a code-first AI development environment that operates entirely in the browser. It takes a single high-level prompt describing a web application and autonomously generates the frontend, backend, database schema, and deployment configuration, delivering a live functional web app in minutes.
+- **[[cursor|Cursor: AI-Native Code Editor]]** — Cursor is an AI-first code editor forked from VS Code that integrates generative AI deeply into the development workflow. It provides codebase-aware chat, inline AI editing, automated debugging, and full VS Code extension compatibility, making it a leading tool for AI-assisted software development.
+- **[[github-copilot|GitHub Copilot: AI Pair Programmer & Developer Platform]]** — GitHub Copilot is the industry-leading AI developer platform that integrates directly into the software development lifecycle. It has evolved from a simple code completion tool into a comprehensive suite featuring multi-model choice (Claude, Gemini, OpenAI), Copilot Workspace for agentic issue-to-PR workflows, and Copilot Autofix for security remediation.
+- **[[lovable|Lovable: Design-First AI Frontend Builder]]** — Lovable is a design-first AI development tool that specializes in translating visual concepts, mockups, Figma files, and even abstract aesthetic descriptions into functional, high-fidelity web application frontends. It is optimized for founders, designers, and product managers who prioritize user interface and experience.
+- **[[replit|Replit: Browser-Based AI Development Platform]]** — Replit is a collaborative, browser-based development platform that brings AI-assisted coding, deployment, and debugging to users of all skill levels. With Replit Agent, it evolved into a powerful AI-native development environment capable of building full-stack applications from natural language prompts.
+- **[[supabase-ai|Supabase AI: Intelligent Database & SQL Assistant]]** — Supabase AI is an integrated assistant within the Supabase platform that helps developers write, debug, and optimize SQL queries and backend logic using natural language. It is schema-aware, understands database structure for precise results, and integrates directly into the Supabase dashboard for real-time query generation and execution.
+- **[[v0-vercel|V0 (Vercel): AI-Powered React & Tailwind Component Generator]]** — V0 is an AI-powered code generation tool by Vercel that converts natural language descriptions into working React and Tailwind UI components. It integrates with the Vercel/Next.js ecosystem, providing visual previews, editable output, and instant deployment capabilities for modern frontend development.
+- **[[windsurf|Windsurf: Agentic IDE Powered by Codeium]]** — Windsurf is an Agentic IDE that shifts from AI-assisted coding to AI-delegated coding. Powered by Codeium, it indexes and deeply understands entire codebases, allowing developers to assign high-level tasks that the AI plans and executes across multiple files and directories autonomously.

@@ -1,14 +1,10 @@
 
 # Contents
 
-```dataview
-TABLE WITHOUT ID
-  file.link as "Topic",
-  summary as "Description",
-  difficulty as "Difficulty",
-  tags as "Tags"
-FROM "kb/CORE/core-concepts"
-WHERE file.name != "index.md"
-SORT file.name ASC
-```
-
+- **[[00_anatomy|Anatomy of a Knowledge Core: Fueling the Strategic Intelligence Engine]]** — Defines the architecture of the Knowledge Core (Master Hub), the proven asset that powers the Strategic Intelligence Engine (SIE) and reduces the Human Correction Tax.
+- **[[01_the-bill-bernard-standard|The Bill Bernard Standard: Integrity as a Strategic Framework]]** — Defines the Bill Bernard Standard as the hardcoded ethical kernel of the SIE, translating personal integrity into technical protocols like Costly Signaling, Hormesis, and Transaction Cost Reduction.
+- **[[02_model-context-protocol-mcp|Model Context Protocol (MCP)]]** — Defines the Model Context Protocol (MCP) as an emerging standard for how AI agents connect to and retrieve information from knowledge sources, tools, and other agents, ensuring interoperability and scalability for the SIE.
+- **[[03_advanced-retrieval-techniques|Advanced Retrieval Techniques for AI Agents]]** — Explores advanced methods beyond standard RAG for providing AI agents with precise, governed, and contextually-aware information from a knowledge base, enhancing their reasoning and decision-making capabilities.
+- **[[04_the-data-moat|The Data Moat: A Strategic Asset in the Age of AI]]** — Defines a 'Data Moat' as a defensible competitive advantage built from proprietary data, and explains how the Strategic Intelligence Engine (SIE) is designed to construct and activate this critical asset for clients.
+- **[[05_retrieval-augmented-generation-rag|Retrieval-Augmented Generation (RAG)]]** — Explains Retrieval-Augmented Generation (RAG), the core technique used by the Strategic Intelligence Engine (SIE) to provide agents with real-time, factual context from the Master Hub, enhancing the accuracy and relevance of their outputs.
+- **[[06_vector-databases|Vector Databases]]** — Explains what Vector Databases are and their critical role in enabling semantic search for the SIE's RAG pipelines, allowing agents to find information based on meaning rather than keywords.

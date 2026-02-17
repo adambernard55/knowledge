@@ -52,4 +52,3 @@ coverImage:
 
 - **[[ai-for-social-media-marketing|Automate, Analyze, and Amplify]]** — AI as tireless assistant for scheduling, content curation, performance tracking, and influencer integration.
 - **[[social-media-agent|Social Media Agent]]** — Building AI agents for autonomous social media management using Nebius, Composio, and Memori.
-

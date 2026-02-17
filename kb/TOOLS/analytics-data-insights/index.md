@@ -7,14 +7,14 @@ These platforms leverage artificial intelligence and machine learning to move be
 
 ---
 
-```dataview
-TABLE
-    semantic_summary AS "Overview",
-    tags AS "Tags",
-    last_updated AS "Last Updated"
-FROM "kb/TOOLS/analytics-data-insights"
-WHERE file.name != "index"
-SORT file.name ASC
-````
+## Contents
 
-
+- **[[affluent|Affluent: Affiliate Data Aggregation Platform]]** — Affluent is a data aggregation platform that centralizes metrics from disparate affiliate networks (e.g., Impact, ShareASale, CJ) into a single dashboard. It automates data collection, standardizes reporting formats, and provides tools for link management and commission reconciliation.
+- **[[buzzsumo|BuzzSumo: Content Intelligence & Monitoring Platform]]** — BuzzSumo is a cloud-based platform for content discovery and monitoring. It allows users to analyze what content performs best for any topic or competitor, find key influencers to promote content, and track brand mentions. It bridges the gap between social engagement metrics and SEO authority.
+- **[[callrail|CallRail: AI-Powered Call Tracking & Analytics]]** — CallRail is a call tracking and analytics platform that uses AI (Conversation Intelligence) to transcribe calls, analyze sentiment, and spot keywords. It bridges the gap between digital marketing campaigns and offline phone conversions, allowing marketers to attribute revenue to specific keywords and ads.
+- **[[delve-ai|Delve AI: Automated Persona Generation Platform]]** — Delve AI leverages machine learning to analyze website traffic data from Google Analytics, automatically generating detailed customer personas and audience segments. It provides actionable insights into user behavior, content preferences, and conversion paths to optimize marketing strategies.
+- **[[google-analytics|Google Analytics (GA4): Web Analytics & AI Insights]]** — Google Analytics 4 (GA4) is an event-based analytics platform that uses machine learning to predict user behavior, detect anomalies, and track cross-platform journeys. It integrates deeply with the Google marketing ecosystem to optimize ad spend and conversion rates.
+- **[[google-search-console|Google Search Console: Organic Search Performance & Indexing]]** — Google Search Console (GSC) is the primary interface for communication between a website and Google's search index. It provides critical data on crawl status, indexing errors, and organic search performance (clicks, impressions, CTR). It is essential for diagnosing technical SEO issues and optimizing content visibility.
+- **[[salesloft|Salesloft: AI-Powered Sales Engagement Platform]]** — Salesloft is a sales engagement platform that orchestrates the entire revenue lifecycle. It uses AI (Rhythm) to prioritize daily tasks based on buyer signals and provides conversation intelligence to analyze sales calls. It integrates deeply with CRMs to automate data entry and forecast revenue.
+- **[[trackonomics|Trackonomics: Enterprise Affiliate Analytics & Attribution]]** — Trackonomics (acquired by impact.com) is a data management platform (DMP) designed for large-scale content publishers. It aggregates data from over 100 affiliate networks into a single dashboard and utilizes its 'Funnel Relay' technology to provide page-level and link-level revenue attribution. It also features automated link generation and broken link detection.
+- **[[wevo-pulse|WEVO Pulse: AI-Powered UX Research & Optimization]]** — WEVO Pulse is a UX research platform that combines AI with human feedback to diagnose conversion barriers. It provides predictive scores and qualitative insights to optimize landing pages and user journeys before they go live.`

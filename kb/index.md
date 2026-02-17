@@ -1,9 +1,13 @@
 ---
-title: "Strategic Intelligence Engine"
+title: Strategic Intelligence Engine
 type: cornerstone
 status: active
-tags: [hub, navigation, root]
-description: "Central access point for The Bernard Group's knowledge assets, divided into Cognitive, Visibility, and Operational pillars."
+tags:
+  - hub
+  - navigation
+  - root
+description: Central access point for The Bernard Group's knowledge assets, divided into Cognitive, Visibility, and Operational pillars.
+sticker: emoji//1f4c7
 ---
 
 # The Intelligence Engine
@@ -41,64 +45,43 @@ The instruments of execution. Documentation for Obsidian, WordPress, and our sof
 
 # Knowledge Base Contents
 
-```dataviewjs
-// Get all pages named "index" within the "kb" folder and its subdirectories,
-// excluding the current index file itself.
-const pages = dv.pages('"kb"')
-    .where(p => p.file.name === "index" && p.file.path !== dv.current().file.path)
-    .sort(p => p.file.folder);
+### AI
+- **[[AI/0_fundamentals/index|0_fundamentals]]** — Core AI concepts: history, types, ML vs DL, the AI stack, generative AI, NLP, embeddings, transformers
+- **[[AI/1_models/index|1_models]]** — Foundation models, specific models (Claude, GPT, Gemini), evaluation and tooling
+- **[[AI/2_agents/index|2_agents]]** — Agentic AI systems, frameworks, toolkits, and orchestration patterns
+- **[[AI/3_methods/index|3_methods]]** — Prompt engineering, RAG, fine-tuning, MCP, and applied AI methods
+- **[[AI/4_applications/index|4_applications]]** — Business use cases and applied AI implementations
+- **[[AI/5_ethics-and-governance/index|5_ethics-and-governance]]** — AI safety, bias, regulation, and responsible deployment
+- **[[AI/6_future-trends/index|6_future-trends]]** — Emerging AI trends and future directions
+- **[[AI/7_marketing/index|7_marketing]]** — AI-powered marketing: social media, e-commerce, affiliate, influencer
 
-// Group pages by their top-level category folder (e.g., "AI", "SEO").
-const categories = {};
-for (let page of pages) {
-    // Path parts: e.g., "kb/AI/3_methods" -> ["kb", "AI", "3_methods"]
-    const pathParts = page.file.folder.split('/');
-    
-    // The category is the first folder inside "kb"
-    const categoryName = pathParts[1];
-    
-    if (!categoryName) continue; // Skip if the file is directly in "kb"
-    
-    if (!categories[categoryName]) {
-        categories[categoryName] = [];
-    }
-    categories[categoryName].push(page);
-}
+---
 
-// Render the grouped list.
-let isFirstCategory = true;
-for (let categoryName of Object.keys(categories).sort()) {
-    const subPages = categories[categoryName];
-    
-    // Find the main index file for this category, e.g., "kb/AI/index.md"
-    const categoryIndexPage = subPages.find(p => p.file.folder === `kb/${categoryName}`);
-    
-    // If a main index file for the category doesn't exist, skip this category.
-    if (!categoryIndexPage) continue;
-    
-    // Add a horizontal rule between categories.
-    if (!isFirstCategory) {
-        dv.el("hr", "");
-    }
-    isFirstCategory = false;
-    
-    // Display the category name as a linked H3 header.
-    dv.el("h3", dv.fileLink(categoryIndexPage.file.path, categoryName));
-    
-    // Find and list the index files of direct subfolders within this category.
-    const subfolderPages = subPages.filter(p => {
-        const pathParts = p.file.folder.split('/');
-        // A subfolder index path will have 3 parts: ["kb", "Category", "Subfolder"]
-        return pathParts.length === 3 && p.file.folder !== `kb/${categoryName}`;
-    });
-    
-    if (subfolderPages.length > 0) {
-        dv.list(
-            subfolderPages.map(p => {
-                const subfolderName = p.file.folder.split('/')[2];
-                return dv.fileLink(p.file.path, subfolderName);
-            })
-        );
-    }
-}
-```
+### CORE
+- **[[CORE/core-concepts/index|core-concepts]]** — SIE engine architecture, RAG, vector databases, MCP, data moats
+- **[[CORE/strategy-application/index|strategy-application]]** — Strategic application of core concepts
+
+---
+
+### SEO
+- **[[SEO/0_fundamentals/index|0_fundamentals]]** — SEO core principles, search engines, E-E-A-T, user intent
+- **[[SEO/1_research-and-strategy/index|1_research-and-strategy]]** — Keyword research, competitor analysis, topical authority
+- **[[SEO/2_content-and-on-page/index|2_content-and-on-page]]** — Content creation, on-page optimization, internal linking
+- **[[SEO/3_technical-seo/index|3_technical-seo]]** — Crawlability, rendering, site speed, structured data
+- **[[SEO/4_ai-and-automation/index|4_ai-and-automation]]** — AI tools for SEO and optimizing for AI-driven search
+- **[[SEO/5_measurement-and-optimization/index|5_measurement-and-optimization]]** — Analytics, testing, ROI forecasting
+- **[[SEO/6_future-trends/index|6_future-trends]]** — Future of search and SEO
+- **[[SEO/7_frameworks-and-sops/index|7_frameworks-and-sops]]** — SOPs, templates, and checklists
+
+---
+
+### TOOLS
+- **[[TOOLS/ai-foundation-models/index|ai-foundation-models]]** — Core large-scale AI models
+- **[[TOOLS/analytics-data-insights/index|analytics-data-insights]]** — Web analytics and data visualization
+- **[[TOOLS/coding-development/index|coding-development]]** — AI coding assistants and dev tools
+- **[[TOOLS/content-creation/index|content-creation]]** — AI content generation (text, image, video, audio)
+- **[[TOOLS/marketing-automation/index|marketing-automation]]** — Multi-channel marketing automation
+- **[[TOOLS/productivity-workflow/index|productivity-workflow]]** — Workflow automation and productivity tools
+- **[[TOOLS/research-knowledge-agents/index|research-knowledge-agents]]** — AI research and knowledge agents
+- **[[TOOLS/seo-optimization/index|seo-optimization]]** — SEO platforms and search intelligence
+- **[[TOOLS/social-media/index|social-media]]** — Social media management tools

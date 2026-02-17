@@ -1,14 +1,14 @@
 
 
-
-
 ## Contents
 
-```dataview
-TABLE WITHOUT ID
-  file.link as "Topic",
-  summary as "Description"
-FROM "kb/AI/2_agents/toolkits"
-WHERE file.name != "index.md"
-SORT file.name ASC
-````
+- **[[01_introduction-to-openai-agent-builder|Introduction to OpenAI Agent Builder: A Reference Guide for Creating Custom AI Agents]]** — This reference guide explains OpenAI's Agent Builder, a no-code/low-code interface for creating custom AI agents directly within ChatGPT. It covers the core features, architectural components, and best practices for deploying task-specific assistants with integrated tools and memory.
+- **[[02_introduction-to-openai-agentkit|Introduction to OpenAI AgentKit: Exploring Its Architecture and Capabilities]]** — Explore OpenAI's AgentKit, a comprehensive framework that enables developers to design, visualize, and deploy multi-step AI agents. Learn about its architecture, key features, integrations, and how it complements OpenAI's broader ecosystem.
+- **[[03_building-agents-with-openai-gpts|Building Agents with OpenAI's GPTs: A Technical Overview]]** — OpenAI's GPTs (often referred to as custom GPTs) provide a no-code or low-code interface for creating specialized versions of ChatGPT that can function as simple AI agents.
+- **[[04_building-agents-with-the-claude-agent-sdk|Building Agents with the Claude Agent SDK]]** — This document is a technical guide to the Claude Agent SDK, which enables LLMs to function as tool-using software agents. It details the core 'agentic feedback loop' (Gather, Act, Verify), and key architectural components including context management via a filesystem, the use of subagents for parallelism, and the design of effective tools (Bash, Code, MCP). The guide emphasizes building reliable agents through verification loops and provides best practices for production-grade agentic systems.
+- **[[05_microsoft-agent-framework|Microsoft Agent Framework: A Technical Overview]]** — The Microsoft Agent Framework is an open-source SDK and runtime designed to simplify the development and orchestration of complex, production-grade AI agents and multi-agent systems.
+- **[[06_building-ai-workflows-with-n8n|Building AI Workflows with n8n: A Technical Framework]]** — n8n is a visual, node-based workflow automation platform that enables developers and technical users to build complex, multi-step automations. With the integration of AI-native features, n8n can be used to create sophisticated workflows that leverage Large Language Models (LLMs.
+- **[[07_introduction-to-autogpt|Introduction to AutoGPT]]** — This document provides a guide to the AutoGPT platform, an open-source tool for creating and deploying autonomous AI agents. It details system requirements for self-hosting, explains the roles of the AutoGPT Frontend and Server, and introduces associated projects like Forge for building custom agents and agbenchmark for performance testing.
+- **[[08_gemini-cli-hands-on|Hands-on Guide to Gemini CLI]]** — Gemini CLI is an open-source AI agent from Google that operates directly in your terminal, featuring built-in tools for file operations, web search, code execution, and extensibility through MCP servers. This guide covers installation, configuration, tool usage, MCP server setup (GitHub, Cloud Run), and practical use cases from code generation to database operations and automation.
+- **[[09_introduction-to-autogpt|Introduction to AutoGPT: Build, Deploy, and Run AI Agents]]** — This document provides a comprehensive guide to AutoGPT, an open-source platform for building and running autonomous AI agents. It covers the core components (Frontend, Server), self-hosting requirements using Docker, and the classic toolset including Forge for agent creation and Benchmark for performance evaluation. The licensing model, which combines Polyform Shield and MIT licenses, is also explained.
+- **[[10_claude-code-beyond-basics|Claude Code Beyond Basics: Skills, MCP, and Open Models]]** — This document provides a step-by-step tutorial on advancing beyond basic Claude Code usage. It covers setting up and using Claude Code within an IDE like VS Code or Cursor, creating and invoking custom 'Skills' to standardize repeatable workflows, connecting to third-party MCP servers (like Hugging Face) to grant the agent new capabilities, and extending its power with compatible open-source models like SERA. The guide emphasizes combining these methods for powerful, automated task execution.

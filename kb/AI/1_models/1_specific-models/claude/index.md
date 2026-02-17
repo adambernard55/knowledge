@@ -1,13 +1,12 @@
 
 ## Claude Contents
 
-```dataview
-TABLE WITHOUT ID
-  file.link as "Topic",
-  semantic_summary as "Description"
-FROM "kb/AI/1_models/1_specific-models/claude"
-WHERE file.name != "index.md"
-SORT file.name ASC
-````
+## Contents
 
-
+- **[[01_creator-of-claude-code|The Workflow of Claude Code's Creator: A Deep Dive]]** — This document analyzes the viral workflow of Boris Cherny, creator of Claude Code. It details his 'fleet commander' approach, where he runs multiple Claude agents in parallel to manage different development streams simultaneously. Key principles include using the smartest model (Opus) to minimize human correction, maintaining a shared `CLAUDE.md` file for continuous agent learning, and using verification loops to ensure AI-generated code is functional. This methodology shifts the developer's role from a coder to an orchestrator of an autonomous workforce.
+- **[[02_oh-my-claude-code|Oh My Claude Code (OMC): Agent Swarm Orchestration]]** — This document reviews 'Oh My Claude Code' (OMC), a powerful plugin that provides multi-agent swarm orchestration for the Claude Code terminal. OMC features five execution modes (Autopilot, Ultrapilot, Swarm, Pipeline, Ecomode), 32 specialized agents, and smart model routing between Haiku, Sonnet, and Opus to optimize performance and cost. It enables developers to manage complex tasks using natural language, shifting from manual coding to orchestrating a team of autonomous AI agents.
+- **[[03_integrating-claude-code-with-obsidian|Integrating Claude Code with Obsidian]]** — This document details the setup of Claude Code (CLI) within Obsidian using a Terminal plugin. It covers the installation of 'Agent Skills' (JSON Canvas, Markdown specs) into a .claude folder and the initialization of CLAUDE.md for context-aware vault management.
+- **[[04_claude-connector-for-wordpress|Claude Connector for WordPress.com]]** — This document details the official WordPress.com connector for Claude, the first of its kind for a WordPress host. Built on the Model Context Protocol (MCP) and secured with OAuth 2.1, the connector allows users to grant Claude read-only access to their site's data. This enables Claude to answer questions and provide insights based on real site traffic, comments, and content history directly within the Claude interface.
+- **[[05_claude-cowork-desktop-agent|Claude Cowork: Desktop Agent Architecture]]** — Claude Cowork is a desktop-based AI agent available on Windows and macOS. It features full file system access, multi-step task execution, and Model Context Protocol (MCP) support. It runs in a sandboxed virtual machine environment and is currently integrated into Microsoft's internal engineering workflows.
+- **[[06_claude-code-operators-guide|Claude Code Operator’s Guide]]** — This guide outlines the operational best practices for Claude Code, Anthropic's agentic CLI. It details how to establish 'Project Memory' via CLAUDE.md, configure safety permissions, implement a 'Plan-First' architecture, and utilize specialized sub-agents (Planner, Implementer, Reviewer) for robust software development.
+- **[[claude|claude]]**`

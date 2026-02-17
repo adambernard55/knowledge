@@ -31,17 +31,9 @@ Where other sections define the "what" and "why" of our SEO strategy, this secti
 
 ## Contents
 
-```dataview
-TABLE WITHOUT ID
-  file.link as "Topic",
-  summary as "Description"
-FROM "kb/SEO/7_frameworks-and-sops"
-WHERE file.name != "index.md"
-SORT file.name ASC
-```
-
-
-
+- **[[01_semantic-depth-standard|SOP: Semantic Depth Standard]]** — This Standard Operating Procedure (SOP) establishes the definition and implementation principles for 'Semantic Depth'. It mandates that all content must satisfy the three pillars: People-First Completeness, System-Aligned Meaning, and Core Update Resilience.
+- **[[02_semantic-depth-content-brief-template|Template: Semantic Depth Content Brief]]** — This template operationalizes the Semantic Depth Standard for content creators. It includes required fields for defining the primary user goal, mapping out concepts and entities, and planning for original value, ensuring alignment with people-first and system-aligned principles from the start.
+- **[[03_semantic-depth-audit-checklist|Checklist: Semantic Depth Content Audit]]** — This checklist provides a structured framework for auditing content based on Google's self-assessment questions. It allows for scoring content on completeness, originality, and credibility to generate actionable recommendations for improvement, ensuring long-term resilience and quality.
 | Topic                                                                        | Description                                                                                                                                                              |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [[kb/SEO/8_frameworks-and-sops/01_semantic-depth-standard.md]]               | Defines the official standard for achieving 'Semantic Depth' in all content, aligning with Google's core ranking systems for quality, relevance, and resilience.         |

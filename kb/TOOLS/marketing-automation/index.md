@@ -1,3 +1,3 @@
 # Marketing Automation
 
-AI for multi-channel marketing automation. 
+AI for multi-channel marketing automation.

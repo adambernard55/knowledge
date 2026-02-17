@@ -37,34 +37,10 @@ Use this section when you want to:
 
 ## Contents
 
-| Topic                                                                         | Description                                                                                                                                                                                                                                                                                          |
-| ----------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [00_emerging-ai-technologies](00_emerging-ai-technologies.md)                 | An overview of the most important emerging AI technologies—from frontier foundation models and multimodal systems to agentic AI, on-device models, synthetic data, and AI-native infrastructure—and how they are reshaping applications, organizations, and future capabilities.                     |
-| [01_ai-agents-and-autonomous-systems](01_ai-agents-and-autonomous-systems.md) | An overview of AI agents and autonomous systems as a major future trend—how they differ from traditional AI, how they perceive, reason, and act through tools and environments, what multi-agent ecosystems look like, and what this shift means for organizations, workflows, and governance.       |
-| [02_preparing-for-the-ai-future](02_preparing-for-the-ai-future.md)           | A practical guide for individuals and organizations on how to prepare for the AI-driven future—covering mindset, skills, organizational capabilities, governance, and step-by-step actions to move from experimentation to durable value.                                                            |
-| [03_the-widening-ai-value-gap](03_the-widening-ai-value-gap.md)               | A strategic reference explaining why only a small minority of “future-built” organizations capture outsized AI value, how agentic AI accelerates this divide, and what structural, technical, and organizational moves are required to close the gap and scale AI impact.                            |
-| [04_regulation-and-policy-outlook](04_regulation-and-policy-outlook.md)       | A forward-looking overview of how AI regulation and public policy are evolving worldwide, what common themes are emerging (risk-based rules, transparency, safety, accountability), and how organizations can prepare their architectures, governance, and practices for a more regulated AI future. |
-| [05_the-future-in-ai-marketing](05_the-future-in-ai-marketing.md)             | A forward-looking reference on how generative, agentic, and immersive AI technologies will transform marketing—covering emerging tools, evolving marketer roles, required skills, organizational changes, and the ethical foundations needed to compete in an AI-first marketing landscape.          |
-
-## How This Section Connects to the Rest of the Knowledge Base
-
-- **From Fundamentals to Futures**  
-  Start with [What Is AI](00_what-is-ai.md) for core concepts, then use `6_future-trends` to see how those concepts evolve.
-
-- **Methods and Agents**  
-  Future trends here build on technical methods in `3_methods/` (e.g., architectures, multimodal AI, agentic AI) and the practical agent patterns in `2_agents/`.
-
-- **Ethics and Governance**  
-  Many future trends raise new risk and governance questions; cross-reference with `5_ethics-and-governance/` (responsible AI, privacy, fairness, transparency, IP, and operational excellence).
-
-Use this index as your **entry point** when planning strategy, roadmaps, or upskilling programs with a multi-year horizon in mind.
-## Contents
-
-```dataview
-TABLE WITHOUT ID
-  file.link as "Topic",
-  summary as "Description"
-FROM "kb/AI/6_future-trends"
-WHERE file.name != "index.md"
-SORT file.name ASC
-````
+- **[[00_emerging-ai-technologies|Emerging AI Technologies]]** — An overview of the most important emerging AI technologies—from frontier foundation models and multimodal systems to agentic AI, on-device models, synthetic data, and AI-native infrastructure—and how they are reshaping applications, organizations, and future capabilities.
+- **[[01_ai-agents-and-autonomous-systems|AI Agents and Autonomous Systems]]** — An overview of AI agents and autonomous systems as a major future trend—how they differ from traditional AI, how they perceive, reason, and act through tools and environments, what multi-agent ecosystems look like, and what this shift means for organizations, workflows, and governance.
+- **[[02_preparing-for-the-ai-future|Preparing for the AI Future]]** — A practical guide for individuals and organizations on how to prepare for the AI-driven future—covering mindset, skills, organizational capabilities, governance, and step-by-step actions to move from experimentation to durable value.
+- **[[03_the-widening-ai-value-gap|The Widening AI Value Gap]]** — A strategic reference explaining why only a small minority of “future-built” organizations capture outsized AI value, how agentic AI accelerates this divide, and what structural, technical, and organizational moves are required to close the gap and scale AI impact.
+- **[[04_regulation-and-policy-outlook|Regulation and Policy Outlook for AI]]** — A forward-looking overview of how AI regulation and public policy are evolving worldwide, what common themes are emerging (risk-based rules, transparency, safety, accountability), and how organizations can prepare their architectures, governance, and practices for a more regulated AI future.
+- **[[05_the-future-in-ai-marketing|The Future of AI in Marketing]]** — A forward-looking reference on how generative, agentic, and immersive AI technologies will transform marketing—covering emerging tools, evolving marketer roles, required skills, organizational changes, and the ethical foundations needed to compete in an AI-first marketing landscape.
+- **[[06_enterprise-ai-adoption-trends|Enterprise AI Adoption Trends: Agentic, Physical, and Sovereign AI]]** — This document examines three major trends in enterprise AI adoption: agentic AI for autonomous task execution, physical AI for real-world operations, and sovereign AI for strategic independence. It highlights the 'velocity paradox'—the need to adopt AI both quickly and carefully—and outlines the necessary redesign of workflows and governance models for successful integration.

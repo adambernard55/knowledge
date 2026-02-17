@@ -378,8 +378,16 @@ For a flat, searchable view, see:
 
 # AI Knowledge Folders
 
-```dataview 
-TABLE WITHOUT ID key AS "Table of Contents" FROM "kb/AI" GROUP BY file.folder SORT key ASC
-```
+## Contents
+
+- **[[00_AI|AI Knowledge Base Gateway]]** — This pillar page serves as the main entry point for the AI Knowledge Base. It provides a high-level overview and navigation to the core sections, including AI fundamentals, models, agentic systems, methods like RAG, practical applications, ethics, and future trends.
+- **[[0_fundamentals/index|Fundamentals]]** — This document provides a foundational definition of Artificial Intelligence (AI) as the simulation of human cognitive functions in machines. It details key subfields like Machine Learning (ML), Deep Learning (DL), Natural Language Processing (NLP), and Generative AI. The note explains the AI stack, from data infrastructure to user applications, and outlines AI's strategic business impact on efficiency, personalization, and insight generation. It emphasizes a collaborative model where AI augments human expertise, framing the human role as a strategic "Fleet Commander" rather than a simple operator, while also addressing critical ethical considerations like bias and transparency.
+- **[[1_models/index|Models]]** — This document provides a comparative overview of the generative AI model landscape, designed to help in selecting the right model based on performance, cost, and primary use case. The landscape is divided into two main categories: 1.  Cloud-Based & API Models 2.  Local & Open-Source Models
+- **[[2_agents/index|Agents]]** — This document provides a foundational overview of AI agents, defining them as autonomous, goal-oriented systems that leverage LLMs, tools, and memory. It contrasts agents with reactive chatbots, outlines their strategic business purpose in reducing cognitive load via a 'Fleet Commander Model,' details the ReAct architecture, classifies autonomy levels using frameworks from other industries, and discusses key challenges like defining a digital ODD.
+- **[[3_methods/index|Methods]]** — An index of the core principles of SEO, from how search engines work to modern concepts like E-E-A-T and AI's role in search.
+- **[[4_applications/index|Applications]]**
+- **[[5_ethics-and-governance/index|Ethics And Governance]]** — A practical, organization-wide set of principles and guardrails for building and using AI responsibly—covering safety, privacy, fairness, transparency, human oversight, security, IP, and operational excellence.
+- **[[6_future-trends/index|Future Trends]]** — An overview of the most important emerging AI technologies—from frontier foundation models and multimodal systems to agentic AI, on-device models, synthetic data, and AI-native infrastructure—and how they are reshaping applications, organizations, and future capabilities.
+- **[[7_marketing/index|Marketing]]** — This document outlines the fundamental principles of AI-powered marketing. It covers the strategic advantages, core AI concepts (ML, NLP, GenAI), common applications from personalization to ad targeting, and the critical role of human oversight and ethical considerations for responsible implementation.
 
 ---
