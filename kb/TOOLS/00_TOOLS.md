@@ -54,7 +54,7 @@ Welcome to the Technology Stack pillar. This knowledge base is your central repo
 Before diving into specific tools, start with these foundational guides. They provide the strategic context for choosing the right tools and implementing them in practical, repeatable workflows.
 
 - **[[kb/TOOLS/00_ai-tools-overview|AI Tools Overview]]**: Learn the framework for categorizing, evaluating, and selecting the right AI tools for any marketing task.
-- **[[kb/TOOLS/01_applied-ai-use-cases|Applied AI Use Cases]]**: Discover practical playbooks for implementing AI across key functions like content, SEO, email, and social media.
+- **[[01_applied-ai-use-cases|Applied AI Use Cases]]**: Discover practical playbooks for implementing AI across key functions like content, SEO, email, and social media.
 
 ---
 

@@ -1,10 +1,9 @@
 ---
-color: var(--mk-color-purple)
-title: kb
-id: 20260216201631
+title: standards
+id: 20260215044742
 version: "1.0"
 steward: Adam Bernard
-updated: 2026-02-16
+updated: 2026-02-15
 status: Draft
 doc_type:
 summary:
@@ -27,7 +26,6 @@ seo_title:
 meta_description:
 excerpt:
 cover_image:
-sticker: emoji//1f4da
 ---
 
 <% tp.file.cursor() %>

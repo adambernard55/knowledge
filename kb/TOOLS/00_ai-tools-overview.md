@@ -51,7 +51,7 @@ cover_image: ""
 
 This document provides a structured reference for the primary categories, functions, and evaluation methods used to select artificial intelligence tools for marketing, analytics, and creative workflows. It is designed to help teams navigate the rapidly expanding AI landscape, identify appropriate systems for specific business tasks, and evaluate their suitability based on integration, usability, and compliance factors.
 
-This reference describes how AI tools are classified within our knowledge base, how to assess them efficiently, and how they connect to our [[kb/TOOLS/01_applied-ai-use-cases|Applied AI Use Cases]] and governance frameworks.
+This reference describes how AI tools are classified within our knowledge base, how to assess them efficiently, and how they connect to our [[01_applied-ai-use-cases|Applied AI Use Cases]] and governance frameworks.
 
 ---
 
@@ -104,7 +104,7 @@ Practical tool evaluation involves structured testing stages.
 
 1.  **Shortlist Candidates:** Select 2–3 tools using the framework above.
 2.  **Initiate Free Trials or Demos:** Assess workflow fit in real-world scenarios.
-3.  **Define Test Cases:** Create specific tasks from our [[kb/TOOLS/01_applied-ai-use-cases|Applied AI Use Cases]] to test each tool.
+3.  **Define Test Cases:** Create specific tasks from our [[01_applied-ai-use-cases|Applied AI Use Cases]] to test each tool.
 4.  **Measure Performance:** Quantify outcomes (e.g., time saved, quality of output, error rates).
 5.  **Review User Experience:** Note support quality, bugs, and documentation clarity.
 6.  **Assess Governance Fit:** Confirm data handling practices align with our policies.

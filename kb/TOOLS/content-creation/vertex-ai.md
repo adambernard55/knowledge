@@ -1,5 +1,55 @@
 ---
-title: Vertex AI
+title: "Vertex AI: Google Cloud Machine Learning Platform"
+id: SIE/REF/VERTEXAI-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2025-12-08
+status: "Active"
+doc_type: "Reference"
+summary: "Vertex AI is Google Cloud's unified machine learning and AI platform for building, deploying, and scaling custom AI applications."
+tags:
+  - tool
+  - ai
+  - content-creation
+  - machine-learning
+  - google-cloud
+  - mlops
+relations:
+  - kb/TOOLS/content-creation/index.md
+aliases:
+  - Vertex AI
+  - Google Vertex AI
+
+# --- Domain Specifics (Tool) ---
+offering_name: "Vertex AI"
+target_icp: "Developers, data scientists, and enterprises building custom AI/ML solutions on Google Cloud"
+price_point: "Paid"
+
+# --- Operational ---
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: >
+  Vertex AI is Google Cloud's enterprise-grade unified ML and AI platform providing access to
+  foundation models like Gemini and Imagen, AutoML, custom model training, Generative AI Studio,
+  and comprehensive MLOps tools for building, deploying, and scaling AI applications.
+synthetic_questions:
+  - "What is Vertex AI and how does it support custom AI development?"
+  - "How can marketers use Vertex AI for content generation and predictive analytics?"
+  - "What foundation models are available through Vertex AI?"
+key_concepts:
+  - "Unified ML/AI platform"
+  - "Foundation model access (Gemini, Imagen)"
+  - "Enterprise MLOps and AutoML"
+
+# --- SEO & Publication ---
+primary_keyword: "Vertex AI"
+seo_title: "Vertex AI: Google Cloud Machine Learning Platform - Features, Pricing & Use Cases"
+meta_description: "Vertex AI is Google Cloud's unified ML platform for building custom AI apps with Gemini, AutoML, and MLOps tools. Learn features and pricing."
+excerpt: "Vertex AI is Google Cloud's unified machine learning platform for building, deploying, and scaling custom AI applications with enterprise-grade tools."
+cover_image: ""
 ---
 
 

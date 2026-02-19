@@ -78,4 +78,9 @@ While the preview focuses on providing unstructured Markdown, future plans inclu
 ---
 
 ### See Also
+---
+
+### See Also
 -   [[kb/AI/3_methods/mcp/02_mcp-connectors-and-integrations|MCP Connectors and Integrations]]
+-   [[kb/AI/3_methods/mcp/16_google-webmcp-agent-interactions|Google WebMCP: Direct Agent-Website Interaction]]
+- 

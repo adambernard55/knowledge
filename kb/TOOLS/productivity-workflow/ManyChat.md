@@ -1,5 +1,53 @@
 ---
-Title: ManyChat
+title: "ManyChat: AI Chatbot Builder for Messaging Platforms"
+id: SIE/REF/MANYCHAT-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2025-12-08
+status: "Active"
+doc_type: "Reference"
+summary: "ManyChat is a chatbot builder platform for creating automated conversational experiences across Facebook Messenger, Instagram DM, SMS, and WhatsApp for marketing, sales, and support."
+tags:
+  - tool
+  - ai
+  - productivity-workflow
+  - chatbot
+  - messaging
+  - marketing-automation
+relations:
+  - kb/TOOLS/productivity-workflow/index.md
+aliases:
+  - ManyChat
+  - ManyChat AI
+
+# --- Domain Specifics (Tool) ---
+offering_name: "ManyChat"
+target_icp: "Businesses and marketers who want to automate customer interactions and lead generation on messaging platforms like Messenger, Instagram, SMS, and WhatsApp"
+price_point: "Freemium"
+
+# --- Operational ---
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: >
+  ManyChat is a popular chatbot builder platform for automating conversations on Facebook Messenger, Instagram DM, SMS, and WhatsApp. It features a visual drag-and-drop flow builder, keyword triggers, audience segmentation, broadcasting, CRM integrations, and A/B testing to support lead generation, customer support, and marketing automation.
+synthetic_questions:
+  - "What tool can I use to build chatbots for Facebook Messenger and Instagram DM?"
+  - "How can I automate lead generation through messaging platform chatbots?"
+  - "What chatbot platform offers a visual flow builder with SMS and WhatsApp support?"
+key_concepts:
+  - "Visual chatbot flow builder"
+  - "Messaging platform automation"
+  - "Lead generation via conversational marketing"
+
+# --- SEO & Publication ---
+primary_keyword: "ManyChat"
+seo_title: "ManyChat: AI Chatbot Builder for Messenger, Instagram & WhatsApp"
+meta_description: "ManyChat lets you build automated chatbots for Facebook Messenger, Instagram DM, SMS, and WhatsApp to drive leads, sales, and customer support."
+excerpt: "Chatbot builder for automating conversations and lead generation across Messenger, Instagram, SMS, and WhatsApp."
+cover_image: ""
 ---
 
 # **ManyChat**

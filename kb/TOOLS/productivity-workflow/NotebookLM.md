@@ -1,5 +1,53 @@
 ---
-Title: NotebookLM
+title: "NotebookLM: Google AI Research & Document Assistant"
+id: SIE/REF/NOTEBOOKLM-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2025-12-08
+status: "Active"
+doc_type: "Reference"
+summary: "NotebookLM is Google's AI-powered research and writing assistant that grounds its responses in user-uploaded documents for source-based analysis, summarization, and idea generation."
+tags:
+  - tool
+  - ai
+  - productivity-workflow
+  - research
+  - document-analysis
+  - google
+relations:
+  - kb/TOOLS/productivity-workflow/index.md
+aliases:
+  - NotebookLM
+  - NotebookLM AI
+
+# --- Domain Specifics (Tool) ---
+offering_name: "NotebookLM"
+target_icp: "Researchers, strategists, and content creators who need to analyze, synthesize, and generate ideas from their own documents and notes"
+price_point: "Free"
+
+# --- Operational ---
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: >
+  NotebookLM is a Google AI-powered research assistant that works directly with user-uploaded documents such as PDFs, Google Docs, and text files. It provides source-grounded responses with citations, document summarization, idea generation, and cross-document synthesis, reducing hallucinations by anchoring answers to the user's own source materials.
+synthetic_questions:
+  - "What Google AI tool can analyze and summarize my uploaded documents?"
+  - "How can I ask questions about my own PDFs and research papers using AI?"
+  - "What tool provides AI-generated answers grounded in my source documents with citations?"
+key_concepts:
+  - "Source-grounded AI responses"
+  - "Document analysis and summarization"
+  - "Cross-document synthesis and idea generation"
+
+# --- SEO & Publication ---
+primary_keyword: "NotebookLM"
+seo_title: "NotebookLM: Google AI Research & Document Analysis Assistant"
+meta_description: "NotebookLM is Google's free AI assistant that analyzes your uploaded documents, provides cited answers, and generates ideas grounded in your sources."
+excerpt: "Google's AI research assistant for source-grounded document analysis, summarization, and idea generation."
+cover_image: ""
 ---
 # **NotebookLM**
 

@@ -1,5 +1,53 @@
 ---
-Title: Howler AI
+title: "Howler AI: AI-Powered PR & Media Outreach"
+id: SIE/REF/HOWLER-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2025-12-08
+status: "Active"
+doc_type: "Reference"
+summary: "Howler AI is a platform that uses AI to automate and optimize media outreach by identifying relevant journalists, personalizing pitches, and tracking PR campaign performance."
+tags:
+  - tool
+  - ai
+  - productivity-workflow
+  - public-relations
+  - media-outreach
+  - influencer-marketing
+relations:
+  - kb/TOOLS/productivity-workflow/index.md
+aliases:
+  - Howler
+  - Howler AI
+
+# --- Domain Specifics (Tool) ---
+offering_name: "Howler AI"
+target_icp: "PR professionals, communications teams, and businesses seeking to automate media outreach and journalist discovery"
+price_point: "Paid"
+
+# --- Operational ---
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: >
+  Howler AI is an AI-powered PR and media outreach platform that helps businesses identify relevant journalists, podcasters, and influencers, personalize email pitches, automate follow-ups, and track outreach performance. It streamlines the traditionally manual process of building media lists and crafting targeted pitches.
+synthetic_questions:
+  - "What AI tool can help find and pitch relevant journalists for PR campaigns?"
+  - "How can I automate media outreach and personalize pitches to journalists?"
+  - "What platform uses AI to build targeted media lists and track PR performance?"
+key_concepts:
+  - "AI-powered journalist discovery"
+  - "Personalized media pitch automation"
+  - "PR outreach performance tracking"
+
+# --- SEO & Publication ---
+primary_keyword: "Howler AI"
+seo_title: "Howler AI: AI-Powered PR & Media Outreach Platform"
+meta_description: "Howler AI uses artificial intelligence to automate media outreach, discover relevant journalists, personalize pitches, and track PR campaign results."
+excerpt: "AI-powered platform for automating PR outreach, journalist discovery, and personalized media pitching."
+cover_image: ""
 ---
 # Howler AI
 

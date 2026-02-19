@@ -1,5 +1,55 @@
 ---
-title: Writer.com
+title: "Writer: Enterprise AI Content & Governance Platform"
+id: SIE/REF/WRITERCOM-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2025-12-08
+status: "Active"
+doc_type: "Reference"
+summary: "Writer.com is an enterprise AI writing platform that enforces brand voice, style guidelines, and content governance at scale."
+tags:
+  - tool
+  - ai
+  - content-creation
+  - enterprise-writing
+  - brand-governance
+  - style-guide
+relations:
+  - kb/TOOLS/content-creation/index.md
+aliases:
+  - Writer
+  - Writer.com
+
+# --- Domain Specifics (Tool) ---
+offering_name: "Writer"
+target_icp: "Enterprise teams and organizations needing brand-consistent, governed content creation at scale"
+price_point: "Paid"
+
+# --- Operational ---
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: >
+  Writer.com is an enterprise AI writing platform that helps organizations create consistent, on-brand
+  content at scale. It features customizable style guides, brand voice management, terminology enforcement,
+  AI content generation (CoWrite), plagiarism detection, and analytics across multiple integrations.
+synthetic_questions:
+  - "How does Writer.com enforce brand voice across content teams?"
+  - "What enterprise content governance features does Writer offer?"
+  - "How does Writer.com compare to Grammarly for teams?"
+key_concepts:
+  - "Enterprise brand voice governance"
+  - "Customizable style guide enforcement"
+  - "AI-assisted content generation (CoWrite)"
+
+# --- SEO & Publication ---
+primary_keyword: "Writer"
+seo_title: "Writer: Enterprise AI Content & Governance Platform - Features & Pricing"
+meta_description: "Writer.com is an enterprise AI platform for brand-consistent content creation with style guides, voice management, and governance. Explore features."
+excerpt: "Writer.com is an enterprise AI writing platform that enforces brand voice, style guidelines, and content governance across teams at scale."
+cover_image: ""
 ---
 
 ## **Writer.com**

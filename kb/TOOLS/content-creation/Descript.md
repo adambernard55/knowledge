@@ -1,5 +1,55 @@
 ---
-title: Descript
+title: "Descript: AI-Powered Audio & Video Editing"
+id: SIE/REF/DESCRIPT-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2025-12-08
+status: "Active"
+doc_type: "Reference"
+summary: "Descript is an all-in-one audio and video editing platform that uses AI transcription to enable text-based media editing."
+tags:
+  - tool
+  - ai
+  - content-creation
+  - video-editing
+  - audio-editing
+  - transcription
+relations:
+  - kb/TOOLS/content-creation/index.md
+aliases:
+  - Descript
+  - Descript AI
+
+# --- Domain Specifics (Tool) ---
+offering_name: "Descript"
+target_icp: "Podcasters, video marketers, and content creators needing intuitive AI-powered audio/video editing"
+price_point: "Freemium"
+
+# --- Operational ---
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: >
+  Descript is an all-in-one audio and video editing platform that uses AI-powered transcription
+  to allow text-based media editing. Features include AI Overdub voice cloning, Studio Sound
+  noise reduction, filler word removal, screen recording, and collaboration tools.
+synthetic_questions:
+  - "How does Descript's text-based video editing work?"
+  - "What is Descript's AI Overdub feature?"
+  - "Can Descript clean up noisy audio recordings?"
+key_concepts:
+  - "Text-based media editing"
+  - "AI voice cloning (Overdub)"
+  - "AI audio enhancement (Studio Sound)"
+
+# --- SEO & Publication ---
+primary_keyword: "Descript"
+seo_title: "Descript: AI-Powered Audio & Video Editing - Features, Pricing & Use Cases"
+meta_description: "Descript offers AI-powered text-based audio and video editing with transcription, voice cloning, and noise reduction. Explore features and pricing."
+excerpt: "Descript is an all-in-one audio and video editing platform with AI transcription, text-based editing, voice cloning, and noise reduction."
+cover_image: ""
 ---
 
 **Descript**

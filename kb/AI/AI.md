@@ -1,23 +1,33 @@
 ---
 color: var(--mk-color-green)
 title: AI
-id: 20251207052626
-version: 1
-Author: Adam Bernard
-steward:
-date: 2025-12-07
-category:
-category_id:
-Excerpt:
-Meta Description:
-Primary_Keyword:
-Featured_Image:
+id: 20260216060337
+version: "1.0"
+steward: Adam Bernard
+updated: 2026-02-16
+status: Draft
 doc_type:
-relations:
-aliases:
-last_updated: 2025-12-07
+summary:
 tags:
-sticker: emoji//1f916
+  - 
+relations:
+  - 
+aliases:
+  - 
+target_audience:
+security_level: Internal
+owner_team:
+semantic_summary: ""
+synthetic_questions:
+  - 
+key_concepts:
+  - 
+primary_keyword:
+seo_title:
+meta_description:
+excerpt:
+cover_image:
+sticker: lucide//wand-2
 ---
 
 <% tp.file.cursor() %>

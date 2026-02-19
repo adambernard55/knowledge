@@ -1,5 +1,55 @@
 ---
-title: Craiyon
+title: "Craiyon: Free AI Image Generator"
+id: SIE/REF/CRAIYON-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2025-12-08
+status: "Active"
+doc_type: "Reference"
+summary: "Craiyon is a free-to-use AI image generator that creates images from text prompts, formerly known as DALL-E mini."
+tags:
+  - tool
+  - ai
+  - content-creation
+  - image-generation
+  - free-tool
+  - text-to-image
+relations:
+  - kb/TOOLS/content-creation/index.md
+aliases:
+  - Craiyon
+  - DALL-E mini
+
+# --- Domain Specifics (Tool) ---
+offering_name: "Craiyon"
+target_icp: "Casual users and marketers looking for free AI image generation and quick concept visualization"
+price_point: "Free"
+
+# --- Operational ---
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: >
+  Craiyon (formerly DALL-E mini) is a free, ad-supported AI image generator that creates images
+  from text prompts via a simple web interface. It generates grids of 9 images per prompt and
+  offers style options, making it accessible for experimentation and basic concept visualization.
+synthetic_questions:
+  - "Is Craiyon free to use for AI image generation?"
+  - "How does Craiyon compare to DALL-E and Midjourney?"
+  - "What are the limitations of Craiyon for marketing visuals?"
+key_concepts:
+  - "Free AI image generation"
+  - "Text-to-image accessibility"
+  - "Concept visualization"
+
+# --- SEO & Publication ---
+primary_keyword: "Craiyon"
+seo_title: "Craiyon: Free AI Image Generator (Formerly DALL-E Mini) - Features & Use Cases"
+meta_description: "Craiyon is a free AI image generator formerly known as DALL-E mini. Create images from text prompts with no cost. Learn features and use cases."
+excerpt: "Craiyon is a free-to-use AI image generator that creates images from text prompts, ideal for experimentation and quick concept visualization."
+cover_image: ""
 ---
 # **Craiyon (formerly DALL-E mini)**
 

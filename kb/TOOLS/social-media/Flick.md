@@ -1,5 +1,53 @@
 ---
-Title: Flick
+title: "Flick: AI Social Media Marketing Assistant"
+id: SIE/REF/FLICK-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2025-12-08
+status: "Active"
+doc_type: "Reference"
+summary: "Flick is an AI-powered social media marketing platform for content ideation, caption writing, hashtag research, scheduling, and analytics, with a strong focus on Instagram."
+tags:
+  - tool
+  - ai
+  - social-media
+  - content-creation
+  - hashtag-strategy
+  - instagram
+relations:
+  - kb/TOOLS/social-media/index.md
+aliases:
+  - Flick
+  - Flick AI
+
+# --- Domain Specifics (Tool) ---
+offering_name: "Flick"
+target_icp: "Individual creators, social media managers, and small businesses looking to improve their social media marketing, especially on Instagram"
+price_point: "Paid"
+
+# --- Operational ---
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: >
+  Flick is an AI social media marketing assistant that helps with content ideation, AI-powered caption writing, advanced hashtag research and management, post scheduling across Instagram, Facebook, TikTok, and LinkedIn, and performance analytics. It is particularly well-regarded for its Instagram-focused tools including visual grid planning and hashtag performance tracking.
+synthetic_questions:
+  - "What AI tool helps with Instagram hashtag research and content scheduling?"
+  - "How can I use AI to brainstorm social media content ideas and write captions?"
+  - "What platform provides AI-powered hashtag suggestions and social media analytics?"
+key_concepts:
+  - "AI content ideation and caption writing"
+  - "Advanced hashtag research and management"
+  - "Multi-platform social media scheduling"
+
+# --- SEO & Publication ---
+primary_keyword: "Flick"
+seo_title: "Flick: AI Social Media Marketing Assistant for Instagram & Beyond"
+meta_description: "Flick is an AI social media assistant for content ideation, caption writing, hashtag research, scheduling, and analytics across Instagram and more."
+excerpt: "AI-powered social media marketing assistant for content creation, hashtag strategy, scheduling, and analytics."
+cover_image: ""
 ---
 
 ## **Flick’s AI Social Media Marketing Assistant (Flick.tech)**

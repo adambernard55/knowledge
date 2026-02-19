@@ -1,5 +1,55 @@
 ---
-title: Pictory
+title: "Pictory: AI Text-to-Video Creation Platform"
+id: SIE/REF/PICTORY-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2025-12-08
+status: "Active"
+doc_type: "Reference"
+summary: "Pictory uses AI to automatically convert long-form text content into short, engaging summary videos for social media and marketing."
+tags:
+  - tool
+  - ai
+  - content-creation
+  - video-creation
+  - text-to-video
+  - content-repurposing
+relations:
+  - kb/TOOLS/content-creation/index.md
+aliases:
+  - Pictory
+  - Pictory AI
+
+# --- Domain Specifics (Tool) ---
+offering_name: "Pictory"
+target_icp: "Marketers and content creators needing to repurpose text content into engaging short-form videos"
+price_point: "Freemium"
+
+# --- Operational ---
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: >
+  Pictory is an AI-powered platform that converts long-form content like blog posts, articles,
+  and scripts into short, engaging summary videos. It features article-to-video, script-to-video,
+  automatic transcription, stock media libraries, and AI voiceover options.
+synthetic_questions:
+  - "How does Pictory convert blog posts into videos?"
+  - "What text-to-video features does Pictory offer?"
+  - "Can Pictory automatically add captions to videos?"
+key_concepts:
+  - "AI text-to-video conversion"
+  - "Content repurposing automation"
+  - "Automatic transcription and captioning"
+
+# --- SEO & Publication ---
+primary_keyword: "Pictory"
+seo_title: "Pictory: AI Text-to-Video Creation Platform - Features, Pricing & Use Cases"
+meta_description: "Pictory converts blog posts and text content into engaging videos using AI. Explore text-to-video features, pricing, and marketing use cases."
+excerpt: "Pictory uses AI to convert long-form text content like blog posts and scripts into short, engaging summary videos for social media."
+cover_image: ""
 ---
 
 # **Pictory**

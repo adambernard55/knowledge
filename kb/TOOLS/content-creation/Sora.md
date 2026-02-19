@@ -1,5 +1,55 @@
 ---
-title: Sora
+title: "Sora: OpenAI Text-to-Video Generation Model"
+id: SIE/REF/SORA-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2025-12-08
+status: "Active"
+doc_type: "Reference"
+summary: "Sora is OpenAI's advanced AI model that generates realistic video scenes from text instructions."
+tags:
+  - tool
+  - ai
+  - content-creation
+  - video-generation
+  - text-to-video
+  - openai
+relations:
+  - kb/TOOLS/content-creation/index.md
+aliases:
+  - Sora
+  - Sora AI
+
+# --- Domain Specifics (Tool) ---
+offering_name: "Sora"
+target_icp: "Video producers, marketers, and creatives exploring AI-generated video content from text prompts"
+price_point: "Paid"
+
+# --- Operational ---
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: >
+  Sora is OpenAI's advanced AI model designed to generate realistic and imaginative video scenes
+  from text instructions. It can create videos with multiple characters, specific motion types, and
+  accurate details, representing the frontier of AI text-to-video generation technology.
+synthetic_questions:
+  - "What is Sora and how does it generate videos from text?"
+  - "Is Sora available for public use and what does it cost?"
+  - "How does Sora compare to other AI video generation tools?"
+key_concepts:
+  - "Text-to-video generation"
+  - "AI video synthesis"
+  - "Generative video modeling"
+
+# --- SEO & Publication ---
+primary_keyword: "Sora"
+seo_title: "Sora: OpenAI Text-to-Video Generation Model - Features, Access & Use Cases"
+meta_description: "Sora by OpenAI generates realistic videos from text prompts. Learn about features, access availability, and potential marketing use cases."
+excerpt: "Sora is OpenAI's advanced AI model that generates realistic and imaginative video scenes from natural language text instructions."
+cover_image: ""
 ---
 
 # **Sora (OpenAI)**

@@ -43,10 +43,11 @@ KB_ROOT = Path(os.getenv("KB_ROOT", r"C:\Users\AdamB\Documents\Brain\Adam\kb"))
 # Topic ID mapping (path pattern → WordPress topic ID)
 TOPIC_MAPPING = {
     "/AI/0_fundamentals/": 1186,
-    "/AI/1_models/specific-models/": 1779,
-    "/AI/1_models/concepts-and-techniques/": 1780,
-    "/AI/1_models/evaluation-and-tooling/": 1781,
-    "/AI/1_models/comparisons/": 1782,
+    "/AI/1_models/1_specific-models/claude/": 2267,
+    "/AI/1_models/1_specific-models/": 1779,
+    "/AI/1_models/2_concepts-and-techniques/": 1780,
+    "/AI/1_models/3_evaluation-and-tooling/": 1781,
+    "/AI/1_models/4_comparisons/": 1782,
     "/AI/1_models/": 1187,
     "/AI/2_agents/toolkits/": 1783,
     "/AI/2_agents/": 1188,
@@ -62,13 +63,13 @@ TOPIC_MAPPING = {
     "/SEO/1_research-and-strategy/": 1163,
     "/SEO/2_content-and-on-page/": 1164,
     "/SEO/3_technical-seo/": 1165,
-    "/SEO/4_ai-and-automation/using-ai-for-seo/": 1787,
-    "/SEO/4_ai-and-automation/optimizing-for-ai/": 1788,
+    "/SEO/4_ai-and-automation/1_using-ai-for-seo/": 1787,
+    "/SEO/4_ai-and-automation/2_optimizing-for-ai/": 1788,
     "/SEO/4_ai-and-automation/": 1166,
     "/SEO/5_measurement-and-optimization/": 1167,
     "/SEO/6_future-trends/": 1168,
     "/SEO/": 1158,
-    "/TOOLS/marketing-automation/seo-optimization/": 1603,
+    "/TOOLS/seo-optimization/": 1603,
     "/TOOLS/ai-foundation-models/": 1596,
     "/TOOLS/analytics-data-insights/": 1597,
     "/TOOLS/audio-generation/": 1598,
@@ -85,8 +86,13 @@ TOPIC_MAPPING = {
     "/CORE/": 1607,
 }
 
-# Parent topic ID (all posts get this + specific topic)
-PARENT_TOPIC_ID = 1158
+# Parent topic IDs by top-level folder
+PARENT_TOPIC_IDS = {
+    "AI": 1159,
+    "SEO": 1158,
+    "TOOLS": 1160,
+    "CORE": 1607,
+}
 
 # =============================================================================
 # WordPress API Client
@@ -368,6 +374,10 @@ def generate_slug(text: str) -> str:
     slug = text.lower()
     # Convert various Unicode hyphens/dashes to regular hyphen
     slug = re.sub(r'[\u2010\u2011\u2012\u2013\u2014\u2015\u2212]', '-', slug)
+    # Convert dots to hyphens (for names like Writer.com → writer-com)
+    slug = slug.replace('.', '-')
+    # Convert forward slashes to hyphens (for titles like "AI/ML" → "ai-ml")
+    slug = slug.replace('/', '-')
     # Remove non-alphanumeric except spaces and hyphens
     slug = re.sub(r'[^a-z0-9\s-]', '', slug)
     # Convert spaces and underscores to hyphens
@@ -390,6 +400,45 @@ def slug_from_filename(filename: str) -> str:
     name = re.sub(r'^[0-9]+[_-]', '', name)
     # Convert to slug format
     return generate_slug(name)
+
+
+def generate_path_slug(file_path: Path, kb_root: Path) -> str:
+    """
+    Generate URL slug including directory structure.
+
+    This creates hierarchical URLs that reflect the knowledge base organization.
+
+    Example: kb/TOOLS/marketing-automation/adobe-target.md
+          → tools/marketing-automation/adobe-target
+
+    Example: kb/AI/1_models/1_specific-models/claude/claude-overview.md
+          → ai/models/specific-models/claude/claude-overview
+    """
+    # Get path relative to KB root
+    rel_path = file_path.relative_to(kb_root)
+
+    # Get directory parts (excluding the filename)
+    dir_parts = list(rel_path.parent.parts)
+
+    # Clean each directory part
+    clean_dirs = []
+    for part in dir_parts:
+        # Remove numeric prefixes (e.g., 1_models → models, 01_fundamentals → fundamentals)
+        clean = re.sub(r'^[0-9]+[_-]', '', part)
+        # Lowercase
+        clean = clean.lower()
+        # Apply same slug rules for consistency
+        clean = generate_slug(clean)
+        if clean:  # Skip empty parts
+            clean_dirs.append(clean)
+
+    # Get the filename slug
+    file_slug = slug_from_filename(file_path.name)
+
+    # Combine directory path with filename slug
+    if clean_dirs:
+        return "/".join(clean_dirs) + "/" + file_slug
+    return file_slug
 
 
 def title_from_filename(filename: str) -> str:
@@ -421,6 +470,16 @@ def get_topic_id(file_path: Path, kb_root: Path) -> int:
     return 1158  # Default to SEO parent topic
 
 
+def get_parent_topic_id(file_path: Path, kb_root: Path) -> int:
+    """Determine parent WordPress topic ID from file path's top-level folder."""
+    relative_path = str(file_path.relative_to(kb_root)).replace("\\", "/")
+
+    # Get top-level folder (AI, SEO, TOOLS, CORE)
+    top_folder = relative_path.split("/")[0] if "/" in relative_path else ""
+
+    return PARENT_TOPIC_IDS.get(top_folder, 1158)  # Default to SEO
+
+
 # =============================================================================
 # Sync Functions
 # =============================================================================
@@ -442,9 +501,15 @@ def should_sync_file(file_path: Path) -> bool:
     return True
 
 
-def sync_file(file_path: Path, wp_client: WordPressClient, dry_run: bool = False) -> dict:
+def sync_file(file_path: Path, wp_client: WordPressClient, dry_run: bool = False, existing_mapping: dict = None) -> dict:
     """
     Sync a single markdown file to WordPress and Pinecone.
+
+    Args:
+        file_path: Path to the markdown file
+        wp_client: WordPress API client
+        dry_run: If True, only show what would be synced
+        existing_mapping: Dict mapping relative paths to post info (with post_id)
 
     Returns dict with status, post_id, and any errors.
     """
@@ -472,7 +537,7 @@ def sync_file(file_path: Path, wp_client: WordPressClient, dry_run: bool = False
         # Extract metadata
         title = frontmatter.get("title") or title_from_filename(file_path.name)
         # Use frontmatter slug if specified, otherwise generate from title
-        slug = frontmatter.get("slug") or generate_slug(title)
+        slug = frontmatter.get("slug") or generate_path_slug(file_path, KB_ROOT)
         excerpt = frontmatter.get("excerpt") or frontmatter.get("summary", "")
         tags = frontmatter.get("tags", [])
         if isinstance(tags, str):
@@ -525,11 +590,12 @@ def sync_file(file_path: Path, wp_client: WordPressClient, dry_run: bool = False
                 tag_ids.append(tag_id)
 
         # Build WordPress payload
+        parent_topic_id = get_parent_topic_id(file_path, KB_ROOT)
         payload = {
             "title": title,
             "content": html_content,
             "status": "publish",
-            "knowledge_topics": [PARENT_TOPIC_ID, topic_id],
+            "knowledge_topics": [parent_topic_id, topic_id],
             "knowledge_tag": tag_ids
         }
 
@@ -552,15 +618,26 @@ def sync_file(file_path: Path, wp_client: WordPressClient, dry_run: bool = False
         if acf:
             payload["acf"] = acf
 
-        # Check if post exists
-        existing = wp_client.get_post_by_slug(slug)
+        # Check if post exists - first check mapping file for known post_id
+        rel_path = str(file_path.relative_to(KB_ROOT)).replace("\\", "/")
+        existing_post_id = None
 
-        if existing:
-            post = wp_client.update_post(existing["id"], payload)
+        if existing_mapping and rel_path in existing_mapping:
+            existing_post_id = existing_mapping[rel_path].get("post_id")
+
+        if existing_post_id:
+            # Update existing post by ID (handles slug changes)
+            post = wp_client.update_post(existing_post_id, payload)
             result["status"] = "updated"
         else:
-            post = wp_client.create_post(payload)
-            result["status"] = "created"
+            # Fall back to slug lookup for new files
+            existing = wp_client.get_post_by_slug(slug)
+            if existing:
+                post = wp_client.update_post(existing["id"], payload)
+                result["status"] = "updated"
+            else:
+                post = wp_client.create_post(payload)
+                result["status"] = "created"
 
         result["post_id"] = post["id"]
         result["url"] = post.get("link", f"{WP_SITE_URL}/kb/{slug}/")
@@ -612,6 +689,15 @@ def sync_all(dry_run: bool = False, filter_path: str = None) -> list[dict]:
     wp_client = WordPressClient(WP_SITE_URL, WP_USERNAME, WP_APP_PASSWORD)
     results = []
 
+    # Load existing mapping file for post_id lookups
+    mapping_file = KB_ROOT / "kb_sync_mapping.json"
+    existing_mapping = {}
+    if mapping_file.exists():
+        try:
+            existing_mapping = json.loads(mapping_file.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            existing_mapping = {}
+
     # Find all markdown files
     for md_file in KB_ROOT.rglob("*.md"):
         # Apply filter if specified
@@ -624,7 +710,7 @@ def sync_all(dry_run: bool = False, filter_path: str = None) -> list[dict]:
             continue
 
         print(f"Processing: {md_file.relative_to(KB_ROOT)}")
-        result = sync_file(md_file, wp_client, dry_run=dry_run)
+        result = sync_file(md_file, wp_client, dry_run=dry_run, existing_mapping=existing_mapping)
         results.append(result)
 
         status_icon = {
@@ -653,8 +739,17 @@ def sync_file_by_path(file_path: str, dry_run: bool = False) -> dict:
     if not path.exists():
         return {"status": "error", "error": f"File not found: {path}"}
 
+    # Load existing mapping for post_id lookup
+    mapping_file = KB_ROOT / "kb_sync_mapping.json"
+    existing_mapping = {}
+    if mapping_file.exists():
+        try:
+            existing_mapping = json.loads(mapping_file.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            existing_mapping = {}
+
     wp_client = WordPressClient(WP_SITE_URL, WP_USERNAME, WP_APP_PASSWORD)
-    return sync_file(path, wp_client, dry_run=dry_run)
+    return sync_file(path, wp_client, dry_run=dry_run, existing_mapping=existing_mapping)
 
 
 def save_mapping_file(results: list[dict]) -> None:
@@ -705,6 +800,69 @@ def save_mapping_file(results: list[dict]) -> None:
     print(f"\nMapping saved to: {mapping_file}")
 
 
+def export_redirects_csv(output_path: Path = None) -> Path:
+    """
+    Export a CSV file mapping old URLs to new path-based URLs for Rank Math redirect import.
+
+    Format: source,destination
+    Example: /kb/adobe-target/,/kb/tools/marketing-automation/adobe-target/
+    """
+    import csv
+
+    if output_path is None:
+        output_path = KB_ROOT / "redirects_export.csv"
+
+    mapping_file = KB_ROOT / "kb_sync_mapping.json"
+    if not mapping_file.exists():
+        print(f"Error: Mapping file not found: {mapping_file}")
+        print("Run a sync first to generate the mapping file.")
+        return None
+
+    with open(mapping_file, "r", encoding="utf-8") as f:
+        mapping = json.load(f)
+
+    redirects = []
+
+    for rel_path, data in mapping.items():
+        old_slug = data.get("slug", "")
+        old_url = f"/kb/{old_slug}/"
+
+        # Calculate new path-based slug
+        file_path = KB_ROOT / rel_path
+        if file_path.exists():
+            new_slug = generate_path_slug(file_path, KB_ROOT)
+            new_url = f"/kb/{new_slug}/"
+
+            # Only add if the slug actually changed
+            if old_slug != new_slug:
+                redirects.append({
+                    "source": old_url,
+                    "destination": new_url,
+                    "file": rel_path
+                })
+
+    if not redirects:
+        print("No URL changes detected - all slugs match the new format.")
+        return None
+
+    # Write CSV for Rank Math
+    with open(output_path, "w", encoding="utf-8", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["source", "destination"])
+        for r in redirects:
+            writer.writerow([r["source"], r["destination"]])
+
+    print(f"\nRedirects CSV exported: {output_path}")
+    print(f"Total redirects: {len(redirects)}")
+    print("\nSample redirects:")
+    for r in redirects[:5]:
+        print(f"  {r['source']} → {r['destination']}")
+    if len(redirects) > 5:
+        print(f"  ... and {len(redirects) - 5} more")
+
+    return output_path
+
+
 # =============================================================================
 # CLI Interface
 # =============================================================================
@@ -716,8 +874,17 @@ if __name__ == "__main__":
     parser.add_argument("--dry-run", action="store_true", help="Show what would be synced without making changes")
     parser.add_argument("--file", type=str, help="Sync a specific file (relative to kb root)")
     parser.add_argument("--filter", type=str, help="Filter by path prefix (e.g., 'AI/' or 'SEO/')")
+    parser.add_argument("--export-redirects", action="store_true", help="Export CSV of old→new URL redirects for Rank Math")
 
     args = parser.parse_args()
+
+    # Handle redirect export (before sync)
+    if args.export_redirects:
+        print("=" * 60)
+        print("Exporting URL Redirects for Rank Math")
+        print("=" * 60)
+        export_redirects_csv()
+        exit(0)
 
     print("=" * 60)
     print("Knowledge Base Sync")

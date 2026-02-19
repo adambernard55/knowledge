@@ -1,5 +1,53 @@
 ---
-Title: MarketMuse
+title: "MarketMuse: AI Content Planning & Topical Authority"
+id: SIE/REF/MARKETMUSE-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2025-12-08
+status: "Active"
+doc_type: "Reference"
+summary: "MarketMuse is an AI-powered content planning and optimization platform that helps businesses build topical authority and create expert-level content that ranks well in search engines."
+tags:
+  - tool
+  - ai
+  - productivity-workflow
+  - content-strategy
+  - seo
+  - content-optimization
+relations:
+  - kb/TOOLS/productivity-workflow/index.md
+aliases:
+  - MarketMuse
+  - MarketMuse AI
+
+# --- Domain Specifics (Tool) ---
+offering_name: "MarketMuse"
+target_icp: "Content strategists, SEO professionals, and marketing teams focused on building topical authority through comprehensive, high-quality content"
+price_point: "Paid"
+
+# --- Operational ---
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: >
+  MarketMuse is an AI-powered content planning and optimization platform that analyzes entire content landscapes to identify gaps and opportunities. It provides content inventory auditing, topic modeling, content brief generation, competitive analysis, and a real-time optimization editor to help businesses build topical authority and rank higher in search engines.
+synthetic_questions:
+  - "What AI tool helps plan content strategy based on topical authority and content gaps?"
+  - "How can I generate detailed content briefs with AI-powered topic modeling?"
+  - "What platform analyzes competitor content to identify SEO opportunities?"
+key_concepts:
+  - "AI-driven topical authority building"
+  - "Content gap analysis and brief generation"
+  - "Content optimization for search rankings"
+
+# --- SEO & Publication ---
+primary_keyword: "MarketMuse"
+seo_title: "MarketMuse: AI Content Planning & Topical Authority Platform"
+meta_description: "MarketMuse uses AI to plan content strategy, identify topical gaps, generate content briefs, and optimize articles for search engine authority."
+excerpt: "AI-powered content planning platform for building topical authority, generating briefs, and optimizing content for SEO."
+cover_image: ""
 ---
 # **MarketMuse**
 

@@ -1,7 +1,33 @@
 ---
-color: var(--mk-color-teal)
-sticker: emoji//1f6e0-fe0f
+color: var(--mk-color-gray)
+title: TOOLS
+id: 20260217051841
+version: "1.0"
+steward: Adam Bernard
+updated: 2026-02-17
+status: Draft
+doc_type:
+summary:
+tags:
+  - 
+relations:
+  - 
 aliases:
-  - Tools
+  - 
+target_audience:
+security_level: Internal
+owner_team:
+semantic_summary: ""
+synthetic_questions:
+  - 
+key_concepts:
+  - 
+primary_keyword:
+seo_title:
+meta_description:
+excerpt:
+cover_image:
+sticker: emoji//1f6e0-fe0f
 ---
-AI Tools Directory
+
+<% tp.file.cursor() %>

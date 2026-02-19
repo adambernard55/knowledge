@@ -1,5 +1,53 @@
 ---
-Title: Facebook Ads Manager
+title: "Facebook Ads Manager: Meta AI-Powered Ad Platform"
+id: SIE/REF/FACEBOOKADS-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2025-12-08
+status: "Active"
+doc_type: "Reference"
+summary: "Facebook Ads Manager (Meta Ads Manager) is the platform for creating, managing, and optimizing AI-driven advertising campaigns across Facebook, Instagram, Messenger, and the Audience Network."
+tags:
+  - tool
+  - ai
+  - social-media
+  - advertising
+  - meta
+  - paid-media
+relations:
+  - kb/TOOLS/social-media/index.md
+aliases:
+  - Facebook Ads Manager
+  - Facebook Ads Manager AI
+
+# --- Domain Specifics (Tool) ---
+offering_name: "Facebook Ads Manager"
+target_icp: "Marketers, advertisers, and businesses running paid campaigns across Meta platforms including Facebook, Instagram, and Messenger"
+price_point: "Free"
+
+# --- Operational ---
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: >
+  Facebook Ads Manager (Meta Ads Manager) is the central platform for creating, managing, and analyzing advertising campaigns across Meta properties. It leverages AI and machine learning extensively through features like Advantage+ campaigns, Lookalike Audiences, automated bidding strategies, and Dynamic Creative Optimization to maximize ad performance and return on ad spend.
+synthetic_questions:
+  - "How do I create and manage advertising campaigns on Facebook and Instagram?"
+  - "What AI features does Meta Ads Manager offer for campaign optimization?"
+  - "How do Advantage+ campaigns use AI to automate ad targeting and creative?"
+key_concepts:
+  - "AI-optimized ad delivery and bidding"
+  - "Advantage+ automated campaigns"
+  - "Lookalike and Custom Audience targeting"
+
+# --- SEO & Publication ---
+primary_keyword: "Facebook Ads Manager"
+seo_title: "Facebook Ads Manager: Meta AI-Powered Advertising Platform"
+meta_description: "Facebook Ads Manager lets you create and optimize AI-driven ad campaigns across Facebook, Instagram, and Messenger with Advantage+ and smart targeting."
+excerpt: "Meta's AI-powered platform for creating, managing, and optimizing ad campaigns across Facebook, Instagram, and Messenger."
+cover_image: ""
 ---
 
 # **Facebook Ads Manager (Meta Ads Manager)**

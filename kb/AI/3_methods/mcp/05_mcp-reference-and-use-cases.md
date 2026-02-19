@@ -83,6 +83,16 @@ Each mode can coexist within a single workflow, allowing agents to orchestrate a
 | **DevOps & CI/CD** | Activepieces / Airflow MCP | `trigger_pipeline`, `monitor_task` | Orchestrate AI agents in CI/CD pipelines |
 | **Local Productivity** | Obsidian MCP · Spotify MCP · SearXNG MCP | `read_note`, `search_web`, `get_track_info` | Personal assistant automation offline |
 
+## 3. Emerging Standards: Browser-Native MCP
+
+As of 2026, Google has introduced **WebMCP**, extending the Model Context Protocol directly into the Chrome browser. This allows websites to expose tools to visiting AI agents without requiring a separate server installation.
+
+| Domain | Protocol | Key Method | Business Outcome |
+| :--- | :--- | :--- | :--- |
+| **Client-Side Web** | **WebMCP** | `navigator.modelContext` | Websites become natively "agent-readable," replacing fragile screen scraping with structured tool definitions. |
+
+> **Deep Dive:** See [[kb/AI/3_methods/mcp/16_google-webmcp-agent-interactions|Google WebMCP: Direct Agent-Website Interaction]].
+
 ## 3. Industry-Specific Use Cases
 
 ### 3.1 Software Engineering

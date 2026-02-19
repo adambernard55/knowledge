@@ -1,5 +1,53 @@
 ---
-Title: Bardeen.ai
+title: "Bardeen AI: No-Code AI Workflow Automation"
+id: SIE/REF/BARDEEN-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2025-12-08
+status: "Active"
+doc_type: "Reference"
+summary: "Bardeen AI is a no-code workflow automation tool that uses AI to automate repetitive browser-based tasks and connect web applications without writing code."
+tags:
+  - tool
+  - ai
+  - productivity-workflow
+  - automation
+  - no-code
+  - web-scraping
+relations:
+  - kb/TOOLS/productivity-workflow/index.md
+aliases:
+  - Bardeen
+  - Bardeen AI
+
+# --- Domain Specifics (Tool) ---
+offering_name: "Bardeen AI"
+target_icp: "Sales, marketing, and operations professionals who perform repetitive browser-based tasks across multiple web apps"
+price_point: "Freemium"
+
+# --- Operational ---
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: >
+  Bardeen AI is a no-code workflow automation platform that operates as a browser extension to automate repetitive tasks across web applications. It uses AI for natural language understanding to create automations, web scraping, data extraction, and connecting apps like Google Sheets, Notion, Slack, and CRMs without coding.
+synthetic_questions:
+  - "What no-code tool can automate browser-based tasks and connect web apps?"
+  - "How can I automate lead generation and data scraping without writing code?"
+  - "What AI tool offers pre-built automation playbooks for sales and marketing workflows?"
+key_concepts:
+  - "No-code workflow automation"
+  - "Browser extension automation"
+  - "AI-powered web scraping and data extraction"
+
+# --- SEO & Publication ---
+primary_keyword: "Bardeen AI"
+seo_title: "Bardeen AI: No-Code AI Workflow Automation for Browser Tasks"
+meta_description: "Bardeen AI automates repetitive browser tasks and connects web apps with no-code AI workflows, playbooks, and web scraping capabilities."
+excerpt: "No-code AI workflow automation tool for browser-based task automation and web app integration."
+cover_image: ""
 ---
 
 ## **Bardeen.ai**

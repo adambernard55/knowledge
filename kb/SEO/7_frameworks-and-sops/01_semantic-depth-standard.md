@@ -58,4 +58,5 @@ All content must be created and evaluated against the following three pillars:
 To ensure this standard is met consistently, the following operational documents must be used:
 
 -   **For New Content:** All content creation must begin with the [[kb/SEO/8_frameworks-and-sops/02_semantic-depth-content-brief-template|Semantic Depth Content Brief Template]].
+-   **For Writing:** Follow the guide on [[kb/SEO/How to Write an SEO Blog Post|How to Write an SEO Blog Post (AI Era Guide)]] to ensure structure and AI-readiness.
 -   **For Existing Content:** All content audits must be performed using the [[kb/SEO/8_frameworks-and-sops/03_semantic-depth-audit-checklist|Semantic Depth Audit Checklist]].

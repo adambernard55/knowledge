@@ -1,5 +1,55 @@
 ---
-title: Grammarly
+title: "Grammarly: AI Writing Assistant & Grammar Checker"
+id: SIE/REF/GRAMMARLY-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2025-12-08
+status: "Active"
+doc_type: "Reference"
+summary: "Grammarly is an AI-powered writing assistant that checks grammar, spelling, punctuation, clarity, tone, and plagiarism across platforms."
+tags:
+  - tool
+  - ai
+  - content-creation
+  - writing-assistant
+  - grammar-checker
+  - proofreading
+relations:
+  - kb/TOOLS/content-creation/index.md
+aliases:
+  - Grammarly
+  - Grammarly AI
+
+# --- Domain Specifics (Tool) ---
+offering_name: "Grammarly"
+target_icp: "Writers, marketers, and professionals who need real-time writing quality improvement"
+price_point: "Freemium"
+
+# --- Operational ---
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: >
+  Grammarly is an AI-powered writing assistant that helps users improve their writing by checking
+  for grammatical errors, spelling mistakes, punctuation issues, clarity, conciseness, tone, and
+  plagiarism. It works across browsers, desktop apps, mobile keyboards, and Microsoft Office.
+synthetic_questions:
+  - "How can Grammarly improve my marketing content quality?"
+  - "What features does Grammarly Premium offer over the free version?"
+  - "Does Grammarly detect tone and suggest adjustments?"
+key_concepts:
+  - "AI writing assistance"
+  - "Grammar and style checking"
+  - "Tone detection and adjustment"
+
+# --- SEO & Publication ---
+primary_keyword: "Grammarly"
+seo_title: "Grammarly: AI Writing Assistant & Grammar Checker - Features & Pricing"
+meta_description: "Grammarly is an AI writing assistant for grammar, spelling, tone, and clarity checks. Explore features, pricing, and marketing use cases."
+excerpt: "Grammarly is an AI-powered writing assistant that checks grammar, spelling, clarity, tone, and plagiarism across all writing platforms."
+cover_image: ""
 ---
 
 **Grammarly**

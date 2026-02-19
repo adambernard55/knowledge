@@ -1,5 +1,55 @@
 ---
-title: Blaze.ai
+title: "Blaze AI: Brand-Consistent AI Content Creation"
+id: SIE/REF/BLAZEAI-01
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2025-12-08
+status: "Active"
+doc_type: "Reference"
+summary: "Blaze AI is an AI-powered content generation platform that helps marketers create brand-consistent marketing copy across multiple formats."
+tags:
+  - tool
+  - ai
+  - content-creation
+  - copywriting
+  - brand-voice
+  - marketing-automation
+relations:
+  - kb/TOOLS/content-creation/index.md
+aliases:
+  - Blaze AI
+  - Blaze.ai
+
+# --- Domain Specifics (Tool) ---
+offering_name: "Blaze AI"
+target_icp: "Marketers and businesses needing rapid, brand-consistent AI-generated marketing copy"
+price_point: "Freemium"
+
+# --- Operational ---
+target_audience: "All_Staff"
+security_level: "Public"
+owner_team: "AI & Automation"
+
+# --- AI & RAG Enhancement ---
+semantic_summary: >
+  Blaze AI is an AI-powered content generation platform designed for marketers to quickly create
+  various types of marketing copy including ads, emails, blog content, and social media posts.
+  It features brand style matching, template libraries, and multiple output variations.
+synthetic_questions:
+  - "How does Blaze AI help maintain brand consistency in content creation?"
+  - "What types of marketing content can Blaze AI generate?"
+  - "How does Blaze AI compare to other AI copywriting tools?"
+key_concepts:
+  - "Brand style matching"
+  - "AI content generation"
+  - "Marketing copy automation"
+
+# --- SEO & Publication ---
+primary_keyword: "Blaze AI"
+seo_title: "Blaze AI: Brand-Consistent AI Content Creation - Features & Pricing"
+meta_description: "Blaze AI generates brand-consistent marketing copy for ads, emails, blogs, and social media. Learn about features, pricing, and use cases."
+excerpt: "Blaze AI is an AI-powered platform that helps marketers create brand-consistent marketing copy across ads, emails, blogs, and social media."
+cover_image: ""
 ---
 
 ## **Blaze.ai**

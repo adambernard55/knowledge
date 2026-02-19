@@ -43,11 +43,9 @@ Modern SEO is generally categorized into three main areas:
 
 This is everything you do _on_ your actual pages to help search engines understand your content.
 
-- **Keyword Research:** Identifying the specific terms your customers use (e.g., "vintage fedoras" for **bernardhats.com**).
-    
-- **Content Quality:** Creating "people-first" content that is helpful and original.
-    
-- **HTML Elements:** Optimizing Title Tags, Meta Descriptions, and Header Tags (H1, H2, etc.) so search engines can "read" the page structure.
+> **Deep Dive:** See [[kb/SEO/How to Write an SEO Blog Post|How to Write an SEO Blog Post]] for a 13-step execution guide.
+
+- **Keyword Research:** Identifying the specific terms your customers use...
     
 
 ### 2. Technical SEO (The Engine)
