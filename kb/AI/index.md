@@ -182,7 +182,7 @@ Index:
 
 - [4_applications/business/index](app://obsidian.md/Knowledge/AI/4_applications/business/index.md)
 
-> Marketing applications have moved to [[kb/AI/7_marketing/index|7_marketing]].
+> Marketing applications have moved to [[kb/AI/7_growth/index|7_marketing]].
 
 Use this section when you want **examples, patterns, and playbooks** for applying AI to business.
 
@@ -194,14 +194,14 @@ Use this section when you want **examples, patterns, and playbooks** for applyin
 
 Index:
 
-- [[kb/AI/7_marketing/index]]
+- [[kb/AI/7_growth/index]]
 
 Specialized areas:
 
-- [[kb/AI/7_marketing/Affiliate/index|Affiliate Marketing]] — Partner discovery, performance analytics, automation
-- [[kb/AI/7_marketing/E-commerce/index|E-commerce]] — AI across the buyer journey
-- [[kb/AI/7_marketing/Influencer/index|Influencer Marketing]] — Discovery, vetting, campaign optimization
-- [[kb/AI/7_marketing/Social Media/index|Social Media]] — Organic growth, paid media, analytics, AI systems
+- [[kb/AI/7_growth/Affiliate/index|Affiliate Marketing]] — Partner discovery, performance analytics, automation
+- [[kb/AI/7_growth/Shop/index|E-commerce]] — AI across the buyer journey
+- [[kb/AI/7_growth/Creator/index|Influencer Marketing]] — Discovery, vetting, campaign optimization
+- [[kb/AI/7_growth/Social/index|Social Media]] — Organic growth, paid media, analytics, AI systems
 
 Use this section for **marketing strategy, channel-specific playbooks, and AI marketing implementation**.
 
@@ -366,13 +366,13 @@ For a flat, searchable view, see:
 | [index](app://obsidian.md/Knowledge/AI/1_models/1_specific-models/index.md)                                                                           | Index for specific models.                                                                                       |
 | [index](app://obsidian.md/Knowledge/AI/4_applications/business/index.md)                                                                              | Index for business applications.                                                                                 |
 | [index](app://obsidian.md/Knowledge/AI/4_applications/index.md)                                                                                       | Index for applications.                                                                                          |
-| [[kb/AI/7_marketing/index\|7_marketing index]]                                                                             | Index for marketing applications.                                                                                |
+| [[kb/AI/7_growth/index\|7_marketing index]]                                                                             | Index for marketing applications.                                                                                |
 | [index](app://obsidian.md/Knowledge/AI/index.md)                                                                                                      | This top-level AI index.                                                                                         |
 | [index](app://obsidian.md/Knowledge/AI/6_future-trends/index.md)                                                                                      | Index for future trends.                                                                                         |
 | [index](app://obsidian.md/Knowledge/AI/5_ethics-and-governance/index.md)                                                                              | Index for ethics and governance.                                                                                 |
 | [index](app://obsidian.md/Knowledge/AI/1_models/index%20.md)                                                                                          | Index for models.                                                                                                |
 | [LLM-Evalkit](app://obsidian.md/Knowledge/AI/1_models/3_evaluation-and-tooling/LLM-Evalkit.md)                                                        | Evaluation toolkit for LLMs.                                                                                     |
-| [[kb/AI/7_marketing/index\|Marketing]]                                                                     | AI-powered marketing knowledge base                                                                                                |
+| [[kb/AI/7_growth/index\|Marketing]]                                                                     | AI-powered marketing knowledge base                                                                                                |
 | [mcp](app://obsidian.md/Knowledge/AI/3_methods/mcp/mcp.md)                                                                                            | -                                                                                                                |
 | [toolkits](app://obsidian.md/Knowledge/AI/2_agents/toolkits/toolkits.md)                                                                              | -                                                                                                                |
 
@@ -388,6 +388,6 @@ For a flat, searchable view, see:
 - **[[4_applications/index|Applications]]**
 - **[[5_ethics-and-governance/index|Ethics And Governance]]** — A practical, organization-wide set of principles and guardrails for building and using AI responsibly—covering safety, privacy, fairness, transparency, human oversight, security, IP, and operational excellence.
 - **[[6_future-trends/index|Future Trends]]** — An overview of the most important emerging AI technologies—from frontier foundation models and multimodal systems to agentic AI, on-device models, synthetic data, and AI-native infrastructure—and how they are reshaping applications, organizations, and future capabilities.
-- **[[7_marketing/index|Marketing]]** — This document outlines the fundamental principles of AI-powered marketing. It covers the strategic advantages, core AI concepts (ML, NLP, GenAI), common applications from personalization to ad targeting, and the critical role of human oversight and ethical considerations for responsible implementation.
+- **[[kb/AI/7_growth/index|Marketing]]** — This document outlines the fundamental principles of AI-powered marketing. It covers the strategic advantages, core AI concepts (ML, NLP, GenAI), common applications from personalization to ad targeting, and the critical role of human oversight and ethical considerations for responsible implementation.
 
 ---

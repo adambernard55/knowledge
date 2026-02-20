@@ -53,7 +53,7 @@ The instruments of execution. Documentation for Obsidian, WordPress, and our sof
 - **[[AI/4_applications/index|4_applications]]** — Business use cases and applied AI implementations
 - **[[AI/5_ethics-and-governance/index|5_ethics-and-governance]]** — AI safety, bias, regulation, and responsible deployment
 - **[[AI/6_future-trends/index|6_future-trends]]** — Emerging AI trends and future directions
-- **[[AI/7_marketing/index|7_marketing]]** — AI-powered marketing: social media, e-commerce, affiliate, influencer
+- **[[kb/AI/7_growth/index|7_marketing]]** — AI-powered marketing: social media, e-commerce, affiliate, influencer
 
 ---
 
