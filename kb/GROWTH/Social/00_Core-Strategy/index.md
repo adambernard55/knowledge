@@ -1,21 +1,34 @@
 ---
-title: Untitled
-id: 20251228082857
-version: 1
-Author: Adam Bernard
-steward:
-date: 2025-12-28
-category:
-category_id:
-Excerpt:
-Meta Description:
-Primary_Keyword:
-Featured_Image:
-doc_type:
-relations:
-aliases:
-last_updated: 2025-12-28
-tags:
+title: "Core Strategy — Subfolder Index"
+id: "KB/GROWTH/SOC/CS-IDX"
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2026-02-22
+status: Active
+doc_type: context_index
+summary: "Navigation index for the Social Media Core Strategy subfolder, linking all nine reference documents."
+tags: ["social-media", "ai-strategy", "core-strategy", "index", "context-index"]
+relations: ["00_Core-Strategy.md", "01_ai-in-social-media.md", "02_core-ai-technologies-in-marketing.md", "03_the -ai-powered-social-media-ecosystem.md", "04_the-strive-framework.md", "05_ai-ethics-and-governance-in-social-media.md", "06_ai-implementation-smart-goals.md", "07_emerging-trends.md", "08_strategic-orchestration.md", "09_ai-leadership-and-skills.md"]
+aliases: ["Core Strategy Index"]
+semantic_summary: >
+  Navigation index for the Social Media Core Strategy subfolder, linking nine reference documents covering AI's strategic imperative, core technologies, the AI-powered ecosystem, STRIVE framework, ethics and governance, SMART goals, emerging trends, strategic orchestration, and leadership skills.
+synthetic_questions:
+  - "What documents are in the social media core strategy subfolder?"
+  - "How is the core strategy module organized?"
+key_concepts:
+  - "AI strategic imperative"
+  - "STRIVE framework"
+  - "SMART goals"
+  - "strategic orchestration"
+  - "AI ethics"
+primary_keyword: "ai social media core strategy"
+seo_title: "Social Media Core Strategy Subfolder Index"
+meta_description: "Navigation index for the AI social media core strategy reference documents."
+excerpt: "Navigation index for the Social Media Core Strategy subfolder linking nine reference documents from strategic imperative through orchestration and leadership."
+cover_image: ""
+target_audience: All_Staff
+security_level: Internal
+owner_team: Strategy
 ---
 
 ## Contents

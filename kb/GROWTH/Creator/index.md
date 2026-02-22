@@ -1,27 +1,38 @@
 ---
-title: Untitled
-id: 20260212120000
-version: 1
-Author: Adam Bernard
-steward:
-date: 2026-02-12
-category:
-category_id:
-Excerpt:
-Meta Description:
-Primary_Keyword:
-Featured_Image:
-doc_type:
-relations:
-aliases:
-last_updated: 2026-02-12
-tags:
-coverImage:
+title: "Creator & Influencer Marketing — Folder Index"
+id: "KB/GROWTH/CRE/IDX"
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2026-02-22
+status: Active
+doc_type: context_index
+summary: "Navigation index for the Creator/Influencer Marketing folder, linking all reference documents."
+tags: ["influencer-marketing", "ai-strategy", "index", "context-index"]
+relations: ["00_Creator.md", "ai-for-influencer-marketing.md", "evolution-of-influencer-marketing.md", "ai-impact-on-influencer-marketing.md", "defining-goals-and-metrics.md", "influencer-identification.md", "finding-and-vetting-influencers.md", "influencer-selection-strategy.md", "irm-with-ai.md", "influencer-out-reach-email.md", "predicting-influencer-performance.md", "influencer-marketing-legal-requirements.md"]
+aliases: ["Creator Index", "Influencer Marketing Index"]
+semantic_summary: >
+  Navigation index for the Creator/Influencer Marketing folder, linking the taxonomy overview and all reference documents covering AI-powered influencer discovery, vetting, relationship management, outreach, performance prediction, and legal compliance.
+synthetic_questions:
+  - "What documents are in the influencer marketing folder?"
+  - "How is the creator/influencer marketing knowledge base organized?"
+key_concepts:
+  - "influencer marketing"
+  - "influencer discovery"
+  - "relationship management"
+  - "performance prediction"
+primary_keyword: "ai influencer marketing"
+seo_title: "Creator & Influencer Marketing Folder Index"
+meta_description: "Navigation index for the AI influencer marketing knowledge base."
+excerpt: "Navigation index for the Creator/Influencer Marketing folder linking all reference documents from taxonomy through discovery, vetting, outreach, and legal compliance."
+cover_image: ""
+target_audience: All_Staff
+security_level: Internal
+owner_team: Strategy
 ---
 
 ## Contents
 
-- **[[00_Influencer|AI for Influencer Marketing]]** — Strategic overview of AI across influencer marketing: discovery, relationship management, campaign optimization, and legal compliance.
+- **[[00_Creator|AI for Influencer Marketing]]** — Strategic overview of AI across influencer marketing: discovery, relationship management, campaign optimization, and legal compliance.
 - **[[ai-for-influencer-marketing|AI for Influencer Marketing (Course)]]** — Comprehensive course on using AI to find influencers, check authenticity, manage relationships, predict performance, and measure ROI.
 - **[[evolution-of-influencer-marketing|The Evolution of Influencer Marketing]]** — How influencer marketing evolved from manual, relationship-based methods to a data-rich, AI-driven discipline.
 - **[[ai-impact-on-influencer-marketing|AI's Impact on Influencer Marketing]]** — How AI reshapes each stage: discovery, management, and campaign optimization, with benefits and challenges.

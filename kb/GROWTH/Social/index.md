@@ -1,22 +1,34 @@
 ---
-title: Untitled
-id: 20251228082857
-version: 1
-Author: Adam Bernard
-steward:
-date: 2025-12-28
-category:
-category_id:
-Excerpt:
-Meta Description:
-Primary_Keyword:
-Featured_Image:
-doc_type:
-relations:
-aliases:
-last_updated: 2025-12-28
-tags:
-coverImage:
+title: "Social Media Marketing — Folder Index"
+id: "KB/GROWTH/SOC/IDX"
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2026-02-22
+status: Active
+doc_type: context_index
+summary: "Navigation index for the Social Media Marketing folder, linking all subfolders and reference documents."
+tags: ["social-media", "ai-strategy", "index", "context-index"]
+relations: ["00_Social.md", "Social.md", "00_Core-Strategy/00_Core-Strategy.md", "01_Organic-Growth/social-media-for-engagement-and-growth.md", "02_Paid-Media/social-media-advertising.md", "03_Intelligence-Analytics/social-media-analytics.md", "04_AI-Systems/ai-for-social-media-marketing.md"]
+aliases: ["Social Index", "Social Media Index"]
+semantic_summary: >
+  Navigation index for the Social Media Marketing folder, linking the taxonomy overview and all reference documents across five subfolders: Core Strategy, Organic Growth, Paid Media, Intelligence/Analytics, and AI Systems.
+synthetic_questions:
+  - "What documents are in the social media marketing folder?"
+  - "How is the social media marketing knowledge base organized?"
+key_concepts:
+  - "social media marketing"
+  - "organic growth"
+  - "paid media"
+  - "social analytics"
+  - "AI automation"
+primary_keyword: "ai social media marketing"
+seo_title: "Social Media Marketing Folder Index"
+meta_description: "Navigation index for the AI social media marketing knowledge base."
+excerpt: "Navigation index for the Social Media Marketing folder linking all subfolders and reference documents across core strategy, organic growth, paid media, analytics, and AI systems."
+cover_image: ""
+target_audience: All_Staff
+security_level: Internal
+owner_team: Strategy
 ---
 
 ## Contents

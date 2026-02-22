@@ -1,30 +1,53 @@
-
-
-The AI Marketing knowledge base covers the strategic and practical application of Artificial Intelligence across marketing disciplines.
-
-The collection begins with [[00_foundations-of-ai-powered-marketing]], which outlines core AI concepts, strategic advantages, and ethical principles. It then covers specific, high-impact applications:
-
-- **Content and Personalization:** [[01_ai-content-strategy]] focuses on leveraging AI for content creation (text, image, video), while [[02_personalization-and-predictive-ai]] covers tailoring customer experiences and forecasting business outcomes.
-- **Implementation Frameworks:** [[03_applied-ai-marketing]] provides a hands-on guide to implementation with frameworks and ROI tracking, complemented by the [[04_gen-ai-playbook]], which offers a strategic matrix for guiding organizational adoption of Generative AI.
-- **Practical Tools and Advanced Concepts:** Actionable resources like [[05_chatgpt-prompts]] for daily tasks, [[06_optimizing-for-ai-citation-GEO|Generative Engine Optimization (GEO)]], and [[07_chatgpt-ads-and-conversational-commerce|ChatGPT Ads and Conversational Commerce]].
-
-### Specialized Areas
-
-- **[[kb/AI/7_growth/Affiliate/index|Affiliate Marketing]]** — AI-powered partner discovery, performance analytics, automation, and influencer integration.
-- **[[kb/AI/7_growth/Shop/index|E-commerce]]** — AI across the buyer journey from discovery through retention and loyalty.
-- **[[kb/AI/7_growth/Creator/index|Influencer Marketing]]** — AI for influencer discovery, vetting, relationship management, and campaign optimization.
-- **[[kb/AI/7_growth/Social/index|Social Media]]** — AI-driven organic growth, paid media, analytics, and automation systems.
-
 ---
-## Contents
+title: "GROWTH Knowledge Base Index"
+id: "KB/GROWTH/IDX"
+version: "1.0"
+steward: "Adam Bernard"
+updated: 2026-02-22
+status: Active
+doc_type: context_index
+summary: "Master navigation index for the GROWTH knowledge base, linking all marketing domain folders and root reference documents."
+tags: ["growth", "marketing", "ai-strategy", "index", "context-index"]
+relations: ["GROWTH.md", "Ads/Ads.md", "Email/Email.md", "Affiliate/00_Affiliate.md", "Creator/00_Creator.md", "Social/00_Social.md"]
+aliases: ["GROWTH Index", "Marketing KB Index"]
+semantic_summary: >
+  Master navigation index for the GROWTH knowledge base, organizing all marketing domain folders — Ads (e-commerce advertising), Email (CRM and email marketing), Affiliate, Creator (influencer marketing), and Social Media — alongside root-level AI marketing reference documents.
+synthetic_questions:
+  - "How is the GROWTH marketing knowledge base organized?"
+  - "What marketing domains are covered in the GROWTH KB?"
+key_concepts:
+  - "marketing domains"
+  - "knowledge base navigation"
+  - "growth marketing"
+primary_keyword: "growth marketing knowledge base"
+seo_title: "GROWTH Marketing Knowledge Base — Master Index"
+meta_description: "Master index for the GROWTH marketing knowledge base across all domains."
+excerpt: "Master navigation index for the GROWTH marketing knowledge base, linking all domain folders and root reference documents."
+cover_image: ""
+target_audience: All_Staff
+security_level: Internal
+owner_team: Strategy
+---
 
-- **[[00_growth|AI-Driven Marketing & Agentic Strategy]]** — The transition to the Agentic Web, Generative Engine Optimization (GEO), structured data, and optimizing for AI agents as the primary discovery engine.
-- **[[00_foundations-of-ai-powered-marketing|Foundations of AI-Powered Marketing]]** — Core AI concepts (ML, NLP, GenAI), strategic advantages, common applications, and ethical considerations for responsible implementation.
-- **[[01_ai-content-strategy|AI-Powered Content Creation]]** — Leveraging AI for text, image, and video generation with ethical considerations and best practices for human-led workflows.
-- **[[01_applied-ai-use-cases|Applied AI Use Cases]]** — Practical workflows, tools, and prompt examples for content ideation, copy optimization, social media, email, and SEO.
-- **[[02_personalization-and-predictive-ai|Personalization and Predictive AI]]** — ML models for dynamic content, product recommendations, churn prediction, lead conversion, and lifetime value forecasting.
-- **[[03_applied-ai-marketing|Applied AI Marketing: Frameworks and Implementation]]** — PTCF prompt framework, tool evaluation criteria, content calendars, and ROI tracking templates.
-- **[[04_gen-ai-playbook|The Generative AI Playbook]]** — 2x2 strategic matrix categorizing tasks by error cost and knowledge type to guide organizational GenAI adoption.
-- **[[05_chatgpt-prompts|ChatGPT Prompts for Marketing]]** — Curated prompt templates for digital marketing, content creation, and SEO tasks.
-- **[[06_optimizing-for-ai-citation-GEO|Optimizing for AI Citation (GEO)]]** — Structured data, factual accuracy, sourcing, and topical authority to increase visibility in AI-generated answers.
-- **[[07_chatgpt-ads-and-conversational-commerce|ChatGPT Ads and Conversational Commerce]]** — Strategic implications of conversational commerce, Answer Engine Optimization (AEO), and a small business playbook.
+# GROWTH Knowledge Base
+
+## Domain Folders
+
+| Domain | Taxonomy | Scope |
+|---|---|---|
+| **[[Ads/Ads\|Ads]]** | [[Ads/Ads\|E-commerce Advertising Taxonomy]] | AI-driven e-commerce marketing across the buyer journey: strategy, acquisition, engagement, conversion, retention, scaling |
+| **[[Email/Email\|Email]]** | [[Email/Email\|Email & CRM Taxonomy]] | AI-powered email and CRM marketing: strategy, personalization, automation, influencer outreach, optimization |
+| **[[Affiliate/00_Affiliate\|Affiliate]]** | [[Affiliate/00_Affiliate\|Affiliate Marketing Taxonomy]] | AI for affiliate programs: partner discovery, performance tracking, automation, influencer-driven sales |
+| **[[Creator/00_Creator\|Creator]]** | [[Creator/00_Creator\|Influencer Marketing Taxonomy]] | AI across influencer marketing: discovery, vetting, relationship management, performance prediction, legal compliance |
+| **[[Social/00_Social\|Social]]** | [[Social/00_Social\|Social Media Taxonomy]] | AI for social media: strategy, organic growth, paid media, analytics, automation systems |
+
+## Root Reference Documents
+
+- **[[00_foundations-of-ai-powered-marketing|Foundations of AI-Powered Marketing]]** — Core AI concepts for marketing
+- **[[01_ai-content-strategy|AI Content Strategy]]** — AI-driven content creation and optimization
+- **[[02_personalization-and-predictive-ai|Personalization & Predictive AI]]** — Personalization engines and predictive analytics
+- **[[03_applied-ai-marketing|Applied AI Marketing]]** — Practical AI marketing applications
+- **[[04_gen-ai-playbook|Generative AI Playbook]]** — Generative AI tools and workflows
+- **[[05_chatgpt-prompts|ChatGPT Prompts]]** — Prompt engineering for marketing
+- **[[06_optimizing-for-ai-citation-GEO|Optimizing for AI Citation (GEO)]]** — Generative engine optimization
+- **[[07_chatgpt-ads-and-conversational-commerce|ChatGPT Ads & Conversational Commerce]]** — AI-powered advertising and conversational commerce
