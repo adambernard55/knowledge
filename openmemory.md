@@ -49,7 +49,7 @@ kb/
 │   ├── Ads/                   # E-commerce advertising (7 subfolders, 29 files)
 │   ├── Email/                 # Email & CRM marketing (5 subfolders, 32 files)
 │   ├── Affiliate/             # Affiliate marketing (8 files)
-│   ├── Creator/               # Influencer marketing (12 files)
+│   ├── Creator/               # Creator marketing (22 files) — renamed from "influencer"
 │   ├── Social/                # Social media (5 subfolders, 24 files)
 │   ├── index.md               # GROWTH master index
 │   ├── GROWTH.md              # GROWTH landing page
@@ -96,6 +96,7 @@ kb/
 | GROWTH/Ads | `KB/GROWTH/ADS/[FOLDER]-[SEQ]` | STR-01, ACQ-02, ENG-03 |
 | GROWTH/Email | `KB/GROWTH/EMAIL/[FOLDER]-[SEQ]` | STR-01, PER-02, AUT-03 |
 | E-COMMERCE | `KB/AI/MKTG/ECOM-[SEQ]` | ECOM-00 through ECOM-24 |
+| GROWTH/Creator | `KB/GROWTH/CRE-[SEQ]` | CRE-00 through CRE-23 |
 | Folder indexes | `KB/.../[ABBREV]-00` or `KB/.../[ABBREV]-IDX` | ECOM-STR-00, ECOM-FUT-00 |
 
 ### Schema-Compliant Frontmatter (all fields required)
@@ -155,8 +156,10 @@ owner_team: Strategy
 | `9dec0a1` | Rewrite Email lesson files as schema-compliant Reference documents | 32 |
 | `88c8ce2` | Rewrite E-COMMERCE course content as schema-compliant Reference documents | 34 |
 | `c98337b` | Add schema-compliant frontmatter to 5 GROWTH index files | 5 |
+| `1993aed` | Update openmemory.md with KB project context and standards | 1 |
+| `0f000a5` | Creator folder: rename influencer→creator, split masters, strip scaffolding | 33 changed (20 add, 11 del, 2 mod) |
 
-**Current state:** 149 files across GROWTH + E-COMMERCE, all FULL SCHEMA, zero partial, zero missing.
+**Current state:** ~159 files across GROWTH + E-COMMERCE, all FULL SCHEMA, zero partial, zero missing.
 
 ## Patterns & Decisions
 
@@ -166,6 +169,8 @@ owner_team: Strategy
 - **Root files per folder:** Typically 3 — taxonomy (`00_*.md`), landing page (`FOLDER.md`), and navigation index (`index.md`)
 - **Agent batching:** Process 3 folders in parallel per batch to avoid rate limits; agents get ~12 tool uses before hitting limits
 - **Linter auto-modifications:** Obsidian linter strips quotes from YAML values and adds `sticker:` field — these are intentional user-side changes
+- **Creator terminology rename:** "Influencer" → "creator" in general usage across Creator/ folder. Keep "influencer" in: IRM (Influencer Relationship Management) as established compound term, legal/regulatory references (FTC), historical contexts (pre-creator economy era). ~60% of occurrences replaced.
+- **Creator folder structure:** 3 master files (irm-with-ai.md 102KB, influencer-identification.md 46KB, predicting-influencer-performance.md 49KB) split into 12 individual files. 8 files renamed from influencer-* to creator-*. Total: 22 files (20 Reference + 1 taxonomy + 1 index)
 
 ## User Defined Namespaces
 
