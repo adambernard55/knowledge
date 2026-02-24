@@ -58,8 +58,8 @@ The instruments of execution. Documentation for Obsidian, WordPress, and our sof
 ---
 
 ### CORE
-- **[[CORE/core-concepts/index|core-concepts]]** — SIE engine architecture, RAG, vector databases, MCP, data moats
-- **[[CORE/strategy-application/index|strategy-application]]** — Strategic application of core concepts
+- **[[kb/CORE/1_core-concepts/index|core-concepts]]** — SIE engine architecture, RAG, vector databases, MCP, data moats
+- **[[kb/CORE/3_strategy-application/index|strategy-application]]** — Strategic application of core concepts
 
 ---
 
