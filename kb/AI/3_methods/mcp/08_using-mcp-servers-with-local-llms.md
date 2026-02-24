@@ -122,7 +122,7 @@ This guide details how to employ MCP servers to facilitate seamless local LLM de
 Once your local environment is configured, MCP opens up several specific use cases ranging from database management to smart home control.
 
 For a detailed list of 5 specific implementation examples, see:
-- [[kb/AI/3_methods/mcp/16_practical-local-mcp-use-cases|5 Practical Ways to Use Local LLMs with MCP]]
+- [[17_practical-local-mcp-use-cases|5 Practical Ways to Use Local LLMs with MCP]]
 - 
 ---
 

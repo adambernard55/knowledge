@@ -47,7 +47,7 @@ cover_image: "assets/images/agent-memory-architecture.png"
 # How to Build a Self-Organizing Agent Memory System for Long-Term AI Reasoning
 
 ## Strategic Context
-This guide provides a practical implementation for the **Memory and Relationships** layer defined in [[kb/CORE/core-concepts/00_anatomy|Anatomy of a Knowledge Core]]. While the Master Hub serves as the global source of truth, individual agents require local, episodic memory to maintain context over long horizons. This system solves the "amnesia problem" by structuring interactions into persistent **Knowledge Units** rather than raw logs.
+This guide provides a practical implementation for the **Memory and Relationships** layer defined in [[00_anatomy|Anatomy of a Knowledge Core]]. While the Master Hub serves as the global source of truth, individual agents require local, episodic memory to maintain context over long horizons. This system solves the "amnesia problem" by structuring interactions into persistent **Knowledge Units** rather than raw logs.
 
 ---
 

@@ -1,37 +1,35 @@
 ---
-title: "5 Practical Ways to Use Local LLMs with MCP"
-id: "kb/AI/3_methods/mcp/16_practical-local-mcp-use-cases"
+title: 5 Practical Ways to Use Local LLMs with MCP
+id: kb/AI/3_methods/mcp/17_practical-local-mcp-use-cases
 version: "1.0"
-steward: "Adam Bernard"
-updated: "2026-02-12"
-status: "Active"
-doc_type: "Reference"
-summary: "Five practical application scenarios for connecting local Large Language Models to external tools via MCP, covering databases, research, knowledge management, smart homes, and file operations."
+steward: Adam Bernard
+updated: 2026-02-12
+status: Active
+doc_type: Reference
+summary: Five practical application scenarios for connecting local Large Language Models to external tools via MCP, covering databases, research, knowledge management, smart homes, and file operations.
 tags:
-  - "mcp"
-  - "local-llm"
-  - "automation"
-  - "smart-home"
-  - "obsidian"
+  - mcp
+  - local-llm
+  - automation
+  - smart-home
+  - obsidian
 relations:
-  - "kb/AI/3_methods/mcp/08_using-mcp-servers-with-local-llms"
-  - "kb/AI/3_methods/mcp/09_open-source-mcp-projects-and-tools"
+  - kb/AI/3_methods/mcp/08_using-mcp-servers-with-local-llms
+  - kb/AI/3_methods/mcp/09_open-source-mcp-projects-and-tools
 aliases:
-  - "Local MCP Use Cases"
-  - "MCP Automation Examples"
-
-# --- AI & RAG Enhancement ---
+  - Local MCP Use Cases
+  - MCP Automation Examples
 semantic_summary: "This document outlines five specific use cases for Model Context Protocol (MCP) with local LLMs: natural language database querying, autonomous web research, Obsidian vault management, offline smart home control via Home Assistant, and natural language file system management."
 synthetic_questions:
-  - "How can I use MCP to control my smart home offline?"
-  - "Can a local LLM manage my Obsidian vault using MCP?"
-  - "How do I query a SQL database using natural language and MCP?"
+  - How can I use MCP to control my smart home offline?
+  - Can a local LLM manage my Obsidian vault using MCP?
+  - How do I query a SQL database using natural language and MCP?
 key_concepts:
-  - "Natural Language SQL"
-  - "Autonomous Research Agents"
-  - "Obsidian MCP"
-  - "Home Assistant MCP"
-  - "Sandboxed File Management"
+  - Natural Language SQL
+  - Autonomous Research Agents
+  - Obsidian MCP
+  - Home Assistant MCP
+  - Sandboxed File Management
 ---
 
 # 5 Practical Ways to Use Local LLMs with MCP
