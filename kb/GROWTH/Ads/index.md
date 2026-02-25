@@ -46,7 +46,7 @@ owner_team: Strategy
 
 | Module | Index | Reference Documents | Description |
 |--------|-------|---------------------|-------------|
-| **01 Strategy** | [[01_Strategy/01_Strategy]] | [[01_Strategy/ai-concepts-for-e-commerce\|AI Concepts]], [[01_Strategy/e-commerce-tech-stack-strive\|Tech Stack & STRIVE]] | Core AI concepts, STRIVE framework, tech stack architecture |
+| **01 Strategy** | [[kb/GROWTH/Ads/01_Strategy/01_Strategy]] | [[01_Strategy/ai-concepts-for-e-commerce\|AI Concepts]], [[01_Strategy/e-commerce-tech-stack-strive\|Tech Stack & STRIVE]] | Core AI concepts, STRIVE framework, tech stack architecture |
 | **02 Acquisition** | [[02_Acquisition/02_Acquisition]] | [[02_Acquisition/ai-market-competitor-intelligence\|Market Intelligence]], [[02_Acquisition/ai-audience-segmentation\|Audience Segmentation]] | Competitor intelligence, audience segmentation, content/SEO |
 | **03 Engagement** | [[03_Engagement/03_Engagement]] | [[03_Engagement/ai-product-recommendation-engines\|Recommendations]], [[03_Engagement/dynamic-website-personalization\|Personalization]], [[03_Engagement/e-commerce-chatbot-strategy\|Chatbots]] | Product recommendations, dynamic personalization, conversational AI |
 | **04 Conversion** | [[04_Conversion/04_Conversion]] | [[04_Conversion/ai-cro-cart-abandonment\|CRO & Cart Recovery]], [[04_Conversion/dynamic-pricing-inventory\|Dynamic Pricing]], [[04_Conversion/checkout-optimization-security\|Checkout & Security]] | CRO, dynamic pricing, checkout optimization, fraud prevention |
