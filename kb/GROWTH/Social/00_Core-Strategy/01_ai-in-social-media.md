@@ -45,6 +45,8 @@ excerpt: "Defines why AI in social media is a strategic imperative, debunks comm
 cover_image: ""
 ---
 
+# AI in Social Media - Strategic Imperative & Capabilities
+
 ## 1. The Strategic Imperative
 
 The landscape of social media marketing is undergoing a transformation driven by Artificial Intelligence. Integration is no longer optional but a strategic imperative required to navigate:
