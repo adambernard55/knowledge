@@ -36,4 +36,4 @@ Strategic application of AI tools and frameworks across the e-commerce buyer jou
 **Start here:**
 
 - **[[00_E-COMMERCE|Taxonomy & Overview]]** — Core frameworks (SMART, STRIVE) and the six capability areas mapped across the buyer journey
-- **[[index|Full Module Index]]** — Navigation to all seven modules with topic summaries
+- **[[kb/E-COMMERCE/index|Full Module Index]]** — Navigation to all seven modules with topic summaries

@@ -1,51 +1,51 @@
 ---
-title: "AI for CRO, Predictive Engagement & Cart Abandonment Recovery"
-id: "KB/AI/MKTG/ECOM-15"
+title: AI for CRO, Predictive Engagement & Cart Abandonment Recovery
+id: KB/AI/MKTG/ECOM-15
 version: "1.0"
-steward: "Adam Bernard"
-updated: "2026-02-22"
-status: "Active"
-doc_type: "Reference"
-summary: "Strategic guide to AI-driven conversion rate optimization through predictive engagement scoring, targeted behavioral interventions, advanced A/B testing, and multi-channel cart abandonment recovery."
+steward: Adam Bernard
+updated: 2026-02-22
+status: Active
+doc_type: Reference
+summary: Strategic guide to AI-driven conversion rate optimization through predictive engagement scoring, targeted behavioral interventions, advanced A/B testing, and multi-channel cart abandonment recovery.
 tags:
-  - "e-commerce"
-  - "ai"
-  - "conversion-rate-optimization"
-  - "cart-abandonment"
-  - "predictive-engagement"
-  - "a-b-testing"
-  - "personalization"
+  - e-commerce
+  - ai
+  - conversion-rate-optimization
+  - cart-abandonment
+  - predictive-engagement
+  - a-b-testing
+  - personalization
 relations:
-  - "[[conversion-optimization|KB/AI/MKTG/ECOM-05]]"
+  - "[[4_4_conversion-optimization|KB/AI/MKTG/ECOM-05]]"
   - "[[4_2_AI for Strategic Dynamic Pricing & Inventory Management|KB/AI/MKTG/ECOM-16]]"
   - "[[4_3_AI for Strategic Checkout Optimization & Payment Security|KB/AI/MKTG/ECOM-17]]"
 aliases:
-  - "E-commerce CRO AI"
-  - "Cart Abandonment Recovery"
-  - "Predictive Engagement Scoring"
-target_audience: "All_Staff"
-security_level: "Internal"
-owner_team: "Strategy"
-semantic_summary: "This reference document details how AI scores visitor engagement in real time, predicts conversion likelihood, and triggers targeted interventions at high-, mid-, and low-intent thresholds. It covers AI-enhanced A/B testing methodologies including multi-armed bandits and contextual bandits, predictive cart abandonment detection, and the design of personalized multi-channel recovery campaigns. SMART goal examples and STRIVE evaluation criteria are provided for tool selection and ethical guardrails."
+  - E-commerce CRO AI
+  - Cart Abandonment Recovery
+  - Predictive Engagement Scoring
+target_audience: All_Staff
+security_level: Internal
+owner_team: Strategy
+semantic_summary: This reference document details how AI scores visitor engagement in real time, predicts conversion likelihood, and triggers targeted interventions at high-, mid-, and low-intent thresholds. It covers AI-enhanced A/B testing methodologies including multi-armed bandits and contextual bandits, predictive cart abandonment detection, and the design of personalized multi-channel recovery campaigns. SMART goal examples and STRIVE evaluation criteria are provided for tool selection and ethical guardrails.
 synthetic_questions:
-  - "How does AI score visitor engagement and predict conversion likelihood in e-commerce?"
-  - "What targeted interventions can AI trigger based on engagement scores?"
-  - "How do multi-armed bandit and contextual bandit methods improve A/B testing?"
-  - "What signals does AI use to predict cart abandonment before it occurs?"
-  - "How should personalized cart recovery campaigns be structured across channels?"
+  - How does AI score visitor engagement and predict conversion likelihood in e-commerce?
+  - What targeted interventions can AI trigger based on engagement scores?
+  - How do multi-armed bandit and contextual bandit methods improve A/B testing?
+  - What signals does AI use to predict cart abandonment before it occurs?
+  - How should personalized cart recovery campaigns be structured across channels?
 key_concepts:
-  - "predictive engagement scoring"
-  - "conversion propensity modeling"
-  - "multi-armed bandit testing"
-  - "contextual bandit personalization"
-  - "cart abandonment prediction"
-  - "multi-channel recovery campaigns"
-  - "SMART goals for CRO"
-  - "STRIVE framework evaluation"
-primary_keyword: "AI conversion rate optimization"
-seo_title: "AI for CRO, Predictive Engagement & Cart Abandonment Recovery"
-meta_description: "Strategic reference on AI-driven CRO, predictive engagement scoring, advanced A/B testing, and personalized multi-channel cart abandonment recovery for e-commerce."
-excerpt: "AI transforms conversion rate optimization by scoring visitor engagement in real time, triggering precision interventions, accelerating A/B testing with bandit algorithms, and orchestrating personalized multi-channel cart abandonment recovery campaigns."
+  - predictive engagement scoring
+  - conversion propensity modeling
+  - multi-armed bandit testing
+  - contextual bandit personalization
+  - cart abandonment prediction
+  - multi-channel recovery campaigns
+  - SMART goals for CRO
+  - STRIVE framework evaluation
+primary_keyword: AI conversion rate optimization
+seo_title: AI for CRO, Predictive Engagement & Cart Abandonment Recovery
+meta_description: Strategic reference on AI-driven CRO, predictive engagement scoring, advanced A/B testing, and personalized multi-channel cart abandonment recovery for e-commerce.
+excerpt: AI transforms conversion rate optimization by scoring visitor engagement in real time, triggering precision interventions, accelerating A/B testing with bandit algorithms, and orchestrating personalized multi-channel cart abandonment recovery campaigns.
 cover_image: ""
 ---
 

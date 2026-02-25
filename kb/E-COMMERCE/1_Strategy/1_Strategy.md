@@ -44,10 +44,10 @@ The Strategy module establishes the intellectual foundation for every AI initiat
 
 | ID | Document | Description |
 |---|---|---|
-| ECOM-02 | [AI Foundations & Strategic Imperatives for E-commerce](ai-foundation-for-e-commerce.md) | Core AI technologies (NLP, computer vision, predictive analytics, ML), data strategy prerequisites, and the integrated tech stack concept. The starting point for readers new to AI in e-commerce. |
-| ECOM-03 | [AI for Strategic E-commerce Discovery and Acquisition](ai-strategy-for-e-commerce.md) | AI-driven market intelligence, competitor analysis, audience segmentation (RFM, behavioral, predictive CLV), content strategy, and SEO optimization for the discovery and acquisition phase of the buyer journey. |
-| ECOM-07 | [Developing an AI-Powered E-commerce Strategy](6_1_Developing%20an%20AI-Powered%20E-commerce%20Strategy.md) | End-to-end AI strategy development: goal alignment, RICE prioritization, integrated workflow design, ethical governance, KPI measurement, ROI calculation, scaling pilots, and future-proofing with emerging trends. |
-| ECOM-09 | [The AI E-commerce Tech Stack & Strategic Tool Evaluation with STRIVE](The%20AI%20E-commerce%20Tech%20Stack%20&%20Strategic%20Tool%20Evaluation%20with%20STRIVE.md) | Taxonomy of AI tool categories (personalization, chatbots, dynamic pricing, analytics, content generation, sentiment analysis, advertising) and the STRIVE framework for systematic tool evaluation across Strategic Fit, Technical Efficacy, ROI, Integration, Vendor Viability, and Ethical Compliance. |
+| ECOM-02 | [AI Foundations & Strategic Imperatives for E-commerce](1_1_ai-foundation-for-e-commerce.md) | Core AI technologies (NLP, computer vision, predictive analytics, ML), data strategy prerequisites, and the integrated tech stack concept. The starting point for readers new to AI in e-commerce. |
+| ECOM-03 | [AI for Strategic E-commerce Discovery and Acquisition](1_2_ai-strategy-for-e-commerce.md) | AI-driven market intelligence, competitor analysis, audience segmentation (RFM, behavioral, predictive CLV), content strategy, and SEO optimization for the discovery and acquisition phase of the buyer journey. |
+| ECOM-07 | [Developing an AI-Powered E-commerce Strategy](1_4_developing-an-ai-powered-e-commerce-strategy.md) | End-to-end AI strategy development: goal alignment, RICE prioritization, integrated workflow design, ethical governance, KPI measurement, ROI calculation, scaling pilots, and future-proofing with emerging trends. |
+| ECOM-09 | [1_3_ai-e-commerce-tech-stack](1_3_ai-e-commerce-tech-stack.md) | Taxonomy of AI tool categories (personalization, chatbots, dynamic pricing, analytics, content generation, sentiment analysis, advertising) and the STRIVE framework for systematic tool evaluation across Strategic Fit, Technical Efficacy, ROI, Integration, Vendor Viability, and Ethical Compliance. |
 
 ---
 

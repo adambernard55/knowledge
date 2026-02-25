@@ -40,8 +40,8 @@ This module sits within the broader E-commerce knowledge base and focuses specif
 
 | Document | ID | Description |
 |---|---|---|
-| [[AI for E-commerce Content & SEO that Converts]] | KB/AI/MKTG/ECOM-10 | Covers AI as a content creation accelerator and SEO optimization engine. Addresses the human-AI collaboration model for product descriptions, ad copy, blog content, and email sequences. Includes technical SEO automation, topical authority strategy, AI-generated visual assets, and ethical guardrails for visual content. |
-| [[Strategic AI-Powered Audience Segmentation for E-commerce]] | KB/AI/MKTG/ECOM-11 | Covers AI-enhanced segmentation models including RFM analysis, behavioral clustering, and predictive CLV. Addresses dynamic real-time segmentation, platform integration architecture across ad platforms, personalization tools, email automation, and CRM systems. Includes privacy compliance and anti-discrimination guardrails. |
+| [[2_1_ai-for-e-commerce-content]] | KB/AI/MKTG/ECOM-10 | Covers AI as a content creation accelerator and SEO optimization engine. Addresses the human-AI collaboration model for product descriptions, ad copy, blog content, and email sequences. Includes technical SEO automation, topical authority strategy, AI-generated visual assets, and ethical guardrails for visual content. |
+| [[2_2_strategic-ai-powered-audience-segmentation-for-e-commerce]] | KB/AI/MKTG/ECOM-11 | Covers AI-enhanced segmentation models including RFM analysis, behavioral clustering, and predictive CLV. Addresses dynamic real-time segmentation, platform integration architecture across ad platforms, personalization tools, email automation, and CRM systems. Includes privacy compliance and anti-discrimination guardrails. |
 
 ## Module Scope
 

@@ -48,11 +48,11 @@ excerpt: "Full Module 7 reference for the AI e-commerce action plan capstone pro
 cover_image: ""
 ---
 
-# Module 7: Capstone Project & Final Assessment -- Strategic AI E-commerce Action Plan (120 mins)
+# Capstone Project - Strategic AI E-commerce Action Plan
 
 ## Module Introduction and Description:
 
-Welcome to **Module 7: Capstone Project & Final Assessment – Strategic AI E-commerce Action Plan**, the culminating segment of "AI for E-commerce Marketing: Strategically Orchestrating AI for Buyer Journey Success". This module serves as the bridge from theoretical knowledge to practical application, challenging you to consolidate and apply the strategic frameworks, AI concepts, and critical thinking skills developed throughout the course.
+Welcome to **Capstone Project – Strategic AI E-commerce Action Plan**, the culminating segment of "AI for E-commerce Marketing: Strategically Orchestrating AI for Buyer Journey Success". This module serves as the bridge from theoretical knowledge to practical application, challenging you to consolidate and apply the strategic frameworks, AI concepts, and critical thinking skills developed throughout the course.
 
 The centerpiece of this module is the **Capstone Project**, where you will step into the role of an AI strategist for an e-commerce business—either one you choose or a detailed hypothetical scenario. Your primary goal will be to develop a comprehensive **Strategic AI E-commerce Action Plan**. This is not just an academic exercise; the aim is to craft a realistic, actionable, and stakeholder-ready document that could drive tangible business results. You'll be expected to define overarching SMART e-commerce goals for the business and then propose 2-3 strategic AI tool categories to support these objectives. For each chosen AI category, a rigorous STRIVE analysis will be essential, justifying its selection with detailed reasoning for each criterion (Strategic Fit, Technical Efficacy, ROI, Integration, Vendor Viability, and Ethical Alignment) in the specific business context.
 

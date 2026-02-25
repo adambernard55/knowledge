@@ -1,51 +1,51 @@
 ---
-title: "AI for Strategic Dynamic Pricing & Inventory Management"
-id: "KB/AI/MKTG/ECOM-16"
+title: AI for Strategic Dynamic Pricing & Inventory Management
+id: KB/AI/MKTG/ECOM-16
 version: "1.0"
-steward: "Adam Bernard"
-updated: "2026-02-22"
-status: "Active"
-doc_type: "Reference"
-summary: "Strategic guide to AI-driven dynamic pricing models, demand forecasting for inventory optimization, critical data requirements, and ethical guardrails for pricing fairness and transparency."
+steward: Adam Bernard
+updated: 2026-02-22
+status: Active
+doc_type: Reference
+summary: Strategic guide to AI-driven dynamic pricing models, demand forecasting for inventory optimization, critical data requirements, and ethical guardrails for pricing fairness and transparency.
 tags:
-  - "e-commerce"
-  - "ai"
-  - "dynamic-pricing"
-  - "inventory-management"
-  - "demand-forecasting"
-  - "pricing-strategy"
-  - "ethics"
+  - e-commerce
+  - ai
+  - dynamic-pricing
+  - inventory-management
+  - demand-forecasting
+  - pricing-strategy
+  - ethics
 relations:
-  - "[[conversion-optimization|KB/AI/MKTG/ECOM-05]]"
+  - "[[4_4_conversion-optimization|KB/AI/MKTG/ECOM-05]]"
   - "[[4_1_AI for CRO, Predictive Engagement & Cart Abandonment Recovery|KB/AI/MKTG/ECOM-15]]"
   - "[[4_3_AI for Strategic Checkout Optimization & Payment Security|KB/AI/MKTG/ECOM-17]]"
 aliases:
-  - "Dynamic Pricing AI"
-  - "AI Inventory Management"
-  - "Demand Forecasting"
-target_audience: "All_Staff"
-security_level: "Internal"
-owner_team: "Strategy"
-semantic_summary: "This reference document covers AI-driven dynamic pricing strategies including demand-based, competitor-responsive, inventory-level, and segment-based pricing models. It details how AI improves demand forecasting accuracy over traditional methods by incorporating historical sales, external factors, and real-time engagement signals. Data strategy requirements, ethical considerations around pricing fairness and transparency, SMART goal examples, and STRIVE evaluation criteria for pricing and inventory tools are provided."
+  - Dynamic Pricing AI
+  - AI Inventory Management
+  - Demand Forecasting
+target_audience: All_Staff
+security_level: Internal
+owner_team: Strategy
+semantic_summary: This reference document covers AI-driven dynamic pricing strategies including demand-based, competitor-responsive, inventory-level, and segment-based pricing models. It details how AI improves demand forecasting accuracy over traditional methods by incorporating historical sales, external factors, and real-time engagement signals. Data strategy requirements, ethical considerations around pricing fairness and transparency, SMART goal examples, and STRIVE evaluation criteria for pricing and inventory tools are provided.
 synthetic_questions:
-  - "What types of dynamic pricing strategies can AI enable for e-commerce?"
-  - "How does AI improve demand forecasting accuracy over traditional statistical methods?"
-  - "What data inputs are required for effective AI-driven pricing and inventory models?"
-  - "What ethical guardrails should govern AI dynamic pricing?"
-  - "How do pricing and inventory strategies interconnect through AI?"
+  - What types of dynamic pricing strategies can AI enable for e-commerce?
+  - How does AI improve demand forecasting accuracy over traditional statistical methods?
+  - What data inputs are required for effective AI-driven pricing and inventory models?
+  - What ethical guardrails should govern AI dynamic pricing?
+  - How do pricing and inventory strategies interconnect through AI?
 key_concepts:
-  - "demand-based pricing"
-  - "competitor-responsive pricing"
-  - "inventory-level pricing"
-  - "segment-based pricing"
-  - "demand forecasting"
-  - "stockout reduction"
-  - "overstock minimization"
-  - "pricing ethics and transparency"
-primary_keyword: "AI dynamic pricing inventory management"
-seo_title: "AI for Strategic Dynamic Pricing & Inventory Management"
-meta_description: "Strategic reference on AI-driven dynamic pricing, demand forecasting, inventory optimization, and ethical pricing guardrails for e-commerce operations."
-excerpt: "AI enables multi-factor dynamic pricing and demand forecasting that surpasses traditional methods, optimizing revenue, margins, and inventory levels while requiring strong ethical guardrails around fairness and transparency."
+  - demand-based pricing
+  - competitor-responsive pricing
+  - inventory-level pricing
+  - segment-based pricing
+  - demand forecasting
+  - stockout reduction
+  - overstock minimization
+  - pricing ethics and transparency
+primary_keyword: AI dynamic pricing inventory management
+seo_title: AI for Strategic Dynamic Pricing & Inventory Management
+meta_description: Strategic reference on AI-driven dynamic pricing, demand forecasting, inventory optimization, and ethical pricing guardrails for e-commerce operations.
+excerpt: AI enables multi-factor dynamic pricing and demand forecasting that surpasses traditional methods, optimizing revenue, margins, and inventory levels while requiring strong ethical guardrails around fairness and transparency.
 cover_image: ""
 ---
 

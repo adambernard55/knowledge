@@ -38,7 +38,7 @@ This module addresses the operational reality of AI in e-commerce: moving from s
 
 | ID | Document | Description |
 |---|---|---|
-| ECOM-21 | [[6_Strategically Implementing, Scaling & Future-Proofing AI in E-commerce\|Strategic Implementation Overview]] | Full AI implementation lifecycle: strategy development, integrated workflows, ethical governance, and the operational framework connecting measurement, scaling, and future-proofing |
+| ECOM-21 | [[6_1_Strategically Implementing, Scaling & Future-Proofing AI in E-commerce\|Strategic Implementation Overview]] | Full AI implementation lifecycle: strategy development, integrated workflows, ethical governance, and the operational framework connecting measurement, scaling, and future-proofing |
 | ECOM-22 | [[6_2_Strategically Measuring AI Performance & ROI in E-commerce\|Measuring AI Performance & ROI]] | E-commerce-specific KPI frameworks, attribution methodologies, ROI calculation for AI initiatives, and the measurement discipline required for evidence-based scaling decisions |
 | ECOM-23 | [[6_3_Iterative Refinement and Scaling Successful AI Initiatives Strategically\|Iterative Refinement & Scaling]] | Methodology for moving from pilot to production, scaling successful AI initiatives, managing model drift, and building organizational capacity for continuous improvement |
 | ECOM-24 | [[6_4_The Future of AI in E-commerce & Continuous Strategic Adaptation\|Future Trends & Strategic Adaptation]] | Emerging AI trends (hyper-personalization, generative AI, voice commerce, predictive supply chains) and the organizational capabilities required for continuous adaptation |

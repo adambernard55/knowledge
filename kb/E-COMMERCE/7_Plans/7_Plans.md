@@ -39,7 +39,7 @@ This module provides the synthesis layer for the E-commerce AI knowledge base: s
 | ID | Document | Description |
 |---|---|---|
 | ECOM-04 | [[capstone-project-strategic-ai-action\|Capstone Project: Strategic AI Action Plan]] | Step-by-step methodology for developing an AI-powered e-commerce strategy, applying SMART goal-setting and STRIVE evaluation to a chosen business scenario |
-| ECOM-08 | [[Strategic AI E-commerce Action Plan\|Strategic AI E-commerce Action Plan]] | Comprehensive action plan template with scenario-based evaluation, implementation roadmap, and strategy validation frameworks |
+| ECOM-08 | [[strategic-ai-e-commerce-action-plan\|Strategic AI E-commerce Action Plan]] | Comprehensive action plan template with scenario-based evaluation, implementation roadmap, and strategy validation frameworks |
 
 ## Reading Sequence
 
