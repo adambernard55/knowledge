@@ -32,9 +32,9 @@ This section details the technical building blocks and fundamental techniques th
 
 ## Contents
 
-- **[[00_CORE|00 Core]]**
-- **[[core-concepts/index|Core Concepts]]** — The Knowledge Core is the central nervous system of the SIE, designed to minimize the 'Human Correction Tax' by providing a governed, single source of truth. It contains structured, semi-structured, and unstructured data (including negative examples). It is operationalized via the Knowledge Pipeline (KPL), which syncs Obsidian markdown to a vector database for RAG, enabling the 'Fleet Commander' model of agent orchestration.
-- **[[strategy-application/index|Strategy Application]]**
+- **[[kb/CORE/00_CORE|00 Core]]**
+- **[[kb/CORE/1_core-concepts/index|Core Concepts]]** — The Knowledge Core is the central nervous system of the SIE, designed to minimize the 'Human Correction Tax' by providing a governed, single source of truth. It contains structured, semi-structured, and unstructured data (including negative examples). It is operationalized via the Knowledge Pipeline (KPL), which syncs Obsidian markdown to a vector database for RAG, enabling the 'Fleet Commander' model of agent orchestration.
+- **[[kb/CORE/3_strategy-application/index|Strategy Application]]**
 
 | Topic                                                                     | Description                                                                                                                                                                                                                                     |
 | ------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -55,4 +55,4 @@ This section explains how the core concepts are applied strategically to build a
 
 | Topic                                     | Description                                                                                                                                                                                                                                 |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [[anatomy-of-an-ai-agent-knowledge-base]] | Defines the architecture and components of the knowledge base (the Master Hub) that powers the Strategic Intelligence Engine's (SIE) agents, enabling them to perform complex reasoning and automated tasks with high accuracy and context. |
+| [[01_anatomy-of-an-ai-agent-knowledge-base]] | Defines the architecture and components of the knowledge base (the Master Hub) that powers the Strategic Intelligence Engine's (SIE) agents, enabling them to perform complex reasoning and automated tasks with high accuracy and context. |
