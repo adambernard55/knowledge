@@ -43,7 +43,7 @@ Together, these references equip practitioners with the knowledge to deploy AI a
 
 | ID | Document | Description |
 |---|---|---|
-| OPT-01 | [[5_Legal Requirements and Ethical Considerations in AI‑Powered Email]] | GDPR, CCPA/CPRA compliance, consent architecture, algorithmic bias detection and mitigation, transparency obligations, and a best-practice compliance checklist for AI-powered email marketing. |
+| OPT-01 | [[5_1_Legal Requirements and Ethical Considerations in AI‑Powered Email]] | GDPR, CCPA/CPRA compliance, consent architecture, algorithmic bias detection and mitigation, transparency obligations, and a best-practice compliance checklist for AI-powered email marketing. |
 | OPT-02 | [[5_2_AI for Subject Line & Content Optimization]] | AI-driven subject-line generation and scoring, A/B/N testing at scale with auto-allocation, email body content optimization, readability analysis, and ethical safeguards for AI-generated copy. |
 | OPT-03 | [[5_3_AI for Send‑Time Optimization & Deliverability]] | Per-subscriber send-time optimization using behavioral profiles, dynamic vs. batch scheduling, sender reputation management, SPF/DKIM/DMARC authentication, AI content scanning, and automated list hygiene. |
 | OPT-04 | [[5_4_Analyzing & Reporting on AI‑Powered Campaigns]] | AI tool integration with ESP/CRM platforms, AI-powered dashboard interpretation, KPI attribution for AI interventions, and structured ROI reporting for stakeholders. |

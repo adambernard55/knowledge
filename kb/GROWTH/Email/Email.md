@@ -1,52 +1,51 @@
 ---
-title: "AI for Email & CRM Marketing - Taxonomy & Overview"
-id: "KB/GROWTH/EMAIL/EMAIL-00"
+title: AI for Email & CRM Marketing - Taxonomy & Overview
+id: KB/GROWTH/EMAIL/EMAIL-00
 version: "1.0"
-steward: "Adam Bernard"
+steward: Adam Bernard
 updated: 2026-02-21
 status: Active
 doc_type: Reference
-summary: "Taxonomy document mapping the core capability areas of AI-driven email and CRM marketing, from strategic foundations to optimization and future-proofing."
+summary: Taxonomy document mapping the core capability areas of AI-driven email and CRM marketing, from strategic foundations to optimization and future-proofing.
 tags:
-  - "email-marketing"
-  - "ai-strategy"
-  - "taxonomy"
-  - "crm"
-  - "automation"
-  - "personalization"
+  - email-marketing
+  - ai-strategy
+  - taxonomy
+  - crm
+  - automation
+  - personalization
 relations:
-  - "index.md"
-  - "Strategy/Strategy.md"
-  - "Personalization/Personalization.md"
-  - "Automation/Automation.md"
-  - "Outreach/Outreach.md"
-  - "Optimization/Optimization.md"
+  - index.md
+  - Strategy/Strategy.md
+  - Personalization/Personalization.md
+  - Automation/Automation.md
+  - Outreach/Outreach.md
+  - Optimization/Optimization.md
 aliases:
-  - "Email AI Taxonomy"
-  - "Email Marketing Taxonomy"
-
+  - Email AI Taxonomy
+  - Email Marketing Taxonomy
 semantic_summary: "This taxonomy document provides a structured overview of AI applications in email and CRM marketing, organized into five capability areas: strategic foundations, advanced personalization, intelligent automation, influencer outreach, and campaign optimization. It serves as a navigational index for the email marketing knowledge base and maps how AI transforms each stage of the email marketing lifecycle."
 synthetic_questions:
-  - "What are the core capability areas of AI in email marketing?"
-  - "How is the email marketing knowledge base organized?"
-  - "What frameworks apply to AI-driven email strategy?"
+  - What are the core capability areas of AI in email marketing?
+  - How is the email marketing knowledge base organized?
+  - What frameworks apply to AI-driven email strategy?
 key_concepts:
-  - "email personalization"
-  - "marketing automation"
-  - "send-time optimization"
-  - "behavioral targeting"
-  - "influencer outreach"
-  - "campaign analytics"
-  - "SMART goals"
-
-primary_keyword: "ai email marketing"
-seo_title: "AI Email Marketing Taxonomy & Capability Overview"
+  - email personalization
+  - marketing automation
+  - send-time optimization
+  - behavioral targeting
+  - influencer outreach
+  - campaign analytics
+  - SMART goals
+primary_keyword: ai email marketing
+seo_title: AI Email Marketing Taxonomy & Capability Overview
 meta_description: "Taxonomy of ai email marketing capabilities: strategy, personalization, automation, and optimization."
-excerpt: "A structured taxonomy of ai email marketing capabilities spanning strategic foundations, personalization, automation, influencer outreach, and campaign optimization."
+excerpt: A structured taxonomy of ai email marketing capabilities spanning strategic foundations, personalization, automation, influencer outreach, and campaign optimization.
 cover_image: ""
 target_audience: All_Staff
 security_level: Internal
 owner_team: Strategy
+sticker: emoji//1f680
 ---
 
 # AI for Email & CRM Marketing

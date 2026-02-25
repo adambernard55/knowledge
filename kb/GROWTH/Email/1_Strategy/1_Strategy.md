@@ -43,7 +43,7 @@ Collectively, these references provide the conceptual and operational foundation
 
 | Ref ID | File | Title | Description |
 |---|---|---|---|
-| STR-01 | [[1_AI for Email & CRM]] | AI's Strategic Role in Modern Email Marketing | Defines why AI is a strategic imperative through three pillars: scaled personalization, real-time optimization, and competitive differentiation. Establishes AI capability and limitation boundaries. |
+| STR-01 | [[1_1_AI for Email & CRM]] | AI's Strategic Role in Modern Email Marketing | Defines why AI is a strategic imperative through three pillars: scaled personalization, real-time optimization, and competitive differentiation. Establishes AI capability and limitation boundaries. |
 | STR-02 | [[1_2_Core AI Concepts & the Email Marketing Stack]] | Core AI Concepts and the Email Marketing Stack | Demystifies Machine Learning, NLP, and AI-driven data analysis as applied to email marketing. Maps the components of an AI email technology stack and covers GDPR/CCPA compliance and ethical AI requirements. |
 | STR-03 | [[1_3_Customer-Centricity & the Evolving Email Landscape]] | Customer-Centricity and the Evolving Email Landscape | Traces the evolution from batch-and-blast to adaptive, relationship-driven email. Defines the human-AI balance and establishes ethical personalization boundaries including the concept of intrusive personalization. |
 | STR-04 | [[1_4_AI-Powered Email Tools]] | AI-Powered Email Tools: A Strategic Overview | Categorizes AI email tools into personalization, automation, optimization, and analytics. Profiles seven major platforms and provides a selection framework based on organizational objectives. |

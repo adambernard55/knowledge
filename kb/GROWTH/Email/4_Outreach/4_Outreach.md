@@ -39,8 +39,8 @@ The documents in this index progress through the influencer outreach lifecycle: 
 
 | Seq | File | ID | Description |
 |-----|------|----|-------------|
-| 1 | [[4_Email as an Influencer Amplifier]] | OUT-01 | Foundational reference on why email is the strategic channel for influencer relationship management, AI solutions to traditional outreach pain points, and legal/ethical requirements. |
-| 2 | [[4_1_Strategic Influencer Marketing via Email]] | OUT-02 | Detailed breakdown of AI capabilities for influencer identification, email personalization mechanics, automation infrastructure, and compliance frameworks. |
+| 1 | [[4_1_Email as an Influencer Amplifier]] | OUT-01 | Foundational reference on why email is the strategic channel for influencer relationship management, AI solutions to traditional outreach pain points, and legal/ethical requirements. |
+| 2 | [[4_2_Strategic Influencer Marketing via Email]] | OUT-02 | Detailed breakdown of AI capabilities for influencer identification, email personalization mechanics, automation infrastructure, and compliance frameworks. |
 | 3 | [[4_2_AI‑Powered Content & Strategy Optimization for Influencer Campaigns ]] | OUT-03 | AI-driven content optimization (messaging, visuals, CTAs), real-time campaign monitoring, strategic budget reallocation, and A/B testing coordination via email. |
-| 4 | [[4_3_AI‑Driven Personalized Outreach & Proposals]] | OUT-04 | Techniques for AI-powered deep personalization in outreach emails, automated proposal generation, predictive metrics, and relationship nurturing beyond the initial pitch. |
+| 4 | [[4_4_AI‑Driven Personalized Outreach & Proposals]] | OUT-04 | Techniques for AI-powered deep personalization in outreach emails, automated proposal generation, predictive metrics, and relationship nurturing beyond the initial pitch. |
 | 5 | [[4_4_Automating Influencer Outreach Sequences & ROI Measurement ]] | OUT-05 | Multi-touch automated outreach workflow design, attribution tracking methods (UTM, promo codes, landing pages), ROI calculation, and ethical automation practices. |

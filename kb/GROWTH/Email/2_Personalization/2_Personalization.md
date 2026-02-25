@@ -41,7 +41,7 @@ The five reference documents in this module form a sequential knowledge base. Th
 
 | Seq | File | ID | Description |
 |-----|------|----|-------------|
-| 1 | [[2_Advanced Personalization Strategies]] | PER-01 | Defines and differentiates behavioral, contextual, and predictive personalization. Covers AI-driven send-time optimization and cross-industry applications. |
+| 1 | [[2_1_Advanced Personalization Strategies]] | PER-01 | Defines and differentiates behavioral, contextual, and predictive personalization. Covers AI-driven send-time optimization and cross-industry applications. |
 | 2 | [[2_2_AI for Granular Audience Segmentation]] | PER-02 | Explains how machine learning clustering algorithms create micro-segments from multi-dimensional data. Addresses data sources, benefits, platform capabilities, and ethical guardrails. |
 | 3 | [[2_3_AI for Dynamic Content and Recommendations]] | PER-03 | Details dynamic content elements (text, images, offers, CTAs) and recommendation engine architectures (collaborative filtering, content-based filtering, hybrid systems). |
 | 4 | [[2_4_AB Testing & Optimizing Personalization]] | PER-04 | Covers A/B testing methodology applied to personalized email elements. Addresses AI-assisted variation generation, statistical significance, and iterative refinement cycles. |

@@ -44,7 +44,7 @@ The documents in this collection are designed to be read independently or as a p
 
 | ID | Document | Description |
 |----|----------|-------------|
-| AUT-01 | [Strategic AI-Powered Email Automation](3_Strategic%20AI‑Powered%20Email%20Automation%20.md) | Foundational framework for AI-driven workflow design: customer journey planning, trigger architecture, branching logic, and template-based acceleration |
+| AUT-01 | [Strategic AI-Powered Email Automation](3_1_Strategic%20AI‑Powered%20Email%20Automation%20.md) | Foundational framework for AI-driven workflow design: customer journey planning, trigger architecture, branching logic, and template-based acceleration |
 | AUT-02 | [Advanced Triggered Emails & Behavioral Targeting](3_2_Advanced%20Triggered%20Emails%20&%20Behavioral%20Targeting.md) | AI-powered behavioral triggers, implicit intent signals, timing optimization, adaptive follow-up paths, and ethical targeting frameworks |
 | AUT-03 | [Building Intelligent Automated Email Follow-Up Sequences with AI](3_3_Building%20Intelligent%20Automated%20Email%20Follow‑Up%20Sequences%20with%20AI%20.md) | Adaptive sequence architecture: branching logic, dynamic content, cadence optimization, lead scoring integration, and practical sequence designs |
 | AUT-04 | [Contract Management and Long-Term Relationships](3_4_Contract%20Management%20and%20Long‑Term%20Relationships.md) | AI-powered influencer contract automation, compliance checking, performance analytics, audience alignment monitoring, and partnership nurturing strategies |
