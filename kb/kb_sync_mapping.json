@@ -1,37 +1,9 @@
 {
-  "TOOLS/ai-foundation-models/ChatGPT (OpenAI).md": {
-    "post_id": 22938,
-    "slug": "chatgpt-openai-conversational-ai-profile",
-    "url": "https://adambernard.com/kb/chatgpt-openai-conversational-ai-profile/",
-    "title": "ChatGPT (OpenAI): Conversational AI Profile",
-    "last_synced": "2026-02-08T10:06:13.674627"
-  },
-  "TOOLS/ai-foundation-models/Claude (Anthropic).md": {
-    "post_id": 22939,
-    "slug": "claude-anthropic-ai-platform-profile",
-    "url": "https://adambernard.com/kb/claude-anthropic-ai-platform-profile/",
-    "title": "Claude (Anthropic): AI Platform Profile",
-    "last_synced": "2026-02-08T10:06:13.674627"
-  },
-  "TOOLS/ai-foundation-models/DeepSeek.md": {
-    "post_id": 24178,
-    "slug": "deepseek-cost-effective-llm-for-chat-reasoning-coding",
-    "url": "https://adambernard.com/kb/deepseek-cost-effective-llm-for-chat-reasoning-coding/",
-    "title": "DeepSeek: Cost-Effective LLM for Chat, Reasoning & Coding",
-    "last_synced": "2026-02-08T10:06:13.674627"
-  },
   "TOOLS/ai-foundation-models/Gemini.md": {
     "post_id": 22940,
     "slug": "gemini-google-multimodal-ai-profile",
     "url": "https://adambernard.com/kb/gemini-google-multimodal-ai-profile/",
     "title": "Gemini (Google): Multimodal AI Profile",
-    "last_synced": "2026-02-08T10:06:13.674627"
-  },
-  "TOOLS/ai-foundation-models/Grok (xAI).md": {
-    "post_id": 22941,
-    "slug": "grok-xai-real-time-social-ai-profile",
-    "url": "https://adambernard.com/kb/grok-xai-real-time-social-ai-profile/",
-    "title": "Grok (xAI): Real-Time Social AI Profile",
     "last_synced": "2026-02-08T10:06:13.674627"
   },
   "TOOLS/ai-foundation-models/LLaMA.md": {
@@ -328,27 +300,6 @@
     "title": "How to Build Full-Stack Agent Applications",
     "last_synced": "2026-02-09T18:37:46.529549"
   },
-  "AI/2_agents/03_build-an-ai-desktop-automation-agent.md": {
-    "post_id": 21304,
-    "slug": "framework-for-building-an-ai-desktop-automation-agent",
-    "url": "https://adambernard.com/kb/framework-for-building-an-ai-desktop-automation-agent/",
-    "title": "Framework for Building an AI Desktop Automation Agent",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
-  "AI/2_agents/04_agentic-reinforcement-learning.md": {
-    "post_id": 21308,
-    "slug": "agentic-reinforcement-learning-agentic-rl-a-technical-overview",
-    "url": "https://adambernard.com/kb/agentic-reinforcement-learning-agentic-rl-a-technical-overview/",
-    "title": "Agentic Reinforcement Learning (Agentic RL): A Technical Overview",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
-  "AI/2_agents/05_agentic-vs-automation-platforms.md": {
-    "post_id": 21306,
-    "slug": "agentic-vs-automation-platforms-a-comparison-of-openai-agentkit-n8n-and-make",
-    "url": "https://adambernard.com/kb/agentic-vs-automation-platforms-a-comparison-of-openai-agentkit-n8n-and-make/",
-    "title": "Agentic vs. Automation Platforms: A Comparison of OpenAI AgentKit, n8n, and Make",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
   "AI/2_agents/06_building-an-ai-agent-with-dual-memory.md": {
     "post_id": 21307,
     "slug": "building-an-ai-agent-with-dual-memory-architecture",
@@ -461,39 +412,11 @@
     "title": "Context Management for Deep Agents: A Technical Guide",
     "last_synced": "2026-02-09T18:37:46.529549"
   },
-  "AI/2_agents/toolkits/01_introduction-to-openai-agent-builder.md": {
-    "post_id": 21302,
-    "slug": "introduction-to-openai-agent-builder-a-reference-guide-for-creating-custom-ai-agents",
-    "url": "https://adambernard.com/kb/introduction-to-openai-agent-builder-a-reference-guide-for-creating-custom-ai-agents/",
-    "title": "Introduction to OpenAI Agent Builder: A Reference Guide for Creating Custom AI Agents",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
-  "AI/2_agents/toolkits/02_introduction-to-openai-agentkit.md": {
-    "post_id": 21303,
-    "slug": "introduction-to-openai-agentkit-exploring-its-architecture-and-capabilities",
-    "url": "https://adambernard.com/kb/introduction-to-openai-agentkit-exploring-its-architecture-and-capabilities/",
-    "title": "Introduction to OpenAI AgentKit: Exploring Its Architecture and Capabilities",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
-  "AI/2_agents/toolkits/03_building-agents-with-openai-gpts.md": {
-    "post_id": 21300,
-    "slug": "building-agents-with-openais-gpts-a-technical-overview",
-    "url": "https://adambernard.com/kb/building-agents-with-openais-gpts-a-technical-overview/",
-    "title": "Building Agents with OpenAI's GPTs: A Technical Overview",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
   "AI/2_agents/toolkits/04_building-agents-with-the-claude-agent-sdk.md": {
     "post_id": 23509,
     "slug": "building-agents-with-the-claude-agent-sdk",
     "url": "https://adambernard.com/kb/building-agents-with-the-claude-agent-sdk/",
     "title": "Building Agents with the Claude Agent SDK",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
-  "AI/2_agents/toolkits/05_microsoft-agent-framework.md": {
-    "post_id": 21301,
-    "slug": "microsoft-agent-framework-a-technical-overview",
-    "url": "https://adambernard.com/kb/microsoft-agent-framework-a-technical-overview/",
-    "title": "Microsoft Agent Framework: A Technical Overview",
     "last_synced": "2026-02-09T18:37:46.529549"
   },
   "AI/2_agents/toolkits/06_building-ai-workflows-with-n8n.md": {
@@ -573,13 +496,6 @@
     "title": "Agentic AI Overview: Understanding Autonomous, Goal-Driven Systems",
     "last_synced": "2026-02-09T18:37:46.529549"
   },
-  "AI/3_methods/07_multimodal-ai.md": {
-    "post_id": 21541,
-    "slug": "advanced-multimodal-rag",
-    "url": "https://adambernard.com/kb/advanced-multimodal-rag/",
-    "title": "Advanced Multimodal RAG",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
   "AI/3_methods/08_evaluation-and-performance.md": {
     "post_id": 21216,
     "slug": "evaluation-and-performance-assessing-the-effectiveness-of-ai-models",
@@ -606,13 +522,6 @@
     "slug": "agentic-context-engineering-structuring-contexts-for-autonomous-reliable-ai-agents",
     "url": "https://adambernard.com/kb/agentic-context-engineering-structuring-contexts-for-autonomous-reliable-ai-agents/",
     "title": "Agentic Context Engineering: Structuring Contexts for Autonomous, Reliable AI Agents",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
-  "AI/3_methods/12_advanced-multimodal-rag.md.md": {
-    "post_id": 21541,
-    "slug": "advanced-multimodal-rag",
-    "url": "https://adambernard.com/kb/advanced-multimodal-rag/",
-    "title": "Advanced Multimodal RAG",
     "last_synced": "2026-02-09T18:37:46.529549"
   },
   "AI/3_methods/13_perplexity-search-api.md": {
@@ -690,13 +599,6 @@
     "slug": "using-mcp-servers-with-local-large-language-models-llms",
     "url": "https://adambernard.com/kb/using-mcp-servers-with-local-large-language-models-llms/",
     "title": "Using MCP Servers with Local Large Language Models (LLMs)",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
-  "AI/3_methods/mcp/09_build-dynamic-ai-systems-with-mcp.md": {
-    "post_id": 21528,
-    "slug": "building-dynamic-ai-systems-with-mcp",
-    "url": "https://adambernard.com/kb/building-dynamic-ai-systems-with-mcp/",
-    "title": "Building Dynamic AI Systems with MCP",
     "last_synced": "2026-02-09T18:37:46.529549"
   },
   "AI/3_methods/mcp/09_open-source-mcp-projects-and-tools.md": {
@@ -825,62 +727,6 @@
     "title": "AI-Powered Chatbots",
     "last_synced": "2026-02-09T18:37:46.529549"
   },
-  "AI/4_applications/marketing/00_foundations-of-ai-powered-marketing.md": {
-    "post_id": 21236,
-    "slug": "foundations-of-ai-powered-marketing",
-    "url": "https://adambernard.com/kb/foundations-of-ai-powered-marketing/",
-    "title": "Foundations of AI-Powered Marketing",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
-  "AI/4_applications/marketing/01_ai-content-strategy.md": {
-    "post_id": 22992,
-    "slug": "ai-powered-content-creation",
-    "url": "https://adambernard.com/kb/ai-powered-content-creation/",
-    "title": "AI-Powered Content Creation",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
-  "AI/4_applications/marketing/02_personalization-and-predictive-ai.md": {
-    "post_id": 22993,
-    "slug": "ai-for-personalization-and-predictive-analytics",
-    "url": "https://adambernard.com/kb/ai-for-personalization-and-predictive-analytics/",
-    "title": "AI for Personalization and Predictive Analytics",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
-  "AI/4_applications/marketing/03_applied-ai-marketing.md": {
-    "post_id": 22994,
-    "slug": "applied-ai-marketing-frameworks-and-implementation",
-    "url": "https://adambernard.com/kb/applied-ai-marketing-frameworks-and-implementation/",
-    "title": "Applied AI Marketing: Frameworks and Implementation",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
-  "AI/4_applications/marketing/04_gen-ai-playbook.md": {
-    "post_id": 22995,
-    "slug": "the-generative-ai-playbook-for-organizations",
-    "url": "https://adambernard.com/kb/the-generative-ai-playbook-for-organizations/",
-    "title": "The Generative AI Playbook for Organizations",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
-  "AI/4_applications/marketing/05_chatgpt-prompts.md": {
-    "post_id": 22996,
-    "slug": "chatgpt-prompts-for-marketing-and-content-creation",
-    "url": "https://adambernard.com/kb/chatgpt-prompts-for-marketing-and-content-creation/",
-    "title": "ChatGPT Prompts for Marketing and Content Creation",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
-  "AI/4_applications/marketing/06_optimizing-for-ai-citation-GEO.md": {
-    "post_id": 22381,
-    "slug": "optimizing-content-for-ai-citation-geo",
-    "url": "https://adambernard.com/kb/optimizing-content-for-ai-citation-geo/",
-    "title": "Optimizing Content for AI Citation (GEO)",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
-  "AI/4_applications/marketing/07_chatgpt-ads-and-conversational-commerce.md": {
-    "post_id": 23486,
-    "slug": "chatgpt-ads-and-the-rise-of-conversational-commerce",
-    "url": "https://adambernard.com/kb/chatgpt-ads-and-the-rise-of-conversational-commerce/",
-    "title": "ChatGPT Ads and the Rise of Conversational Commerce",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
   "AI/5_ethics-and-governance/00_responsible-ai-principles.md.md": {
     "post_id": 21278,
     "slug": "responsible-ai-principles",
@@ -920,7 +766,7 @@
     "post_id": 22287,
     "slug": "human-ai-collaboration",
     "url": "https://adambernard.com/kb/human-ai-collaboration/",
-    "title": "Human–AI Collaboration",
+    "title": "HumanÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“AI Collaboration",
     "last_synced": "2026-02-09T18:37:46.529549"
   },
   "AI/5_ethics-and-governance/06_ethical-considerations-in-ai-marketing.md": {
@@ -991,76 +837,6 @@
     "slug": "enterprise-ai-adoption-trends-agentic-physical-and-sovereign-ai",
     "url": "https://adambernard.com/kb/enterprise-ai-adoption-trends-agentic-physical-and-sovereign-ai/",
     "title": "Enterprise AI Adoption Trends: Agentic, Physical, and Sovereign AI",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
-  "CORE/core-concepts/00_anatomy.md": {
-    "post_id": 22156,
-    "slug": "anatomy-of-a-knowledge-core-fueling-the-strategic-intelligence-engine",
-    "url": "https://adambernard.com/kb/anatomy-of-a-knowledge-core-fueling-the-strategic-intelligence-engine/",
-    "title": "Anatomy of a Knowledge Core: Fueling the Strategic Intelligence Engine",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
-  "CORE/core-concepts/01_the-bill-bernard-standard.md": {
-    "post_id": 22151,
-    "slug": "the-bill-bernard-standard-integrity-as-a-strategic-framework",
-    "url": "https://adambernard.com/kb/the-bill-bernard-standard-integrity-as-a-strategic-framework/",
-    "title": "The Bill Bernard Standard: Integrity as a Strategic Framework",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
-  "CORE/core-concepts/02_model-context-protocol-mcp.md": {
-    "post_id": 21743,
-    "slug": "model-context-protocol-mcp",
-    "url": "https://adambernard.com/kb/model-context-protocol-mcp/",
-    "title": "Model Context Protocol (MCP)",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
-  "CORE/core-concepts/03_advanced-retrieval-techniques.md": {
-    "post_id": 21742,
-    "slug": "advanced-retrieval-techniques-for-ai-agents",
-    "url": "https://adambernard.com/kb/advanced-retrieval-techniques-for-ai-agents/",
-    "title": "Advanced Retrieval Techniques for AI Agents",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
-  "CORE/core-concepts/04_the-data-moat.md": {
-    "post_id": 21745,
-    "slug": "the-data-moat-a-strategic-asset-in-the-age-of-ai",
-    "url": "https://adambernard.com/kb/the-data-moat-a-strategic-asset-in-the-age-of-ai/",
-    "title": "The Data Moat: A Strategic Asset in the Age of AI",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
-  "CORE/core-concepts/05_retrieval-augmented-generation-rag.md": {
-    "post_id": 21747,
-    "slug": "retrieval-augmented-generation-rag",
-    "url": "https://adambernard.com/kb/retrieval-augmented-generation-rag/",
-    "title": "Retrieval-Augmented Generation (RAG)",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
-  "CORE/core-concepts/06_vector-databases.md": {
-    "post_id": 21589,
-    "slug": "vector-databases",
-    "url": "https://adambernard.com/kb/vector-databases/",
-    "title": "Vector Databases",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
-  "CORE/strategy-application/anatomy-of-an-ai-agent-knowledge-base.md": {
-    "post_id": 21751,
-    "slug": "anatomy-of-an-ai-agent-knowledge-base",
-    "url": "https://adambernard.com/kb/anatomy-of-an-ai-agent-knowledge-base/",
-    "title": "Anatomy of an AI Agent Knowledge Base",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
-  "CORE/strategy-application/leveraging-ai-knowledge-bases-for-seo.md": {
-    "post_id": 21893,
-    "slug": "leveraging-ai-knowledge-bases-for-seo",
-    "url": "https://adambernard.com/kb/leveraging-ai-knowledge-bases-for-seo/",
-    "title": "Leveraging AI Knowledge Bases for SEO",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
-  "CORE/strategy-application/maintaining-knowledge-base-freshness.md": {
-    "post_id": 21896,
-    "slug": "maintaining-knowledge-base-freshness",
-    "url": "https://adambernard.com/kb/maintaining-knowledge-base-freshness/",
-    "title": "Maintaining Knowledge Base Freshness",
     "last_synced": "2026-02-09T18:37:46.529549"
   },
   "SEO/seo-knowledge.md": {
@@ -1203,13 +979,6 @@
     "title": "AEO & GEO: Optimizing for Retrieval, Citation, and Trust in AI Search",
     "last_synced": "2026-02-09T18:37:46.529549"
   },
-  "SEO/1_research-and-strategy/13_advanced-query-analysis-techniques.md": {
-    "post_id": 24417,
-    "slug": "advanced-query-analysis-techniques-n-grams-levenshtein-jaccard",
-    "url": "https://adambernard.com/kb/advanced-query-analysis-techniques-n-grams-levenshtein-jaccard/",
-    "title": "Advanced Query Analysis Techniques: N-grams, Levenshtein & Jaccard",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
   "SEO/1_research-and-strategy/14_semantic-depth.md": {
     "post_id": 22976,
     "slug": "semantic-depth-a-guide-to-aligning-with-googles-core-ranking-systems",
@@ -1250,13 +1019,6 @@
     "slug": "content-architecture-structuring-pages-for-seo-and-user-experience",
     "url": "https://adambernard.com/kb/content-architecture-structuring-pages-for-seo-and-user-experience/",
     "title": "Content Architecture: Structuring Pages for SEO and User Experience",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
-  "SEO/2_content-and-on-page/02_title-tags-and-meta.md": {
-    "post_id": 23178,
-    "slug": "title-tags-and-meta-descriptions-crafting-effective-on-page-seo-metadata",
-    "url": "https://adambernard.com/kb/title-tags-and-meta-descriptions-crafting-effective-on-page-seo-metadata/",
-    "title": "Title Tags and Meta Descriptions: Crafting Effective On‑Page SEO Metadata",
     "last_synced": "2026-02-09T18:37:46.529549"
   },
   "SEO/2_content-and-on-page/03_header-structure.md": {
@@ -1453,13 +1215,6 @@
     "slug": "seo-prompt-library-for-ai-chatbots",
     "url": "https://adambernard.com/kb/seo-prompt-library-for-ai-chatbots/",
     "title": "SEO Prompt Library for AI Chatbots",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
-  "SEO/4_ai-and-automation/1_using-ai-for-seo/10_ai-for-seo-workflows.md": {
-    "post_id": 21818,
-    "slug": "ai-for-seo-workflows-10-practical-integrations",
-    "url": "https://adambernard.com/kb/ai-for-seo-workflows-10-practical-integrations/",
-    "title": "AI for SEO Workflows: 10 Practical Integrations",
     "last_synced": "2026-02-09T18:37:46.529549"
   },
   "SEO/4_ai-and-automation/1_using-ai-for-seo/11_programmatic-seo-guide.md": {
@@ -1672,13 +1427,6 @@
     "title": "AI Tools Overview: Categories, Evaluation, and Selection Framework",
     "last_synced": "2026-02-09T18:37:46.529549"
   },
-  "TOOLS/01_applied-ai-use-cases.md": {
-    "post_id": 21656,
-    "slug": "applied-ai-use-cases-reference-playbooks-for-marketing-functions",
-    "url": "https://adambernard.com/kb/applied-ai-use-cases-reference-playbooks-for-marketing-functions/",
-    "title": "Applied AI Use Cases: Reference Playbooks for Marketing Functions",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
   "TOOLS/tools-knowledge.md": {
     "post_id": 23352,
     "slug": "ai-marketing-tools-knowledge-base-gateway",
@@ -1691,14 +1439,14 @@
     "slug": "chatgpt-openai-conversational-ai-profile",
     "url": "https://adambernard.com/kb/chatgpt-openai-conversational-ai-profile/",
     "title": "ChatGPT (OpenAI): Conversational AI Profile",
-    "last_synced": "2026-02-09T18:37:46.529549"
+    "last_synced": "2026-02-08T10:06:13.674627"
   },
   "TOOLS/ai-foundation-models/claude-anthropic.md": {
     "post_id": 22939,
     "slug": "claude-anthropic-ai-platform-profile",
     "url": "https://adambernard.com/kb/claude-anthropic-ai-platform-profile/",
     "title": "Claude (Anthropic): AI Platform Profile",
-    "last_synced": "2026-02-09T18:37:46.529549"
+    "last_synced": "2026-02-08T10:06:13.674627"
   },
   "TOOLS/ai-foundation-models/deepseek.md": {
     "post_id": 24426,
@@ -1719,7 +1467,7 @@
     "slug": "grok-xai-real-time-social-ai-profile",
     "url": "https://adambernard.com/kb/grok-xai-real-time-social-ai-profile/",
     "title": "Grok (xAI): Real-Time Social AI Profile",
-    "last_synced": "2026-02-09T18:37:46.529549"
+    "last_synced": "2026-02-08T10:06:13.674627"
   },
   "TOOLS/ai-foundation-models/llama.md": {
     "post_id": 22942,
@@ -1777,25 +1525,11 @@
     "title": "Google Search Console: Organic Search Performance & Indexing",
     "last_synced": "2026-02-09T18:37:46.529549"
   },
-  "TOOLS/analytics-data-insights/salesloft.md": {
-    "post_id": 22950,
-    "slug": "salesloft-ai-powered-sales-engagement-platform",
-    "url": "https://adambernard.com/kb/salesloft-ai-powered-sales-engagement-platform/",
-    "title": "Salesloft: AI-Powered Sales Engagement Platform",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
   "TOOLS/analytics-data-insights/trackonomics.md": {
     "post_id": 24427,
     "slug": "trackonomics-enterprise-affiliate-analytics-attribution",
     "url": "https://adambernard.com/kb/trackonomics-enterprise-affiliate-analytics-attribution/",
     "title": "Trackonomics: Enterprise Affiliate Analytics & Attribution",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
-  "TOOLS/analytics-data-insights/wevo-pulse.md": {
-    "post_id": 22951,
-    "slug": "wevo-pulse-ai-powered-ux-research-optimization",
-    "url": "https://adambernard.com/kb/wevo-pulse-ai-powered-ux-research-optimization/",
-    "title": "WEVO Pulse: AI-Powered UX Research & Optimization",
     "last_synced": "2026-02-09T18:37:46.529549"
   },
   "TOOLS/audio-generation/elevenlabs.md": {
@@ -2372,20 +2106,6 @@
     "title": "Ahrefs: SEO & Competitive Analysis Platform",
     "last_synced": "2026-02-09T18:37:46.529549"
   },
-  "TOOLS/seo-optimization/answerthepublic.md": {
-    "post_id": 22963,
-    "slug": "answerthepublic-visual-keyword-research-tool",
-    "url": "https://adambernard.com/kb/answerthepublic-visual-keyword-research-tool/",
-    "title": "AnswerThePublic: Visual Keyword Research Tool",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
-  "TOOLS/seo-optimization/clearscope.md": {
-    "post_id": 22966,
-    "slug": "clearscope-ai-powered-content-optimization",
-    "url": "https://adambernard.com/kb/clearscope-ai-powered-content-optimization/",
-    "title": "Clearscope: AI-Powered Content Optimization",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
   "TOOLS/seo-optimization/conductor.md": {
     "post_id": 22967,
     "slug": "conductor-enterprise-seo-content-intelligence-platform",
@@ -2400,53 +2120,11 @@
     "title": "Content at Scale: AI-Powered SEO Content Generation",
     "last_synced": "2026-02-09T18:37:46.529549"
   },
-  "TOOLS/seo-optimization/google-keyword-planner.md": {
-    "post_id": 22969,
-    "slug": "google-keyword-planner-foundational-keyword-research-tool",
-    "url": "https://adambernard.com/kb/google-keyword-planner-foundational-keyword-research-tool/",
-    "title": "Google Keyword Planner: Foundational Keyword Research Tool",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
-  "TOOLS/seo-optimization/lumar.md": {
-    "post_id": 22970,
-    "slug": "lumar-enterprise-website-intelligence-platform",
-    "url": "https://adambernard.com/kb/lumar-enterprise-website-intelligence-platform/",
-    "title": "Lumar: Enterprise Website Intelligence Platform",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
-  "TOOLS/seo-optimization/neuronwriter.md": {
-    "post_id": 22971,
-    "slug": "neuronwriter-ai-content-optimization-planning",
-    "url": "https://adambernard.com/kb/neuronwriter-ai-content-optimization-planning/",
-    "title": "NeuronWriter: AI Content Optimization & Planning",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
-  "TOOLS/seo-optimization/scalenut.md": {
-    "post_id": 22972,
-    "slug": "scalenut-ai-powered-seo-content-marketing-suite",
-    "url": "https://adambernard.com/kb/scalenut-ai-powered-seo-content-marketing-suite/",
-    "title": "Scalenut: AI-Powered SEO & Content Marketing Suite",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
   "TOOLS/seo-optimization/semrush.md": {
     "post_id": 22973,
     "slug": "semrush-online-visibility-content-marketing-platform",
     "url": "https://adambernard.com/kb/semrush-online-visibility-content-marketing-platform/",
     "title": "Semrush: Online Visibility & Content Marketing Platform",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
-  "TOOLS/seo-optimization/surfer-seo.md": {
-    "post_id": 22974,
-    "slug": "surfer-seo-ai-powered-content-intelligence",
-    "url": "https://adambernard.com/kb/surfer-seo-ai-powered-content-intelligence/",
-    "title": "Surfer SEO: AI-Powered Content Intelligence",
-    "last_synced": "2026-02-09T18:37:46.529549"
-  },
-  "TOOLS/seo-optimization/ubersuggest.md": {
-    "post_id": 22975,
-    "slug": "ubersuggest-seo-keyword-research-tool",
-    "url": "https://adambernard.com/kb/ubersuggest-seo-keyword-research-tool/",
-    "title": "Ubersuggest: SEO & Keyword Research Tool",
     "last_synced": "2026-02-09T18:37:46.529549"
   },
   "TOOLS/social-media/buffer.md": {
@@ -2511,5 +2189,397 @@
     "url": "https://adambernard.com/kb/ai-content-optimization-enhancing-quality-and-performance/",
     "title": "AI Content Optimization: Enhancing Quality and Performance",
     "last_synced": "2026-02-09T05:24:04.502519"
+  },
+  "GROWTH/00_foundations-of-ai-powered-marketing.md": {
+    "post_id": 21236,
+    "slug": "foundations-of-ai-powered-marketing",
+    "url": "https://adambernard.com/kb/foundations-of-ai-powered-marketing/",
+    "title": "Foundations of AI-Powered Marketing",
+    "last_synced": "2026-02-09T18:37:46.529549"
+  },
+  "GROWTH/01_ai-content-strategy.md": {
+    "post_id": 22992,
+    "slug": "ai-powered-content-creation",
+    "url": "https://adambernard.com/kb/ai-powered-content-creation/",
+    "title": "AI-Powered Content Creation",
+    "last_synced": "2026-02-09T18:37:46.529549"
+  },
+  "GROWTH/02_personalization-and-predictive-ai.md": {
+    "post_id": 22993,
+    "slug": "ai-for-personalization-and-predictive-analytics",
+    "url": "https://adambernard.com/kb/ai-for-personalization-and-predictive-analytics/",
+    "title": "AI for Personalization and Predictive Analytics",
+    "last_synced": "2026-02-09T18:37:46.529549"
+  },
+  "GROWTH/03_applied-ai-marketing.md": {
+    "post_id": 22994,
+    "slug": "applied-ai-marketing-frameworks-and-implementation",
+    "url": "https://adambernard.com/kb/applied-ai-marketing-frameworks-and-implementation/",
+    "title": "Applied AI Marketing: Frameworks and Implementation",
+    "last_synced": "2026-02-09T18:37:46.529549"
+  },
+  "GROWTH/04_gen-ai-playbook.md": {
+    "post_id": 22995,
+    "slug": "the-generative-ai-playbook-for-organizations",
+    "url": "https://adambernard.com/kb/the-generative-ai-playbook-for-organizations/",
+    "title": "The Generative AI Playbook for Organizations",
+    "last_synced": "2026-02-09T18:37:46.529549"
+  },
+  "GROWTH/05_chatgpt-prompts.md": {
+    "post_id": 22996,
+    "slug": "chatgpt-prompts-for-marketing-and-content-creation",
+    "url": "https://adambernard.com/kb/chatgpt-prompts-for-marketing-and-content-creation/",
+    "title": "ChatGPT Prompts for Marketing and Content Creation",
+    "last_synced": "2026-02-09T18:37:46.529549"
+  },
+  "GROWTH/06_optimizing-for-ai-citation-GEO.md": {
+    "post_id": 22381,
+    "slug": "optimizing-content-for-ai-citation-geo",
+    "url": "https://adambernard.com/kb/optimizing-content-for-ai-citation-geo/",
+    "title": "Optimizing Content for AI Citation (GEO)",
+    "last_synced": "2026-02-09T18:37:46.529549"
+  },
+  "GROWTH/07_chatgpt-ads-and-conversational-commerce.md": {
+    "post_id": 23486,
+    "slug": "chatgpt-ads-and-the-rise-of-conversational-commerce",
+    "url": "https://adambernard.com/kb/chatgpt-ads-and-the-rise-of-conversational-commerce/",
+    "title": "ChatGPT Ads and the Rise of Conversational Commerce",
+    "last_synced": "2026-02-09T18:37:46.529549"
+  },
+  "CORE/1_core-concepts/00_anatomy.md": {
+    "post_id": 22156,
+    "slug": "core/core-concepts/anatomy-of-a-knowledge-core-fueling-the-strategic-intelligence-engine",
+    "url": "https://adambernard.com/kb/core/core-concepts/anatomy-of-a-knowledge-core-fueling-the-strategic-intelligence-engine/",
+    "title": "Anatomy of a Knowledge Core: Fueling the Strategic Intelligence Engine",
+    "last_synced": "2026-02-25T04:35:55.863179"
+  },
+  "CORE/2_governance/01_the-bill-bernard-standard.md": {
+    "post_id": 22151,
+    "slug": "core/the-bill-bernard-standard-integrity-as-a-strategic-framework",
+    "url": "https://adambernard.com/kb/core/the-bill-bernard-standard-integrity-as-a-strategic-framework/",
+    "title": "The Bill Bernard Standard: Integrity as a Strategic Framework",
+    "last_synced": "2026-02-25T04:35:55.863179"
+  },
+  "CORE/1_core-concepts/02_model-context-protocol-mcp.md": {
+    "post_id": 21743,
+    "slug": "core/core-concepts/model-context-protocol-mcp",
+    "url": "https://adambernard.com/kb/core/core-concepts/model-context-protocol-mcp/",
+    "title": "Model Context Protocol (MCP)",
+    "last_synced": "2026-02-25T04:35:55.863179"
+  },
+  "CORE/1_core-concepts/03_advanced-retrieval-techniques.md": {
+    "post_id": 21742,
+    "slug": "core/core-concepts/advanced-retrieval-techniques-for-ai-agents",
+    "url": "https://adambernard.com/kb/core/core-concepts/advanced-retrieval-techniques-for-ai-agents/",
+    "title": "Advanced Retrieval Techniques for AI Agents",
+    "last_synced": "2026-02-25T04:35:55.863179"
+  },
+  "CORE/1_core-concepts/04_the-data-moat.md": {
+    "post_id": 21745,
+    "slug": "core/core-concepts/the-data-moat-a-strategic-asset-in-the-age-of-ai",
+    "url": "https://adambernard.com/kb/core/core-concepts/the-data-moat-a-strategic-asset-in-the-age-of-ai/",
+    "title": "The Data Moat: A Strategic Asset in the Age of AI",
+    "last_synced": "2026-02-25T04:35:55.863179"
+  },
+  "CORE/1_core-concepts/05_retrieval-augmented-generation-rag.md": {
+    "post_id": 21747,
+    "slug": "core/core-concepts/retrieval-augmented-generation-rag",
+    "url": "https://adambernard.com/kb/core/core-concepts/retrieval-augmented-generation-rag/",
+    "title": "Retrieval-Augmented Generation (RAG)",
+    "last_synced": "2026-02-25T04:35:55.863179"
+  },
+  "CORE/1_core-concepts/06_vector-databases.md": {
+    "post_id": 21589,
+    "slug": "core/core-concepts/vector-databases",
+    "url": "https://adambernard.com/kb/core/core-concepts/vector-databases/",
+    "title": "Vector Databases",
+    "last_synced": "2026-02-25T04:35:55.863179"
+  },
+  "CORE/3_strategy-application/01_anatomy-of-an-ai-agent-knowledge-base.md": {
+    "post_id": 21751,
+    "slug": "core/strategy-application/anatomy-of-an-ai-agent-knowledge-base",
+    "url": "https://adambernard.com/kb/core/strategy-application/anatomy-of-an-ai-agent-knowledge-base/",
+    "title": "Anatomy of an AI Agent Knowledge Base",
+    "last_synced": "2026-02-25T04:35:55.863179"
+  },
+  "CORE/3_strategy-application/02_leveraging-ai-knowledge-bases-for-seo.md": {
+    "post_id": 21893,
+    "slug": "core/strategy-application/leveraging-ai-knowledge-bases-for-seo",
+    "url": "https://adambernard.com/kb/core/strategy-application/leveraging-ai-knowledge-bases-for-seo/",
+    "title": "Leveraging AI Knowledge Bases for SEO",
+    "last_synced": "2026-02-25T04:35:55.863179"
+  },
+  "CORE/3_strategy-application/03_maintaining-knowledge-base-freshness.md": {
+    "post_id": 21896,
+    "slug": "core/strategy-application/maintaining-knowledge-base-freshness",
+    "url": "https://adambernard.com/kb/core/strategy-application/maintaining-knowledge-base-freshness/",
+    "title": "Maintaining Knowledge Base Freshness",
+    "last_synced": "2026-02-25T04:35:55.863179"
+  },
+  "GROWTH/01_applied-ai-use-cases.md": {
+    "post_id": 21656,
+    "slug": "applied-ai-use-cases-reference-playbooks-for-marketing-functions",
+    "url": "https://adambernard.com/kb/applied-ai-use-cases-reference-playbooks-for-marketing-functions/",
+    "title": "Applied AI Use Cases: Reference Playbooks for Marketing Functions",
+    "last_synced": "2026-02-09T18:37:46.529549"
+  },
+  "CORE/00_CORE.md": {
+    "post_id": 24849,
+    "slug": "core/core",
+    "url": "https://adambernard.com/kb/core/core/",
+    "title": "Core",
+    "last_synced": "2026-02-25T04:35:55.863179"
+  },
+  "CORE/1_core-concepts/07_the-human-correction-tax.md": {
+    "post_id": 24884,
+    "slug": "core/core-concepts/the-human-correction-tax-the-hidden-cost-of-ai",
+    "url": "https://adambernard.com/kb/core/core-concepts/the-human-correction-tax-the-hidden-cost-of-ai/",
+    "title": "The Human Correction Tax: The Hidden Cost of AI",
+    "last_synced": "2026-02-25T04:35:55.863179"
+  },
+  "CORE/1_core-concepts/08_the-fleet-commander-model.md": {
+    "post_id": 24885,
+    "slug": "core/core-concepts/the-fleet-commander-model-scaling-ai-with-strategic-intent",
+    "url": "https://adambernard.com/kb/core/core-concepts/the-fleet-commander-model-scaling-ai-with-strategic-intent/",
+    "title": "The Fleet Commander Model: Scaling AI with Strategic Intent",
+    "last_synced": "2026-02-25T04:35:55.863179"
+  },
+  "CORE/1_core-concepts/09_dual-readability-and-semantic-authoring.md": {
+    "post_id": 24886,
+    "slug": "core/core-concepts/dual-readability-and-semantic-authoring",
+    "url": "https://adambernard.com/kb/core/core-concepts/dual-readability-and-semantic-authoring/",
+    "title": "Dual-Readability and Semantic Authoring",
+    "last_synced": "2026-02-25T04:35:55.863179"
+  },
+  "CORE/3_strategy-application/04_implementing-the-iron-word-loop.md": {
+    "post_id": 24891,
+    "slug": "core/strategy-application/implementing-the-iron-word-verification-loop",
+    "url": "https://adambernard.com/kb/core/strategy-application/implementing-the-iron-word-verification-loop/",
+    "title": "Implementing the Iron Word Verification Loop",
+    "last_synced": "2026-02-25T04:35:55.863179"
+  },
+  "CORE/3_strategy-application/05_architecting-the-agent-loop.md": {
+    "post_id": 24892,
+    "slug": "core/strategy-application/architecting-the-agent-loop",
+    "url": "https://adambernard.com/kb/core/strategy-application/architecting-the-agent-loop/",
+    "title": "Architecting the Agent Loop",
+    "last_synced": "2026-02-25T04:35:55.863179"
+  },
+  "CORE/3_strategy-application/06_content-clustering-for-the-agentic-era.md": {
+    "post_id": 24893,
+    "slug": "core/strategy-application/content-clustering-for-the-agentic-era",
+    "url": "https://adambernard.com/kb/core/strategy-application/content-clustering-for-the-agentic-era/",
+    "title": "Content Clustering for the Agentic Era",
+    "last_synced": "2026-02-25T04:35:55.863179"
+  },
+  "CORE/3_strategy-application/07_the-steady-presence-post-mortem.md": {
+    "post_id": 24894,
+    "slug": "core/strategy-application/the-steady-presence-post-mortem",
+    "url": "https://adambernard.com/kb/core/strategy-application/the-steady-presence-post-mortem/",
+    "title": "The Steady Presence Post-Mortem",
+    "last_synced": "2026-02-25T04:35:55.863179"
+  },
+  "AI/2_agents/23_openai-codex-app-server-architecture.md": {
+    "post_id": 24842,
+    "slug": "openai-codex-app-server-architecture",
+    "url": "https://adambernard.com/kb/ai/agents/openai-codex-app-server-architecture/",
+    "title": "OpenAI Codex App Server Architecture",
+    "last_synced": "2026-02-25T05:16:37.423700"
+  },
+  "AI/3_methods/16_build-a-self-organizing-agent-memory-system.md": {
+    "post_id": 24845,
+    "slug": "build-a-self-organizing-agent-memory-system",
+    "url": "https://adambernard.com/kb/ai/methods/build-a-self-organizing-agent-memory-system/",
+    "title": "Build a Self-Organizing Agent Memory System",
+    "last_synced": "2026-02-25T05:16:37.423700"
+  },
+  "GROWTH/Ads/02_Acquisition/ai-market-competitor-intelligence.md": {
+    "post_id": 21248,
+    "slug": "ai-for-market-research",
+    "url": "https://adambernard.com/kb/ai/applications/business/ai-for-market-research/",
+    "title": "AI for Market Research",
+    "last_synced": "2026-02-25T05:16:37.423700"
+  },
+  "SEO/1_research-and-strategy/19_enterprise-seo-operating-model.md": {
+    "post_id": 24841,
+    "slug": "enterprise-seo-operating-models-the-2026-infrastructure-shift",
+    "url": "https://adambernard.com/kb/seo/research-and-strategy/enterprise-seo-operating-models-the-2026-infrastructure-shift/",
+    "title": "Enterprise SEO Operating Models: The 2026 Infrastructure Shift",
+    "last_synced": "2026-02-25T05:16:37.423700"
+  },
+  "AI/3_methods/mcp/16_google-webmcp-agent-interactions.md.md": {
+    "post_id": 24843,
+    "slug": "google-webmcp-direct-agent-website-interaction",
+    "url": "https://adambernard.com/kb/ai/methods/mcp/google-webmcp-direct-agent-website-interaction/",
+    "title": "Google WebMCP: Direct Agent-Website Interaction",
+    "last_synced": "2026-02-25T05:16:37.423700"
+  },
+  "AI/3_methods/mcp/17_practical-local-mcp-use-cases.md": {
+    "post_id": 24844,
+    "slug": "5-practical-ways-to-use-local-llms-with-mcp",
+    "url": "https://adambernard.com/kb/ai/methods/mcp/5-practical-ways-to-use-local-llms-with-mcp/",
+    "title": "5 Practical Ways to Use Local LLMs with MCP",
+    "last_synced": "2026-02-25T05:16:37.423700"
+  },
+  "AI/3_methods/07_multimodal-ai.md": {
+    "post_id": 21231,
+    "slug": "multimodal-ai-integrating-diverse-data-streams-for-enhanced-intelligence",
+    "url": "https://adambernard.com/kb/ai/methods/multimodal-ai-integrating-diverse-data-streams-for-enhanced-intelligence/",
+    "title": "Multimodal AI: Integrating Diverse Data Streams for Enhanced Intelligence",
+    "last_synced": "2026-02-25T05:22:27.017104"
+  },
+  "SEO/4_ai-and-automation/1_using-ai-for-seo/10_ai-for-seo-workflows.md": {
+    "post_id": 21284,
+    "slug": "using-ai-for-seo-tools-tactics-and-workflows",
+    "url": "https://adambernard.com/kb/seo/ai-and-automation/using-ai-for-seo-tools-tactics-and-workflows/",
+    "title": "Using AI for SEO: Tools, Tactics, and Workflows",
+    "last_synced": "2026-02-25T05:22:27.017104"
+  },
+  "AI/2_agents/toolkits/03_building-agents-with-openai-gpts.md": {
+    "post_id": 21300,
+    "slug": "building-agents-with-openais-gpts-a-technical-overview",
+    "url": "https://adambernard.com/kb/ai/agents/toolkits/building-agents-with-openais-gpts-a-technical-overview/",
+    "title": "Building Agents with OpenAI&#8217;s GPTs: A Technical Overview",
+    "last_synced": "2026-02-25T05:40:50.347006"
+  },
+  "AI/2_agents/toolkits/05_microsoft-agent-framework.md": {
+    "post_id": 21301,
+    "slug": "microsoft-agent-framework-a-technical-overview",
+    "url": "https://adambernard.com/kb/ai/agents/toolkits/microsoft-agent-framework-a-technical-overview/",
+    "title": "Microsoft Agent Framework: A Technical Overview",
+    "last_synced": "2026-02-25T05:40:50.347006"
+  },
+  "AI/2_agents/toolkits/01_introduction-to-openai-agent-builder.md": {
+    "post_id": 21302,
+    "slug": "introduction-to-openai-agent-builder-a-reference-guide-for-creating-custom-ai-agents",
+    "url": "https://adambernard.com/kb/ai/agents/toolkits/introduction-to-openai-agent-builder-a-reference-guide-for-creating-custom-ai-agents/",
+    "title": "Introduction to OpenAI Agent Builder: A Reference Guide for Creating Custom AI Agents",
+    "last_synced": "2026-02-25T05:40:50.347006"
+  },
+  "AI/2_agents/toolkits/02_introduction-to-openai-agentkit.md": {
+    "post_id": 21303,
+    "slug": "introduction-to-openai-agentkit-exploring-its-architecture-and-capabilities",
+    "url": "https://adambernard.com/kb/ai/agents/toolkits/introduction-to-openai-agentkit-exploring-its-architecture-and-capabilities/",
+    "title": "Introduction to OpenAI AgentKit: Exploring Its Architecture and Capabilities",
+    "last_synced": "2026-02-25T05:40:50.347006"
+  },
+  "AI/2_agents/03_build-an-ai-desktop-automation-agent.md": {
+    "post_id": 21304,
+    "slug": "framework-for-building-an-ai-desktop-automation-agent",
+    "url": "https://adambernard.com/kb/ai/agents/framework-for-building-an-ai-desktop-automation-agent/",
+    "title": "Framework for Building an AI Desktop Automation Agent",
+    "last_synced": "2026-02-25T05:40:50.347006"
+  },
+  "AI/2_agents/05_agentic-vs-automation-platforms.md": {
+    "post_id": 21306,
+    "slug": "agentic-vs-automation-platforms-a-comparison-of-openai-agentkit-n8n-and-make",
+    "url": "https://adambernard.com/kb/ai/agents/agentic-vs-automation-platforms-a-comparison-of-openai-agentkit-n8n-and-make/",
+    "title": "Agentic vs. Automation Platforms: A Comparison of OpenAI AgentKit, n8n, and Make",
+    "last_synced": "2026-02-25T05:40:50.347006"
+  },
+  "AI/2_agents/04_agentic-reinforcement-learning.md": {
+    "post_id": 21308,
+    "slug": "agentic-reinforcement-learning-agentic-rl-a-technical-overview",
+    "url": "https://adambernard.com/kb/ai/agents/agentic-reinforcement-learning-agentic-rl-a-technical-overview/",
+    "title": "Agentic Reinforcement Learning (Agentic RL): A Technical Overview",
+    "last_synced": "2026-02-25T05:40:50.347006"
+  },
+  "AI/3_methods/mcp/09_build-dynamic-ai-systems-with-mcp.md": {
+    "post_id": 21528,
+    "slug": "building-dynamic-ai-systems-with-mcp",
+    "url": "https://adambernard.com/kb/ai/methods/mcp/building-dynamic-ai-systems-with-mcp/",
+    "title": "Building Dynamic AI Systems with MCP",
+    "last_synced": "2026-02-25T05:40:50.347006"
+  },
+  "AI/3_methods/12_advanced-multimodal-rag.md.md": {
+    "post_id": 21541,
+    "slug": "advanced-multimodal-rag",
+    "url": "https://adambernard.com/kb/ai/methods/advanced-multimodal-rag/",
+    "title": "Advanced Multimodal RAG",
+    "last_synced": "2026-02-25T05:40:50.347006"
+  },
+  "SEO/2_content-and-on-page/02_title-tags-and-meta.md": {
+    "post_id": 23178,
+    "slug": "title-tags-and-meta-descriptions-crafting-effective-on-page-seo-metadata",
+    "url": "https://adambernard.com/kb/seo/content-and-on-page/title-tags-and-meta-descriptions-crafting-effective-on-page-seo-metadata/",
+    "title": "Title Tags and Meta Descriptions: Crafting Effective On‑Page SEO Metadata",
+    "last_synced": "2026-02-25T05:40:50.347006"
+  },
+  "SEO/1_research-and-strategy/13_advanced-query-analysis-techniques.md": {
+    "post_id": 24417,
+    "slug": "advanced-query-analysis-techniques-n-grams-levenshtein-jaccard",
+    "url": "https://adambernard.com/kb/seo/research-and-strategy/advanced-query-analysis-techniques-n-grams-levenshtein-jaccard/",
+    "title": "Advanced Query Analysis Techniques: N-grams, Levenshtein &#038; Jaccard",
+    "last_synced": "2026-02-25T05:40:50.347006"
+  },
+  "TOOLS/analytics-data-insights/salesloft.md": {
+    "post_id": 22950,
+    "slug": "salesloft-ai-powered-sales-engagement-platform",
+    "url": "https://adambernard.com/kb/tools/analytics-data-insights/salesloft-ai-powered-sales-engagement-platform/",
+    "title": "Salesloft: AI-Powered Sales Engagement Platform",
+    "last_synced": "2026-02-25T05:40:50.347006"
+  },
+  "TOOLS/analytics-data-insights/wevo-pulse.md": {
+    "post_id": 22951,
+    "slug": "wevo-pulse-ai-powered-ux-research-optimization",
+    "url": "https://adambernard.com/kb/tools/analytics-data-insights/wevo-pulse-ai-powered-ux-research-optimization/",
+    "title": "WEVO Pulse: AI-Powered UX Research &#038; Optimization",
+    "last_synced": "2026-02-25T05:40:50.347006"
+  },
+  "TOOLS/seo-optimization/answerthepublic.md": {
+    "post_id": 22963,
+    "slug": "answerthepublic-visual-keyword-research-tool",
+    "url": "https://adambernard.com/kb/tools/seo-optimization/answerthepublic-visual-keyword-research-tool/",
+    "title": "AnswerThePublic: Visual Keyword Research Tool",
+    "last_synced": "2026-02-25T05:40:50.347006"
+  },
+  "TOOLS/seo-optimization/clearscope.md": {
+    "post_id": 22966,
+    "slug": "clearscope-ai-powered-content-optimization",
+    "url": "https://adambernard.com/kb/tools/seo-optimization/clearscope-ai-powered-content-optimization/",
+    "title": "Clearscope: AI-Powered Content Optimization",
+    "last_synced": "2026-02-25T05:40:50.347006"
+  },
+  "TOOLS/seo-optimization/google-keyword-planner.md": {
+    "post_id": 22969,
+    "slug": "google-keyword-planner-foundational-keyword-research-tool",
+    "url": "https://adambernard.com/kb/tools/seo-optimization/google-keyword-planner-foundational-keyword-research-tool/",
+    "title": "Google Keyword Planner: Foundational Keyword Research Tool",
+    "last_synced": "2026-02-25T05:40:50.347006"
+  },
+  "TOOLS/seo-optimization/lumar.md": {
+    "post_id": 22970,
+    "slug": "lumar-enterprise-website-intelligence-platform",
+    "url": "https://adambernard.com/kb/tools/seo-optimization/lumar-enterprise-website-intelligence-platform/",
+    "title": "Lumar: Enterprise Website Intelligence Platform",
+    "last_synced": "2026-02-25T05:40:50.347006"
+  },
+  "TOOLS/seo-optimization/neuronwriter.md": {
+    "post_id": 22971,
+    "slug": "neuronwriter-ai-content-optimization-planning",
+    "url": "https://adambernard.com/kb/tools/seo-optimization/neuronwriter-ai-content-optimization-planning/",
+    "title": "NeuronWriter: AI Content Optimization &#038; Planning",
+    "last_synced": "2026-02-25T05:40:50.347006"
+  },
+  "TOOLS/seo-optimization/scalenut.md": {
+    "post_id": 22972,
+    "slug": "scalenut-ai-powered-seo-content-marketing-suite",
+    "url": "https://adambernard.com/kb/tools/seo-optimization/scalenut-ai-powered-seo-content-marketing-suite/",
+    "title": "Scalenut: AI-Powered SEO &#038; Content Marketing Suite",
+    "last_synced": "2026-02-25T05:40:50.347006"
+  },
+  "TOOLS/seo-optimization/surfer-seo.md": {
+    "post_id": 22974,
+    "slug": "surfer-seo-ai-powered-content-intelligence",
+    "url": "https://adambernard.com/kb/tools/seo-optimization/surfer-seo-ai-powered-content-intelligence/",
+    "title": "Surfer SEO: AI-Powered Content Intelligence",
+    "last_synced": "2026-02-25T05:40:50.347006"
+  },
+  "TOOLS/seo-optimization/ubersuggest.md": {
+    "post_id": 22975,
+    "slug": "ubersuggest-seo-keyword-research-tool",
+    "url": "https://adambernard.com/kb/tools/seo-optimization/ubersuggest-seo-keyword-research-tool/",
+    "title": "Ubersuggest: SEO &#038; Keyword Research Tool",
+    "last_synced": "2026-02-25T05:40:50.347006"
   }
 }
