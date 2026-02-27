@@ -2581,5 +2581,250 @@
     "url": "https://adambernard.com/kb/tools/seo-optimization/ubersuggest-seo-keyword-research-tool/",
     "title": "Ubersuggest: SEO &#038; Keyword Research Tool",
     "last_synced": "2026-02-25T05:40:50.347006"
+  },
+  "00_kb.md": {
+    "post_id": 23354,
+    "slug": "knowledge-base-gateway",
+    "url": "https://adambernard.com/kb/seo/knowledge-base-gateway/",
+    "title": "Knowledge Base Gateway",
+    "last_synced": "2026-02-26T00:00:00"
+  },
+  "AI/00_AI.md": {
+    "post_id": 23350,
+    "slug": "ai-knowledge-base-gateway",
+    "url": "https://adambernard.com/kb/ai/ai-knowledge-base-gateway/",
+    "title": "AI Knowledge Base Gateway",
+    "last_synced": "2026-02-26T00:00:00"
+  },
+  "AI/1_models/1_specific-models/claude/04_claude-connector-for-wordpress.md": {
+    "post_id": 23511,
+    "slug": "claude-connector-for-wordpress-com",
+    "url": "https://adambernard.com/kb/ai/models/specific-models/claude/claude-connector-for-wordpress-com/",
+    "title": "Claude Connector for WordPress.com",
+    "last_synced": "2026-02-26T00:00:00"
+  },
+  "GROWTH/Creator/contract-management-and-long-term-relationships.md": {
+    "post_id": 24914,
+    "slug": "contract-management-and-long-term-relationships",
+    "url": "https://adambernard.com/kb/seo/contract-management-and-long-term-relationships/",
+    "title": "Contract Management and Long-Term Relationships",
+    "last_synced": "2026-02-26T00:00:00"
+  },
+  "GROWTH/Creator/creator-marketing-legal-requirements.md": {
+    "post_id": 25028,
+    "slug": "creator-marketing-legal-requirements",
+    "url": "https://adambernard.com/kb/seo/creator-marketing-legal-requirements/",
+    "title": "Creator Marketing Legal Requirements",
+    "last_synced": "2026-02-26T00:00:00"
+  },
+  "GROWTH/Creator/creator-outreach-email.md": {
+    "post_id": 25027,
+    "slug": "ai-powered-creator-outreach-via-email",
+    "url": "https://adambernard.com/kb/seo/ai-powered-creator-outreach-via-email/",
+    "title": "AI-Powered Creator Outreach via Email",
+    "last_synced": "2026-02-26T00:00:00"
+  },
+  "GROWTH/Email/1_Strategy/1_2_Core AI Concepts & the Email Marketing Stack.md": {
+    "post_id": 25002,
+    "slug": "core-ai-concepts-and-the-email-marketing-stack",
+    "url": "https://adambernard.com/kb/ai/core-ai-concepts-and-the-email-marketing-stack/",
+    "title": "Core AI Concepts and the Email Marketing Stack",
+    "last_synced": "2026-02-26T00:00:00"
+  },
+  "GROWTH/Email/1_Strategy/1_3_Customer-Centricity & the Evolving Email Landscape.md": {
+    "post_id": 25004,
+    "slug": "customer-centricity-and-the-evolving-email-landscape",
+    "url": "https://adambernard.com/kb/seo/customer-centricity-and-the-evolving-email-landscape/",
+    "title": "Customer-Centricity and the Evolving Email Landscape",
+    "last_synced": "2026-02-26T00:00:00"
+  },
+  "GROWTH/Email/1_Strategy/1_4_AI-Powered Email Tools.md": {
+    "post_id": 25000,
+    "slug": "ai-powered-email-tools-a-strategic-overview",
+    "url": "https://adambernard.com/kb/ai/ai-powered-email-tools-a-strategic-overview/",
+    "title": "AI-Powered Email Tools: A Strategic Overview",
+    "last_synced": "2026-02-26T00:00:00"
+  },
+  "GROWTH/Email/1_Strategy/1_5_Defining SMART Goals for AI Adoption.md": {
+    "post_id": 25001,
+    "slug": "defining-smart-goals-and-strategic-kpis-for-ai-adoption",
+    "url": "https://adambernard.com/kb/ai/defining-smart-goals-and-strategic-kpis-for-ai-adoption/",
+    "title": "Defining SMART Goals and Strategic KPIs for AI Adoption",
+    "last_synced": "2026-02-26T00:00:00"
+  },
+  "GROWTH/Email/2_Personalization/2_1_Advanced Personalization Strategies.md": {
+    "post_id": 24911,
+    "slug": "advanced-personalization-strategies-behavioral-contextual-and-predictive",
+    "url": "https://adambernard.com/kb/seo/advanced-personalization-strategies-behavioral-contextual-and-predictive/",
+    "title": "Advanced Personalization Strategies: Behavioral, Contextual, and Predictive",
+    "last_synced": "2026-02-26T00:00:00"
+  },
+  "GROWTH/Email/2_Personalization/2_2_AI for Granular Audience Segmentation.md": {
+    "post_id": 24910,
+    "slug": "ai-for-granular-audience-segmentation",
+    "url": "https://adambernard.com/kb/ai/ai-for-granular-audience-segmentation/",
+    "title": "AI for Granular Audience Segmentation",
+    "last_synced": "2026-02-26T00:00:00"
+  },
+  "GROWTH/Email/2_Personalization/2_3_AI for Dynamic Content and Recommendations.md": {
+    "post_id": 24908,
+    "slug": "ai-for-dynamic-content-and-recommendations",
+    "url": "https://adambernard.com/kb/ai/ai-for-dynamic-content-and-recommendations/",
+    "title": "AI for Dynamic Content and Recommendations",
+    "last_synced": "2026-02-26T00:00:00"
+  },
+  "GROWTH/Email/2_Personalization/2_4_AB Testing & Optimizing Personalization.md": {
+    "post_id": 24909,
+    "slug": "a-b-testing-and-optimizing-personalization",
+    "url": "https://adambernard.com/kb/seo/a-b-testing-and-optimizing-personalization/",
+    "title": "A/B Testing and Optimizing Personalization",
+    "last_synced": "2026-02-26T00:00:00"
+  },
+  "GROWTH/Email/2_Personalization/2_5_Balancing Automation and the Human Touch.md": {
+    "post_id": 24912,
+    "slug": "balancing-automation-and-the-human-touch",
+    "url": "https://adambernard.com/kb/seo/balancing-automation-and-the-human-touch/",
+    "title": "Balancing Automation and the Human Touch",
+    "last_synced": "2026-02-26T00:00:00"
+  },
+  "GROWTH/Email/3_Automation/3_1_Strategic AI‑Powered Email Automation .md": {
+    "post_id": 24916,
+    "slug": "strategic-ai-powered-email-automation",
+    "url": "https://adambernard.com/kb/ai/strategic-ai-powered-email-automation/",
+    "title": "Strategic AI-Powered Email Automation",
+    "last_synced": "2026-02-26T00:00:00"
+  },
+  "GROWTH/Email/3_Automation/3_2_Advanced Triggered Emails & Behavioral Targeting.md": {
+    "post_id": 24917,
+    "slug": "advanced-triggered-emails-and-behavioral-targeting",
+    "url": "https://adambernard.com/kb/seo/advanced-triggered-emails-and-behavioral-targeting/",
+    "title": "Advanced Triggered Emails and Behavioral Targeting",
+    "last_synced": "2026-02-26T00:00:00"
+  },
+  "GROWTH/Email/3_Automation/3_3_Building Intelligent Automated Email Follow‑Up Sequences with AI .md": {
+    "post_id": 24915,
+    "slug": "building-intelligent-automated-email-follow-up-sequences-with-ai",
+    "url": "https://adambernard.com/kb/ai/building-intelligent-automated-email-follow-up-sequences-with-ai/",
+    "title": "Building Intelligent Automated Email Follow-Up Sequences with AI",
+    "last_synced": "2026-02-26T00:00:00"
+  },
+  "GROWTH/Email/3_Automation/3_4_Contract Management and Long‑Term Relationships.md": {
+    "post_id": 24914,
+    "slug": "contract-management-and-long-term-relationships",
+    "url": "https://adambernard.com/kb/seo/contract-management-and-long-term-relationships/",
+    "title": "Contract Management and Long-Term Relationships",
+    "last_synced": "2026-02-26T00:00:00"
+  },
+  "GROWTH/Email/3_Automation/3_5_Hands-on Advanced Workflow Creation.md": {
+    "post_id": 24913,
+    "slug": "hands-on-advanced-workflow-creation",
+    "url": "https://adambernard.com/kb/seo/hands-on-advanced-workflow-creation/",
+    "title": "Hands-on Advanced Workflow Creation",
+    "last_synced": "2026-02-26T00:00:00"
+  },
+  "GROWTH/Email/4_Outreach/4_1_Email as an Influencer Amplifier.md": {
+    "post_id": 24918,
+    "slug": "email-as-an-influencer-amplifier",
+    "url": "https://adambernard.com/kb/seo/email-as-an-influencer-amplifier/",
+    "title": "Email as an Influencer Amplifier",
+    "last_synced": "2026-02-26T00:00:00"
+  },
+  "GROWTH/Email/4_Outreach/4_2_Strategic Influencer Marketing via Email.md": {
+    "post_id": 24919,
+    "slug": "strategic-influencer-marketing-via-email",
+    "url": "https://adambernard.com/kb/seo/strategic-influencer-marketing-via-email/",
+    "title": "Strategic Influencer Marketing via Email",
+    "last_synced": "2026-02-26T00:00:00"
+  },
+  "GROWTH/Email/5_Optimization/5_1_Legal Requirements and Ethical Considerations in AI‑Powered Email.md": {
+    "post_id": 25006,
+    "slug": "legal-requirements-and-ethical-considerations-in-ai-powered-email",
+    "url": "https://adambernard.com/kb/ai/legal-requirements-and-ethical-considerations-in-ai-powered-email/",
+    "title": "Legal Requirements and Ethical Considerations in AI-Powered Email",
+    "last_synced": "2026-02-26T00:00:00"
+  },
+  "GROWTH/Email/5_Optimization/5_2_AI for Subject Line & Content Optimization.md": {
+    "post_id": 25007,
+    "slug": "ai-for-subject-line-and-content-optimization",
+    "url": "https://adambernard.com/kb/ai/ai-for-subject-line-and-content-optimization/",
+    "title": "AI for Subject Line and Content Optimization",
+    "last_synced": "2026-02-26T00:00:00"
+  },
+  "GROWTH/Email/5_Optimization/5_3_AI for Send‑Time Optimization & Deliverability.md": {
+    "post_id": 25005,
+    "slug": "ai-for-send-time-optimization-and-deliverability",
+    "url": "https://adambernard.com/kb/ai/ai-for-send-time-optimization-and-deliverability/",
+    "title": "AI for Send-Time Optimization and Deliverability",
+    "last_synced": "2026-02-26T00:00:00"
+  },
+  "GROWTH/Email/5_Optimization/5_4_Analyzing & Reporting on AI‑Powered Campaigns.md": {
+    "post_id": 25009,
+    "slug": "analyzing-and-reporting-on-ai-powered-campaigns",
+    "url": "https://adambernard.com/kb/ai/analyzing-and-reporting-on-ai-powered-campaigns/",
+    "title": "Analyzing and Reporting on AI-Powered Campaigns",
+    "last_synced": "2026-02-26T00:00:00"
+  },
+  "GROWTH/Email/5_Optimization/5_5_Future‑Proofing Your Email Strategy with AI.md": {
+    "post_id": 25008,
+    "slug": "future-proofing-your-email-strategy-with-ai",
+    "url": "https://adambernard.com/kb/ai/future-proofing-your-email-strategy-with-ai/",
+    "title": "Future-Proofing Your Email Strategy with AI",
+    "last_synced": "2026-02-26T00:00:00"
+  },
+  "GROWTH/Social/00_Core-Strategy/02_core-ai-technologies-in-marketing.md": {
+    "post_id": 25023,
+    "slug": "core-ai-technologies-in-marketing",
+    "url": "https://adambernard.com/kb/seo/core-ai-technologies-in-marketing/",
+    "title": "Core AI Technologies in Marketing",
+    "last_synced": "2026-02-26T00:00:00"
+  },
+  "GROWTH/Social/00_Core-Strategy/03_the -ai-powered-social-media-ecosystem.md": {
+    "post_id": 25018,
+    "slug": "the-ai-powered-social-media-ecosystem",
+    "url": "https://adambernard.com/kb/seo/the-ai-powered-social-media-ecosystem/",
+    "title": "The AI-Powered Social Media Ecosystem",
+    "last_synced": "2026-02-26T00:00:00"
+  },
+  "GROWTH/Social/00_Core-Strategy/04_the-strive-framework.md": {
+    "post_id": 25020,
+    "slug": "the-strive-framework-for-ai-tool-evaluation",
+    "url": "https://adambernard.com/kb/seo/the-strive-framework-for-ai-tool-evaluation/",
+    "title": "The STRIVE Framework for AI Tool Evaluation",
+    "last_synced": "2026-02-26T00:00:00"
+  },
+  "GROWTH/Social/00_Core-Strategy/05_ai-ethics-and-governance-in-social-media.md": {
+    "post_id": 25024,
+    "slug": "ai-ethics-and-governance-in-social-media",
+    "url": "https://adambernard.com/kb/seo/ai-ethics-and-governance-in-social-media/",
+    "title": "AI Ethics and Governance in Social Media",
+    "last_synced": "2026-02-26T00:00:00"
+  },
+  "GROWTH/Social/00_Core-Strategy/07_emerging-trends.md": {
+    "post_id": 25017,
+    "slug": "emerging-ai-trends-in-social-media",
+    "url": "https://adambernard.com/kb/seo/emerging-ai-trends-in-social-media/",
+    "title": "Emerging AI Trends in Social Media",
+    "last_synced": "2026-02-26T00:00:00"
+  },
+  "GROWTH/Social/00_Core-Strategy/08_strategic-orchestration.md": {
+    "post_id": 25019,
+    "slug": "strategic-orchestration-of-ai-systems",
+    "url": "https://adambernard.com/kb/seo/strategic-orchestration-of-ai-systems/",
+    "title": "Strategic Orchestration of AI Systems",
+    "last_synced": "2026-02-26T00:00:00"
+  },
+  "GROWTH/Social/00_Core-Strategy/09_ai-leadership-and-skills.md": {
+    "post_id": 25021,
+    "slug": "ai-leadership-and-future-proofing-skills",
+    "url": "https://adambernard.com/kb/seo/ai-leadership-and-future-proofing-skills/",
+    "title": "AI Leadership and Future-Proofing Skills",
+    "last_synced": "2026-02-26T00:00:00"
+  },
+  "SEO/00_SEO.md": {
+    "post_id": 23351,
+    "slug": "seo-knowledge-base-gateway",
+    "url": "https://adambernard.com/kb/seo/seo-knowledge-base-gateway/",
+    "title": "SEO Knowledge Base Gateway",
+    "last_synced": "2026-02-26T00:00:00"
   }
 }
